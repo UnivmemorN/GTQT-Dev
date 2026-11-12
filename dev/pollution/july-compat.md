@@ -1,6 +1,6 @@
 # 当前 Pollution 配合七月 Core
 
-`pollutionJulyCompat` 在作者 Pollution `9ed70ed` 基础上修复材料兼容、网络包的物理端分离及工业注魔的注册和加工。编译使用原始七月 Core。运行时使用经过两处修补的 Core 和十月喵呜版 GregTech 的生产名称 JAR。两份派生产物的 SHA-256 见 [workspace.lock.json](../../workspace.lock.json)。[Pollution 兼容分支](https://github.com/UnivmemorN/Pollution/tree/d50486c58696fc48a71af0ed8398a64f3569eda2) · [Core 补丁](compat/README.md)
+`pollutionJulyCompat` 在作者 Pollution `9ed70ed` 基础上修复材料兼容、网络包的物理端分离及工业注魔的注册和加工。编译使用原始七月 Core。运行时使用经过两处修补的 Core 和十月喵呜版 GregTech 的生产名称 JAR。兼容分支 `117162f` 恢复了魔法聚变反应堆要求的铀-235 压缩块。[依赖锁](../../workspace.lock.json) · [Pollution 兼容分支](https://github.com/UnivmemorN/Pollution/tree/117162fc16b0a6f4e87571ab972c8c1bf9e3a03c) · [Core 补丁](compat/README.md)
 
 ## 复跑
 
@@ -22,10 +22,11 @@ python -B dev/pollution/compat_server.py @inputs --supplier
 python -B dev/pollution/compat_server.py @inputs --core-field
 python -B dev/pollution/compat_server.py @inputs --runtime-only
 python -B dev/pollution/compat_server.py @inputs --processing
+python -B dev/pollution/compat_server.py @inputs --reactor-altar
 python -B dev/pollution/compat_server.py @inputs --legacy-infusion
 ```
 
-各组验收分别创建新世界。材料测试在建档时写入随机标记，保存并退出后由第二个 JVM 读回，同时核对材料对象和两条已注册的配方。纯运行组仅安装实际运行模组，通过 `level.dat` 核对两次保存的世界名、种子和 26 个 FML 模组条目。[专服验收记录](../../evidence/pollution-july-compat.json)
+各组验收分别创建新世界。材料测试在建档时写入随机标记，保存并退出后由第二个 JVM 读回，同时核对材料对象和两条已注册的配方。纯运行组仅安装实际运行模组，通过 `level.dat` 核对两次保存的世界名、种子和 26 个 FML 模组条目。下表记录 `d50486c` 的验收。当前锁定版 `117162f` 完成了工业加工、原生祭坛和纯运行三组。[先前六组验收](../../evidence/pollution-july-compat.json) · [当前反应堆验收](../../evidence/pollution-fusion-reactor.json)
 
 | 专服场景 | 两次启动的结果 |
 | --- | --- |
@@ -56,7 +57,13 @@ python -B dev/pollution/compat_server.py @inputs --legacy-infusion
 
 另一张原方来自 Pollution 自身。IV 魔法电路板使用 1 张 EV 板、3 种符文各 1、1 个稳定框架，以及电容、晶体管、二极管三种贴片各 8 个。旧导入器为这 29 件物品逐件占用配方栏，触发了 25 栏上限。现在 8 种输入仍消耗 29 件，原方研究、四种要素和基础参数 480 EU/t × 960 tick 均保留。每个祭坛位置可以使用其任一匹配物品。缺少整项原料或无法映射要素的配方会带原方 ID 跳过，以免省去原料。[原方](https://github.com/UnivmemorN/Pollution/blob/f8d654daa57136412348eaa8fe8330db6ddd5dfb/src/main/java/meowmel/pollution/loaders/recipes/MagicIntegrationRecipes.java#L518-L537) · [导入器](https://github.com/UnivmemorN/Pollution/blob/f8d654daa57136412348eaa8fe8330db6ddd5dfb/src/main/java/meowmel/pollution/api/recipes/builder/IndustrialInfusionBuilder.java)
 
-严格检查完整原料后，最小实例另有一条明确跳过的工业配方。`pollution:magic_fusion_reactor` 的第九个环绕材料要求 `blockUranium235`，在这组依赖中没有任何匹配物品。原祭坛配方仍在 Thaumcraft 注册表中。此项与前述 8 次空流体、IV 板的 25 栏上限分别记录。[聚变反应堆原方](https://github.com/UnivmemorN/Pollution/blob/f8d654daa57136412348eaa8fe8330db6ddd5dfb/src/main/java/meowmel/pollution/loaders/recipes/MagicGCYMRecipes.java#L599-L615)
+### 魔法聚变反应堆的铀-235 压缩块
+
+作者于 2024-05-24 加入原方时，第九个环绕材料便是 `blockUranium235`。同次提交附带的 GTCEu 2.8.8-beta 将铀-235 定义为锭材料，由 GregTech 自动生成压缩块。2024-08-03 的核材料改动移除了其锭属性，保留了粉和熔融流体。原方随仓的 GTQTCore 只为该材料增加核燃料芯块。到可取得的 1.9 开发依赖，七月、八月和十月的喵呜版均将铀-235 定义为粉末，七月 Core 也未恢复压缩块。先前专服因此注册了一个缺少可用原料的祭坛配方，并跳过其工业版本。[最初配方](https://github.com/GTQT/Pollution/blob/b9caaca3fc96655646cb67e1648ce397b9ba14f9/src/main/java/keqing/pollution/loaders/recipes/MagicGCYMRecipes.java#L416-L431) · [原作者随仓 GT 二进制](https://github.com/GTQT/Pollution/blob/b9caaca3fc96655646cb67e1648ce397b9ba14f9/libs/gregtech-1.12.2-2.8.8-beta.jar) · [同期 Core](https://github.com/GTQT/Pollution/blob/b9caaca3fc96655646cb67e1648ce397b9ba14f9/libs/gtqtcore-1.0.jar) · [上游核材料变更](https://github.com/GTQT/GregTech/commit/85834cbe981401d3049fdcda408abeb70b1cc8ae)
+
+公开整合包主线的覆盖文件、1.8.7 分支的脚本及 1.8.8 实例均未找到补注册该块的规则。公开仓的 `1.9.0.json` 是公告测试样例，未发行 1.9 的私有打包脚本无法核验。兼容分支在 Pollution 的材料事件中给已有的 `Materials.Uranium235` 增加 `FORCE_GENERATE_BLOCK`。由 GregTech 自动生成的压缩机配方使用 9 份铀-235 粉，产出 1 个铀-235 压缩块，基础参数为 2 EU/t、300 tick。专服探针调用注册配方的匹配与扣料逻辑，核对少一份粉和错用同位素均失败，再用该配方返回的产物进行注魔。压缩机本身未作为机器实体运行。[公开脚本](https://github.com/GTQT/GT-QuantumTransition/tree/3fd61bb3d9eacef642dd55eedb90bd2de216dec8/overrides/scripts) · [1.9 公告样例](https://github.com/GTQT/GT-QuantumTransition/blob/3fd61bb3d9eacef642dd55eedb90bd2de216dec8/remote/version/1.9.0.json) · [GregTech 压缩机配方生成](https://github.com/GTQT/GregTech/blob/1d6dcad959021ec1530238620211f55aef471daf/src/main/java/gregtech/loaders/recipe/handlers/MaterialRecipeHandler.java#L197-L202) · [兼容修复](https://github.com/UnivmemorN/Pollution/commit/117162fc16b0a6f4e87571ab972c8c1bf9e3a03c)
+
+原生祭坛验证使用真实基座、矩阵和源质罐。完成 `INFUSION@2` 研究后，缺铀块或放入铀-238 块均无法启动。使用正确压缩块时，消耗中心框架、10 件环绕材料和 692 点源质，在 3,765 个祭坛更新 tick 后得到反应堆。成型工业注魔矩阵消耗同样的 11 件物品、99,648 mB 配方要素及 822 mB 聚魔液，在实测结构中用时 822 个加工 tick、耗电 6,312,960 EU。两组均在各自的世界保存重启后读回第一台，第二次加工后实有两台。[专服运行记录](../../evidence/pollution-fusion-reactor.json)
 
 ### 加工与存档
 

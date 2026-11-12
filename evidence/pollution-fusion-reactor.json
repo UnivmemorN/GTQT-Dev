@@ -1,0 +1,127 @@
+{
+  "profile": "pollutionJulyCompat",
+  "forge": "forge-1.12.2-14.23.5.2860",
+  "build": {
+    "source": "117162fc16b0a6f4e87571ab972c8c1bf9e3a03c",
+    "profile": "pollutionJulyCompat",
+    "jarSha256": "cb151b9b1a1f732c7751ea7712911547a8948d5aced25cd8043ede1bc00ae8ed",
+    "inputs": {
+      "gtOctober": "1e01cbe2664e21d76cf9ab3bbdcf0a2fa1a2e82758fcefd6ed9af4071bea12f8",
+      "coreJuly": "458029f1649d5b08a4e71be5820dddda4a4dc606524e0841996571ba87a09502",
+      "gtfoJuly": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
+      "steamJuly": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
+      "model100": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f"
+    }
+  },
+  "productionRuntimeSha256": {
+    "gregtech": "6ee0c0fc7756b8c8c1a4693d2943c711faefcb36af2db8170d548573e0d77671",
+    "gtqtcore": "fd2cbe765cb362e4869855ca4244b71f9d8761d7b5af9e68c98cfa178731f046"
+  },
+  "previousAcceptance": {
+    "source": "d50486c58696fc48a71af0ed8398a64f3569eda2",
+    "path": "evidence/pollution-july-compat.json"
+  },
+  "cases": [
+    {
+      "mode": "reactor-altar",
+      "resultSha256": "eea27430997ee6c5c62c26b94cf99169a87bbaa8d1daf84427259ebd9f9c8ae3",
+      "restartVerified": true,
+      "originalsRestored": true,
+      "world": {
+        "seed": 5407935344783294431,
+        "name": "steamtech-smoke"
+      },
+      "savedModCount": 27,
+      "probeSha256": "a1cd45dbe019cc4e00bf2aae50f956e54dd2a8ed98ec6208c54172fd9e28eada",
+      "runs": [
+        {
+          "phase": "create",
+          "levelSha256": "883cac7ecda625aefd7e724aaceb7b8b53c59acd64f1cb0996dedc1bc814caff",
+          "altar": "GTQT_REACTOR_ALTAR_OK phase=create recipe=pollution:magic_fusion_reactor research=INFUSION@2 central=1 peripheral=10 missingUraniumRejected=true uranium238Rejected=true essentia=692 output=1 ticks=3765 totalOutput=1"
+        },
+        {
+          "phase": "reload",
+          "levelSha256": "ec7da64d85e6649b93e9dc5d0cccaa8d47910e407e0341a705d22a0c886b966a",
+          "altar": "GTQT_REACTOR_ALTAR_OK phase=reload recipe=pollution:magic_fusion_reactor research=INFUSION@2 central=1 peripheral=10 missingUraniumRejected=true uranium238Rejected=true essentia=692 output=1 ticks=3765 totalOutput=2"
+        }
+      ],
+      "lockedRun": true
+    },
+    {
+      "mode": "processing",
+      "resultSha256": "5ef56c69a86edf5abd434cf3fa458fd2d80776f4928f95651b1d694d8b400ff1",
+      "restartVerified": true,
+      "originalsRestored": true,
+      "world": {
+        "seed": 3628816376571814033,
+        "name": "steamtech-smoke"
+      },
+      "savedModCount": 27,
+      "probeSha256": "a1cd45dbe019cc4e00bf2aae50f956e54dd2a8ed98ec6208c54172fd9e28eada",
+      "runs": [
+        {
+          "phase": "create",
+          "levelSha256": "5f29a9855e4d3a60ecd87371c4329879841d425d207f8eaa342c2eeff33dfe22",
+          "industrialRecipesProcessed": 9,
+          "reactor": "GTQT_PROCESS_OK phase=create recipe=pollution:magic_fusion_reactor output=1xtile.unnamed@542 quantity=1 ticks=822 eu=6312960 items=11 aspectsMb=99648 infusedMb=822 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+          "parallel": "GTQT_INFUSION_BATCH_OK phase=create recipe=pollution:magic_circuit_board_iv output=1xmetaitem@545 quantity=2 ticks=460 eu=1766400 items=58 aspectsMb=55296 infusedMb=460 totalInOutput=3 parallel=2 stalledTicks=12 cutProgress=5 stalledProgress=1"
+        },
+        {
+          "phase": "reload",
+          "levelSha256": "674bc20deb45f791b91064bbb3afc37bdc168f4da5e9baff66f0f8a562ec86c9",
+          "industrialRecipesProcessed": 9,
+          "reactor": "GTQT_PROCESS_OK phase=reload recipe=pollution:magic_fusion_reactor output=1xtile.unnamed@542 quantity=1 ticks=822 eu=6312960 items=11 aspectsMb=99648 infusedMb=822 totalInOutput=2 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+          "parallel": "GTQT_INFUSION_BATCH_OK phase=reload recipe=pollution:magic_circuit_board_iv output=1xmetaitem@545 quantity=2 ticks=460 eu=1766400 items=58 aspectsMb=55296 infusedMb=460 totalInOutput=6 parallel=2 stalledTicks=12 cutProgress=5 stalledProgress=1"
+        }
+      ],
+      "lockedRun": true
+    },
+    {
+      "mode": "runtime-only",
+      "resultSha256": "9f1888aa4e4b14ce2207cfc9b291449faff16aea5033626cac6247352bac2cbf",
+      "restartVerified": true,
+      "originalsRestored": true,
+      "world": {
+        "seed": -8623655138703445136,
+        "name": "steamtech-smoke"
+      },
+      "savedModCount": 26,
+      "runs": [
+        {
+          "phase": "create",
+          "levelSha256": "c9e01296ec9b0d3bada1168303d9b640e5201112c408bfea478cd034ec8b396d"
+        },
+        {
+          "phase": "reload",
+          "levelSha256": "d495f7e12cddae5e1ade0162fb9c63f0f069cc00759491a4dd4aa96838c87e55"
+        }
+      ],
+      "lockedRun": true
+    }
+  ],
+  "runtimeJarSha256": {
+    "forge-1.12.2-14.23.5.2860.jar": "cd3fbf85d7ca744507fd6a37a41b90122d43e616a4f8962332b1b658655e8a64",
+    "gregtech-1.9.0-october-srg.jar": "6ee0c0fc7756b8c8c1a4693d2943c711faefcb36af2db8170d548573e0d77671",
+    "gtqtcore-1.9.0-july-compat.jar": "fd2cbe765cb362e4869855ca4244b71f9d8761d7b5af9e68c98cfa178731f046",
+    "Pollution-1.9.0.jar": "cb151b9b1a1f732c7751ea7712911547a8948d5aced25cd8043ede1bc00ae8ed",
+    "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
+    "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
+    "modelloader-1.0.0.jar": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f",
+    "astralsorcery-1.12.2-1.10.27.jar": "771107764cad17a30b37f683fd6889384a916981b1c8ed63826ec0a335efae86",
+    "!configanytime-3.0.jar": "29fe190f0d1bb0b3841b2b9f315a5d561cab9f587df6164a0205440540577575",
+    "!mixinbooter-10.6.jar": "c74998ccd73e6722b2b1f0d236c7b9c0b34572a892a3810d5e49557d96a356bd",
+    "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+    "modularui-3.1.5.jar": "faed2f57c620b180f7730ea4767a7bfde7a54a94997626577ed53cd264616ce4",
+    "theoneprobe-1.12-1.4.28.jar": "f3e5048dbe58f37f98f8130886ede880ac5b3333ee73cae2381c337e500c4bd1",
+    "Baubles-1.12-1.5.2.jar": "b32010b2f2778aa1188585e7ead91ad46d4cb2c715f9c778a61848ba7fe51f8d",
+    "Thaumcraft-1.12.2-6.1.BETA26.jar": "9425f8643581b27ff8845b087c8bc6fc10425a32942f1a3f0e265ce6b38f7b5f",
+    "Botania r1.10-364.4.jar": "8962beb2c583720a83858f58bd6afc891185b50d868c712549a96b191339b52a",
+    "ExtraBotany-r1.1-60-beta-hotfix.jar": "68b07d9a0b23210511d603c20353c61ba2e77ea0e076d12eda3ef5a8ec6ac516",
+    "BloodMagic-1.12.2-2.4.3-105.jar": "ef187aea109446bdb7b35e06958d4c6d22f5f7ceb4e5bcaeab16f3ad29fe16a5",
+    "Guide-API-1.12-2.1.8-63.jar": "e201712ef8fadc6c4b6380939751e92fe32cad2ba2dcb717e1acb3b07e0c2125",
+    "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+    "FTBQuests-1202.9.0.15.jar": "3f6a674ac0d8678fd0b127e6930199f32848fe47d1689e44c72976bfb24c7385",
+    "ItemFilters-1.0.4.2.jar": "cdffbb810f75db50afce9681374f0604e4c1ed2dcfe768cff5b4e17d5384166b",
+    "FTBMoney-1.2.0.47.jar": "e39a0e07387ea03753675670c1e7f483b030b49441e2fa5d460f02b7dea3980b"
+  }
+}

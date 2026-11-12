@@ -124,6 +124,9 @@ public final class SunnariumProbe {
         require(marker.equals(rules.getClass().getMethod("func_82767_a", String.class).invoke(rules, WORLD_RULE)), "overworld marker");
         boolean processing = Boolean.parseBoolean(options.getProperty("processing"));
         boolean legacy = Boolean.parseBoolean(options.getProperty("legacyInfusion"));
+        if (Boolean.parseBoolean(options.getProperty("reactorAltar"))) {
+            ReactorAltarProbe.run((net.minecraft.world.WorldServer) overworld, phase);
+        }
         if (processing || legacy) {
             if (processing) ImportGuardProbe.verify();
             ProcessingProbe.run((net.minecraft.world.WorldServer) overworld,

@@ -21,7 +21,7 @@ from acceptance import check_head, isolated_server, server_directory
 PROCESSING_RECIPES = {
     "thaumcraft:elementalsword", "thaumcraft:voidrobehelm", "thaumcraft:voidrobechest",
     "thaumcraft:voidrobelegs", "thaumcraft:primalcrusher", "thaumcraft:causalitycollapser",
-    "thaumcraft:voidsiphon", "pollution:magic_circuit_board_iv",
+    "thaumcraft:voidsiphon", "pollution:magic_circuit_board_iv", "pollution:magic_fusion_reactor",
 }
 
 
@@ -36,7 +36,7 @@ def build_probe(destination, javac, source, gt_compile, mods, forge):
                  *sorted((forge.parent / "libraries").rglob("*.jar"))]
     sources = [HERE / "probe" / name for name in (
         "SunnariumProbe.java", "InfusionCases.java", "ProcessingProbe.java", "ImportGuardProbe.java",
-        "LegacyInfusionProbe.java")]
+        "LegacyInfusionProbe.java", "ReactorAltarProbe.java")]
     subprocess.run([str(javac), "-proc:none", "-encoding", "UTF-8", "-cp", os.pathsep.join(map(str, classpath)),
                     "-d", str(classes), *sources], check=True)
     jar = destination / "gtqt-compat-probe.jar"
@@ -78,7 +78,8 @@ def main():
     modes.add_argument("--supplier", action="store_true", help="inject a distinguishable registered Sunnarium in this test world")
     modes.add_argument("--core-field", action="store_true", help="use a test-only Core with a real public Sunnarium field")
     modes.add_argument("--runtime-only", action="store_true", help="use only the production JARs; verify the saved seed and mod list")
-    modes.add_argument("--processing", action="store_true", help="process all eight affected infusions in the dedicated world before and after restart")
+    modes.add_argument("--processing", action="store_true", help="process all affected infusions in the industrial matrix before and after restart")
+    modes.add_argument("--reactor-altar", action="store_true", help="craft the magic fusion reactor on a Thaumcraft infusion altar before and after restart")
     modes.add_argument("--legacy-infusion", action="store_true", help="reload an already-paid infusion from an older scheduler save")
     parser.add_argument("--candidate", action="store_true", help="test new hashes and source commit before promotion to the lock")
     args = parser.parse_args()
@@ -151,6 +152,8 @@ def main():
     test_mode = mode
     if args.processing:
         test_mode = "processing"
+    elif args.reactor_altar:
+        test_mode = "reactor-altar"
     elif args.legacy_infusion:
         test_mode = "legacy-infusion"
     record = {"source": revision, "forge": smoke.FORGE, "mode": test_mode,
@@ -171,7 +174,7 @@ def main():
                 if not args.runtime_only:
                     (directory / "gtqt-probe.properties").write_text(
                         f"phase={phase}\nmarker={marker}\nmode={mode}\nprocessing={str(args.processing).lower()}\n"
-                        f"legacyInfusion={str(args.legacy_infusion).lower()}\n",
+                        f"legacyInfusion={str(args.legacy_infusion).lower()}\nreactorAltar={str(args.reactor_altar).lower()}\n",
                         encoding="ascii")
                 try:
                     smoke.boot(java, forge, directory, result, timeout=360)
@@ -179,7 +182,8 @@ def main():
                     if (result / "console.log").exists():
                         (result / "console.log").rename(result / (phase + ".log"))
                 lines = (result / (phase + ".log")).read_text(encoding="utf-8").splitlines()
-                fatal_recipes = ("FluidStack cannot be null", "Invalid recipe for recipe map industrial_infusion_recipes")
+                fatal_recipes = ("FluidStack cannot be null", "Invalid recipe for recipe map industrial_infusion_recipes",
+                                 "Skipping industrial infusion pollution:magic_fusion_reactor:")
                 if any(message in line for message in fatal_recipes for line in lines):
                     raise ValueError(f"Recipe registration errors in {phase}.log")
                 expected_probe = f"GTQT_PROBE_OK phase={phase} marker={marker} "
@@ -202,6 +206,8 @@ def main():
                 run = {"phase": phase, "world": identity, "mods": registered, "levelSha256": smoke.digest(level)}
                 if matches:
                     run["probe"] = matches[0]
+                if args.reactor_altar:
+                    run["altar"] = single_marker(lines, f"GTQT_REACTOR_ALTAR_OK phase={phase} ", phase)
                 if args.legacy_infusion:
                     run["legacyInfusion"] = single_marker(lines, f"GTQT_LEGACY_INFUSION_OK phase={phase} ", phase)
                 if args.processing:
