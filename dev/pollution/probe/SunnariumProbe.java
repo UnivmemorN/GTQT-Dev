@@ -122,6 +122,14 @@ public final class SunnariumProbe {
             require("reload".equals(phase), "unknown phase");
         }
         require(marker.equals(rules.getClass().getMethod("func_82767_a", String.class).invoke(rules, WORLD_RULE)), "overworld marker");
+        boolean processing = Boolean.parseBoolean(options.getProperty("processing"));
+        boolean legacy = Boolean.parseBoolean(options.getProperty("legacyInfusion"));
+        if (processing || legacy) {
+            if (processing) ImportGuardProbe.verify();
+            ProcessingProbe.run((net.minecraft.world.WorldServer) overworld,
+                    (net.minecraft.server.management.PlayerList) server.getClass().getMethod("func_184103_al").invoke(server),
+                    phase, legacy);
+        }
         System.out.printf("GTQT_PROBE_OK phase=%s marker=%s material=%s id=%d reactor=%d tarot=%d%n",
                 phase, marker, material.getRegistryName(), material.getId(), reactorMatches, tarotMatches);
     }

@@ -2,9 +2,9 @@
   "profile": "pollutionJulyCompat",
   "forge": "forge-1.12.2-14.23.5.2860",
   "build": {
-    "source": "71d7de118d3b5278b2f8caaec567449c6d1f4d62",
+    "source": "d50486c58696fc48a71af0ed8398a64f3569eda2",
     "profile": "pollutionJulyCompat",
-    "jarSha256": "6cf6ca6eff8c43946a8dfd99a6ccdd570dd0e0ca3476b0558c630bf2ddd16eb8",
+    "jarSha256": "50ba7e7021cedcc87f61ada5c0109fad2379accfdb31402c70b474af9764df0b",
     "inputs": {
       "gtOctober": "1e01cbe2664e21d76cf9ab3bbdcf0a2fa1a2e82758fcefd6ed9af4071bea12f8",
       "coreJuly": "458029f1649d5b08a4e71be5820dddda4a4dc606524e0841996571ba87a09502",
@@ -21,7 +21,7 @@
     "forge-1.12.2-14.23.5.2860.jar": "cd3fbf85d7ca744507fd6a37a41b90122d43e616a4f8962332b1b658655e8a64",
     "gregtech-1.9.0-october-srg.jar": "6ee0c0fc7756b8c8c1a4693d2943c711faefcb36af2db8170d548573e0d77671",
     "gtqtcore-1.9.0-july-compat.jar": "fd2cbe765cb362e4869855ca4244b71f9d8761d7b5af9e68c98cfa178731f046",
-    "Pollution-1.9.0.jar": "6cf6ca6eff8c43946a8dfd99a6ccdd570dd0e0ca3476b0558c630bf2ddd16eb8",
+    "Pollution-1.9.0.jar": "50ba7e7021cedcc87f61ada5c0109fad2379accfdb31402c70b474af9764df0b",
     "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
     "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
     "modelloader-1.0.0.jar": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f",
@@ -70,6 +70,21 @@
     "modelloader": "1.0.0",
     "pollution": "0.0.1-beta"
   },
+  "baselineInfusionAudit": {
+    "source": "71d7de118d3b5278b2f8caaec567449c6d1f4d62",
+    "nullFluidMessages": 8,
+    "rejected29SlotRecipes": 1,
+    "observations": [
+      "key=pollution:magic_circuit_board_iv output=1xmetaitem@545 centralCandidates=1 components=28 missing=[]",
+      "key=thaumcraft:causalitycollapser output=1xitem.causality_collapser@0 centralCandidates=1 components=8 missing=[alienis=50 ]",
+      "key=thaumcraft:elementalsword output=1xitem.elemental_sword@0 centralCandidates=1 components=4 missing=[aversio=30 ]",
+      "key=thaumcraft:primalcrusher output=1xitem.primal_crusher@0 centralCandidates=1 components=4 missing=[aversio=50 alienis=50 ]",
+      "key=thaumcraft:voidrobechest output=1xitem.void_robe_chest@0 centralCandidates=1 components=6 missing=[alienis=25 ]",
+      "key=thaumcraft:voidrobehelm output=1xitem.void_robe_helm@0 centralCandidates=1 components=6 missing=[alienis=25 ]",
+      "key=thaumcraft:voidrobelegs output=1xitem.void_robe_legs@0 centralCandidates=1 components=6 missing=[alienis=25 ]",
+      "key=thaumcraft:voidsiphon output=1xtile.void_siphon@0 centralCandidates=1 components=6 missing=[alienis=50 ]"
+    ]
+  },
   "cases": [
     {
       "mode": "runtime-only",
@@ -80,18 +95,26 @@
         {
           "phase": "create",
           "world": {
-            "seed": -4572069591436722368,
+            "seed": -807171476991033066,
             "name": "steamtech-smoke"
           },
-          "levelSha256": "6bbd45deee1522ba8e0ca527fdc54ec62c1cb230705618da3897e1396e55928c"
+          "levelSha256": "d5b0cede64c401336a7f650f07af80e69baf59cea0d291909a909aecd9d1a239",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
         },
         {
           "phase": "reload",
           "world": {
-            "seed": -4572069591436722368,
+            "seed": -807171476991033066,
             "name": "steamtech-smoke"
           },
-          "levelSha256": "3a7829935ed7f2dd0c8e0f3aaf02fdde62d6d90eda27870e77d63c23c0f1eafb"
+          "levelSha256": "ff4dc9620c66611b61f22fb302eecb16a163268a48a62e67b1e0e5da81d79cbe",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
         }
       ]
     },
@@ -101,18 +124,34 @@
       "originalsRestored": true,
       "modCount": 27,
       "testJars": {
-        "gtqt-compat-probe.jar": "4aae57a6720d67628b30567edbd1c76b60b0a39bba22636eeecc7468ed1799f9"
+        "gtqt-compat-probe.jar": "c87bcf4d0e610ce7fbd2be425358d1ab73bc256c17ba19481acdfa1c649e8e64"
       },
       "runs": [
         {
           "phase": "create",
-          "probe": "GTQT_PROBE_OK phase=create marker=cd43f37958764a69b87f99a9b621a244 material=pollution:sunnarium id=14 reactor=1 tarot=1",
-          "levelSha256": "68398467ed6ad384f6642a3f872c4b5b7a3c95f946d1636d52420b63edf14463"
+          "world": {
+            "seed": 4991168801323663431,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "77cc55e5cc054e51cfe6ff85362fd67788b9ac02c44efc49d05cfeca31410244",
+          "probe": "GTQT_PROBE_OK phase=create marker=ffc52ad9b1c64230b283d1bb7788a500 material=pollution:sunnarium id=14 reactor=1 tarot=1",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
         },
         {
           "phase": "reload",
-          "probe": "GTQT_PROBE_OK phase=reload marker=cd43f37958764a69b87f99a9b621a244 material=pollution:sunnarium id=14 reactor=1 tarot=1",
-          "levelSha256": "fbe936555a3448494b7be1cf8027ba8da5e2d549db304b8de644798fc6218229"
+          "world": {
+            "seed": 4991168801323663431,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "e0022a8c333633427cabba5229de46a754b4faa4b096d5b81373085b84acff54",
+          "probe": "GTQT_PROBE_OK phase=reload marker=ffc52ad9b1c64230b283d1bb7788a500 material=pollution:sunnarium id=14 reactor=1 tarot=1",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
         }
       ]
     },
@@ -122,18 +161,34 @@
       "originalsRestored": true,
       "modCount": 27,
       "testJars": {
-        "gtqt-compat-probe.jar": "4aae57a6720d67628b30567edbd1c76b60b0a39bba22636eeecc7468ed1799f9"
+        "gtqt-compat-probe.jar": "3182a88c28792c326739227d56f82921a6923ee2809a7246a4520bf034c4681c"
       },
       "runs": [
         {
           "phase": "create",
-          "probe": "GTQT_PROBE_OK phase=create marker=48c96f1d02254101bc4b85a62f73a4b2 material=gtqtcore:sunnarium id=30000 reactor=1 tarot=1",
-          "levelSha256": "d677c276a89eca73eaf87705737df54a54ba7fc614c16ffa4c1ce1b274c28a4f"
+          "world": {
+            "seed": -6583987686828875760,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "e5f2331fcf8b01b2b610aca58d4fe01bb530026a644bdc621fb0656eeb0edc60",
+          "probe": "GTQT_PROBE_OK phase=create marker=011adb7e3eda425b8c695ed9487f375d material=gtqtcore:sunnarium id=30000 reactor=1 tarot=1",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
         },
         {
           "phase": "reload",
-          "probe": "GTQT_PROBE_OK phase=reload marker=48c96f1d02254101bc4b85a62f73a4b2 material=gtqtcore:sunnarium id=30000 reactor=1 tarot=1",
-          "levelSha256": "b79a1d74dce153301d0e183bb5d0f425062e1f4284a777520a03b71a23781a50"
+          "world": {
+            "seed": -6583987686828875760,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "117c369bb031874a987e818500a4d6543754797b0bbae2d10dfa0695afe33af9",
+          "probe": "GTQT_PROBE_OK phase=reload marker=011adb7e3eda425b8c695ed9487f375d material=gtqtcore:sunnarium id=30000 reactor=1 tarot=1",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
         }
       ]
     },
@@ -144,7 +199,7 @@
       "modCount": 27,
       "testJars": {
         "TEST-ONLY-gtqtcore-field.jar": "20d9692aacd69c633aee01c99e7cd3ead66377cc15ed7fd0dc5c526de1783e07",
-        "gtqt-compat-probe.jar": "4aae57a6720d67628b30567edbd1c76b60b0a39bba22636eeecc7468ed1799f9"
+        "gtqt-compat-probe.jar": "c87bcf4d0e610ce7fbd2be425358d1ab73bc256c17ba19481acdfa1c649e8e64"
       },
       "replacedRuntimeJars": [
         "gtqtcore-1.9.0-july-compat.jar"
@@ -152,13 +207,129 @@
       "runs": [
         {
           "phase": "create",
-          "probe": "GTQT_PROBE_OK phase=create marker=00c4d67dcbc448a6b9d62f7da36bda14 material=gtqtcore:field_fixture_sun id=30000 reactor=1 tarot=1",
-          "levelSha256": "0d35fd1921b4772dea8184e68a5d84d5cd924bd0fbe13e18604a4d9e6503efc7"
+          "world": {
+            "seed": -567771061352711400,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "b9ae6228d5a1d273380ee9e9488e2984d07202de98f01eac1550142a51e947ad",
+          "probe": "GTQT_PROBE_OK phase=create marker=e865ba3264df43178a6560ae2c73f79a material=gtqtcore:field_fixture_sun id=30000 reactor=1 tarot=1",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
         },
         {
           "phase": "reload",
-          "probe": "GTQT_PROBE_OK phase=reload marker=00c4d67dcbc448a6b9d62f7da36bda14 material=gtqtcore:field_fixture_sun id=30000 reactor=1 tarot=1",
-          "levelSha256": "85330e1bd202f535a158fc0374e860495af270aa6ecb4051a0a08f0087931a0c"
+          "world": {
+            "seed": -567771061352711400,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "d75891ae39d66d15ff4c68510567c84e80a19a7142bd03dc96da66939c452907",
+          "probe": "GTQT_PROBE_OK phase=reload marker=e865ba3264df43178a6560ae2c73f79a material=gtqtcore:field_fixture_sun id=30000 reactor=1 tarot=1",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
+        }
+      ]
+    },
+    {
+      "mode": "processing",
+      "restartVerified": true,
+      "originalsRestored": true,
+      "modCount": 27,
+      "testJars": {
+        "gtqt-compat-probe.jar": "c87bcf4d0e610ce7fbd2be425358d1ab73bc256c17ba19481acdfa1c649e8e64"
+      },
+      "runs": [
+        {
+          "phase": "create",
+          "world": {
+            "seed": -3507208828079041351,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "1c9e1d09b7d419c16089f7c7cf661a4f6a16fd65450689a930669f8d666aad8f",
+          "probe": "GTQT_PROBE_OK phase=create marker=ca8cc74034514e15bfada223f7b210da material=pollution:sunnarium id=14 reactor=1 tarot=1",
+          "importGuard": "GTQT_IMPORT_GUARD_OK centralCandidates=2 repeatedPedestals=2 emptyRejected=true unmappedAspectRejected=true restored=true liveCentralRecipe=pollution:mana_petal",
+          "parallel": "GTQT_INFUSION_BATCH_OK phase=create recipe=pollution:magic_circuit_board_iv output=1xmetaitem@545 quantity=2 ticks=460 eu=1766400 items=58 aspectsMb=55296 infusedMb=460 totalInOutput=3 parallel=2 stalledTicks=12 cutProgress=5 stalledProgress=1",
+          "processing": [
+            "GTQT_PROCESS_OK phase=create recipe=thaumcraft:elementalsword output=1xitem.elemental_sword@0 quantity=1 ticks=106 eu=814080 items=5 aspectsMb=12960 infusedMb=106 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=create recipe=thaumcraft:voidrobehelm output=1xitem.void_robe_helm@0 quantity=1 ticks=178 eu=1367040 items=7 aspectsMb=21600 infusedMb=178 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=create recipe=thaumcraft:voidrobechest output=1xitem.void_robe_chest@0 quantity=1 ticks=183 eu=1405440 items=7 aspectsMb=22320 infusedMb=183 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=create recipe=thaumcraft:voidrobelegs output=1xitem.void_robe_legs@0 quantity=1 ticks=166 eu=1274880 items=7 aspectsMb=20160 infusedMb=166 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=create recipe=thaumcraft:primalcrusher output=1xitem.primal_crusher@0 quantity=1 ticks=475 eu=3648000 items=5 aspectsMb=57600 infusedMb=475 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=create recipe=thaumcraft:causalitycollapser output=1xitem.causality_collapser@0 quantity=1 ticks=119 eu=913920 items=9 aspectsMb=14400 infusedMb=119 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=create recipe=thaumcraft:voidsiphon output=1xtile.void_siphon@0 quantity=1 ticks=296 eu=2273280 items=7 aspectsMb=36000 infusedMb=296 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=create recipe=pollution:magic_circuit_board_iv output=1xmetaitem@545 quantity=1 ticks=228 eu=1751040 items=29 aspectsMb=27648 infusedMb=228 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0"
+          ],
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
+        },
+        {
+          "phase": "reload",
+          "world": {
+            "seed": -3507208828079041351,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "85388670a4fd45f7dea79a35623e1d20fc9b99b7e3ebcdd30f56435ebf947db6",
+          "probe": "GTQT_PROBE_OK phase=reload marker=ca8cc74034514e15bfada223f7b210da material=pollution:sunnarium id=14 reactor=1 tarot=1",
+          "importGuard": "GTQT_IMPORT_GUARD_OK centralCandidates=2 repeatedPedestals=2 emptyRejected=true unmappedAspectRejected=true restored=true liveCentralRecipe=pollution:mana_petal",
+          "parallel": "GTQT_INFUSION_BATCH_OK phase=reload recipe=pollution:magic_circuit_board_iv output=1xmetaitem@545 quantity=2 ticks=460 eu=1766400 items=58 aspectsMb=55296 infusedMb=460 totalInOutput=6 parallel=2 stalledTicks=12 cutProgress=5 stalledProgress=1",
+          "processing": [
+            "GTQT_PROCESS_OK phase=reload recipe=thaumcraft:elementalsword output=1xitem.elemental_sword@0 quantity=1 ticks=106 eu=814080 items=5 aspectsMb=12960 infusedMb=106 totalInOutput=2 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=reload recipe=thaumcraft:voidrobehelm output=1xitem.void_robe_helm@0 quantity=1 ticks=178 eu=1367040 items=7 aspectsMb=21600 infusedMb=178 totalInOutput=2 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=reload recipe=thaumcraft:voidrobechest output=1xitem.void_robe_chest@0 quantity=1 ticks=183 eu=1405440 items=7 aspectsMb=22320 infusedMb=183 totalInOutput=2 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=reload recipe=thaumcraft:voidrobelegs output=1xitem.void_robe_legs@0 quantity=1 ticks=166 eu=1274880 items=7 aspectsMb=20160 infusedMb=166 totalInOutput=2 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=reload recipe=thaumcraft:primalcrusher output=1xitem.primal_crusher@0 quantity=1 ticks=475 eu=3648000 items=5 aspectsMb=57600 infusedMb=475 totalInOutput=2 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=reload recipe=thaumcraft:causalitycollapser output=1xitem.causality_collapser@0 quantity=1 ticks=119 eu=913920 items=9 aspectsMb=14400 infusedMb=119 totalInOutput=2 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=reload recipe=thaumcraft:voidsiphon output=1xtile.void_siphon@0 quantity=1 ticks=296 eu=2273280 items=7 aspectsMb=36000 infusedMb=296 totalInOutput=2 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
+            "GTQT_PROCESS_OK phase=reload recipe=pollution:magic_circuit_board_iv output=1xmetaitem@545 quantity=1 ticks=228 eu=1751040 items=29 aspectsMb=27648 infusedMb=228 totalInOutput=4 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0"
+          ],
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
+        }
+      ]
+    },
+    {
+      "mode": "legacy-infusion",
+      "restartVerified": true,
+      "originalsRestored": true,
+      "modCount": 27,
+      "testJars": {
+        "gtqt-compat-probe.jar": "c87bcf4d0e610ce7fbd2be425358d1ab73bc256c17ba19481acdfa1c649e8e64"
+      },
+      "runs": [
+        {
+          "phase": "create",
+          "world": {
+            "seed": -7514995301992906203,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "064f0e1d22b7efd84d0488342f1ae7ac1e7b84c68b21c81306c35412b7272c15",
+          "probe": "GTQT_PROBE_OK phase=create marker=c15c2c422c0142dea324993aa61f3eb3 material=pollution:sunnarium id=14 reactor=1 tarot=1",
+          "legacyInfusion": "GTQT_LEGACY_INFUSION_OK phase=create slots=3 running=2 completed=1 progress=6,9 euSpent=192 magicSpent=2 insufficientEUHeld=true missingMagicHeld=true disabled=true",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
+        },
+        {
+          "phase": "reload",
+          "world": {
+            "seed": -7514995301992906203,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "bdd993663d3c7c72e6a456f306e5c7443a6852988ff29228492c521af2c31dae",
+          "probe": "GTQT_PROBE_OK phase=reload marker=c15c2c422c0142dea324993aa61f3eb3 material=pollution:sunnarium id=14 reactor=1 tarot=1",
+          "legacyInfusion": "GTQT_LEGACY_INFUSION_OK phase=reload slots=3 restoredProgress=6,9 euSpent=288 magicSpent=5 completedWhileBlocked=3 freeFlush=true delivered=3",
+          "registrationErrors": {
+            "nullFluid": 0,
+            "invalidIndustrialInfusion": 0
+          }
         }
       ]
     }

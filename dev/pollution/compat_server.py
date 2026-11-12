@@ -5,6 +5,7 @@ import gzip
 import json
 import os
 from pathlib import Path
+import re
 import runpy
 import shutil
 import subprocess
@@ -17,21 +18,40 @@ sys.path.insert(0, str(HERE.parent))
 from acceptance import check_head, isolated_server, server_directory
 
 
-def build_probe(destination, javac, source, gt_compile):
+PROCESSING_RECIPES = {
+    "thaumcraft:elementalsword", "thaumcraft:voidrobehelm", "thaumcraft:voidrobechest",
+    "thaumcraft:voidrobelegs", "thaumcraft:primalcrusher", "thaumcraft:causalitycollapser",
+    "thaumcraft:voidsiphon", "pollution:magic_circuit_board_iv",
+}
+
+
+def build_probe(destination, javac, source, gt_compile, mods, forge):
     classes = destination / "probe-classes"
     classes.mkdir()
     minecraft = source / "build/rfg/recompiled_minecraft-1.12.2.jar"
     if not minecraft.is_file():
         raise ValueError(f"Run the full Pollution build first; missing {minecraft}")
-    subprocess.run([str(javac), "-proc:none", "-encoding", "UTF-8", "-cp",
-                    os.pathsep.join(map(str, (minecraft, gt_compile))), "-d", str(classes),
-                    str(HERE / "probe/SunnariumProbe.java")], check=True)
+    # Named Minecraft and GT compile APIs take priority over the production dependencies.
+    classpath = [minecraft, gt_compile, *mods, forge.parent / "minecraft_server.1.12.2.jar",
+                 *sorted((forge.parent / "libraries").rglob("*.jar"))]
+    sources = [HERE / "probe" / name for name in (
+        "SunnariumProbe.java", "InfusionCases.java", "ProcessingProbe.java", "ImportGuardProbe.java",
+        "LegacyInfusionProbe.java")]
+    subprocess.run([str(javac), "-proc:none", "-encoding", "UTF-8", "-cp", os.pathsep.join(map(str, classpath)),
+                    "-d", str(classes), *sources], check=True)
     jar = destination / "gtqt-compat-probe.jar"
     with ZipFile(jar, "w") as out:
         for p in sorted(classes.rglob("*.class")):
             entry = ZipInfo(p.relative_to(classes).as_posix())
             out.writestr(entry, p.read_bytes(), compress_type=ZIP_DEFLATED)
     return jar
+
+
+def single_marker(lines, prefix, phase):
+    messages = [line[line.index(prefix):] for line in lines if prefix in line]
+    if len(messages) != 1:
+        raise ValueError(f"{phase}.log: expected one {prefix}, found {len(messages)}")
+    return messages[0]
 
 
 def saved_identity(level):
@@ -58,6 +78,8 @@ def main():
     modes.add_argument("--supplier", action="store_true", help="inject a distinguishable registered Sunnarium in this test world")
     modes.add_argument("--core-field", action="store_true", help="use a test-only Core with a real public Sunnarium field")
     modes.add_argument("--runtime-only", action="store_true", help="use only the production JARs; verify the saved seed and mod list")
+    modes.add_argument("--processing", action="store_true", help="process all eight affected infusions in the dedicated world before and after restart")
+    modes.add_argument("--legacy-infusion", action="store_true", help="reload an already-paid infusion from an older scheduler save")
     parser.add_argument("--candidate", action="store_true", help="test new hashes and source commit before promotion to the lock")
     args = parser.parse_args()
     lock = json.loads((HERE.parents[1] / "workspace.lock.json").read_text(encoding="utf-8"))
@@ -115,7 +137,7 @@ def main():
         files.append(path)
     gt_compile = source / "libs" / lock["artifacts"]["gtOctober"]["filename"]
     if not args.runtime_only:
-        files.append(build_probe(result, javac, source, gt_compile))
+        files.append(build_probe(result, javac, source, gt_compile, files, forge))
     if len({f.name.lower() for f in files}) != len(files):
         parser.error("Duplicate filenames in candidate runtime")
     marker = uuid4().hex
@@ -126,7 +148,13 @@ def main():
         mode = "core-field"
     elif args.supplier:
         mode = "supplier"
-    record = {"source": revision, "forge": smoke.FORGE, "mode": mode, "productionRuntimeSha256": hashes,
+    test_mode = mode
+    if args.processing:
+        test_mode = "processing"
+    elif args.legacy_infusion:
+        test_mode = "legacy-infusion"
+    record = {"source": revision, "forge": smoke.FORGE, "mode": test_mode,
+              "productionRuntimeSha256": hashes,
               "sha256": {p.name: smoke.digest(p) for p in [forge, *files]},
               "restartVerified": False, "runs": []}
     print(f"Evidence directory: {result}", flush=True)
@@ -142,17 +170,24 @@ def main():
                     raise ValueError(f"Unexpected level.dat state before {phase}")
                 if not args.runtime_only:
                     (directory / "gtqt-probe.properties").write_text(
-                        f"phase={phase}\nmarker={marker}\nmode={mode}\n", encoding="ascii")
+                        f"phase={phase}\nmarker={marker}\nmode={mode}\nprocessing={str(args.processing).lower()}\n"
+                        f"legacyInfusion={str(args.legacy_infusion).lower()}\n",
+                        encoding="ascii")
                 try:
                     smoke.boot(java, forge, directory, result, timeout=360)
                 finally:
                     if (result / "console.log").exists():
                         (result / "console.log").rename(result / (phase + ".log"))
                 lines = (result / (phase + ".log")).read_text(encoding="utf-8").splitlines()
+                fatal_recipes = ("FluidStack cannot be null", "Invalid recipe for recipe map industrial_infusion_recipes")
+                if any(message in line for message in fatal_recipes for line in lines):
+                    raise ValueError(f"Recipe registration errors in {phase}.log")
                 expected_probe = f"GTQT_PROBE_OK phase={phase} marker={marker} "
                 matches = [line[line.index(expected_probe):] for line in lines if expected_probe in line]
                 if len(matches) != (0 if args.runtime_only else 1) or not any("Saved the world" in line for line in lines):
-                    raise ValueError(f"Missing material, recipe, saved-world or marker evidence in {phase}.log")
+                    failures = [line for line in lines if line.startswith("Caused by: ")]
+                    detail = failures[-1] if failures else "missing saved-world or probe marker"
+                    raise ValueError(f"{phase}.log: {detail}")
                 registered = world_mods(level)
                 required = {"pollution", "gtqtcore", "gregtech", "gtsteam", "gregtechfoodoption", "modelloader"}
                 if ("gtqtcompatprobe" in registered) == args.runtime_only:
@@ -167,6 +202,17 @@ def main():
                 run = {"phase": phase, "world": identity, "mods": registered, "levelSha256": smoke.digest(level)}
                 if matches:
                     run["probe"] = matches[0]
+                if args.legacy_infusion:
+                    run["legacyInfusion"] = single_marker(lines, f"GTQT_LEGACY_INFUSION_OK phase={phase} ", phase)
+                if args.processing:
+                    run["importGuard"] = single_marker(lines, "GTQT_IMPORT_GUARD_OK ", phase)
+                    run["parallel"] = single_marker(lines, f"GTQT_INFUSION_BATCH_OK phase={phase} ", phase)
+                    marker_text = f"GTQT_PROCESS_OK phase={phase} recipe="
+                    processed = [line[line.index(marker_text):] for line in lines if marker_text in line]
+                    keys = [re.search(r" recipe=(\S+)", line)[1] for line in processed]
+                    if len(keys) != len(PROCESSING_RECIPES) or set(keys) != PROCESSING_RECIPES:
+                        raise ValueError(f"Incomplete industrial infusion processing in {phase}.log: {keys}")
+                    run["processing"] = processed
                 record["runs"].append(run)
             record["restartVerified"] = True
     except Exception as error:

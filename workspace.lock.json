@@ -64,7 +64,7 @@
     },
     "pollutionCompat": {
       "repo": "UnivmemorN/Pollution",
-      "rev": "71d7de118d3b5278b2f8caaec567449c6d1f4d62",
+      "rev": "d50486c58696fc48a71af0ed8398a64f3569eda2",
       "modIds": ["pollution"],
       "note": "codex/july-core-compat，基于作者 9ed70ed 的独立兼容分支"
     },
@@ -282,7 +282,7 @@
     },
     "pollutionJulyCompat": {
       "repositories": ["pollutionCompat", "steamRunner"],
-      "sourceRev": "71d7de118d3b5278b2f8caaec567449c6d1f4d62",
+      "sourceRev": "d50486c58696fc48a71af0ed8398a64f3569eda2",
       "artifacts": ["gtOctober", "coreJuly", "gtfoJuly", "steamJuly", "model100"],
       "runtimeSha256": {
         "gregtech": "6ee0c0fc7756b8c8c1a4693d2943c711faefcb36af2db8170d548573e0d77671",
@@ -290,7 +290,7 @@
       },
       "runtime": "Forge 1.12.2 14.23.5.2860 / Java 8",
       "build": "passed",
-      "server": "passed-save-and-restart",
+      "server": "passed-industrial-infusion-save-and-restart",
       "guide": "dev/pollution/july-compat.md",
       "evidence": "evidence/pollution-july-compat.json"
     },
