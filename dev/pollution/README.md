@@ -12,6 +12,8 @@ python -B dev/pollution/build.py --source D:/GTQT-Pollution-1.12.2 --steam-env D
 
 ## 当前提交的实测结果
 
+所需 Core 的类名、候选 JAR 哈希、公开测试包调查及复验步骤见[当前 Core 来源核查](core-provenance.md)。
+
 | 当前 Pollution 使用的依赖 | Gradle 编译结果 |
 |---|---|
 | 7 月 27 日同批 GregTech、Core、GTFO、SteamTech，加上 ModelLoadLib | 19 条 javac 诊断，涉及矿脉、消声仓接口和 Sunnarium 材料 |

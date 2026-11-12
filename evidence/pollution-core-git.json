@@ -1,0 +1,657 @@
+{
+  "asOf": "2026-11-12",
+  "pollution": "9ed70ed318c57e350cfcdf725c1eadda8f539789",
+  "classEntry": "meowmel/gtqtcore/api/unification/material/GTQTMaterials.class",
+  "gitRepositories": [
+    "5555-a11y/GTQTSpace",
+    "5555-a11y/GTQTcore",
+    "5555-a11y/Pollution",
+    "627e/GT-QuantumTransition",
+    "Dr-ppp/GTQTRoots",
+    "GTQT/Applied-Energistics-2-Supergiant",
+    "GTQT/Applied-Energistics-2.5",
+    "GTQT/ApplyGray",
+    "GTQT/Bandit",
+    "GTQT/BestQuestings",
+    "GTQT/BeyondDimensions",
+    "GTQT/DrTech",
+    "GTQT/GT-QuantumTransition",
+    "GTQT/GT6Addition",
+    "GTQT/GTQT-Core",
+    "GTQT/GTQT-EnderIO-CEu",
+    "GTQT/GTQTSpace",
+    "GTQT/GTTopAddition",
+    "GTQT/GT_Maid",
+    "GTQT/GT_MoreEMC",
+    "GTQT/GregTech",
+    "GTQT/GregTech-SteamTech",
+    "GTQT/GregTechFoodOption",
+    "GTQT/GregTinker_CEU",
+    "GTQT/ModelLoadLib",
+    "GTQT/Pollution",
+    "GTQT/PrismPlan",
+    "GTQT/QuantumHue-Visualizer",
+    "GTQT/Realistic-Terrain-Generation-Community",
+    "GTQT/SuperFactoryManager",
+    "GTQT/VisualOres-Meowmel",
+    "Kasualix/GT-QuantumTransition",
+    "Ling-ye-Future/Pollution",
+    "MeowmelMuku/AIMC",
+    "MeowmelMuku/BloodMagicJei",
+    "MeowmelMuku/DataLink-API",
+    "MeowmelMuku/FVM-Reborn",
+    "MeowmelMuku/GTLCore",
+    "MeowmelMuku/GregMek",
+    "MeowmelMuku/GregTech-Lite-Core-CE",
+    "MeowmelMuku/JavaPractice",
+    "MeowmelMuku/MeowmelMuku",
+    "MeowmelMuku/WeatherScraperForecaster",
+    "Osmith0/GTQTSpace",
+    "Osmith0/GTQTcore",
+    "Trouvaille-and/DrTech",
+    "Trouvaille-and/Pollution",
+    "UnivmemorN/GTQTcore",
+    "UnivmemorN/GregTech-SteamTech",
+    "VoidStudioMC/GregTech-SteamTech",
+    "huzpsb/GTQT_Unofficial",
+    "kuzuanpa/GT-QuantumTransition",
+    "kuzuanpa/GTQTcore",
+    "kuzuanpa/Pollution",
+    "last8kings/GTQTcore",
+    "papanopapa/DrTech",
+    "papanopapa/GTQTcore",
+    "papanopapa/Pollution",
+    "qwertyuixxxx/GT-QuantumTransition",
+    "zhenzi233/ZhenziGTQT"
+  ],
+  "branchRefs": 165,
+  "tagRefs": 153,
+  "relatedPrHeads": 141,
+  "uniqueOuterJar": 549,
+  "uniqueOuterZip": 17,
+  "nestedArchiveEntries": 117,
+  "uniqueNestedArchiveContents": 71,
+  "nestedMatches": 0,
+  "outerMatches": [
+    {
+      "blob": "7fb29d06a799c41bf193a0b14f361ef039651a6d",
+      "repo": "GTQT/DrTech",
+      "commit": "0301afd95ff1093617bb09fccc8515f1ff88ccbf",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "3f3903fa157eb5213d7bf3cd3a538bcf341f43eb",
+      "repo": "GTQT/DrTech",
+      "commit": "1b8aa223aef9533c2fd5da2e68103489899db7c7",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "d26b8780d32fcb32521273a762e5adf582b2318a",
+      "repo": "GTQT/DrTech",
+      "commit": "1d0adbda48524a0b45a15065107b6a2a7bd3cee1",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "18011ece2a7ed90c6fca4ed89acd8e0bebf86d56",
+      "repo": "GTQT/DrTech",
+      "commit": "1e1bacedf9aff84eb6f7fd3cb2867de9e4d425fc",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "bb242b32b80428c5619108807b88a29f8d2ae24e",
+      "repo": "GTQT/DrTech",
+      "commit": "522071d013763d7afa3f43a2553d9c5fe060592a",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "76c84811f6043aa953c465a7536fc6a864b1fd8b",
+      "repo": "GTQT/DrTech",
+      "commit": "a03f4e32af421d0954cfef2d535c76b0ed0db9d7",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "ee8c2d89c9435f08eeb3fb934dff6c37f47d7eea",
+      "repo": "GTQT/DrTech",
+      "commit": "a0965ab7c8c9b7e91a88d0411ef5ab05a32474db",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "4cff502aed3ef11ab799cec5290c1631a7909daa",
+      "repo": "GTQT/DrTech",
+      "commit": "e82a59be0b8c6aebc29c74dcf97444f0c80c3c4d",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "6519ae91df5202601ea1936564467b90ac9ddd35",
+      "repo": "GTQT/DrTech",
+      "commit": "eb4848f4bace61e7a0df51afbb69667157ea57cd",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "f4a946c3bdf5c8e1adf65a506fe942861254ab95",
+      "repo": "GTQT/DrTech",
+      "commit": "ffa31559f7540526af11274e7f89663e37bbf5be",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "7e3e9c21d8e81d301e6c745ac6c8370c58424f54",
+      "repo": "GTQT/DrTech",
+      "commit": "d238c5a5578c6610f379161243dafc726cde2470",
+      "path": "libs/gtqtcore-1.7.1.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "0e0507f9c94bdcdac05eff7135d86285fbca0dd5",
+      "repo": "GTQT/DrTech",
+      "commit": "9ebfa63b915af091a366cd2a0b55b39fb2b7abbb",
+      "path": "libs/gtqtcore-1.7.2.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "fa426ba0b22c71984da5d2d0fdc5029b6911ff39",
+      "repo": "GTQT/DrTech",
+      "commit": "be62f5e440a9806869d575153524a0a008da6402",
+      "path": "libs/gtqtcore-1.7.2.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "d155d13d14c8e1ee99a4aa6b0d06f3daa99e95a0",
+      "repo": "GTQT/DrTech",
+      "commit": "f5d32a468b2717cbc69bdb736e89b2b55de21592",
+      "path": "libs/gtqtcore-1.7.2.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "6e18abb9cf4abe2d731ddc4b6d2af2887c7c45bb",
+      "repo": "GTQT/DrTech",
+      "commit": "469c8417edeb74302a59a0c4607d03795135ab91",
+      "path": "libs/gtqtcore-1.8.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "3d160e65dc6753338c94f7d76bcae306884cdf89",
+      "repo": "GTQT/GTQTSpace",
+      "commit": "072f6731d51176147749eb50e1328b4775cf21af",
+      "path": "libs/gtqtcore-1.8.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "66ab2b339dc58950429e74eb9680d462eb557d31",
+      "repo": "GTQT/GTQTSpace",
+      "commit": "5bfa33d35716d1a3a028d650379c0ca1524d4844",
+      "path": "libs/gtqtcore-1.8.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "cd1eefebb177b76fb797131cdb40ebfa6369810d",
+      "repo": "GTQT/GTQTSpace",
+      "commit": "8209e00dc4dceb6d4c07c60cc2b2d2234d2f95dd",
+      "path": "libs/gtqtcore-1.8.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "a714d6232103d51f60bc87c839edbe90d40c31fc",
+      "repo": "GTQT/GTQTSpace",
+      "commit": "a03780ecd909513614a32e06b6165fb1e86c9efe",
+      "path": "libs/gtqtcore-1.8.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "4dd35bf12eacedad4f504838ac94f73f96789e02",
+      "repo": "GTQT/GTQTSpace",
+      "commit": "a44ff80be5661c16d75af3def7954f113abdd8ac",
+      "path": "libs/gtqtcore-1.8.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "f61eca1d1ddbd2b69a3e58ce18feeaf3aa996ff1",
+      "repo": "GTQT/GTQTSpace",
+      "commit": "e638cd77f2a5a1cedc0b3cddc049ae64b78b3f8c",
+      "path": "libs/gtqtcore-1.8.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "b29324a74938d806f61f4c92c81657366a78094f",
+      "repo": "GTQT/GTQTSpace",
+      "commit": "5cd5786d3dc6443aeff5cadea576197fc187acf6",
+      "path": "libs/gtqtcore-1.8.3.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "af20e8347f7780ac8b7e23ec63482731297c9f64",
+      "repo": "GTQT/GTQTSpace",
+      "commit": "e73e75a18bfffb4ba904b46c38770716847402b8",
+      "path": "libs/gtqtcore-1.8.4.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "f7e6fdd2783db229b61657281b18193f66bf757a",
+      "repo": "GTQT/GregTinker_CEU",
+      "commit": "67685a166bdfc34cb0871e94539c1418c05ae950",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "50ef92e51b028ff278d4c9ecc531de69d0436882",
+      "repo": "GTQT/GregTinker_CEU",
+      "commit": "9c3d01f34fd18c9b81dc7144a92cc68761317682",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "b64100b7409bc8d60e03ab4ee784ee867d9f1d61",
+      "repo": "GTQT/Pollution",
+      "commit": "1309f5599dd788a71a6bf88ab4da9ee215625cf3",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "d2e0af562fb76be40ae6c1b611d85f05236014f5",
+      "repo": "GTQT/Pollution",
+      "commit": "26766b3b3b8dc6b2ebe9e610f317ca14c981ac0a",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "d6990268d9895603c6d03ab60dbf0c2b858b3e57",
+      "repo": "GTQT/Pollution",
+      "commit": "2c06b8bb9b057f0ffec2a6585ca5c0889f57b0fa",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "d73a71bbab385a0440f95c1a1837d7d080167aae",
+      "repo": "GTQT/Pollution",
+      "commit": "32073c4b504311ee416f9cc7d0f05b1d306aa2a1",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "43760bac116035fed90a263c0e39b3847f69afb5",
+      "repo": "GTQT/Pollution",
+      "commit": "49aa825dbffdeaa0cd97c3a5fc01deeee2bd899c",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "f02393063a42b56b675cebf5f1c74c64895ba9bf",
+      "repo": "GTQT/Pollution",
+      "commit": "5107b28e67cdaa4d1b08acda79d98167a3a54055",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "f9b7d09ed4d4ef33e2926dcd681c3809362d12c6",
+      "repo": "GTQT/Pollution",
+      "commit": "5f3ec702bddf4d215f9ea806e5b0f674976f5eb4",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "31534d7f9a1a7c8b487d0dd736f700f15c62f35b",
+      "repo": "GTQT/Pollution",
+      "commit": "65f83e29ce7707413a5eb5b96fa3fc515d442c1a",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "be15e02bac678c83ffa0181a755c3ad9dfb9af5d",
+      "repo": "GTQT/Pollution",
+      "commit": "71b40393d5b0926319b4f4b6c1befabcc5dcb5ce",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "6e90f9c344efe06cbe4f03a64833c53e41f48ba2",
+      "repo": "GTQT/Pollution",
+      "commit": "7b595b13c1cae5ae7f9ed13254e4d3da91b622d5",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "90986a7e617d66882bf4bb5ef1e3d8e77c70904c",
+      "repo": "GTQT/Pollution",
+      "commit": "87698cc9f65f33c6fe88991bd07ab4bd35c08bca",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "d06a5af1f454dc1a04ee4054eab99b09481374b8",
+      "repo": "GTQT/Pollution",
+      "commit": "8d05169f34d2c50bc235586b48433764cfe8322c",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "ad14dcd34f93d64463d07a032a25abfd6439b9fd",
+      "repo": "GTQT/Pollution",
+      "commit": "aa2bfd74feca61a5dc72f83702d9b64f8c14a1e5",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "4866c8d0dad98a852811037407f992ce3eadfb80",
+      "repo": "GTQT/Pollution",
+      "commit": "bdacd4588d518a626b2fbf0308039e8c6b1d57fd",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "1746e9469915cd6881d1ae744f1df4f50726e638",
+      "repo": "GTQT/Pollution",
+      "commit": "c6ca49886fecb1e38329211eb6d0fa7f550cdeef",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "a3347240ac6fec9ac815a8145e200d4816e07de8",
+      "repo": "GTQT/Pollution",
+      "commit": "de70ba59ea043a8a67446c244a0905ceda5a3aa5",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "cd88e4b83ecb71d96c476e1e76f9354c1fa15f2f",
+      "repo": "GTQT/Pollution",
+      "commit": "d1611ce5dec0eac71c2d68cc86975db86c2e3112",
+      "path": "libs/gtqtcore-1.9.0.jar",
+      "members": [
+        "meowmel/gtqtcore/api/unification/material/GTQTMaterials.class",
+        "meowmel/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "1f78a3aac7f5e125f11e3ef01fabb18c3962a876",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "05e257afb755c4aeb6c25280c67e8ae0e6acc04e",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "6e9b7482a5160ecd6f376cb3549785772f64d7eb",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "10eecdb6fe9d8d5731c8f0bcdb9c252fe102472d",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "e9fbe5645606e7f90ef56769a3b28e60264e0505",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "116929d6223ff4eda890b8df783c9110960d9aa5",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "db97224cd4a8504981f9096d8f2a65839ce9f662",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "32989948758d345a55636553af15687022e7e453",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "aaec2349e31ac3172378972985b16ce98b766b91",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "348671e8f7ccad014edecd03a6cd1406c4bfad5b",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "230b4b755aeddd69b7824762e7878b38c68d322c",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "423d567cc4f4ec558a79d5b5d6c438171809f234",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "d24fc3381f97fb5370337cff118970a6b80d30ae",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "676f5a9b42932258a69561d957565822ab04b7f2",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "f538386ce1831a959dfd0e81636f3222485de15b",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "86e300d2a8bb2b157e1c919a25f5264cf89ef08b",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "5d1697722fae6474ea7ed8be075b947c32f38c22",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "b45b4f12b34547c16c2269eb011cc4e7eee9841c",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "4b99b2601fc61632fac83bbf32a424934de25747",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "b9aa84e53fec2731f762a02e4ae9a8a38ef280e7",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "534246cb67e1145ee495236b9b1bf5c1fd687019",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "c1e16053812ea7104fb2c9440a5208bb379c8957",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "e2e8f40a1df6d85e6751b89b43c54e9396057dd9",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "db6dbd49ad1274d6c7a4282a7be9b3645ef50317",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "fdde20faf2a9bc60a40e73a5a7e07caada758362",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "ec0f32c8fe871b74d4a06a4a923965342eb6e02e",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "63eb3e11369cde106636c5c8363656692daa387a",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "f28985b4b45a2a442467ede440c4eabb4318c5b7",
+      "path": "libs/gtqtcore-1.0.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "30fb05aacee2edcabdb0a703bf8a8311fe550881",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "e13c180d18b7b1fd59bff79bed83be998cc636cf",
+      "path": "libs/gtqtcore-1.7.1.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    },
+    {
+      "blob": "f5f8a9295c1034bd2a0071b018bd7abbb7d08df6",
+      "repo": "Osmith0/GTQTSpace",
+      "commit": "7dd6de5fee57adae29d8a886b365ee14f63c7545",
+      "path": "libs/gtqtcore-1.7.2.jar",
+      "members": [
+        "keqing/gtqtcore/api/unification/GTQTMaterials.class",
+        "keqing/gtqtcore/GTQTCore.class"
+      ]
+    }
+  ]
+}
