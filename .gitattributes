@@ -1,1 +1,3 @@
 * text=auto eol=lf
+# Unified diffs prefix unchanged upstream lines with a space, including empty lines and tabs.
+dev/pack/*.patch whitespace=-blank-at-eol,-space-before-tab

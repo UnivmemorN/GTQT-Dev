@@ -1,0 +1,232 @@
+{
+  "manifest": "3fd61bb3d9eacef642dd55eedb90bd2de216dec8",
+  "historicalFiles": 189,
+  "historicalPreWorldFailure": {
+    "modId": "appliedenergistics2",
+    "conflictingFiles": [
+      "appliedenergistics2-rv6-stable-7.jar",
+      "ae2-uel-v0.56.7.jar"
+    ],
+    "selected": "ae2-uel-v0.56.7.jar"
+  },
+  "scope": "12 independent Forge dependency messages from a mixed 188-file historical diagnostic after removing rv6, not from the original untouched 189 or the current candidate. ModularUI was already 3.1.5 in that diagnostic.",
+  "diagnosticLogSha256": "859e15c4568c1440ebbccca2aef914832ccd13e75c66b2b9bf5748f99e0dcdcb",
+  "dependencies": [
+    {
+      "modId": "bogosorter",
+      "forgeMessage": "Mod bogosorter (Inventory Bogo Sorter) requires [modularui@[2.5.0-rc3,3.0.0)]",
+      "mixedCandidate": {
+        "filename": "bogosorter-1.4.11.jar",
+        "sha256": "e1ecf3ff9616bd58870fc71ffbae7818f7878aac42f76acbf1b6bf9d2f2d8735",
+        "metadataVersion": "1.4.11"
+      },
+      "historicalManifest": {
+        "projectID": 632327,
+        "fileID": 6717232,
+        "filename": "bogosorter-1.4.11.jar",
+        "sha256": "e1ecf3ff9616bd58870fc71ffbae7818f7878aac42f76acbf1b6bf9d2f2d8735"
+      },
+      "disposition": "replace",
+      "reason": "BogoSorter 1.6.2 accepts ModularUI [3.1.3,4.0.0) on clients; requires Key Binding Patch >=1.3.3.3. Guard optional Future MC Barrel API when current DrTech supplies its partial futuremc module.",
+      "source": "https://modrinth.com/mod/inventory-bogosorter/version/NQMttriY"
+    },
+    {
+      "modId": "drtech",
+      "forgeMessage": "Mod drtech (DrTech) requires [gregtech@[2.9.0-beta,)]",
+      "mixedCandidate": {
+        "filename": "drtech-1.8.8.jar",
+        "sha256": "8256e53afa042d1828a13ba1a17f4f145a890076f0e2491097c7b2ab19f8b7c4",
+        "metadataVersion": "1.8.8"
+      },
+      "historicalManifest": {
+        "projectID": 1076583,
+        "fileID": 7042514,
+        "filename": "drtech-1.8.8.jar",
+        "sha256": "8256e53afa042d1828a13ba1a17f4f145a890076f0e2491097c7b2ab19f8b7c4"
+      },
+      "disposition": "replace",
+      "reason": "Author DrTech e530bc9, compiled for October GregTech. Embedded subset owns futuremc; compatibility with other mods and registry coverage require testing.",
+      "source": "dev/pack/drtech-october.md"
+    },
+    {
+      "modId": "gcym",
+      "forgeMessage": "Mod gcym (Gregicality Multiblocks) requires [gregtech@[2.9.0-188,)]",
+      "mixedCandidate": {
+        "filename": "GregicalityMultiblocks-MeowmelMuku-1.8.8.jar",
+        "sha256": "682910fdb158d4c0c04e52ca123fcaad6d9a329149efbea5fd01e912e1d8b2a3",
+        "metadataVersion": "1.8.8"
+      },
+      "historicalManifest": {
+        "projectID": 1263292,
+        "fileID": 7042557,
+        "filename": "GregicalityMultiblocks-MeowmelMuku-1.8.8.jar",
+        "sha256": "682910fdb158d4c0c04e52ca123fcaad6d9a329149efbea5fd01e912e1d8b2a3"
+      },
+      "disposition": "partially-integrated",
+      "reason": "GregTech merged GCYM multi machinery, old standalone requires older API and missing classes. Old machine IDs and scripts have no general mapping.",
+      "source": "https://github.com/GTQT/GregTech/commit/469d74d3cbddfaad13ae9315ae9c16ecb578415c"
+    },
+    {
+      "modId": "gregtechfoodoption",
+      "forgeMessage": "Mod gregtechfoodoption (GregTech Food Option) requires [gregtech@[2.8.0-beta,)]",
+      "mixedCandidate": {
+        "filename": "gregtechfoodoption-MeowmelMuku-1.12.2-1.8.8.jar",
+        "sha256": "979b9a605b4ae2859dcf9ed63830b72faea1ed4da973c8fb213ce498753fc34b",
+        "metadataVersion": "1.8.8"
+      },
+      "historicalManifest": {
+        "projectID": 1316532,
+        "fileID": 7042516,
+        "filename": "gregtechfoodoption-MeowmelMuku-1.12.2-1.8.8.jar",
+        "sha256": "979b9a605b4ae2859dcf9ed63830b72faea1ed4da973c8fb213ce498753fc34b"
+      },
+      "disposition": "replace",
+      "reason": "July author GTFO 1.9.0 snapshot; separate candidate population/log compatibility changes are recorded in candidate files.",
+      "source": "https://github.com/GTQT/Pollution/tree/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs"
+    },
+    {
+      "modId": "gtmaid",
+      "forgeMessage": "Mod gtmaid (GTMaid) requires [gregtech@[2.8.0-beta,)]",
+      "mixedCandidate": {
+        "filename": "gtmaid-1.0.2.jar",
+        "sha256": "79278c365792ba676db9fdd08e51dea934567c206e605700c4b9077e6d3a2a72",
+        "metadataVersion": "1.0.2"
+      },
+      "historicalManifest": {
+        "projectID": 1181296,
+        "fileID": 6832147,
+        "filename": "gtmaid-1.0.2.jar",
+        "sha256": "79278c365792ba676db9fdd08e51dea934567c206e605700c4b9077e6d3a2a72"
+      },
+      "disposition": "recompile",
+      "reason": "Original runtime rejects 1.9.0. The 49233e1 sources compile against October API and original Touhou Little Maid, with explicit runtime requirements.",
+      "source": "https://github.com/GTQT/GT_Maid/tree/49233e13b55e3280d45805fad18925f06a505fd3"
+    },
+    {
+      "modId": "gtqtcore",
+      "forgeMessage": "Mod gtqtcore (GTQT Core) requires [gregtech@[2.9.0-beta,)]",
+      "mixedCandidate": {
+        "filename": "gtqtcore-1.8.8.jar",
+        "sha256": "c13929f5e722b81375d2b842f744a7a17cb58ce96028471a0d7bcd73103cfe41",
+        "metadataVersion": "1.8.8"
+      },
+      "historicalManifest": {
+        "projectID": 1076580,
+        "fileID": 7042526,
+        "filename": "gtqtcore-1.8.8.jar",
+        "sha256": "c13929f5e722b81375d2b842f744a7a17cb58ce96028471a0d7bcd73103cfe41"
+      },
+      "disposition": "replace",
+      "reason": "Use the dedicated-safe patched July GTQT-Core 1.9.0 production JAR with the October GregTech runtime. Current full Core source absent.",
+      "source": "dev/pollution/july-compat.md"
+    },
+    {
+      "modId": "gtqtspace",
+      "forgeMessage": "Mod gtqtspace (GTQTSpace) requires [gregtech@[2.8.7-beta,)]",
+      "mixedCandidate": {
+        "filename": "gtqtspace-1.8.7.jar",
+        "sha256": "b21025fa17dd7347534dec686771d2e238ab8fa3b54ccb4db12e43d9856bc3e1",
+        "metadataVersion": "1.8.7"
+      },
+      "historicalManifest": {
+        "projectID": 1076582,
+        "fileID": 6995566,
+        "filename": "gtqtspace-1.8.7.jar",
+        "sha256": "b21025fa17dd7347534dec686771d2e238ab8fa3b54ccb4db12e43d9856bc3e1"
+      },
+      "disposition": "source-port-required",
+      "reason": "Released Space 1.8.7 references 23 unavailable old Core classes and 6 absent fork-GT classes. Its public sources still target 2.9.0-185.",
+      "source": "dev/pack/legacy-addons.md"
+    },
+    {
+      "modId": "modularui",
+      "forgeMessage": "Mod modularui (ModularUI) requires [bogosorter@[1.6.1,)]",
+      "mixedCandidate": {
+        "filename": "modularui-3.1.5.jar",
+        "sha256": "faed2f57c620b180f7730ea4767a7bfde7a54a94997626577ed53cd264616ce4",
+        "metadataVersion": "3.1.5"
+      },
+      "historicalManifest": {
+        "projectID": 624243,
+        "fileID": 6206809,
+        "filename": "modularui-2.5.0-rc4.jar",
+        "sha256": "f828879b5611581e166c8f976a80f7eab89dedc12bd4f40aca188122b32522b2"
+      },
+      "disposition": "replace",
+      "reason": "Existing locked 1.9 GregTech runtime uses 3.1.5; upgrading BogoSorter 1.4.11 to 1.6.2 satisfies the 1.6.1 minimum.",
+      "source": "https://github.com/CleanroomMC/ModularUI/releases/tag/v3.1.5"
+    },
+    {
+      "modId": "pollution",
+      "forgeMessage": "Mod pollution (Pollution) requires [gregtech@[2.8.5-beta,)]",
+      "mixedCandidate": {
+        "filename": "Pollution-1.8.8.jar",
+        "sha256": "157b799c8f67ad1bceafb82acbd876a0ec5439689adce1b0fa1aed0006401acb",
+        "metadataVersion": "1.8.8"
+      },
+      "historicalManifest": {
+        "projectID": 997218,
+        "fileID": 7042537,
+        "filename": "Pollution-1.8.8.jar",
+        "sha256": "157b799c8f67ad1bceafb82acbd876a0ec5439689adce1b0fa1aed0006401acb"
+      },
+      "disposition": "replace",
+      "reason": "Current upstream compatibility branch against July Core, validated with both infusion routes over restart in the minimal profile.",
+      "source": "dev/pollution/july-compat.md"
+    },
+    {
+      "modId": "prismplan",
+      "forgeMessage": "Mod prismplan (Prism Plan) requires [gregtech@[2.8.0-beta,)]",
+      "mixedCandidate": {
+        "filename": "prismplan-1.8.5.jar",
+        "sha256": "365d97c6222526ed67efc57ffc2f4003ccf0633709da9da3091847e07be12552",
+        "metadataVersion": "1.8.5"
+      },
+      "historicalManifest": {
+        "projectID": 1216755,
+        "fileID": 6947570,
+        "filename": "prismplan-1.8.5.jar",
+        "sha256": "365d97c6222526ed67efc57ffc2f4003ccf0633709da9da3091847e07be12552"
+      },
+      "disposition": "source-port-required",
+      "reason": "1.9.0 author source still uses GT 2.9.0-190 and AE2 v1.0.5-gtqt, AE2FC 2.7.10, NAE2 1.9.0. Trial compilation with Java 16 against October GT fails on BlockPattern, FactoryBlockPattern, PatternMatchContext, changed OPTICAL_PIPES, GT holder/getProxy and AE grid contracts. No direct GTQT-Core package imports.",
+      "source": "https://github.com/GTQT/PrismPlan/tree/8dbed095e346ac421f263a1a95ffccbed859543d"
+    },
+    {
+      "modId": "supercritical",
+      "forgeMessage": "Mod supercritical (Supercritical) requires [gregtech@[2.8.10-beta,)]",
+      "mixedCandidate": {
+        "filename": "supercritical-MeowmelMuku-1.8.8.jar",
+        "sha256": "5c897ddc9d1b9d692aa96aaab602df90156532f5143272eb1c66ef0b4f0e241d",
+        "metadataVersion": "1.8.8"
+      },
+      "historicalManifest": {
+        "projectID": 1192819,
+        "fileID": 7042541,
+        "filename": "supercritical-MeowmelMuku-1.8.8.jar",
+        "sha256": "5c897ddc9d1b9d692aa96aaab602df90156532f5143272eb1c66ef0b4f0e241d"
+      },
+      "disposition": "partially-integrated",
+      "reason": "October GT contains reactor, rod/coolant and neutron simulation. Standalone has missing old GT classes; old namespace and progression parity were not established.",
+      "source": "https://github.com/GTQT/GregTech/commit/58bcfbe52a26cb51c2b0cb591141c1a20c06d6a9"
+    },
+    {
+      "modId": "visualores",
+      "forgeMessage": "Mod visualores (VisualOres-MeowmelMuku) requires [gregtech@[2.8.0-beta,)]",
+      "mixedCandidate": {
+        "filename": "visualores-Meowmel-0.2.8.jar",
+        "sha256": "9bd5ed5a071c4b2ee53c4b636c7cccd1453ad77d512ae547547677a9b20f723d",
+        "metadataVersion": "0.2.8"
+      },
+      "historicalManifest": {
+        "projectID": 1315686,
+        "fileID": 6819678,
+        "filename": "visualores-Meowmel-0.2.8.jar",
+        "sha256": "9bd5ed5a071c4b2ee53c4b636c7cccd1453ad77d512ae547547677a9b20f723d"
+      },
+      "disposition": "recompile",
+      "reason": "Published 0.2.8 also restricts the co-installed GT version. Author a9f5e8e source accepts 1.9 and declares newer Xaero Minimap, World Map and XaeroLib. October vein API, packet and registry adapters are in manifest-visualores.patch.",
+      "source": "https://github.com/GTQT/VisualOres-Meowmel/tree/a9f5e8e3b83756146796c83bbe39171d26d2a375"
+    }
+  ]
+}

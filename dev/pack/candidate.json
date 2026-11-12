@@ -1,0 +1,1493 @@
+{
+  "minecraft": "1.12.2",
+  "forge": "14.23.5.2860",
+  "historicalManifest": "https://github.com/GTQT/GT-QuantumTransition/blob/3fd61bb3d9eacef642dd55eedb90bd2de216dec8/manifest.json",
+  "overrides": {
+    "sha256": "2a2afb5e6af3bd64663da423c71ed17d965493d0f516e4219c34329718aefb86",
+    "treeSha256": "e0428b29021f5a6bb6d2e26fe1b892ab106c8b3c36441a68632aa4898b1863ea",
+    "files": 8236,
+    "source": "https://github.com/GTQT/GT-QuantumTransition/tree/3fd61bb3d9eacef642dd55eedb90bd2de216dec8/overrides"
+  },
+  "files": [
+    {
+      "filename": "!configanytime-3.0.jar",
+      "bytes": 5201,
+      "sha256": "29fe190f0d1bb0b3841b2b9f315a5d561cab9f587df6164a0205440540577575",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5212/709/%21configanytime-3.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5212/709/%21configanytime-3.0.jar"
+    },
+    {
+      "filename": "!mixinbooter-10.6.jar",
+      "bytes": 2382989,
+      "sha256": "c74998ccd73e6722b2b1f0d236c7b9c0b34572a892a3810d5e49557d96a356bd",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6344/449/%21mixinbooter-10.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6344/449/%21mixinbooter-10.6.jar"
+    },
+    {
+      "filename": "!Red-Core-MC-1.8-1.12-0.7-Dev-1.jar",
+      "bytes": 151801,
+      "sha256": "4f55468d449b7fd776cb866283fda58e0555a15cf1eb86f5481611c7b70f0bf0",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6230/904/%21Red-Core-MC-1.8-1.12-0.7-Dev-1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6230/904/%21Red-Core-MC-1.8-1.12-0.7-Dev-1.jar"
+    },
+    {
+      "filename": "[MC-1.12.2] Key Binding Patch v1.3.3.3 - 2024-12-1.jar",
+      "bytes": 51610,
+      "sha256": "0223a857235e9c0db492f5d885f22b492638208abcc041cf5e229696cb77e26d",
+      "side": "both",
+      "source": "https://cdn.modrinth.com/data/iWiOURsj/versions/bJC5mnH8/%5BMC-1.12.2%5D%20Key%20Binding%20Patch%20v1.3.3.3%20-%202024-12-1.jar",
+      "url": "https://cdn.modrinth.com/data/iWiOURsj/versions/bJC5mnH8/%5BMC-1.12.2%5D%20Key%20Binding%20Patch%20v1.3.3.3%20-%202024-12-1.jar"
+    },
+    {
+      "filename": "_MixinBootstrap-1.1.0.jar",
+      "bytes": 1119478,
+      "sha256": "17c589aad9907d4ba56d578d502afa80aac1ba2fa8677e8b4d06c019c41d7731",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3437/402/_MixinBootstrap-1.1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3437/402/_MixinBootstrap-1.1.0.jar"
+    },
+    {
+      "filename": "ae2-uel-v0.56.7.jar",
+      "bytes": 4451298,
+      "sha256": "dfca9f74cfebb4e79806ae77cd6bcedc30649be2b0e505e06d629386b0c3074e",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6302/98/ae2-uel-v0.56.7.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6302/98/ae2-uel-v0.56.7.jar"
+    },
+    {
+      "filename": "AE2CT-Legacy-0.1.2.jar",
+      "bytes": 140468,
+      "sha256": "fadb8f4ec2cfea4217b8ded7719aa1fc01e87ebcb2679da24f6d4ed0a79f0d6c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5814/89/AE2CT-Legacy-0.1.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5814/89/AE2CT-Legacy-0.1.2.jar"
+    },
+    {
+      "filename": "ae2stuff-1.12.2-0.9.jar",
+      "bytes": 495515,
+      "sha256": "3362f478ab59d60640b7388f422f83f284a8c8a54a4b7a4940db33746bd55e98",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5002/181/ae2stuff-1.12.2-0.9.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5002/181/ae2stuff-1.12.2-0.9.jar"
+    },
+    {
+      "filename": "AEWirelessChannel-1.0.1-release.jar",
+      "bytes": 145489,
+      "sha256": "ddd69c1733c3c3f6d9c34ceaf79ce0c7b1c37f66236374444c7b53cea4e0f048",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6845/869/AEWirelessChannel-1.0.1-release.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6845/869/AEWirelessChannel-1.0.1-release.jar"
+    },
+    {
+      "filename": "AkashicTome-1.2-12.jar",
+      "bytes": 44663,
+      "sha256": "4edda1cb9a1eb9240b7c9087dfc0347b0f75c29f7239299991b27324524b167f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2648/656/AkashicTome-1.2-12.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2648/656/AkashicTome-1.2-12.jar"
+    },
+    {
+      "filename": "Alfheim-1.6.jar",
+      "bytes": 70512,
+      "sha256": "730bb0425c97d394c86712e27f71c93069d5b95877bd54f70fc56235eeef33ef",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6687/458/Alfheim-1.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6687/458/Alfheim-1.6.jar"
+    },
+    {
+      "filename": "antighost-1.12-forge14.21.1.2387-1.1.1.jar",
+      "bytes": 142727,
+      "sha256": "9725edfdc4551eb6bb3a4c3db17e05d5fec0cae65914dfa4e84bf288b936aac3",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2856/128/antighost-1.12-forge14.21.1.2387-1.1.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2856/128/antighost-1.12-forge14.21.1.2387-1.1.1.jar"
+    },
+    {
+      "filename": "AppleCore-mc1.12.2-3.4.0.jar",
+      "bytes": 89615,
+      "sha256": "9e4980728afb5941bdd67c435d2fddf260d88685563343f32d009bae01b64962",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2969/118/AppleCore-mc1.12.2-3.4.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2969/118/AppleCore-mc1.12.2-3.4.0.jar"
+    },
+    {
+      "filename": "AppleSkin-mc1.12-1.0.14.jar",
+      "bytes": 33683,
+      "sha256": "4bbd37edecff0b420ab0eea166b5d7b4b41a9870bfb8647bf243140dc57f101e",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2987/247/AppleSkin-mc1.12-1.0.14.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2987/247/AppleSkin-mc1.12-1.0.14.jar"
+    },
+    {
+      "filename": "AquaAcrobatics-1.15.4.jar",
+      "bytes": 182194,
+      "sha256": "506ee8e264c347fad33302183b8f4daddb05d5e5f75c0b6d833266c886e127ce",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5225/456/AquaAcrobatics-1.15.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5225/456/AquaAcrobatics-1.15.4.jar"
+    },
+    {
+      "filename": "architecturecraft-1.12-3.108.jar",
+      "bytes": 925535,
+      "sha256": "34a864afeceb60f744b5071ba625de5d294143f7c08740642cb21482b288bd7e",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4344/128/architecturecraft-1.12-3.108.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4344/128/architecturecraft-1.12-3.108.jar"
+    },
+    {
+      "filename": "astralsorcery-1.12.2-1.10.27.jar",
+      "bytes": 25028160,
+      "sha256": "771107764cad17a30b37f683fd6889384a916981b1c8ed63826ec0a335efae86",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3044/416/astralsorcery-1.12.2-1.10.27.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3044/416/astralsorcery-1.12.2-1.10.27.jar"
+    },
+    {
+      "filename": "AutoRegLib-1.3-32.jar",
+      "bytes": 108306,
+      "sha256": "d8610a94da8f30815db4612b3291ecdcfd8204eaf1a4db8c5d0663c7b1191d91",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2746/11/AutoRegLib-1.3-32.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2746/11/AutoRegLib-1.3-32.jar"
+    },
+    {
+      "filename": "Avaritia-1.12.2-3.3.0.37-universal.jar",
+      "bytes": 975727,
+      "sha256": "e37b89bf89d5cb75d0605cf03863537b7e52a73e2ff6fb033161989c43d33876",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3143/349/Avaritia-1.12.2-3.3.0.37-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3143/349/Avaritia-1.12.2-3.3.0.37-universal.jar"
+    },
+    {
+      "filename": "avaritiaio-1.4.jar",
+      "bytes": 22178,
+      "sha256": "b79a3ed8000a85159be87f30c6ac65b73dd381837a3f5f28f420881f335c8b1e",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2800/346/avaritiaio-1.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2800/346/avaritiaio-1.4.jar"
+    },
+    {
+      "filename": "Baubles-1.12-1.5.2.jar",
+      "bytes": 108450,
+      "sha256": "b32010b2f2778aa1188585e7ead91ad46d4cb2c715f9c778a61848ba7fe51f8d",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2518/667/Baubles-1.12-1.5.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2518/667/Baubles-1.12-1.5.2.jar"
+    },
+    {
+      "filename": "bdlib-1.14.4.1-mc1.12.2.jar",
+      "bytes": 2313893,
+      "sha256": "b385f1a6f3f908673324ef03ed15b6bb5f588ce2e36443acc7273a6263cca045",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4675/629/bdlib-1.14.4.1-mc1.12.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4675/629/bdlib-1.14.4.1-mc1.12.2.jar"
+    },
+    {
+      "filename": "BestQuesting-0.0.4.jar",
+      "bytes": 2007007,
+      "sha256": "67d922e2f75382f8513edcd564abdbfa4281653fe49145e8c5bcda159173455c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6921/797/BestQuesting-0.0.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6921/797/BestQuesting-0.0.4.jar"
+    },
+    {
+      "filename": "betterbiomeblend-1.12.2-1.1.7-forge.jar",
+      "bytes": 37657,
+      "sha256": "fa0eb97e2e7ee0682c3ba8527bbfbf15c0eef69817a75444f4c6cf83a8a38bc8",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3554/486/betterbiomeblend-1.12.2-1.1.7-forge.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3554/486/betterbiomeblend-1.12.2-1.1.7-forge.jar"
+    },
+    {
+      "filename": "BetterBuildersWands-1.12.2-0.13.2.271+5997513.jar",
+      "bytes": 77866,
+      "sha256": "0bb50f545b87f19087d9dbdb9930d6be2d66ee8c76d2a1982eef9e3d2bb43108",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2691/84/BetterBuildersWands-1.12.2-0.13.2.271%2B5997513.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2691/84/BetterBuildersWands-1.12.2-0.13.2.271%2B5997513.jar"
+    },
+    {
+      "filename": "betterchat-1.4.jar",
+      "bytes": 20203,
+      "sha256": "a81ddef0102809a6b40b483e9a337a4290b5c58b5ab64d63c6715c4c88e962b4",
+      "side": "client",
+      "source": "https://mediafilez.forgecdn.net/files/3048/407/betterchat-1.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3048/407/betterchat-1.4.jar"
+    },
+    {
+      "filename": "BetterMineshaftsForge-1.12.2-2.2.1.jar",
+      "bytes": 305086,
+      "sha256": "6380ad3f470c38337e545afec5418084e95bd7ec3cd75658f9da81e46a2288b1",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3247/154/BetterMineshaftsForge-1.12.2-2.2.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3247/154/BetterMineshaftsForge-1.12.2-2.2.1.jar"
+    },
+    {
+      "filename": "betterp2p-1.12.2-1.2.3-extended_life.jar",
+      "bytes": 128422,
+      "sha256": "d29c8bad54aeed335bc294df192b6703a987e4da8a144de577bfa27b5016f14f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4815/198/betterp2p-1.12.2-1.2.3-extended_life.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4815/198/betterp2p-1.12.2-1.2.3-extended_life.jar"
+    },
+    {
+      "filename": "BiblioCraft[v2.4.6][MC1.12.2].jar",
+      "bytes": 5185177,
+      "sha256": "43f0fe963867bd74a18ac3f04caaf65c75d197abaf703f96b8282af6b843f2f8",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3647/708/BiblioCraft%5Bv2.4.6%5D%5BMC1.12.2%5D.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3647/708/BiblioCraft%5Bv2.4.6%5D%5BMC1.12.2%5D.jar"
+    },
+    {
+      "filename": "binnie-mods-1.12.2-2.5.1.203.jar",
+      "bytes": 5857998,
+      "sha256": "2ead1181ab49131241862d98a78d72f4b171f102d2774c730b0f67677fcfd03f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2916/129/binnie-mods-1.12.2-2.5.1.203.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2916/129/binnie-mods-1.12.2-2.5.1.203.jar"
+    },
+    {
+      "filename": "BiomesOPlenty-1.12.2-7.0.1.2445-universal.jar",
+      "bytes": 4746208,
+      "sha256": "1c53d3ee39f557162591f618c58b79dc6861d24522ef785794ee4a815f8a3908",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3558/882/BiomesOPlenty-1.12.2-7.0.1.2445-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3558/882/BiomesOPlenty-1.12.2-7.0.1.2445-universal.jar"
+    },
+    {
+      "filename": "BloodMagic-1.12.2-2.4.3-105.jar",
+      "bytes": 7208594,
+      "sha256": "ef187aea109446bdb7b35e06958d4c6d22f5f7ceb4e5bcaeab16f3ad29fe16a5",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2822/288/BloodMagic-1.12.2-2.4.3-105.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2822/288/BloodMagic-1.12.2-2.4.3-105.jar"
+    },
+    {
+      "filename": "bmj-1.0.2.jar",
+      "bytes": 10652,
+      "sha256": "bf2f40340a428a32a5f1c62314f9ad6dc7f01ef1f872a792704b9f7a1e9159df",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5671/51/bmj-1.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5671/51/bmj-1.0.2.jar"
+    },
+    {
+      "filename": "bogosorter-1.6.2-barrelguard.jar",
+      "bytes": 627168,
+      "sha256": "77c3379239c834070c238a47cd9153be7e4b1aa91277e39a25b5c4eeae084e11",
+      "side": "both",
+      "source": "dev/pack/patch_bogo.py using BogoSorter 1.6.2",
+      "url": "https://cdn.modrinth.com/data/CuLATCrJ/versions/NQMttriY/bogosorter-1.6.2.jar"
+    },
+    {
+      "filename": "Botania r1.10-364.4.jar",
+      "bytes": 13817704,
+      "sha256": "8962beb2c583720a83858f58bd6afc891185b50d868c712549a96b191339b52a",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3330/934/Botania%20r1.10-364.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3330/934/Botania%20r1.10-364.4.jar"
+    },
+    {
+      "filename": "Bountiful-1.12.2-2.2.3.jar",
+      "bytes": 255987,
+      "sha256": "0024f21e4c0a777949aabff6af6cf58632b531359fdebc296a3bb5a7ab4fe22c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3570/157/Bountiful-1.12.2-2.2.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3570/157/Bountiful-1.12.2-2.2.3.jar"
+    },
+    {
+      "filename": "BrandonsCore-1.12.2-2.4.20.162-universal.jar",
+      "bytes": 827900,
+      "sha256": "7f26e2cad131d3cb79296b0309dbde4f361b34c7f602d9575aecff893bb04d76",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3408/276/BrandonsCore-1.12.2-2.4.20.162-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3408/276/BrandonsCore-1.12.2-2.4.20.162-universal.jar"
+    },
+    {
+      "filename": "BuildingGadgets-2.8.4.jar",
+      "bytes": 719492,
+      "sha256": "1f130a49dbcdd56ec24df38710d6fe67e95880294f9941c28a4d4a104d1ddec5",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3005/950/BuildingGadgets-2.8.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3005/950/BuildingGadgets-2.8.4.jar"
+    },
+    {
+      "filename": "Chameleon-1.12-4.1.3.jar",
+      "bytes": 96859,
+      "sha256": "238416f801acda67b90fba9e0e572dbd6e7631b7e64c3eb3d6226f45ae536c87",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2450/900/Chameleon-1.12-4.1.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2450/900/Chameleon-1.12-4.1.3.jar"
+    },
+    {
+      "filename": "champions-1.12.2-1.0.11.10.jar",
+      "bytes": 230539,
+      "sha256": "3e7ea02af8016fe53690977d20b0521901f2e09d55e4c41f855190bd9b79e91f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3177/947/champions-1.12.2-1.0.11.10.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3177/947/champions-1.12.2-1.0.11.10.jar"
+    },
+    {
+      "filename": "ChestTransporter-1.12.2-2.8.8.jar",
+      "bytes": 314060,
+      "sha256": "ea8ba7acdfaf7102cad7e3638bffa247bd5cfb634de4c355d47d33a8d2c724a1",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2524/58/ChestTransporter-1.12.2-2.8.8.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2524/58/ChestTransporter-1.12.2-2.8.8.jar"
+    },
+    {
+      "filename": "Chisel-MC1.12.2-1.0.2.45.jar",
+      "bytes": 4755282,
+      "sha256": "64c62f20a89939db2c03d47737c7bd371d8bd8c10ae42e2e8c63432ae89db2c7",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2915/375/Chisel-MC1.12.2-1.0.2.45.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2915/375/Chisel-MC1.12.2-1.0.2.45.jar"
+    },
+    {
+      "filename": "CodeChickenLib-1.12.2-3.2.3.358-universal.jar",
+      "bytes": 704330,
+      "sha256": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2779/848/CodeChickenLib-1.12.2-3.2.3.358-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2779/848/CodeChickenLib-1.12.2-3.2.3.358-universal.jar"
+    },
+    {
+      "filename": "collective-1.12.2-3.0.jar",
+      "bytes": 129073,
+      "sha256": "43541ab1d57cf5aa3aba63fa34b6b6ebffd67f602b9fb4d220e4bec365cb754c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3533/131/collective-1.12.2-3.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3533/131/collective-1.12.2-3.0.jar"
+    },
+    {
+      "filename": "conarm-1.12.2-1.2.5.10.jar",
+      "bytes": 894824,
+      "sha256": "3ce60a0e2c757937eab9cafb2baa9bc823e96a9d41f39f462bf276c224ae099f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3174/535/conarm-1.12.2-1.2.5.10.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3174/535/conarm-1.12.2-1.2.5.10.jar"
+    },
+    {
+      "filename": "Controlling-3.0.12.4.jar",
+      "bytes": 34383,
+      "sha256": "f5edd4793f96cd5a6f31aecbd3030093b367a51afba5d6f7281756d0f9c03786",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5408/385/Controlling-3.0.12.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5408/385/Controlling-3.0.12.4.jar"
+    },
+    {
+      "filename": "CraftingTweaks_1.12.2-9.0.1.jar",
+      "bytes": 101956,
+      "sha256": "fa1aa0ad09e7f240e4af9af20a7478cab93598e468cfda3a42e46bb65e067dae",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3852/709/CraftingTweaks_1.12.2-9.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3852/709/CraftingTweaks_1.12.2-9.0.1.jar"
+    },
+    {
+      "filename": "CraftTweaker2-1.12-4.1.20.709.jar",
+      "bytes": 1608614,
+      "sha256": "10f9b14779416ff036b25780747f4307c4c4a74bd8136db1dd99fb39b1946fc9",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6929/88/CraftTweaker2-1.12-4.1.20.709.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6929/88/CraftTweaker2-1.12-4.1.20.709.jar"
+    },
+    {
+      "filename": "CTM-MC1.12.2-1.0.2.31.jar",
+      "bytes": 199045,
+      "sha256": "433f441dc9c0aa75a4168df832900720ddadac1f22cc3bba4e4f25ca789b268b",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2915/363/CTM-MC1.12.2-1.0.2.31.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2915/363/CTM-MC1.12.2-1.0.2.31.jar"
+    },
+    {
+      "filename": "CustomStartingGear-1.12-1.2.0.9-universal.jar",
+      "bytes": 23171,
+      "sha256": "66a567a85dcb3f1e26b4dd6b0e3327d64992d88648e0272846a5b27073666fe7",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2514/705/CustomStartingGear-1.12-1.2.0.9-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2514/705/CustomStartingGear-1.12-1.2.0.9-universal.jar"
+    },
+    {
+      "filename": "DefaultWorldGenerator-port-1.12-2.3.1.jar",
+      "bytes": 193836,
+      "sha256": "dc273312735b9bf1be981a3617b40ee54bd7f9826bd94bff9df757b1e941628a",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3337/685/DefaultWorldGenerator-port-1.12-2.3.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3337/685/DefaultWorldGenerator-port-1.12-2.3.1.jar"
+    },
+    {
+      "filename": "DelightfulCuisineForWoodheads_1.12.2-1.1.0.jar",
+      "bytes": 816215,
+      "sha256": "e0eb7b6e8f6decde5d9f4965159b2ff184e28a722294e65beb389f1ecf75f759",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6997/581/DelightfulCuisineForWoodheads_1.12.2-1.1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6997/581/DelightfulCuisineForWoodheads_1.12.2-1.1.0.jar"
+    },
+    {
+      "filename": "Draconic-Evolution-1.12.2-2.3.28.354-universal.jar",
+      "bytes": 5708839,
+      "sha256": "1eecdefa00056efac98ff56e25f7ed840b70e2d809c628e38c9c5b5518ff14ff",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3431/261/Draconic-Evolution-1.12.2-2.3.28.354-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3431/261/Draconic-Evolution-1.12.2-2.3.28.354-universal.jar"
+    },
+    {
+      "filename": "drtech-1.8.9.jar",
+      "bytes": 6275422,
+      "sha256": "8ad8ed5d064533269309009e5a5a766a57a1bbd1384daca14d22ead0e0954915",
+      "side": "both",
+      "source": "dev/drtech/build.py --october-gregtech",
+      "url": "https://github.com/GTQT/DrTech/tree/e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf"
+    },
+    {
+      "filename": "Durability101-forge-1.12-0.0.5.jar",
+      "bytes": 1033153,
+      "sha256": "51b38902f8397f66a8e03a561016ba28e45dc1e1e91aa7876ab8a3eb8afcc328",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5304/648/Durability101-forge-1.12-0.0.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5304/648/Durability101-forge-1.12-0.0.5.jar"
+    },
+    {
+      "filename": "DurabilityViewer-1.12-forge14.21.1.2387-1.6.jar",
+      "bytes": 73121,
+      "sha256": "41f1e7cf12f3e333f6638b699f424cbab440bef17d76412afdc6dd30c07683e9",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2851/556/DurabilityViewer-1.12-forge14.21.1.2387-1.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2851/556/DurabilityViewer-1.12-forge14.21.1.2387-1.6.jar"
+    },
+    {
+      "filename": "DynamicSurroundings-1.12.2-3.6.3.jar",
+      "bytes": 15778870,
+      "sha256": "e5c9fbc101dae923a49800761c901831c1f085685c20a229d7dcf98f37d70b85",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3497/269/DynamicSurroundings-1.12.2-3.6.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3497/269/DynamicSurroundings-1.12.2-3.6.3.jar"
+    },
+    {
+      "filename": "dynamistics-1.0.2.jar",
+      "bytes": 43317,
+      "sha256": "e3d2215286984be17bf5fef2ac3e2f8ddc62a35ad4d7f1e25b91cd5520347335",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3056/455/dynamistics-1.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3056/455/dynamistics-1.0.2.jar"
+    },
+    {
+      "filename": "EnchantmentDescriptions-1.12.2-1.1.20.jar",
+      "bytes": 17072,
+      "sha256": "a67a4cf91eb47c7cf345ad8ae956688e29b55bb99b03024d43981595e4282b96",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2898/966/EnchantmentDescriptions-1.12.2-1.1.20.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2898/966/EnchantmentDescriptions-1.12.2-1.1.20.jar"
+    },
+    {
+      "filename": "EnderCore-1.12.2-0.5.78.jar",
+      "bytes": 660062,
+      "sha256": "adbd309f6c8001c38c4630aa701cdc5ea59fa7ee9ffa770e21f56b160adb443c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4671/384/EnderCore-1.12.2-0.5.78.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4671/384/EnderCore-1.12.2-0.5.78.jar"
+    },
+    {
+      "filename": "EnderIO-1.12.2-5.3.72.jar",
+      "bytes": 8946588,
+      "sha256": "9b5e7756af35a191de8bc8f010c0f7c7ffc2e1e056a69ec265d1dd5ce90d19b4",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4674/244/EnderIO-1.12.2-5.3.72.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4674/244/EnderIO-1.12.2-5.3.72.jar"
+    },
+    {
+      "filename": "EnderIO-endergy-1.12.2-5.3.72.jar",
+      "bytes": 118017,
+      "sha256": "8379e7174304658873e5e260aeb362d5c4f4dc450fae6f81ee2fde7d07645a98",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4674/241/EnderIO-endergy-1.12.2-5.3.72.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4674/241/EnderIO-endergy-1.12.2-5.3.72.jar"
+    },
+    {
+      "filename": "enderutilities-1.12.2-0.7.15.jar",
+      "bytes": 1730192,
+      "sha256": "c0a604aac57853f76f16e21958b02f4d6adbc543c20dda67eb1088ca91ba618c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2977/10/enderutilities-1.12.2-0.7.15.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2977/10/enderutilities-1.12.2-0.7.15.jar"
+    },
+    {
+      "filename": "ExtraBotany-r1.1-60-beta-hotfix.jar",
+      "bytes": 2721611,
+      "sha256": "68b07d9a0b23210511d603c20353c61ba2e77ea0e076d12eda3ef5a8ec6ac516",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3112/313/ExtraBotany-r1.1-60-beta-hotfix.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3112/313/ExtraBotany-r1.1-60-beta-hotfix.jar"
+    },
+    {
+      "filename": "fancymenu_forge_2.14.9_MC_1.12-1.12.2.jar",
+      "bytes": 1260832,
+      "sha256": "a803fe18e69f4df03de1b296f8d3c19848d2424f3435cc5e0ecd481436d5094f",
+      "side": "client",
+      "source": "https://mediafilez.forgecdn.net/files/4655/936/fancymenu_forge_2.14.9_MC_1.12-1.12.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4655/936/fancymenu_forge_2.14.9_MC_1.12-1.12.2.jar"
+    },
+    {
+      "filename": "findme-1.12.2-1.1.0-8.jar",
+      "bytes": 17601,
+      "sha256": "ac70fb3c98f3194f1ff50cf5fba193f04cb10df693a43057cc93a44802058d4f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2682/853/findme-1.12.2-1.1.0-8.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2682/853/findme-1.12.2-1.1.0-8.jar"
+    },
+    {
+      "filename": "FlameLib-1.12.2-0.0.7.jar",
+      "bytes": 46474,
+      "sha256": "81ad110c36018e8f99aa94487dee0824a57aa35fb3ff4560d74405f23459fe86",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2668/970/FlameLib-1.12.2-0.0.7.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2668/970/FlameLib-1.12.2-0.0.7.jar"
+    },
+    {
+      "filename": "Fluid Craft for AE2-2.6.6-r.jar",
+      "bytes": 686935,
+      "sha256": "d07e66ed7b93017580a736b74829007ecb964a08ac03e5a7b8e6124b1530f24b",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5751/930/Fluid%20Craft%20for%20AE2-2.6.6-r.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5751/930/Fluid%20Craft%20for%20AE2-2.6.6-r.jar"
+    },
+    {
+      "filename": "forestry_1.12.2-5.8.2.426.jar",
+      "bytes": 5396469,
+      "sha256": "d44a2784c721b10b3d70fd1d6b21a66761634e76f1e928e63b43606151775e2f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6450/115/forestry_1.12.2-5.8.2.426.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6450/115/forestry_1.12.2-5.8.2.426.jar"
+    },
+    {
+      "filename": "Forgelin-Continuous-2.2.20.0.jar",
+      "bytes": 7423721,
+      "sha256": "710f4717511590c1c9978eb41a34cd1e39e2aeb2a2dfc58a9144183e5c1c3362",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6983/420/Forgelin-Continuous-2.2.20.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6983/420/Forgelin-Continuous-2.2.20.0.jar"
+    },
+    {
+      "filename": "ForgeMultipart-1.12.2-2.6.2.83-universal.jar",
+      "bytes": 1304958,
+      "sha256": "25718bd80799a608c45299d13d86e5d67248f07a3c00657c690948b1821835ce",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2755/790/ForgeMultipart-1.12.2-2.6.2.83-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2755/790/ForgeMultipart-1.12.2-2.6.2.83-universal.jar"
+    },
+    {
+      "filename": "FpsReducer-mc1.12.2-1.20.jar",
+      "bytes": 79700,
+      "sha256": "4c04d17010c77196226bb5f2a64c4c8dc348c144ce6183906d6ff301227780d5",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3362/160/FpsReducer-mc1.12.2-1.20.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3362/160/FpsReducer-mc1.12.2-1.20.jar"
+    },
+    {
+      "filename": "FTBBackups-1.1.0.1.jar",
+      "bytes": 43764,
+      "sha256": "6b6bcbbf6ac4528657345e1696339528a44643ecb06e6137908eafb8432bd962",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2819/669/FTBBackups-1.1.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2819/669/FTBBackups-1.1.0.1.jar"
+    },
+    {
+      "filename": "FTBLib-5.4.7.2.jar",
+      "bytes": 934370,
+      "sha256": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2985/811/FTBLib-5.4.7.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2985/811/FTBLib-5.4.7.2.jar"
+    },
+    {
+      "filename": "FTBMoney-1.2.0.47.jar",
+      "bytes": 90491,
+      "sha256": "e39a0e07387ea03753675670c1e7f483b030b49441e2fa5d460f02b7dea3980b",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3010/526/FTBMoney-1.2.0.47.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3010/526/FTBMoney-1.2.0.47.jar"
+    },
+    {
+      "filename": "FTBQuests-1202.9.0.15.jar",
+      "bytes": 1091954,
+      "sha256": "3f6a674ac0d8678fd0b127e6930199f32848fe47d1689e44c72976bfb24c7385",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3156/637/FTBQuests-1202.9.0.15.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3156/637/FTBQuests-1202.9.0.15.jar"
+    },
+    {
+      "filename": "FTBUtilities-5.4.1.131.jar",
+      "bytes": 425832,
+      "sha256": "e458fe39aba9ba28122496e54f826e4f61df515ed1f8d0c70cc9e56f67a5404a",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3157/548/FTBUtilities-5.4.1.131.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3157/548/FTBUtilities-5.4.1.131.jar"
+    },
+    {
+      "filename": "geckolib-forge-1.12.2-3.0.31.jar",
+      "bytes": 3702893,
+      "sha256": "b00bc9de4e3e94cea0455f8d58b295c1464272135e842bdf3170c2c955c871a5",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4020/277/geckolib-forge-1.12.2-3.0.31.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4020/277/geckolib-forge-1.12.2-3.0.31.jar"
+    },
+    {
+      "filename": "gendustry-1.6.5.8-mc1.12.2.jar",
+      "bytes": 1856305,
+      "sha256": "21952b5b2f4a89a3b80029042ec7b07d99835e56683d2c17e130a1144922b38d",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2516/215/gendustry-1.6.5.8-mc1.12.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2516/215/gendustry-1.6.5.8-mc1.12.2.jar"
+    },
+    {
+      "filename": "gendustryjei-1.0.2.jar",
+      "bytes": 67472,
+      "sha256": "5e56b6e1eab94eb92740437fc9906756ec6a3a1b3f4d4b2c4caee833b6ca7ae0",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2609/434/gendustryjei-1.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2609/434/gendustryjei-1.0.2.jar"
+    },
+    {
+      "filename": "gregtech-1.9.0-october-pack.jar",
+      "bytes": 34466886,
+      "sha256": "efd9dd02380a2320d9594ffd5cdad4c4daa99ba7d5a4c3a2d3828316269f8c31",
+      "side": "both",
+      "source": "October remapped runtime + pack compatibility patches listed in dev/pack",
+      "url": "https://raw.githubusercontent.com/GTQT/QuantumHue-Visualizer/72e08b4f1b3d64748ca3bbf3e09bf133de0f8405/libs/gregtech-gtqt-1.12.2-1.9.0.jar"
+    },
+    {
+      "filename": "gregtechfoodoption-1.9.0-bop.jar",
+      "bytes": 2026902,
+      "sha256": "4fccf4660e2b5f107caf667bbbf1a0d6fcbe53ab3615f6593a181c571ba6f0ed",
+      "side": "both",
+      "source": "dev/pack/PatchBopWood.java (July GTFO)",
+      "url": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gregtechfoodoption-gtqt-1.12.2-1.9.0.jar"
+    },
+    {
+      "filename": "groovyscript-1.2.4.jar",
+      "bytes": 13654186,
+      "sha256": "74b8f13005cdec06fb675921f34f36dbb7d1e5af8278016aea8f8f7cd231fac5",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6520/434/groovyscript-1.2.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6520/434/groovyscript-1.2.4.jar"
+    },
+    {
+      "filename": "gtmaid-1.0.2.jar",
+      "bytes": 113280,
+      "sha256": "7173e6576d80750b1051c26cfec3495f80f79a77e09dd1f83cf1dab8185003ec",
+      "side": "both",
+      "source": "dev/pack/manifest_addons.py gtmaid",
+      "url": "https://github.com/GTQT/GT_Maid/tree/49233e13b55e3280d45805fad18925f06a505fd3"
+    },
+    {
+      "filename": "gtqtcore-1.9.0-july-compat.jar",
+      "bytes": 9194467,
+      "sha256": "fd2cbe765cb362e4869855ca4244b71f9d8761d7b5af9e68c98cfa178731f046",
+      "side": "both",
+      "source": "dev/pollution/prepare_compat.py (July Core dedicated runtime)",
+      "url": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gtqtcore-1.9.0.jar"
+    },
+    {
+      "filename": "gtsteam-1.9.0.jar",
+      "bytes": 741294,
+      "sha256": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
+      "side": "both",
+      "source": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gtsteam-1.9.0.jar",
+      "url": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gtsteam-1.9.0.jar"
+    },
+    {
+      "filename": "gttopaddition-1.8.5.jar",
+      "bytes": 44105,
+      "sha256": "00d9d723f87286bc620d9204c74b875a239b4dd04b695e414c523c86cf60dc4e",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6947/560/gttopaddition-1.8.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6947/560/gttopaddition-1.8.5.jar"
+    },
+    {
+      "filename": "Guide-API-1.12-2.1.8-63.jar",
+      "bytes": 169528,
+      "sha256": "e201712ef8fadc6c4b6380939751e92fe32cad2ba2dcb717e1acb3b07e0c2125",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2645/992/Guide-API-1.12-2.1.8-63.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2645/992/Guide-API-1.12-2.1.8-63.jar"
+    },
+    {
+      "filename": "HadEnoughItems_1.12.2-4.29.7.jar",
+      "bytes": 783978,
+      "sha256": "76710abac822e3fff83a0a4157a584f6802dfea718a2b1ec152c6b2aefcbb6f9",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6963/93/HadEnoughItems_1.12.2-4.29.7.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6963/93/HadEnoughItems_1.12.2-4.29.7.jar"
+    },
+    {
+      "filename": "hecharacters-1.12.2-1.4.1.jar",
+      "bytes": 2272498,
+      "sha256": "42de8661f780142f2d44f266bddf4ed06dc2434150ad9505758b2a5c4a7cca90",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4874/506/hecharacters-1.12.2-1.4.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4874/506/hecharacters-1.12.2-1.4.1.jar"
+    },
+    {
+      "filename": "IGI-BloodMagic-1.2.jar",
+      "bytes": 12869,
+      "sha256": "a8bd375338773208cc8367cba677312a3d4b660fddfcd626ae41d78d3a8f4572",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2549/47/IGI-BloodMagic-1.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2549/47/IGI-BloodMagic-1.2.jar"
+    },
+    {
+      "filename": "IGI-Thaumcraft-1.0a.jar",
+      "bytes": 15783,
+      "sha256": "557de13451cdbc142e4e3b40e6af32903530de80d8dc097c7dd992bdc0deb3d5",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2640/779/IGI-Thaumcraft-1.0a.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2640/779/IGI-Thaumcraft-1.0a.jar"
+    },
+    {
+      "filename": "IGIExtended-1.12.2-1.1.jar",
+      "bytes": 169686,
+      "sha256": "dc3a01dd1afc310eb2ca434845fbc3ae8e987ca41d442b711b0db19cf95f6ea1",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4076/539/IGIExtended-1.12.2-1.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4076/539/IGIExtended-1.12.2-1.1.jar"
+    },
+    {
+      "filename": "InGameInfoXML-1.12.2-2.8.2.94-universal.jar",
+      "bytes": 315455,
+      "sha256": "2b06a46c62a728741316a3bbad555d16280e16f6ebab4487399c64645e596098",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2489/566/InGameInfoXML-1.12.2-2.8.2.94-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2489/566/InGameInfoXML-1.12.2-2.8.2.94-universal.jar"
+    },
+    {
+      "filename": "ironchest-1.12.2-7.0.72.847.jar",
+      "bytes": 956692,
+      "sha256": "29d3a4115d67b83eb542b618eb64db40db23a7f009a0f4dc9a396101d6f8491f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2747/935/ironchest-1.12.2-7.0.72.847.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2747/935/ironchest-1.12.2-7.0.72.847.jar"
+    },
+    {
+      "filename": "ItemFilters-1.0.4.2.jar",
+      "bytes": 78935,
+      "sha256": "cdffbb810f75db50afce9681374f0604e4c1ed2dcfe768cff5b4e17d5384166b",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3003/364/ItemFilters-1.0.4.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3003/364/ItemFilters-1.0.4.2.jar"
+    },
+    {
+      "filename": "jecharacters-1.12.0-3.7.2.jar",
+      "bytes": 2173393,
+      "sha256": "70a8926ff9402930bb2d622512a44aa6a04ce858e5a68b92cbd4a910cd2c78c3",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4692/184/jecharacters-1.12.0-3.7.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4692/184/jecharacters-1.12.0-3.7.2.jar"
+    },
+    {
+      "filename": "JEI-Utilities-1.12.2-0.2.13.jar",
+      "bytes": 33985,
+      "sha256": "cee780b9e233455a98264584664be28b1be201e16e6de6bf75c985f0e324ac5a",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6937/116/JEI-Utilities-1.12.2-0.2.13.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6937/116/JEI-Utilities-1.12.2-0.2.13.jar"
+    },
+    {
+      "filename": "jeibees-0.9.0.5-mc1.12.2.jar",
+      "bytes": 117480,
+      "sha256": "07c6c95eddf0f6f3d15339f373da51a638716c3cbe69f93da5586f7957e3c22a",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2490/58/jeibees-0.9.0.5-mc1.12.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2490/58/jeibees-0.9.0.5-mc1.12.2.jar"
+    },
+    {
+      "filename": "jeiintegration_1.12.2-1.6.0.jar",
+      "bytes": 25196,
+      "sha256": "b072944ed22907db480bea91b0660924d3dcef266e6501de236d08c45d07dc19",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2951/731/jeiintegration_1.12.2-1.6.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2951/731/jeiintegration_1.12.2-1.6.0.jar"
+    },
+    {
+      "filename": "JustEnoughCalculation-1.12.2-3.2.7.jar",
+      "bytes": 298222,
+      "sha256": "5fc2aed14ac29f715af29ea26016e018f2a734fadfe3fc60d52d07206cf054f4",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3524/685/JustEnoughCalculation-1.12.2-3.2.7.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3524/685/JustEnoughCalculation-1.12.2-3.2.7.jar"
+    },
+    {
+      "filename": "konkrete_forge_1.6.1_MC_1.12-1.12.2.jar",
+      "bytes": 618150,
+      "sha256": "5b412639b99dea3dbc7311cd4bdcf310dbdfd8e9c6eba4f2abe839c261aa0c7a",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4514/895/konkrete_forge_1.6.1_MC_1.12-1.12.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4514/895/konkrete_forge_1.6.1_MC_1.12-1.12.2.jar"
+    },
+    {
+      "filename": "lazy-ae2-1.12.2-1.1.26.jar",
+      "bytes": 398411,
+      "sha256": "adcc880f8e9fe2e80f2a27ff15b27c320f139fd120213c47be29e498839a56f4",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3254/160/lazy-ae2-1.12.2-1.1.26.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3254/160/lazy-ae2-1.12.2-1.1.26.jar"
+    },
+    {
+      "filename": "libnine-1.12.2-1.2.2.jar",
+      "bytes": 412371,
+      "sha256": "70db06743282be7e028a6ea725e9c4df19603dc66d7971a3d53e8ae61c3b2716",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6790/812/libnine-1.12.2-1.2.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6790/812/libnine-1.12.2-1.2.2.jar"
+    },
+    {
+      "filename": "llibrary-1.7.20-1.12.2.jar",
+      "bytes": 884550,
+      "sha256": "27fa8dbfc7428168229a445dad82a4696ba52cf0a6e054833bff0f93931d8ceb",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3116/493/llibrary-1.7.20-1.12.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3116/493/llibrary-1.7.20-1.12.2.jar"
+    },
+    {
+      "filename": "loliasm-5.29.jar",
+      "bytes": 1657621,
+      "sha256": "322a50c5c956edac5fa13115005bbf084c09432817bc23d3c167e9eb4b5ee136",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6854/259/loliasm-5.29.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6854/259/loliasm-5.29.jar"
+    },
+    {
+      "filename": "LunatriusCore-1.12.2-1.2.0.42-universal.jar",
+      "bytes": 76753,
+      "sha256": "67c5e8d8e975172d838f765040130ea0f73ec7a590b4470217a2f5516fdc652b",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2489/549/LunatriusCore-1.12.2-1.2.0.42-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2489/549/LunatriusCore-1.12.2-1.2.0.42-universal.jar"
+    },
+    {
+      "filename": "Mantle-1.12-1.3.3.55.jar",
+      "bytes": 843486,
+      "sha256": "0975ad3ef3b8b35fe43461feabe44d406b5521b0a2f3d1965c8d2f6a59ad2e65",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2713/386/Mantle-1.12-1.3.3.55.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2713/386/Mantle-1.12-1.3.3.55.jar"
+    },
+    {
+      "filename": "MeowmelDrawers-1.12.2-5.6.0.jar",
+      "bytes": 918455,
+      "sha256": "60525de3b5fa8bfb31906f9f91cfff55285a038c15ab261d1159af2a197f4e7a",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/7042/531/MeowmelDrawers-1.12.2-5.6.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7042/531/MeowmelDrawers-1.12.2-5.6.0.jar"
+    },
+    {
+      "filename": "modelloader-1.0.0.jar",
+      "bytes": 2436745,
+      "sha256": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f",
+      "side": "both",
+      "source": "https://raw.githubusercontent.com/GTQT/DrTech/e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf/libs/modelloader-1.0.0.jar",
+      "url": "https://raw.githubusercontent.com/GTQT/DrTech/e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf/libs/modelloader-1.0.0.jar"
+    },
+    {
+      "filename": "modernsplash-1.4.0.jar",
+      "bytes": 58851,
+      "sha256": "909a32c381dd39c3ca118adb42f2e99d3b90e52fb15b2f77993f20eeb519cb56",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6501/489/modernsplash-1.4.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6501/489/modernsplash-1.4.0.jar"
+    },
+    {
+      "filename": "modtweaker-4.0.20.11.jar",
+      "bytes": 493285,
+      "sha256": "2c2db905cae947092fe46dba301d1f6777fdab9cc8e79140c050b09fe62dda7a",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3840/577/modtweaker-4.0.20.11.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3840/577/modtweaker-4.0.20.11.jar"
+    },
+    {
+      "filename": "modularui-3.1.5.jar",
+      "bytes": 2331094,
+      "sha256": "faed2f57c620b180f7730ea4767a7bfde7a54a94997626577ed53cd264616ce4",
+      "side": "both",
+      "source": "https://github.com/CleanroomMC/ModularUI/releases/download/v3.1.5/modularui-3.1.5.jar",
+      "url": "https://github.com/CleanroomMC/ModularUI/releases/download/v3.1.5/modularui-3.1.5.jar"
+    },
+    {
+      "filename": "MoreFurnaces-Nomifactory-Edition-1.12.2-1.11.0.jar",
+      "bytes": 116117,
+      "sha256": "dc1f5c254e1c5a9587db019747ccac61880de87f5c1f5230f7d571f8a92678b2",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3613/142/MoreFurnaces-Nomifactory-Edition-1.12.2-1.11.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3613/142/MoreFurnaces-Nomifactory-Edition-1.12.2-1.11.0.jar"
+    },
+    {
+      "filename": "MouseTweaks-2.10.1-mc1.12.2.jar",
+      "bytes": 80528,
+      "sha256": "5e13315f4e0d0c96b1f9b800a42fecb89f519aca81d556c91df617c8751aa575",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3359/843/MouseTweaks-2.10.1-mc1.12.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3359/843/MouseTweaks-2.10.1-mc1.12.2.jar"
+    },
+    {
+      "filename": "MrTJPCore-1.12.2-2.1.4.43-universal.jar",
+      "bytes": 803400,
+      "sha256": "82652f00e513c61c99a791abf2cbc10fdfb0e3a79e4eb02b305cccbc2d2f0087",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2735/197/MrTJPCore-1.12.2-2.1.4.43-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2735/197/MrTJPCore-1.12.2-2.1.4.43-universal.jar"
+    },
+    {
+      "filename": "MTLib-3.0.7.jar",
+      "bytes": 30009,
+      "sha256": "e978ce61b6177ec07a9db231d05a64415239c836f43f5cbcc0cf01bd9da4b3e2",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3308/160/MTLib-3.0.7.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3308/160/MTLib-3.0.7.jar"
+    },
+    {
+      "filename": "nae2-1.0.jar",
+      "bytes": 600270,
+      "sha256": "db239275ac22fb015e6d16c5584881c89442f8b743f7369e2bc2591c11906679",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5674/375/nae2-1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5674/375/nae2-1.0.jar"
+    },
+    {
+      "filename": "NaturesCompass-1.12.2-1.8.5.jar",
+      "bytes": 196434,
+      "sha256": "bd4f556b7e5480687dbc09735dca05a1ceb3622dc93422adb5dab4f68cc9f2d1",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2893/527/NaturesCompass-1.12.2-1.8.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2893/527/NaturesCompass-1.12.2-1.8.5.jar"
+    },
+    {
+      "filename": "NotEnoughEnergistics-1.12.2-2.0.9.jar",
+      "bytes": 240141,
+      "sha256": "ba4c2cd2bfa92e60e5f563a57a1ec0093a8dc8400e0d0f570d1b17bbf5e03d6e",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6325/382/NotEnoughEnergistics-1.12.2-2.0.9.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6325/382/NotEnoughEnergistics-1.12.2-2.0.9.jar"
+    },
+    {
+      "filename": "OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar",
+      "bytes": 16630725,
+      "sha256": "a5d0fc97a809314529b55cac5ef5484b960cb364fc7f944148bcc0ac8694238f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6608/365/OpenComputers-MC1.12.2-1.8.9a%2B8ca336f.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6608/365/OpenComputers-MC1.12.2-1.8.9a%2B8ca336f.jar"
+    },
+    {
+      "filename": "OreExcavation-1.4.150.jar",
+      "bytes": 184743,
+      "sha256": "535c5a8e2d708fa810687698425f982f16c326c0cc91fa5eec08194d65ef2c28",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2897/369/OreExcavation-1.4.150.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2897/369/OreExcavation-1.4.150.jar"
+    },
+    {
+      "filename": "OreLib-1.12.2-3.6.0.1.jar",
+      "bytes": 341728,
+      "sha256": "4483d8cc2b0334b82b7d0f5bb6354a2020a0e00ce63a48379e8ba5eb7d79eef9",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2820/815/OreLib-1.12.2-3.6.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2820/815/OreLib-1.12.2-3.6.0.1.jar"
+    },
+    {
+      "filename": "PackagedAstral-1.12.2-1.0.4.22.jar",
+      "bytes": 325205,
+      "sha256": "2fdcc77db563359f59e18237383815b156500349070157d3fd1c7eca0fdbe62d",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6904/331/PackagedAstral-1.12.2-1.0.4.22.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6904/331/PackagedAstral-1.12.2-1.0.4.22.jar"
+    },
+    {
+      "filename": "PackagedAuto-1.12.2-1.0.23.71.jar",
+      "bytes": 390250,
+      "sha256": "fbebe9f94aaf4f36da6a9708d8edb5827160c327bc97aaf5fcea23f7c7039c2e",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6932/932/PackagedAuto-1.12.2-1.0.23.71.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6932/932/PackagedAuto-1.12.2-1.0.23.71.jar"
+    },
+    {
+      "filename": "PackagedAvaritia-1.12.2-1.0.3.25.jar",
+      "bytes": 49140,
+      "sha256": "e804ab8173154b204747dae755d1c36210dbee321b2bdac86fdc22c9458f0779",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6904/337/PackagedAvaritia-1.12.2-1.0.3.25.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6904/337/PackagedAvaritia-1.12.2-1.0.3.25.jar"
+    },
+    {
+      "filename": "PackagedDraconic-1.12.2-1.0.4.24.jar",
+      "bytes": 100839,
+      "sha256": "ee3e2f36d9c9c60e50157bab9869cb1f695a982985aba37f59fe1e6844c7e364",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6904/341/PackagedDraconic-1.12.2-1.0.4.24.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6904/341/PackagedDraconic-1.12.2-1.0.4.24.jar"
+    },
+    {
+      "filename": "PackagedFluidCrafting-1.12.2-1.0.0.3.jar",
+      "bytes": 96725,
+      "sha256": "882f49fb256f948148876285e76b32196e765da4e4fb5eb2efea1500516da0a7",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/7007/922/PackagedFluidCrafting-1.12.2-1.0.0.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7007/922/PackagedFluidCrafting-1.12.2-1.0.0.3.jar"
+    },
+    {
+      "filename": "PackagedThaumic-1.12.2-1.0.3.20.jar",
+      "bytes": 408872,
+      "sha256": "8cdedbe6191b092e23150ff52693660e8f33559c6a85cb84f4f4caf4d213b320",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6994/968/PackagedThaumic-1.12.2-1.0.3.20.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6994/968/PackagedThaumic-1.12.2-1.0.3.20.jar"
+    },
+    {
+      "filename": "PackagingProvider-1.12.2-1.0.0.1.jar",
+      "bytes": 58410,
+      "sha256": "9d919e8c697f7b0e96b11faa806a4dbc6979020073ca6f91fff89eb5356d3496",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/7011/961/PackagingProvider-1.12.2-1.0.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7011/961/PackagingProvider-1.12.2-1.0.0.1.jar"
+    },
+    {
+      "filename": "Pam's HarvestCraft 1.12.2zg.jar",
+      "bytes": 4912890,
+      "sha256": "9542e0863473b2cf61eff3fa7bdb9f096aaf7fc446c54750cbaa9db47a58f2fa",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2904/825/Pam%27s%20HarvestCraft%201.12.2zg.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2904/825/Pam%27s%20HarvestCraft%201.12.2zg.jar"
+    },
+    {
+      "filename": "Patchouli-1.0-23.6.jar",
+      "bytes": 472464,
+      "sha256": "8fcceac75c71e0d041db734111200205d03431b7e8646f8209cf2c4de9afef7b",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3162/874/Patchouli-1.0-23.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3162/874/Patchouli-1.0-23.6.jar"
+    },
+    {
+      "filename": "PickUpNotifier-v1.1.5-1.12.2.jar",
+      "bytes": 43418,
+      "sha256": "3dca727dc550230b4b7173d060025edf40e2321e9a5f0f823efd61f5f20f4513",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3062/121/PickUpNotifier-v1.1.5-1.12.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3062/121/PickUpNotifier-v1.1.5-1.12.2.jar"
+    },
+    {
+      "filename": "plustic-8.0.6.jar",
+      "bytes": 546442,
+      "sha256": "5ebb9bb630a9c47d3f0053dfff2d0b56007e0163fd0b3528957c948dc54d8ae9",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/4703/532/plustic-8.0.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/4703/532/plustic-8.0.6.jar"
+    },
+    {
+      "filename": "Pollution-1.9.0.jar",
+      "bytes": 4930826,
+      "sha256": "cb151b9b1a1f732c7751ea7712911547a8948d5aced25cd8043ede1bc00ae8ed",
+      "side": "both",
+      "source": "dev/pollution/build.py, profile pollutionJulyCompat",
+      "url": "https://github.com/UnivmemorN/Pollution/tree/117162fc16b0a6f4e87571ab972c8c1bf9e3a03c"
+    },
+    {
+      "filename": "ProjectIntelligence-1.12.2-1.0.9.28-universal.jar",
+      "bytes": 473948,
+      "sha256": "bdbb48ac3f504f224e5383e281e56e773aa6261defb6912c99fb6e0088d6fae9",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2833/640/ProjectIntelligence-1.12.2-1.0.9.28-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2833/640/ProjectIntelligence-1.12.2-1.0.9.28-universal.jar"
+    },
+    {
+      "filename": "ProjectRed-1.12.2-4.9.4.120-Base.jar",
+      "bytes": 2036136,
+      "sha256": "8345e86d84cc38e8017fef9b20b1160b4a988637e14b8bcb5b817747d8e63570",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2745/545/ProjectRed-1.12.2-4.9.4.120-Base.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2745/545/ProjectRed-1.12.2-4.9.4.120-Base.jar"
+    },
+    {
+      "filename": "ProjectRed-1.12.2-4.9.4.120-compat.jar",
+      "bytes": 67384,
+      "sha256": "02c2f75cc0c6630195072bd2cd5878fb60cc0b6780d4fd6a3b0f7b1f3f8ea394",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2745/546/ProjectRed-1.12.2-4.9.4.120-compat.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2745/546/ProjectRed-1.12.2-4.9.4.120-compat.jar"
+    },
+    {
+      "filename": "ProjectRed-1.12.2-4.9.4.120-fabrication.jar",
+      "bytes": 1894139,
+      "sha256": "6f74f0cc3223636bae0c2a6f61dabdf377df2e4bd73db62f12e9c2356492ae9c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2745/547/ProjectRed-1.12.2-4.9.4.120-fabrication.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2745/547/ProjectRed-1.12.2-4.9.4.120-fabrication.jar"
+    },
+    {
+      "filename": "ProjectRed-1.12.2-4.9.4.120-integration.jar",
+      "bytes": 3923751,
+      "sha256": "659623f496dd457dd689c69dbd7a593453f65f78662a4af8dc624bfff33ee2eb",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2745/548/ProjectRed-1.12.2-4.9.4.120-integration.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2745/548/ProjectRed-1.12.2-4.9.4.120-integration.jar"
+    },
+    {
+      "filename": "ProjectRed-1.12.2-4.9.4.120-lighting.jar",
+      "bytes": 724477,
+      "sha256": "65d3a196ff8ca2a1caf119e28ebfb37d0157730d97c9acc0c7e2601f5edbe244",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2745/549/ProjectRed-1.12.2-4.9.4.120-lighting.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2745/549/ProjectRed-1.12.2-4.9.4.120-lighting.jar"
+    },
+    {
+      "filename": "random_complement-1.6.9.jar",
+      "bytes": 318005,
+      "sha256": "7398f47afabe8f871467a43e3013f25bfb847eb3325697378813a992f328229e",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/7015/426/random_complement-1.6.9.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7015/426/random_complement-1.6.9.jar"
+    },
+    {
+      "filename": "randomtweaks-1.12.2-2.8.3.1.jar",
+      "bytes": 288481,
+      "sha256": "48d49cb261cc81784d55086619fe76be431a1710d41e19896fa83a118d8e3910",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3204/340/randomtweaks-1.12.2-2.8.3.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3204/340/randomtweaks-1.12.2-2.8.3.1.jar"
+    },
+    {
+      "filename": "RedstoneFlux-1.12-2.1.1.1-universal.jar",
+      "bytes": 31802,
+      "sha256": "6ff7f96d076bfaad83fb6ba92ec457b8a76391439663b0cc32a9ec5398345280",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2920/436/RedstoneFlux-1.12-2.1.1.1-universal.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2920/436/RedstoneFlux-1.12-2.1.1.1-universal.jar"
+    },
+    {
+      "filename": "ReForbidden Magic-1.12.2-v1.1.0.jar",
+      "bytes": 1086770,
+      "sha256": "dfa5b81569bfe720abcdf8f546eabd7ddc0d816963da633ea827a538449d6241",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6968/879/ReForbidden%20Magic-1.12.2-v1.1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6968/879/ReForbidden%20Magic-1.12.2-v1.1.0.jar"
+    },
+    {
+      "filename": "ResourceLoader-MC1.12.1-1.5.3.jar",
+      "bytes": 16612,
+      "sha256": "5c5ee114dccab5caca1772e3487eca04e161c494baca4d53c8fddf5cf8722e56",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2477/566/ResourceLoader-MC1.12.1-1.5.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2477/566/ResourceLoader-MC1.12.1-1.5.3.jar"
+    },
+    {
+      "filename": "Retro-Sophisticated-Backpacks-1.0.2.jar",
+      "bytes": 766220,
+      "sha256": "ba0b1ccb6ec883026f794e78619edf34fbe361fe1e7e80c762cc0cee3e2c7fde",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6359/328/Retro-Sophisticated-Backpacks-1.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6359/328/Retro-Sophisticated-Backpacks-1.0.2.jar"
+    },
+    {
+      "filename": "Rex's-AdditionalStructures-1.12.x(v.2.5.0).jar",
+      "bytes": 840681,
+      "sha256": "e67d245d68db8c8e292f08ee078ad1e5190ae292d014833784142849de499694",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3636/518/Rex%27s-AdditionalStructures-1.12.x%28v.2.5.0%29.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3636/518/Rex%27s-AdditionalStructures-1.12.x%28v.2.5.0%29.jar"
+    },
+    {
+      "filename": "RoguelikeDungeonsFnarEdition-1.12.2-2.4.6.jar",
+      "bytes": 1308533,
+      "sha256": "f0e88b7ae7b9afa8272cd3a90bdf264bc0753a66f21fbe59aeb80e9c32a8a244",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5688/58/RoguelikeDungeonsFnarEdition-1.12.2-2.4.6.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5688/58/RoguelikeDungeonsFnarEdition-1.12.2-2.4.6.jar"
+    },
+    {
+      "filename": "RoughlyEnoughIDs-2.2.3.jar",
+      "bytes": 784124,
+      "sha256": "3cecd5e3dbb3510399361297346670d5ab2ecca6c1aa4042baacd8bbf726c489",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6761/278/RoughlyEnoughIDs-2.2.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6761/278/RoughlyEnoughIDs-2.2.3.jar"
+    },
+    {
+      "filename": "rtgc-1.0.2.jar",
+      "bytes": 2192509,
+      "sha256": "85e48594137137b41c4778f5722b6879ae48887cf8e9bb496ea0a9db29a7d02c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/7042/534/rtgc-1.0.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7042/534/rtgc-1.0.2.jar"
+    },
+    {
+      "filename": "scalingguis-1.12.2-1.0.3.1.jar",
+      "bytes": 50370,
+      "sha256": "860c0a68cb2d64b55bb850a99dac02efda46ba95d7a08fb0a8c6b5a023aad016",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5150/678/scalingguis-1.12.2-1.0.3.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5150/678/scalingguis-1.12.2-1.0.3.1.jar"
+    },
+    {
+      "filename": "SilentLib-1.12.2-3.0.14+168.jar",
+      "bytes": 369314,
+      "sha256": "eabb5fc9bdbff1620db5e567663ac2f1bfedc02f7f3004313e7fdde66ec11d16",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2851/111/SilentLib-1.12.2-3.0.14%2B168.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2851/111/SilentLib-1.12.2-3.0.14%2B168.jar"
+    },
+    {
+      "filename": "SmoothFont-mc1.12.2-2.1.4.jar",
+      "bytes": 283749,
+      "sha256": "986090ef0d56be1d6f46a9dae7a3669098c0e3f995ed6ba3d2b01223ce9b129a",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3944/565/SmoothFont-mc1.12.2-2.1.4.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3944/565/SmoothFont-mc1.12.2-2.1.4.jar"
+    },
+    {
+      "filename": "soundphysics-1.1.17.jar",
+      "bytes": 75687,
+      "sha256": "384f20954325c82d501cc30300bf492218b16f83ba8c8dee4923ca4af10af85b",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6858/200/soundphysics-1.1.17.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6858/200/soundphysics-1.1.17.jar"
+    },
+    {
+      "filename": "SpiceOfLife-mc1.12-1.3.12.jar",
+      "bytes": 207687,
+      "sha256": "4c4453218b60f03094e7b34b100ff0314f8fe6c2d517c0d1bf3136e8da64b973",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2571/951/SpiceOfLife-mc1.12-1.3.12.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2571/951/SpiceOfLife-mc1.12-1.3.12.jar"
+    },
+    {
+      "filename": "StellarCore-1.5.22.jar",
+      "bytes": 1342013,
+      "sha256": "e6235c16ab45ed5497b4664b1eb236abd63cd13ebe4b5d968014478cb7b59403",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6480/479/StellarCore-1.5.22.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6480/479/StellarCore-1.5.22.jar"
+    },
+    {
+      "filename": "SuperFactoryManager-1.12.2-2.0.25.jar",
+      "bytes": 720288,
+      "sha256": "7d1e6d0008a991dc70e40d4843213943562fdd0c3565e6c8d8c0e25db537739e",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3357/967/SuperFactoryManager-1.12.2-2.0.25.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3357/967/SuperFactoryManager-1.12.2-2.0.25.jar"
+    },
+    {
+      "filename": "tconevo-1.12.2-1.1.1.jar",
+      "bytes": 1270008,
+      "sha256": "23cd353e4149f9d8736a172b26312c13cb6ad279d44f17ea494a542e7b2f06a8",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6802/732/tconevo-1.12.2-1.1.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6802/732/tconevo-1.12.2-1.1.1.jar"
+    },
+    {
+      "filename": "TConstruct-1.12.2-2.13.0.183.jar",
+      "bytes": 4023372,
+      "sha256": "707107f746ffc9d2bf35912953ae1ce780f7b7c4b7cf86b4821a1a151bcf9f6f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2902/483/TConstruct-1.12.2-2.13.0.183.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2902/483/TConstruct-1.12.2-2.13.0.183.jar"
+    },
+    {
+      "filename": "Thaumcraft-1.12.2-6.1.BETA26.jar",
+      "bytes": 11360786,
+      "sha256": "9425f8643581b27ff8845b087c8bc6fc10425a32942f1a3f0e265ce6b38f7b5f",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2629/23/Thaumcraft-1.12.2-6.1.BETA26.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2629/23/Thaumcraft-1.12.2-6.1.BETA26.jar"
+    },
+    {
+      "filename": "thaumic-energistics-extended-life-1.12.2-2.3.5.jar",
+      "bytes": 1101878,
+      "sha256": "a5b9634673adb52198f07be5892bfc1515f33a6c0df5cb6061f7bfcf5b8cb4a7",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6321/322/thaumic-energistics-extended-life-1.12.2-2.3.5.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6321/322/thaumic-energistics-extended-life-1.12.2-2.3.5.jar"
+    },
+    {
+      "filename": "ThaumicAugmentation-1.12.2-2.1.14.jar",
+      "bytes": 8220792,
+      "sha256": "6af6851071a227dc48a634bb827c7679703f0825c0b2a697553e261036b13c00",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6047/659/ThaumicAugmentation-1.12.2-2.1.14.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6047/659/ThaumicAugmentation-1.12.2-2.1.14.jar"
+    },
+    {
+      "filename": "ThaumicInventoryScanning_1.12.2-2.0.10.jar",
+      "bytes": 17224,
+      "sha256": "2fa7286fe1ce1e95eb1ccf958cf6e07fca8beddc3d7de7986d390523c75f247c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2559/89/ThaumicInventoryScanning_1.12.2-2.0.10.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2559/89/ThaumicInventoryScanning_1.12.2-2.0.10.jar"
+    },
+    {
+      "filename": "ThaumicJEI-1.12.2-1.7.0.jar",
+      "bytes": 58100,
+      "sha256": "df34181baa520fc3723c5a9a776e5ede1e550df55705cdb3bbeb9ed8675bc2fa",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5646/810/ThaumicJEI-1.12.2-1.7.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5646/810/ThaumicJEI-1.12.2-1.7.0.jar"
+    },
+    {
+      "filename": "thaumictinkerer-1.12.2-5.9.14-Unofficial.jar",
+      "bytes": 2643883,
+      "sha256": "aa2bcb277bda5ed95911fbb2af0052375d868071c849bd923a0c0fbcce88f130",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6981/380/thaumictinkerer-1.12.2-5.9.14-Unofficial.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6981/380/thaumictinkerer-1.12.2-5.9.14-Unofficial.jar"
+    },
+    {
+      "filename": "thaumicwonders-2.1.3.jar",
+      "bytes": 2750380,
+      "sha256": "ec8c2eae4fe53a8f908c68ef9dab384386ed44c3a1b0907b203548b6ec37585c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/7020/927/thaumicwonders-2.1.3.jar",
+      "url": "https://mediafilez.forgecdn.net/files/7020/927/thaumicwonders-2.1.3.jar"
+    },
+    {
+      "filename": "theoneprobe-1.12-1.4.28.jar",
+      "bytes": 301893,
+      "sha256": "f3e5048dbe58f37f98f8130886ede880ac5b3333ee73cae2381c337e500c4bd1",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2667/280/theoneprobe-1.12-1.4.28.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2667/280/theoneprobe-1.12-1.4.28.jar"
+    },
+    {
+      "filename": "tinkersjei-1.2.jar",
+      "bytes": 12255,
+      "sha256": "526d4fb23d033a79c44276b68746ab3f653e960c7101a9d62f51a12940730b94",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2701/203/tinkersjei-1.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2701/203/tinkersjei-1.2.jar"
+    },
+    {
+      "filename": "TinkerToolLeveling-1.12.2-1.1.0.jar",
+      "bytes": 95850,
+      "sha256": "87e2702152d795efd8548b3a1ec9471469d7c705db1ec199a465807720ddcdcd",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2630/860/TinkerToolLeveling-1.12.2-1.1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2630/860/TinkerToolLeveling-1.12.2-1.1.0.jar"
+    },
+    {
+      "filename": "topaddons-1.12.2-1.13.0.jar",
+      "bytes": 243603,
+      "sha256": "d29f313101f814caa15c589ad1352579922ac588fc11500af2fabeeefbcc70a2",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2887/479/topaddons-1.12.2-1.13.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2887/479/topaddons-1.12.2-1.13.0.jar"
+    },
+    {
+      "filename": "torchmaster_1.12.2-1.8.5.0.jar",
+      "bytes": 156406,
+      "sha256": "c8e0099dcda96d0d284db19be2998fac0a9dd71f84d90ea2b03b07fdf36eafa1",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3529/742/torchmaster_1.12.2-1.8.5.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3529/742/torchmaster_1.12.2-1.8.5.0.jar"
+    },
+    {
+      "filename": "touhoulittlemaid-1.12.2-1.2.5-release.jar",
+      "bytes": 9238397,
+      "sha256": "198b0e3420d61b4502fb28f826dce6d3e1db44f85e5e4ab91a46498d36dce811",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3576/415/touhoulittlemaid-1.12.2-1.2.5-release.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3576/415/touhoulittlemaid-1.12.2-1.2.5-release.jar"
+    },
+    {
+      "filename": "TrashSlot_1.12.2-8.4.10.jar",
+      "bytes": 59192,
+      "sha256": "ddb13a0209cd38bdff452cf583e7453fe10f45f3c8e49e444af533d6cc82f940",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2722/385/TrashSlot_1.12.2-8.4.10.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2722/385/TrashSlot_1.12.2-8.4.10.jar"
+    },
+    {
+      "filename": "UniversalTweaks-1.12.2-1.16.0.1.jar",
+      "bytes": 1620478,
+      "sha256": "ee4d1c000759dbb17aae24ea12d014cb40e991dce11e1901ab00ebea98b5dfeb",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6959/247/UniversalTweaks-1.12.2-1.16.0.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6959/247/UniversalTweaks-1.12.2-1.16.0.1.jar"
+    },
+    {
+      "filename": "VillageNames-1.12.2-4.4.13.jar",
+      "bytes": 3017983,
+      "sha256": "77d6ef0e64bde530cf59b87229c85bd257336340c45db94a011c600994f19a27",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/5886/882/VillageNames-1.12.2-4.4.13.jar",
+      "url": "https://mediafilez.forgecdn.net/files/5886/882/VillageNames-1.12.2-4.4.13.jar"
+    },
+    {
+      "filename": "vintagefix-0.6.2.jar",
+      "bytes": 1034861,
+      "sha256": "03a946ed9b6dcc459f4e9765fe4aad61a7fcaf9886ac115e8ba1902fbddbf60c",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6609/247/vintagefix-0.6.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6609/247/vintagefix-0.6.2.jar"
+    },
+    {
+      "filename": "visualores-0.2.8.jar",
+      "bytes": 254291,
+      "sha256": "c9fb4d04b85859af983d84b1d254433edf00af15c00661d142da9fe165527643",
+      "side": "both",
+      "source": "dev/pack/manifest_addons.py visualores",
+      "url": "https://github.com/GTQT/VisualOres-Meowmel/tree/a9f5e8e3b83756146796c83bbe39171d26d2a375"
+    },
+    {
+      "filename": "w2w-1.2.1.jar",
+      "bytes": 18829,
+      "sha256": "36a6476df303068e15dfc39fb872dc5eade784dc976ab98411a47927bcf31d76",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3009/422/w2w-1.2.1.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3009/422/w2w-1.2.1.jar"
+    },
+    {
+      "filename": "WarpTheory1.12.2-0.0.3.9.jar",
+      "bytes": 195292,
+      "sha256": "c96a1cf1f554a51070e0a8fa9f12c253c481f9bb0fcdb3ef365c45d3a8a34e9b",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/6184/214/WarpTheory1.12.2-0.0.3.9.jar",
+      "url": "https://mediafilez.forgecdn.net/files/6184/214/WarpTheory1.12.2-0.0.3.9.jar"
+    },
+    {
+      "filename": "Waystones_1.12.2-4.1.0.jar",
+      "bytes": 178994,
+      "sha256": "5e79f329154d9a6225130f2b29dbcb0f603e2e622637e39ca566f8179b02ca15",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/2859/589/Waystones_1.12.2-4.1.0.jar",
+      "url": "https://mediafilez.forgecdn.net/files/2859/589/Waystones_1.12.2-4.1.0.jar"
+    },
+    {
+      "filename": "xaerolib-forge-1.12.2-1.1.0.jar",
+      "bytes": 597314,
+      "sha256": "777127ce764ec4ea096ba5245609994de4c6290db2b5cf7d41d3ce17a6662767",
+      "side": "both",
+      "source": "https://cdn.modrinth.com/data/ZaQIxZKn/versions/2EkudBDY/xaerolib-forge-1.12.2-1.1.0.jar",
+      "url": "https://cdn.modrinth.com/data/ZaQIxZKn/versions/2EkudBDY/xaerolib-forge-1.12.2-1.1.0.jar"
+    },
+    {
+      "filename": "xaerominimap-forge-1.12.2-25.3.13.jar",
+      "bytes": 1992503,
+      "sha256": "d802b3f714a7633c1810511d4079975c681d930c6f6c2039cd7664df35c62a3d",
+      "side": "both",
+      "source": "https://cdn.modrinth.com/data/1bokaNcj/versions/48coZVIV/xaerominimap-forge-1.12.2-25.3.13.jar",
+      "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/48coZVIV/xaerominimap-forge-1.12.2-25.3.13.jar"
+    },
+    {
+      "filename": "xaeroworldmap-forge-1.12.2-1.40.16.jar",
+      "bytes": 924972,
+      "sha256": "b5382be704ec8b213bd03dcd37ae2666346fedd6582702cb2a5463f3ba281775",
+      "side": "both",
+      "source": "https://cdn.modrinth.com/data/NcUtCpym/versions/M71Sumnm/xaeroworldmap-forge-1.12.2-1.40.16.jar",
+      "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/M71Sumnm/xaeroworldmap-forge-1.12.2-1.40.16.jar"
+    },
+    {
+      "filename": "Xtones-1.2.2.jar",
+      "bytes": 456054,
+      "sha256": "e5ebc5a68d5b7648f255d66c191d577d4b51c06535c81c8fa0df17d281da06fb",
+      "side": "both",
+      "source": "https://mediafilez.forgecdn.net/files/3248/33/Xtones-1.2.2.jar",
+      "url": "https://mediafilez.forgecdn.net/files/3248/33/Xtones-1.2.2.jar"
+    }
+  ]
+}

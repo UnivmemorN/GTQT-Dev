@@ -229,6 +229,13 @@
       "server": "untested",
       "guide": "dev/drtech/README.md"
     },
+    "drtechOctober": {
+      "repositories": ["drtech", "steamRunner"],
+      "artifacts": ["gtOctober", "gtfoJuly", "model100"],
+      "build": "passed",
+      "server": "tested-in-pack-candidate",
+      "guide": "dev/pack/drtech-october.md"
+    },
     "steamDrtechAugust": {
       "repositories": [
         "steamRunner",
@@ -339,6 +346,20 @@
       "build": "upstream-manifest",
       "server": "blocked-duplicate-ae",
       "guide": "docs/pack.md"
+    },
+    "pack19Candidate": {
+      "repositories": ["pack", "gtceMuku", "steamRunner", "drtech", "pollutionCompat", "pollutionJuly"],
+      "artifacts": ["gtOctober", "coreJuly", "steamJuly", "gtfoJuly", "model100"],
+      "runtime": "Minecraft 1.12.2 / Forge 14.23.5.2860 / Java 8",
+      "build": "assembled-verified-hashes",
+      "server": "passed-new-world-client-join-save-restart-rejoin",
+      "guide": "dev/pack/README.md",
+      "candidateManifest": "dev/pack/candidate.json",
+      "historicalAudit": "evidence/pack19-manifest-audit.json",
+      "dependencyAudit": "dev/pack/manifest-dependency-audit.json",
+      "evidence": "evidence/pack19-acceptance.json",
+      "questAudit": "evidence/pack19-quests.json",
+      "veinAudit": "evidence/pack19-veins.json"
     }
   },
   "awaitingSource": [

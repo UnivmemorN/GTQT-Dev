@@ -29,6 +29,8 @@ Forge 也能从类注解注册模组。缺少 `mcmod.info` 的 JAR 可能正常�
 
 另一次试验在 1.8.8 清单上换入 1.9 的 GregTech、SteamTech 构建件及配套依赖。该候选同样遇到 AE 重复。只在这份候选里移走 rv6 后，Forge 报告 12 项未满足的版本要求，包括旧 GTQT-Core 要求 GregTech ≥2.9.0-beta、旧 GCYM 要求 ≥2.9.0-188，以及 BogoSorter 和 ModularUI 的版本范围冲突。此候选未进入主世界。维护者的旧审计在 `legacy-build/distribution/legacy-real-forge-audit.json`，原始清单的崩溃记录在 `legacy-build/runtime/runs/source-lock-188-control/instance/crash-reports/`。
 
+十月 GT 的联机候选保留 AE2 UEL 0.56.7，纳入七月 Core、兼容分支 Pollution、SteamTech 和 DrTech。可从锁重新组装客户端和专服，在新世界复跑首次加入、保存、关服及重启重连。原 189 项的每个取舍及 12 条 Forge 诊断均可独立查阅。[组装与验收入口](../dev/pack/README.md) · [189 个文件](../evidence/pack19-manifest-audit.json) · [12 条依赖诊断](../dev/pack/manifest-dependency-audit.json)
+
 ## AE 和太空模组的联调组合
 
 | 组合 | 已核对的输入 | 纳入整包前要验证什么 |

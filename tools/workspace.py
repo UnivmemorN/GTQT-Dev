@@ -91,8 +91,25 @@ def validate(lock):
         for field in ("build", "server"):
             require(isinstance(profile.get(field), str) and profile[field].strip(), f"{key}: missing {field} status")
         check_local_reference(key, "guide", profile.get("guide"))
-        if "evidence" in profile:
-            check_local_reference(key, "evidence", profile["evidence"])
+        for field in ("evidence", "candidateManifest", "historicalAudit", "dependencyAudit", "questAudit", "veinAudit"):
+            if field in profile:
+                check_local_reference(key, field, profile[field])
+        if "candidateManifest" in profile:
+            require("evidence" in profile, f"{key}: candidate manifest needs an acceptance receipt")
+            evidence = json.loads((ROOT / profile["evidence"]).read_bytes())
+            manifest = (ROOT / profile["candidateManifest"]).read_bytes()
+            require(hashlib.sha256(manifest).hexdigest() == evidence.get("lockSha256"),
+                    f"{key}: candidate manifest differs from acceptance receipt")
+            if "questAudit" in profile:
+                quests = json.loads((ROOT / profile["questAudit"]).read_bytes())
+                phases = evidence.get("phases", [])
+                require(phases and phases[-1].get("phase") == "reload" and
+                        phases[-1].get("levelSha256") == quests.get("inputs", {}).get("levelDatSha256"),
+                        f"{key}: quests were not audited against the accepted reloaded world")
+            if "veinAudit" in profile:
+                veins = json.loads((ROOT / profile["veinAudit"]).read_bytes())
+                require(veins.get("resultSha256") == evidence.get("resultSha256"),
+                        f"{key}: veins were not verified in the accepted run")
         if "runtimeSha256" in profile:
             runtime = profile["runtimeSha256"]
             require(isinstance(runtime, dict) and runtime and

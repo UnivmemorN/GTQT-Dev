@@ -1,0 +1,23 @@
+--- a/src/main/java/keqing/gtmaid/GTMaid.java
++++ b/src/main/java/keqing/gtmaid/GTMaid.java
+@@ -13,8 +13,8 @@
+         modid = "gtmaid",
+         name = "GTMaid",
+         acceptedMinecraftVersions = "[1.12.2,1.13)",
+-        version = "0.0.1-beta",
+-        dependencies = "required-after:gregtech@[2.8.0-beta,);"
++        version = "1.0.2",
++        dependencies = "required-after:gregtech@[1.9.0];required-after:touhou_little_maid;"
+ )
+ public class GTMaid {
+     public static final String PACK = "1.0.1";
+--- a/src/main/resources/mcmod.info
++++ b/src/main/resources/mcmod.info
+@@ -3,6 +3,7 @@
+ 	"name": "GTMaid",
+ 	"version": "${mod_version}",
+ 	"mcversion": "1.12.2",
++	"dependencies": ["gregtech@[1.9.0]", "touhou_little_maid"],
+ 	"description": "${mod_description}",
+ 	"authorList": ["KeQingSoCute520"],
+ 	"credits": "${mod_credits}",

@@ -1,0 +1,683 @@
+{
+  "forge": "forge-1.12.2-14.23.5.2860",
+  "world": {
+    "seed": 2506983691465655902,
+    "name": "pack19-candidate"
+  },
+  "dedicatedServerRestartAndClientRejoin": true,
+  "serverRestored": true,
+  "inputs": {
+    "method": "pre-launch",
+    "lockSha256": "f71fb8183fb62e619845a944522f1a2d13d61aa506ef1a6dc76772f16762b8aa",
+    "serverSource": {
+      "overrides": {
+        "files": 8236,
+        "sha256": "e0428b29021f5a6bb6d2e26fe1b892ab106c8b3c36441a68632aa4898b1863ea"
+      },
+      "scriptsQuestsResources": {
+        "files": 113,
+        "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+      },
+      "productionMods": {
+        "files": 183,
+        "sha256": "bf1f0fcabe3e0255b0a3b7e7cd8ed2b8769d2b21fd4e73695e803bcbab81e3c4"
+      }
+    },
+    "clientSource": {
+      "overrides": {
+        "files": 8236,
+        "sha256": "e0428b29021f5a6bb6d2e26fe1b892ab106c8b3c36441a68632aa4898b1863ea"
+      },
+      "scriptsQuestsResources": {
+        "files": 113,
+        "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+      },
+      "productionMods": {
+        "files": 185,
+        "sha256": "dda66d1ac247b34b0d1dc6cfeae8d3e1d117851e2d597ccb81c5ec7e359a2fec"
+      }
+    },
+    "serverCreateStaging": {
+      "overrides": {
+        "files": 8236,
+        "sha256": "e0428b29021f5a6bb6d2e26fe1b892ab106c8b3c36441a68632aa4898b1863ea"
+      },
+      "scriptsQuestsResources": {
+        "files": 113,
+        "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+      },
+      "productionMods": {
+        "files": 183,
+        "sha256": "bf1f0fcabe3e0255b0a3b7e7cd8ed2b8769d2b21fd4e73695e803bcbab81e3c4"
+      }
+    },
+    "serverReloadStaging": {
+      "overridesAfterLaunch": {
+        "files": 8245,
+        "sha256": "6cb2a2c178dcae4c0ad09260497da4271694c9bc74c21fe88487be5c669e7943"
+      },
+      "scriptsQuestsResources": {
+        "files": 113,
+        "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+      },
+      "productionMods": {
+        "files": 183,
+        "sha256": "bf1f0fcabe3e0255b0a3b7e7cd8ed2b8769d2b21fd4e73695e803bcbab81e3c4"
+      },
+      "generatedFilesUnderMods": {
+        "1.12.2/ChickenASM-1.12-1.0.2.7.jar": "54c063e72abb6af999d80b94a2f1c9593c6ef0bb7769f3410d2a49f47c1ba3b0",
+        "1.12.2/codecjlayermp3-1.0.0-SNAPSHOT.jar": "e3d0723dbe20290856d80a487a9bbfd5e988f23db17b234fcfe47db17fe6f3fd",
+        "1.12.2/jlayer-1.0.1.jar": "850508c837454a1b06017c32a36876fae516de1e89a829f725fee1e6dcc52000",
+        "1.12.2/nashorn.jar": "984ab65c7c96483caa9e3722d932ee8ad6f4f017364538ed2d169c596ec4fe56",
+        "memory_repo/net/ilexiconn/llibrary-core/1.0.11-1.12.2/llibrary-core-1.0.11-1.12.2.jar": "981fb876fc665c7fa228ae9673ddbbd2355bbf320b6a7ead53987d35ef145e9c",
+        "memory_repo/net/ilexiconn/llibrary-core/1.0.11-1.12.2/llibrary-core-1.0.11-1.12.2.jar.meta": "2a41015371950d75ce8df0f234abf5767127c06d1893395a3c218dd7f8a77967",
+        "memory_repo/info/loenwind/autosave/AutoSave/1.12.2-1.0.11/AutoSave-1.12.2-1.0.11.jar": "8b40573a923098b7505dc3a7333ea7994f99fdca5d1507f200959779f768e14b",
+        "memory_repo/info/loenwind/autosave/AutoSave/1.12.2-1.0.11/AutoSave-1.12.2-1.0.11.jar.meta": "ebfdf24363d41a75ed5ef4247b988e48c91f859aa050cf887a08c122a9a566b8",
+        "memory_repo/info/loenwind/autoconfig/AutoConfig/1.12.2-1.0.2/AutoConfig-1.12.2-1.0.2.jar": "07e017e50b918f9a1ddbc01777b24e74204155730e75628c68e923c4b2e559df",
+        "memory_repo/info/loenwind/autoconfig/AutoConfig/1.12.2-1.0.2/AutoConfig-1.12.2-1.0.2.jar.meta": "4d1c31aec7881e577f9f91319a193145d84fd1cce8f1916752c617bbbe4862fd",
+        "memory_repo/com/enderio/core/EnderCore/1.12.2-0.5.78/EnderCore-1.12.2-0.5.78-core.jar": "f6602f9c1c6bb27bbbaf38f7f32a5e71d4d356ab75b21930b032b68b343fd30d",
+        "memory_repo/com/enderio/core/EnderCore/1.12.2-0.5.78/EnderCore-1.12.2-0.5.78-core.jar.meta": "7734b94946d8502b19a8d38afdf4cf2120722d3d46c1ba72b698e7046e712587"
+      }
+    },
+    "serverAfterReload": {
+      "overridesAfterLaunch": {
+        "files": 8245,
+        "sha256": "bd3177607e801ef7abc0b1e36e7db141b2472ea1d92f77a9f02c4853a8b93fd8"
+      },
+      "scriptsQuestsResources": {
+        "files": 113,
+        "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+      },
+      "productionMods": {
+        "files": 183,
+        "sha256": "bf1f0fcabe3e0255b0a3b7e7cd8ed2b8769d2b21fd4e73695e803bcbab81e3c4"
+      },
+      "generatedFilesUnderMods": {
+        "1.12.2/ChickenASM-1.12-1.0.2.7.jar": "54c063e72abb6af999d80b94a2f1c9593c6ef0bb7769f3410d2a49f47c1ba3b0",
+        "1.12.2/codecjlayermp3-1.0.0-SNAPSHOT.jar": "e3d0723dbe20290856d80a487a9bbfd5e988f23db17b234fcfe47db17fe6f3fd",
+        "1.12.2/jlayer-1.0.1.jar": "850508c837454a1b06017c32a36876fae516de1e89a829f725fee1e6dcc52000",
+        "1.12.2/nashorn.jar": "984ab65c7c96483caa9e3722d932ee8ad6f4f017364538ed2d169c596ec4fe56",
+        "memory_repo/net/ilexiconn/llibrary-core/1.0.11-1.12.2/llibrary-core-1.0.11-1.12.2.jar": "981fb876fc665c7fa228ae9673ddbbd2355bbf320b6a7ead53987d35ef145e9c",
+        "memory_repo/net/ilexiconn/llibrary-core/1.0.11-1.12.2/llibrary-core-1.0.11-1.12.2.jar.meta": "2a41015371950d75ce8df0f234abf5767127c06d1893395a3c218dd7f8a77967",
+        "memory_repo/info/loenwind/autosave/AutoSave/1.12.2-1.0.11/AutoSave-1.12.2-1.0.11.jar": "8b40573a923098b7505dc3a7333ea7994f99fdca5d1507f200959779f768e14b",
+        "memory_repo/info/loenwind/autosave/AutoSave/1.12.2-1.0.11/AutoSave-1.12.2-1.0.11.jar.meta": "ebfdf24363d41a75ed5ef4247b988e48c91f859aa050cf887a08c122a9a566b8",
+        "memory_repo/info/loenwind/autoconfig/AutoConfig/1.12.2-1.0.2/AutoConfig-1.12.2-1.0.2.jar": "07e017e50b918f9a1ddbc01777b24e74204155730e75628c68e923c4b2e559df",
+        "memory_repo/info/loenwind/autoconfig/AutoConfig/1.12.2-1.0.2/AutoConfig-1.12.2-1.0.2.jar.meta": "4d1c31aec7881e577f9f91319a193145d84fd1cce8f1916752c617bbbe4862fd",
+        "memory_repo/com/enderio/core/EnderCore/1.12.2-0.5.78/EnderCore-1.12.2-0.5.78-core.jar": "f6602f9c1c6bb27bbbaf38f7f32a5e71d4d356ab75b21930b032b68b343fd30d",
+        "memory_repo/com/enderio/core/EnderCore/1.12.2-0.5.78/EnderCore-1.12.2-0.5.78-core.jar.meta": "7734b94946d8502b19a8d38afdf4cf2120722d3d46c1ba72b698e7046e712587"
+      }
+    }
+  },
+  "resultSha256": "3f406e53f3aed3281e52c4ac6582a65caaf33ac206905463e1bb412faae8efce",
+  "lockSha256": "680442cf9d02427934c77bf90a9e90697ba9c48f25dc74cffd0b443760e20c10",
+  "testedLockSha256": "f71fb8183fb62e619845a944522f1a2d13d61aa506ef1a6dc76772f16762b8aa",
+  "sourceUrlCorrections": [
+    {
+      "filename": "ae2-uel-v0.56.7.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/6302/098/ae2-uel-v0.56.7.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/6302/98/ae2-uel-v0.56.7.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "AE2CT-Legacy-0.1.2.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/5814/089/AE2CT-Legacy-0.1.2.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/5814/89/AE2CT-Legacy-0.1.2.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "AutoRegLib-1.3-32.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/2746/011/AutoRegLib-1.3-32.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/2746/11/AutoRegLib-1.3-32.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "BetterBuildersWands-1.12.2-0.13.2.271+5997513.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/2691/084/BetterBuildersWands-1.12.2-0.13.2.271%2B5997513.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/2691/84/BetterBuildersWands-1.12.2-0.13.2.271%2B5997513.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "bmj-1.0.2.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/5671/051/bmj-1.0.2.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/5671/51/bmj-1.0.2.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "ChestTransporter-1.12.2-2.8.8.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/2524/058/ChestTransporter-1.12.2-2.8.8.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/2524/58/ChestTransporter-1.12.2-2.8.8.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "CraftTweaker2-1.12-4.1.20.709.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/6929/088/CraftTweaker2-1.12-4.1.20.709.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/6929/88/CraftTweaker2-1.12-4.1.20.709.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "enderutilities-1.12.2-0.7.15.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/2977/010/enderutilities-1.12.2-0.7.15.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/2977/10/enderutilities-1.12.2-0.7.15.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "HadEnoughItems_1.12.2-4.29.7.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/6963/093/HadEnoughItems_1.12.2-4.29.7.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/6963/93/HadEnoughItems_1.12.2-4.29.7.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "IGI-BloodMagic-1.2.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/2549/047/IGI-BloodMagic-1.2.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/2549/47/IGI-BloodMagic-1.2.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "jeibees-0.9.0.5-mc1.12.2.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/2490/058/jeibees-0.9.0.5-mc1.12.2.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/2490/58/jeibees-0.9.0.5-mc1.12.2.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "RoguelikeDungeonsFnarEdition-1.12.2-2.4.6.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/5688/058/RoguelikeDungeonsFnarEdition-1.12.2-2.4.6.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/5688/58/RoguelikeDungeonsFnarEdition-1.12.2-2.4.6.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "Thaumcraft-1.12.2-6.1.BETA26.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/2629/023/Thaumcraft-1.12.2-6.1.BETA26.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/2629/23/Thaumcraft-1.12.2-6.1.BETA26.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "ThaumicInventoryScanning_1.12.2-2.0.10.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/2559/089/ThaumicInventoryScanning_1.12.2-2.0.10.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/2559/89/ThaumicInventoryScanning_1.12.2-2.0.10.jar",
+      "mirrorSourceUrl": true
+    },
+    {
+      "filename": "Xtones-1.2.2.jar",
+      "urlAtTest": "https://mediafilez.forgecdn.net/files/3248/033/Xtones-1.2.2.jar",
+      "urlPublished": "https://mediafilez.forgecdn.net/files/3248/33/Xtones-1.2.2.jar",
+      "mirrorSourceUrl": true
+    }
+  ],
+  "serverJars": 183,
+  "clientJars": 185,
+  "savedModIds": {
+    "minecraft": "1.12.2",
+    "mcp": "9.42",
+    "placeholdername": "1.0.0",
+    "FML": "8.0.99.99",
+    "forge": "14.23.5.2860",
+    "hecharacters": "@VERSION@",
+    "jecharacters": "1.12.0-3.7.2",
+    "smoothfontcore": "mc1.12.2-2.1.4",
+    "xaerolib_core": "1.12.2-1.0",
+    "xaerominimap_core": "1.12.2-1.0",
+    "xaeroworldmap_core": "1.12.2-1.0",
+    "mixinbooter": "10.6",
+    "opencomputers|core": "1.8.9a",
+    "configanytime": "3.0",
+    "redcore": "0.7-Dev-1",
+    "appliedenergistics2": "v0.56.7",
+    "ae2ctl": "0.1.2",
+    "bdlib": "1.14.4.1",
+    "ae2stuff": "0.9",
+    "aewirelesschannel": "1.0.1-release",
+    "akashictome": "1.2-12",
+    "alfheim": "1.6",
+    "applecore": "3.4.0",
+    "crafttweaker": "4.1.20",
+    "mtlib": "3.0.7",
+    "modtweaker": "4.0.19",
+    "jei": "4.29.7",
+    "appleskin": "1.0.14",
+    "aquaacrobatics": "1.15.4",
+    "architecturecraft": "@VERSION@",
+    "baubles": "1.5.2",
+    "astralsorcery": "1.10.27",
+    "autoreglib": "1.3-32",
+    "codechickenlib": "3.2.3.358",
+    "avaritia": "3.3.0",
+    "endercore": "1.12.2-0.5.78",
+    "thaumcraft": "6.1.BETA26",
+    "enderio": "5.3.72",
+    "avaritiaio": "@VERSION@",
+    "betterquesting": "0.0.4",
+    "betterbuilderswands": "0.13.2",
+    "bettermineshafts": "1.12.2-2.2.1",
+    "forgelin": "1.8.4",
+    "betterp2p": "1.12.2-1.2.3-extended_life",
+    "bibliocraft": "2.4.6",
+    "forestry": "5.8.2.426",
+    "binniecore": "2.5.1.203",
+    "binniedesign": "2.5.1.203",
+    "genetics": "2.5.1.203",
+    "botany": "2.5.1.203",
+    "extrabees": "2.5.1.203",
+    "extratrees": "2.5.1.203",
+    "biomesoplenty": "7.0.1.2445",
+    "guideapi": "1.12-2.1.8-63",
+    "bloodmagic": "1.12.2-2.4.3-105",
+    "bmj": "0.0.1-beta",
+    "modularui": "3.1.5",
+    "bogosorter": "1.6.2",
+    "botania": "r1.10-364",
+    "bountiful": "2.2.3",
+    "redstoneflux": "2.1.1",
+    "brandonscore": "2.4.20",
+    "buildinggadgets": "2.8.4",
+    "chameleon": "1.12-4.1.3",
+    "champions": "1.12.2-1.0.11.10",
+    "chesttransporter": "2.8.8",
+    "chisel": "MC1.12.2-1.0.2.45",
+    "collective": "3.0",
+    "mantle": "1.12-1.3.3.55",
+    "enderiointegrationtic": "5.3.72",
+    "tconstruct": "1.12.2-2.13.0.183",
+    "conarm": "1.2.5.10",
+    "craftingtweaks": "9.0.1",
+    "crafttweakerjei": "2.0.3",
+    "customstartinggear": "1.2.0",
+    "defaultworldgenerator-port": "1.12-2.3.1",
+    "cookingforblockheads": "1.1.0",
+    "draconicevolution": "2.3.28",
+    "groovyscript": "1.2.4",
+    "theoneprobe": "1.4.28",
+    "gregtech": "1.9.0",
+    "drtech": "1.8.9",
+    "futuremc": "1.0.0",
+    "durability101": "0.0.5",
+    "orelib": "3.6.0.1",
+    "dsurround": "@VERSION@",
+    "enderiobase": "5.3.72",
+    "enderioconduits": "5.3.72",
+    "enderioconduitsappliedenergistics": "5.3.72",
+    "opencomputers": "1.8.9a",
+    "enderioconduitsopencomputers": "5.3.72",
+    "enderioconduitsrefinedstorage": "5.3.72",
+    "enderiointegrationforestry": "5.3.72",
+    "enderiointegrationticlate": "5.3.72",
+    "enderioinvpanel": "5.3.72",
+    "ftblib": "5.4.7.2",
+    "enderiomachines": "5.3.72",
+    "enderiopowertools": "5.3.72",
+    "enderioendergy": "5.3.72",
+    "enderutilities": "0.7.15",
+    "extrabotany": "60",
+    "findme": "1.1.0",
+    "cursedlib": "1.0.0",
+    "ae2fcsort": "0",
+    "packagedauto": "1.12.2-1.0.23.71",
+    "packagingprovider": "1.12.2-1.0.0.1",
+    "ae2fc": "2.6.6-r",
+    "retro_sophisticated_backpacks": "retro_sophisticated_backpacks",
+    "forgelin_continuous": "2.2.20.0",
+    "forgemultipartcbe": "2.6.2.83",
+    "microblockcbe": "2.6.2.83",
+    "minecraftmultipartcbe": "2.6.2.83",
+    "ftbbackups": "1.1.0.1",
+    "ftbutilities": "5.4.1.131",
+    "itemfilters": "1.0.4.2",
+    "ftbquests": "1202.9.0.15",
+    "ftbmoney": "1.2.0.47",
+    "geckolib3": "3.0.30",
+    "gendustry": "1.6.5.8",
+    "gendustryjei": "1.0.2",
+    "gregtechfoodoption": "1.9.0",
+    "touhou_little_maid": "1.2.5",
+    "gtmaid": "1.0.2",
+    "gtqtcore": "1.9.0",
+    "gtsteam": "0.0.1-beta",
+    "gttopaddition": "0.0.1-beta",
+    "igi|bloodmagicintegration": "1.2",
+    "igi|thaumcraft": "1.0a",
+    "igiextended": "1.1",
+    "lunatriuscore": "1.2.0.42",
+    "ingameinfoxml": "2.8.2.94",
+    "ironchest": "1.12.2-7.0.67.844",
+    "jeibees": "0.9.0.5",
+    "jecalculation": "1.12.2-3.2.7",
+    "konkrete": "1.6.1",
+    "libnine": "1.2.2",
+    "threng": "1.1.26",
+    "loliasm": "5.29",
+    "storagedrawers": "5.6.0",
+    "framedcompactdrawers": "GRADLE:VERSION",
+    "fluiddrawers": "1.0.7",
+    "modelloader": "1.0.0",
+    "morefurnaces": "1.11.0",
+    "mrtjpcore": "2.1.4.43",
+    "nae2": "1.0",
+    "naturescompass": "1.8.5",
+    "neenergistics": "@VERSION@",
+    "oreexcavation": "1.4.150",
+    "packagedastral": "1.12.2-1.0.4.22",
+    "packagedavaritia": "1.12.2-1.0.3.25",
+    "packageddraconic": "1.12.2-1.0.4.24",
+    "packagedfluidcrafting": "1.12.2-1.0.0.3",
+    "packagedthaumic": "1.12.2-1.0.3.20",
+    "harvestcraft": "1.12.2zb",
+    "patchouli": "1.0-23.6",
+    "projectred-core": "4.9.4.120",
+    "plustic": "8.0.6",
+    "pollution": "0.0.1-beta",
+    "projectintelligence": "1.0.9",
+    "projectred-compat": "1.0",
+    "projectred-integration": "4.9.4.120",
+    "projectred-transmission": "4.9.4.120",
+    "projectred-fabrication": "4.9.4.120",
+    "projectred-illumination": "4.9.4.120",
+    "thaumicenergistics": "2.3.5",
+    "random_complement": "1.6.9",
+    "randomtweaks": "1.12.2-2.8.3.1",
+    "forbiddenmagicre": "1.1.0",
+    "additionalstructures": "2.5.0",
+    "roguelike": "2.4.6",
+    "jeid": "2.2.3",
+    "rtgc": "1.0.0",
+    "silentlib": "3.0.13",
+    "spiceoflife": "1.3.12",
+    "stellar_core": "1.5.22",
+    "superfactorymanager": "@VERSION@",
+    "tconevo": "1.1.1",
+    "thaumicaugmentation": "1.12.2-2.1.14",
+    "tcinventoryscan": "2.0.10",
+    "thaumictinkerer": "1.12.2-5.9.4-Unofficial",
+    "thaumicwonders": "2.1.3",
+    "tinkersjei": "1.2",
+    "tinkertoolleveling": "1.12.2-1.1.0.DEV.b23e769",
+    "topaddons": "1.12.2-1.13.0",
+    "torchmaster": "1.8.5.0",
+    "trashslot": "8.4.10",
+    "universaltweaks": "1.16.0.1",
+    "villagenames": "4.4.13",
+    "vintagefix": "0.6.2",
+    "visualores": "0.2.8",
+    "waystones": "4.1.0",
+    "xaerolib": "1.1.0",
+    "xaeroworldmap": "1.40.16",
+    "xaerominimap": "25.3.13",
+    "w2w": "1.2.1",
+    "warptheory": "0.0.3.6",
+    "xtones": "1.2.2",
+    "llibrary": "1.7.20"
+  },
+  "phases": [
+    {
+      "phase": "create",
+      "world": {
+        "seed": 2506983691465655902,
+        "name": "pack19-candidate"
+      },
+      "levelSha256": "c728b148cc76d51b26da765a56f8287331caf115fa1826b53b9ad981aed8362e",
+      "logSha256": "f3a3d651ac00dd1dbd0478cf155e7426b0cebc0e94f0039043927b2194219c8f",
+      "player": "Pack19Probe",
+      "playerId": "3f797988-171e-33b6-a691-d2c597f8973b",
+      "playerSha256": "8940a116ef4f4ab12c4c0b6c0bc9b5696eb5d57f1e9b80111ac2ba83d9f9ef8b",
+      "client": {
+        "phase": "create",
+        "username": "Pack19Probe",
+        "exitCode": 0,
+        "join": "GTQT_PACK_CLIENT_OK phase=create user=Pack19Probe uuid=3f797988-171e-33b6-a691-d2c597f8973b port=52836 dimension=0 chunk=-8,4",
+        "cleanMenuExit": true,
+        "missingWorldIds": {
+          "IRecipe theoneprobe:probe": 1,
+          "IRecipe theoneprobe:probenote": 1
+        },
+        "beforeProbeAndJvm": {
+          "overrides": {
+            "files": 8236,
+            "sha256": "e0428b29021f5a6bb6d2e26fe1b892ab106c8b3c36441a68632aa4898b1863ea"
+          },
+          "scriptsQuestsResources": {
+            "files": 113,
+            "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+          },
+          "productionMods": {
+            "files": 185,
+            "sha256": "dda66d1ac247b34b0d1dc6cfeae8d3e1d117851e2d597ccb81c5ec7e359a2fec"
+          }
+        },
+        "biomesOPlentyWood": "GTQT_BOP_WOOD_OK species=16 registeredStacks=128"
+      },
+      "saveAllCompletedBeforeStop": true,
+      "clientLogSha256": "44c17a56463321fa278bc13c0c542f552ca0f7fcdf51c59a96da9a5b2bdab5cf",
+      "clientLoadedWithProbe": 219,
+      "bopWood": "GTQT_BOP_WOOD_OK species=16 registeredStacks=128",
+      "missingWorldIds": {
+        "IRecipe theoneprobe:probe": 1,
+        "IRecipe theoneprobe:probenote": 1
+      },
+      "actualClientAfterLaunch": {
+        "overridesAfterLaunch": {
+          "files": 8263,
+          "sha256": "e21879903acb20e6a33c361b53c33faa711cf3e14ea76bb7575045480f2c461a"
+        },
+        "scriptsQuestsResources": {
+          "files": 113,
+          "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+        },
+        "productionMods": {
+          "files": 185,
+          "sha256": "dda66d1ac247b34b0d1dc6cfeae8d3e1d117851e2d597ccb81c5ec7e359a2fec"
+        },
+        "generatedFilesUnderMods": {
+          "1.12.2/ChickenASM-1.12-1.0.2.7.jar": "54c063e72abb6af999d80b94a2f1c9593c6ef0bb7769f3410d2a49f47c1ba3b0",
+          "1.12.2/codecjlayermp3-1.0.0-SNAPSHOT.jar": "e3d0723dbe20290856d80a487a9bbfd5e988f23db17b234fcfe47db17fe6f3fd",
+          "1.12.2/jlayer-1.0.1.jar": "850508c837454a1b06017c32a36876fae516de1e89a829f725fee1e6dcc52000",
+          "1.12.2/nashorn.jar": "984ab65c7c96483caa9e3722d932ee8ad6f4f017364538ed2d169c596ec4fe56",
+          "memory_repo/net/ilexiconn/llibrary-core/1.0.11-1.12.2/llibrary-core-1.0.11-1.12.2.jar": "981fb876fc665c7fa228ae9673ddbbd2355bbf320b6a7ead53987d35ef145e9c",
+          "memory_repo/net/ilexiconn/llibrary-core/1.0.11-1.12.2/llibrary-core-1.0.11-1.12.2.jar.meta": "2a41015371950d75ce8df0f234abf5767127c06d1893395a3c218dd7f8a77967",
+          "memory_repo/info/loenwind/autosave/AutoSave/1.12.2-1.0.11/AutoSave-1.12.2-1.0.11.jar": "8b40573a923098b7505dc3a7333ea7994f99fdca5d1507f200959779f768e14b",
+          "memory_repo/info/loenwind/autosave/AutoSave/1.12.2-1.0.11/AutoSave-1.12.2-1.0.11.jar.meta": "ebfdf24363d41a75ed5ef4247b988e48c91f859aa050cf887a08c122a9a566b8",
+          "memory_repo/info/loenwind/autoconfig/AutoConfig/1.12.2-1.0.2/AutoConfig-1.12.2-1.0.2.jar": "07e017e50b918f9a1ddbc01777b24e74204155730e75628c68e923c4b2e559df",
+          "memory_repo/info/loenwind/autoconfig/AutoConfig/1.12.2-1.0.2/AutoConfig-1.12.2-1.0.2.jar.meta": "4d1c31aec7881e577f9f91319a193145d84fd1cce8f1916752c617bbbe4862fd",
+          "memory_repo/com/enderio/core/EnderCore/1.12.2-0.5.78/EnderCore-1.12.2-0.5.78-core.jar": "f6602f9c1c6bb27bbbaf38f7f32a5e71d4d356ab75b21930b032b68b343fd30d",
+          "memory_repo/com/enderio/core/EnderCore/1.12.2-0.5.78/EnderCore-1.12.2-0.5.78-core.jar.meta": "7734b94946d8502b19a8d38afdf4cf2120722d3d46c1ba72b698e7046e712587"
+        },
+        "clientProbeSha256": "5608071101a2ca116f44a73f82cb87ecb666481ca744b5547be983ed4e311adb"
+      },
+      "diagnostics": {
+        "craftTweakerErrorLines": 1533,
+        "craftTweakerErrorsByFile": {
+          "IronChest.zs": 139,
+          "JeiSweep.zs": 1,
+          "StorageDrawers.zs": 28,
+          "TConstruct/Cast.zs": 200,
+          "TConstruct/TConstruct.zs": 1,
+          "enderio/conduit.zs": 263,
+          "enderio/enderio.zs": 876,
+          "thaumcraft/thaumstic.zs": 24
+        },
+        "craftTweakerUnattributedErrorLines": 1,
+        "craftTweakerExecutionFailures": [
+          "IronChest.zs",
+          "JeiSweep.zs",
+          "StorageDrawers.zs",
+          "TConstruct/Cast.zs",
+          "enderio/conduit.zs",
+          "enderio/enderio.zs",
+          "thaumcraft/thaumstic.zs"
+        ],
+        "groovyRecipeConflicts": 288,
+        "groovyRecipeConflictsByMap": {
+          "arc_furnace": 16,
+          "assembler": 80,
+          "cutter": 96,
+          "macerator": 96
+        },
+        "gregTechRejectedRecipesByMap": {
+          "extractor": 1,
+          "heat_chemical_reactor": 2,
+          "industrial_infusion_recipes": 2,
+          "sifter": 16
+        },
+        "groovyErrorLines": 0,
+        "logSha256": {
+          "craftTweaker": "9b9ea29f63e66dd963e15869c03604035e51fe0d9146e5c8ca90c2c6e9cbddbd",
+          "groovy": "7780fbf0a84aa64216c90b27b5823d4f14998486965b9c97f3c1c06ad8f7df92"
+        }
+      }
+    },
+    {
+      "phase": "reload",
+      "world": {
+        "seed": 2506983691465655902,
+        "name": "pack19-candidate"
+      },
+      "levelSha256": "9196ef61a936b0da9128fb29b0d3f51e9b0e3deb0aa0ce331a8eda88d49972d6",
+      "logSha256": "8d9e716a3ab7e748d73085c19f4a1ed512fd9d0c994c8a2e129ed1d8ff2dbed6",
+      "player": "Pack19Probe",
+      "playerId": "3f797988-171e-33b6-a691-d2c597f8973b",
+      "playerSha256": "9dd7be2de302dd377303d6baabbc53026e91d1ebbf6b811310a72a96a3b5ffe2",
+      "client": {
+        "phase": "reload",
+        "username": "Pack19Probe",
+        "exitCode": 0,
+        "join": "GTQT_PACK_CLIENT_OK phase=reload user=Pack19Probe uuid=3f797988-171e-33b6-a691-d2c597f8973b port=51344 dimension=0 chunk=-8,4",
+        "cleanMenuExit": true,
+        "missingWorldIds": {
+          "IRecipe theoneprobe:probe": 1,
+          "IRecipe theoneprobe:probenote": 1
+        },
+        "beforeProbeAndJvm": {
+          "overrides": {
+            "files": 8236,
+            "sha256": "e0428b29021f5a6bb6d2e26fe1b892ab106c8b3c36441a68632aa4898b1863ea"
+          },
+          "scriptsQuestsResources": {
+            "files": 113,
+            "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+          },
+          "productionMods": {
+            "files": 185,
+            "sha256": "dda66d1ac247b34b0d1dc6cfeae8d3e1d117851e2d597ccb81c5ec7e359a2fec"
+          }
+        },
+        "biomesOPlentyWood": "GTQT_BOP_WOOD_OK species=16 registeredStacks=128"
+      },
+      "saveAllCompletedBeforeStop": true,
+      "clientLogSha256": "031910ed24c83d7438c2105d3399bf2c28e32668fc80ca52a84f34d80174091b",
+      "clientLoadedWithProbe": 219,
+      "bopWood": "GTQT_BOP_WOOD_OK species=16 registeredStacks=128",
+      "missingWorldIds": {
+        "IRecipe theoneprobe:probe": 1,
+        "IRecipe theoneprobe:probenote": 1
+      },
+      "actualClientAfterLaunch": {
+        "overridesAfterLaunch": {
+          "files": 8263,
+          "sha256": "4fc6479d9276acedad7952c1852246892a55c6ff04f6781eab827af5c2749d68"
+        },
+        "scriptsQuestsResources": {
+          "files": 113,
+          "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+        },
+        "productionMods": {
+          "files": 185,
+          "sha256": "dda66d1ac247b34b0d1dc6cfeae8d3e1d117851e2d597ccb81c5ec7e359a2fec"
+        },
+        "generatedFilesUnderMods": {
+          "1.12.2/ChickenASM-1.12-1.0.2.7.jar": "54c063e72abb6af999d80b94a2f1c9593c6ef0bb7769f3410d2a49f47c1ba3b0",
+          "1.12.2/codecjlayermp3-1.0.0-SNAPSHOT.jar": "e3d0723dbe20290856d80a487a9bbfd5e988f23db17b234fcfe47db17fe6f3fd",
+          "1.12.2/jlayer-1.0.1.jar": "850508c837454a1b06017c32a36876fae516de1e89a829f725fee1e6dcc52000",
+          "1.12.2/nashorn.jar": "984ab65c7c96483caa9e3722d932ee8ad6f4f017364538ed2d169c596ec4fe56",
+          "memory_repo/net/ilexiconn/llibrary-core/1.0.11-1.12.2/llibrary-core-1.0.11-1.12.2.jar": "981fb876fc665c7fa228ae9673ddbbd2355bbf320b6a7ead53987d35ef145e9c",
+          "memory_repo/net/ilexiconn/llibrary-core/1.0.11-1.12.2/llibrary-core-1.0.11-1.12.2.jar.meta": "2a41015371950d75ce8df0f234abf5767127c06d1893395a3c218dd7f8a77967",
+          "memory_repo/info/loenwind/autosave/AutoSave/1.12.2-1.0.11/AutoSave-1.12.2-1.0.11.jar": "8b40573a923098b7505dc3a7333ea7994f99fdca5d1507f200959779f768e14b",
+          "memory_repo/info/loenwind/autosave/AutoSave/1.12.2-1.0.11/AutoSave-1.12.2-1.0.11.jar.meta": "ebfdf24363d41a75ed5ef4247b988e48c91f859aa050cf887a08c122a9a566b8",
+          "memory_repo/info/loenwind/autoconfig/AutoConfig/1.12.2-1.0.2/AutoConfig-1.12.2-1.0.2.jar": "07e017e50b918f9a1ddbc01777b24e74204155730e75628c68e923c4b2e559df",
+          "memory_repo/info/loenwind/autoconfig/AutoConfig/1.12.2-1.0.2/AutoConfig-1.12.2-1.0.2.jar.meta": "4d1c31aec7881e577f9f91319a193145d84fd1cce8f1916752c617bbbe4862fd",
+          "memory_repo/com/enderio/core/EnderCore/1.12.2-0.5.78/EnderCore-1.12.2-0.5.78-core.jar": "f6602f9c1c6bb27bbbaf38f7f32a5e71d4d356ab75b21930b032b68b343fd30d",
+          "memory_repo/com/enderio/core/EnderCore/1.12.2-0.5.78/EnderCore-1.12.2-0.5.78-core.jar.meta": "7734b94946d8502b19a8d38afdf4cf2120722d3d46c1ba72b698e7046e712587"
+        },
+        "clientProbeSha256": "5608071101a2ca116f44a73f82cb87ecb666481ca744b5547be983ed4e311adb"
+      },
+      "diagnostics": {
+        "craftTweakerErrorLines": 1533,
+        "craftTweakerErrorsByFile": {
+          "IronChest.zs": 139,
+          "JeiSweep.zs": 1,
+          "StorageDrawers.zs": 28,
+          "TConstruct/Cast.zs": 200,
+          "TConstruct/TConstruct.zs": 1,
+          "enderio/conduit.zs": 263,
+          "enderio/enderio.zs": 876,
+          "thaumcraft/thaumstic.zs": 24
+        },
+        "craftTweakerUnattributedErrorLines": 1,
+        "craftTweakerExecutionFailures": [
+          "IronChest.zs",
+          "JeiSweep.zs",
+          "StorageDrawers.zs",
+          "TConstruct/Cast.zs",
+          "enderio/conduit.zs",
+          "enderio/enderio.zs",
+          "thaumcraft/thaumstic.zs"
+        ],
+        "groovyRecipeConflicts": 288,
+        "groovyRecipeConflictsByMap": {
+          "arc_furnace": 16,
+          "assembler": 80,
+          "cutter": 96,
+          "macerator": 96
+        },
+        "gregTechRejectedRecipesByMap": {
+          "extractor": 1,
+          "heat_chemical_reactor": 2,
+          "industrial_infusion_recipes": 2,
+          "sifter": 16
+        },
+        "groovyErrorLines": 0,
+        "logSha256": {
+          "craftTweaker": "03c56430d815cdf58168d81c52fa83cb50e05971101773391d6a33800f6e7dd9",
+          "groovy": "149569ea79970094c349f10967454e3b1c808ee3989671327d821c5b64d45970"
+        }
+      }
+    }
+  ],
+  "lastBootDiagnostics": {
+    "craftTweakerErrorLines": 1533,
+    "craftTweakerErrorsByFile": {
+      "IronChest.zs": 139,
+      "JeiSweep.zs": 1,
+      "StorageDrawers.zs": 28,
+      "TConstruct/Cast.zs": 200,
+      "TConstruct/TConstruct.zs": 1,
+      "enderio/conduit.zs": 263,
+      "enderio/enderio.zs": 876,
+      "thaumcraft/thaumstic.zs": 24
+    },
+    "craftTweakerUnattributedErrorLines": 1,
+    "craftTweakerExecutionFailures": [
+      "IronChest.zs",
+      "JeiSweep.zs",
+      "StorageDrawers.zs",
+      "TConstruct/Cast.zs",
+      "enderio/conduit.zs",
+      "enderio/enderio.zs",
+      "thaumcraft/thaumstic.zs"
+    ],
+    "groovyRecipeConflicts": 288,
+    "groovyRecipeConflictsByMap": {
+      "arc_furnace": 16,
+      "assembler": 80,
+      "cutter": 96,
+      "macerator": 96
+    },
+    "gregTechRejectedRecipesByMap": {
+      "extractor": 1,
+      "heat_chemical_reactor": 2,
+      "industrial_infusion_recipes": 2,
+      "sifter": 16
+    },
+    "groovyErrorLines": 0,
+    "logSha256": {
+      "craftTweaker": "03c56430d815cdf58168d81c52fa83cb50e05971101773391d6a33800f6e7dd9",
+      "groovy": "149569ea79970094c349f10967454e3b1c808ee3989671327d821c5b64d45970"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "addons": {
+    "gtmaid": {
+      "repo": "GTQT/GT_Maid",
+      "rev": "49233e13b55e3280d45805fad18925f06a505fd3",
+      "sourceZipSha256": "355f76217fcb8267718c3f33d5235ae3751f562802228b82c4cac0933e4d5414",
+      "templateRepo": "GTQT/GregTech-SteamTech",
+      "templateRev": "ccbb394cfc155b8df24cff064cfa9c75ed7af9c1",
+      "templates": {
+        "build.gradle": "7c53f109d28563d4e61c2b4fc83d599a7aea0173e299182912b0ebf9ace20eb9",
+        "settings.gradle": "8076f37ad1156f6f76beef48b732079d3440cb8bb5b66d8e6ea92802d875590e",
+        "gradle/scripts/helpers.gradle": "3644eb86983a5c62bdde925aee08cb902a7e5d146a804706d3ff86a9906f665e"
+      },
+      "inputs": [
+        "gregtech",
+        "codecjlayermp3",
+        "touhoulittlemaid",
+        "ccl",
+        "mixin"
+      ],
+      "dependenciesFile": "gradle/scripts/dependencies.gradle"
+    },
+    "visualores": {
+      "repo": "GTQT/VisualOres-Meowmel",
+      "rev": "a9f5e8e3b83756146796c83bbe39171d26d2a375",
+      "sourceZipSha256": "bdc5b93cedc84061c795bdb5ec56336437203f117058c6d392454e4cb1bc1e09",
+      "templateRepo": "GTQT/DrTech",
+      "templateRev": "e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf",
+      "templates": {
+        "build.gradle": "a60f24eb965e661dde67e6e664c4506f8173109134b54ee778a7e59c5ec31d1c",
+        "settings.gradle": "ce86cff74fe8c0a58e159e687512f6f0a78146cef4eb02bc197d12bebcd43c88"
+      },
+      "inputs": [
+        "ccl",
+        "gregtech",
+        "xaerolib",
+        "xaeros-minimap",
+        "xaeros-world-map",
+        "ftblib",
+        "ftbutilities",
+        "thaumcraft",
+        "baubles"
+      ],
+      "dependenciesFile": "dependencies.gradle"
+    }
+  },
+  "inputs": {
+    "ccl": {
+      "filename": "CodeChickenLib-1.12.2-3.2.3.358-universal.jar",
+      "sha256": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+      "curseFile": 2779848,
+      "curseProject": 242818
+    },
+    "mixin": {
+      "filename": "!mixinbooter-10.6.jar",
+      "sha256": "c74998ccd73e6722b2b1f0d236c7b9c0b34572a892a3810d5e49557d96a356bd",
+      "curseFile": 6344449,
+      "curseProject": 419286
+    },
+    "ftblib": {
+      "filename": "FTBLib-5.4.7.2.jar",
+      "sha256": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+      "curseFile": 2985811,
+      "curseProject": 237167
+    },
+    "ftbutilities": {
+      "filename": "FTBUtilities-5.4.1.131.jar",
+      "sha256": "e458fe39aba9ba28122496e54f826e4f61df515ed1f8d0c70cc9e56f67a5404a",
+      "curseFile": 3157548,
+      "curseProject": 237102
+    },
+    "thaumcraft": {
+      "filename": "Thaumcraft-1.12.2-6.1.BETA26.jar",
+      "sha256": "9425f8643581b27ff8845b087c8bc6fc10425a32942f1a3f0e265ce6b38f7b5f",
+      "curseFile": 2629023,
+      "curseProject": 223628
+    },
+    "baubles": {
+      "filename": "Baubles-1.12-1.5.2.jar",
+      "sha256": "b32010b2f2778aa1188585e7ead91ad46d4cb2c715f9c778a61848ba7fe51f8d",
+      "curseFile": 2518667,
+      "curseProject": 227083
+    },
+    "xaeros-minimap": {
+      "filename": "xaerominimap-forge-1.12.2-25.3.13.jar",
+      "sha256": "d802b3f714a7633c1810511d4079975c681d930c6f6c2039cd7664df35c62a3d",
+      "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/48coZVIV/xaerominimap-forge-1.12.2-25.3.13.jar"
+    },
+    "xaeros-world-map": {
+      "filename": "xaeroworldmap-forge-1.12.2-1.40.16.jar",
+      "sha256": "b5382be704ec8b213bd03dcd37ae2666346fedd6582702cb2a5463f3ba281775",
+      "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/M71Sumnm/xaeroworldmap-forge-1.12.2-1.40.16.jar"
+    },
+    "xaerolib": {
+      "filename": "xaerolib-forge-1.12.2-1.1.0.jar",
+      "sha256": "777127ce764ec4ea096ba5245609994de4c6290db2b5cf7d41d3ce17a6662767",
+      "url": "https://cdn.modrinth.com/data/ZaQIxZKn/versions/2EkudBDY/xaerolib-forge-1.12.2-1.1.0.jar"
+    },
+    "gregtech": {
+      "filename": "gregtech-gtqt-1.12.2-1.9.0.jar",
+      "sha256": "1e01cbe2664e21d76cf9ab3bbdcf0a2fa1a2e82758fcefd6ed9af4071bea12f8",
+      "url": "https://raw.githubusercontent.com/GTQT/QuantumHue-Visualizer/72e08b4f1b3d64748ca3bbf3e09bf133de0f8405/libs/gregtech-gtqt-1.12.2-1.9.0.jar"
+    },
+    "codecjlayermp3": {
+      "filename": "codecjlayermp3-1.0.0-SNAPSHOT.jar",
+      "sha256": "e3d0723dbe20290856d80a487a9bbfd5e988f23db17b234fcfe47db17fe6f3fd",
+      "embeddedInSource": "libs/codecjlayermp3-1.0.0-SNAPSHOT.jar"
+    },
+    "touhoulittlemaid": {
+      "filename": "touhoulittlemaid-1.12.2-1.2.5-release.jar",
+      "sha256": "198b0e3420d61b4502fb28f826dce6d3e1db44f85e5e4ab91a46498d36dce811",
+      "embeddedInSource": "libs/touhoulittlemaid-1.12.2-1.2.5-release.jar"
+    }
+  },
+  "modularUiCompile": {
+    "filename": "modularui-3.1.5-dev.jar",
+    "sha256": "9d02b6eaa42d37ba04539aa5fb00a0d6e180ad3e326d12a5e6e314549d63d132"
+  }
+}

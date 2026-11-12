@@ -1,0 +1,255 @@
+diff --git a/src/main/java/hellfall/visualores/database/gregtech/bedrockore/BedrockOreCache.java b/src/main/java/hellfall/visualores/database/gregtech/bedrockore/BedrockOreCache.java
+--- a/src/main/java/hellfall/visualores/database/gregtech/bedrockore/BedrockOreCache.java
++++ b/src/main/java/hellfall/visualores/database/gregtech/bedrockore/BedrockOreCache.java
+@@ -1,7 +1,7 @@
+ package hellfall.visualores.database.gregtech.bedrockore;
+ 
+ import gregtech.api.worldgen.bedrockFluids.ChunkPosDimension;
+-import gregtech.api.worldgen.vein.OreVeinHandler;
++import gregtech.api.worldgen.bedrockOres.OreVeinHandler;
+ import net.minecraft.nbt.NBTTagCompound;
+ import net.minecraft.nbt.NBTTagList;
+ import net.minecraft.util.math.BlockPos;
+diff --git a/src/main/java/hellfall/visualores/database/gregtech/bedrockore/BedrockOrePosition.java b/src/main/java/hellfall/visualores/database/gregtech/bedrockore/BedrockOrePosition.java
+--- a/src/main/java/hellfall/visualores/database/gregtech/bedrockore/BedrockOrePosition.java
++++ b/src/main/java/hellfall/visualores/database/gregtech/bedrockore/BedrockOrePosition.java
+@@ -28,7 +28,7 @@
+         StringBuilder display = new StringBuilder();
+         for (String name : veinId.split(",")) {
+             net.minecraft.item.ItemStack stack =
+-                    gregtech.api.worldgen.vein.VeinHelper.oreNameToItemStack(name.trim());
++                    gregtech.api.worldgen.bedrockOres.VeinHelper.oreNameToItemStack(name.trim());
+             String displayName;
+             if (!stack.isEmpty()) {
+                 gregtech.api.unification.stack.MaterialStack ms =
+diff --git a/src/main/java/hellfall/visualores/database/gregtech/ore/VeinInfoCache.java b/src/main/java/hellfall/visualores/database/gregtech/ore/VeinInfoCache.java
+--- a/src/main/java/hellfall/visualores/database/gregtech/ore/VeinInfoCache.java
++++ b/src/main/java/hellfall/visualores/database/gregtech/ore/VeinInfoCache.java
+@@ -4,32 +4,34 @@
+ import gregtech.api.worldgen.config.WorldGenRegistry;
+ 
+ import java.util.HashMap;
++import java.util.List;
+ import java.util.Map;
+ 
+ public class VeinInfoCache {
+-    private static Map<String, OreVeinInfo> cache;
++    private static final Map<String, OreVeinInfo> cache = new HashMap<>();
+ 
+-    public static void init() {
+-        cache = new HashMap<>();
+-        for (OreDepositDefinition def : WorldGenRegistry.getOreDeposits()) {
+-            if (def.isVein()) {
+-                cache.put(def.getDepositName(), new OreVeinInfo(def));
+-            }
+-        }
++    public static synchronized void init() {
++        cache.clear();
+     }
+ 
+-    public static OreVeinInfo getByName(String name) {
+-        if (!cache.containsKey(name)) {
+-            cache.put(name, OreVeinInfo.missingVein(name));
++    public static synchronized OreVeinInfo getByName(String name) {
++        OreVeinInfo known = cache.get(name);
++        if (known != null) return known;
++        OreDepositDefinition definition = getDefinitionByName(name);
++        if (definition == null || !definition.isVein()) {
++            // A saved deposit may precede its registration or have been removed from the pack.
++            return OreVeinInfo.missingVein(name);
+         }
+-        return cache.get(name);
++        known = new OreVeinInfo(definition);
++        cache.put(name, known);
++        return known;
+     }
+ 
+     public static OreDepositDefinition getDefinitionByName(String name) {
+-        for (OreDepositDefinition def : WorldGenRegistry.getOreDeposits()) {
+-            if (def.getDepositName().equals(name)) {
+-                return def;
+-            }
++        List<OreDepositDefinition> definitions = WorldGenRegistry.getOreDeposits();
++        for (int i = definitions.size() - 1; i >= 0; i--) {
++            OreDepositDefinition definition = definitions.get(i);
++            if (definition.getDepositName().equals(name)) return definition;
+         }
+         return null;
+     }
+diff --git a/src/main/java/hellfall/visualores/gtmodule/VisualOresModule.java b/src/main/java/hellfall/visualores/gtmodule/VisualOresModule.java
+--- a/src/main/java/hellfall/visualores/gtmodule/VisualOresModule.java
++++ b/src/main/java/hellfall/visualores/gtmodule/VisualOresModule.java
+@@ -39,10 +39,10 @@
+ import java.util.List;
+ 
+ @GregTechModule(
+-        moduleID = VisualOresModuleContainer.VO_MODULE,
++        moduleID = Tags.MODID,
+         containerID = GTValues.MODID,
+         name = "VisualOres module",
+-        coreModule = true,
++        coreModule = false,
+         description = "VisualOres GregTech Integration. Disabling this will disable all GT integration in VisualOres."
+ )
+ public class VisualOresModule extends BaseGregTechModule {
+@@ -66,6 +66,7 @@
+ 
+     @Override
+     public void preInit(FMLPreInitializationEvent event) {
++        VisualOres.LOGGER.info("Initializing gregtech:visualores prospecting integration");
+         if (GTValues.isClientSide()) {
+             Layers.registerLayer(OreRenderLayer.class, "oreveins");
+             Layers.registerLayer(UndergroundFluidRenderLayer.class, "undergroundfluid");
+diff --git a/src/main/java/hellfall/visualores/gtmodule/VisualOresModuleContainer.java b/src/main/java/hellfall/visualores/gtmodule/VisualOresModuleContainer.java
+deleted file mode 100644
+--- a/src/main/java/hellfall/visualores/gtmodule/VisualOresModuleContainer.java
++++ /dev/null
+@@ -1,15 +0,0 @@
+-package hellfall.visualores.gtmodule;
+-
+-import gregtech.api.modules.IModuleContainer;
+-import gregtech.api.modules.ModuleContainer;
+-import hellfall.visualores.Tags;
+-
+-@ModuleContainer
+-public class VisualOresModuleContainer implements IModuleContainer {
+-    public static final String VO_MODULE = "visualores";
+-
+-    @Override
+-    public String getID() {
+-        return Tags.MODID;
+-    }
+-}
+diff --git a/src/main/java/hellfall/visualores/map/layers/gregtech/BedrockOreRenderLayer.java b/src/main/java/hellfall/visualores/map/layers/gregtech/BedrockOreRenderLayer.java
+--- a/src/main/java/hellfall/visualores/map/layers/gregtech/BedrockOreRenderLayer.java
++++ b/src/main/java/hellfall/visualores/map/layers/gregtech/BedrockOreRenderLayer.java
+@@ -1,6 +1,6 @@
+ package hellfall.visualores.map.layers.gregtech;
+ 
+-import gregtech.api.worldgen.vein.OreVeinHandler;
++import gregtech.api.worldgen.bedrockOres.OreVeinHandler;
+ import hellfall.visualores.database.gregtech.GTClientCache;
+ import hellfall.visualores.database.gregtech.bedrockore.BedrockOrePosition;
+ import hellfall.visualores.map.DrawUtils;
+diff --git a/src/main/java/hellfall/visualores/mixins/gregtech/WidgetProspectingMapMixin.java b/src/main/java/hellfall/visualores/mixins/gregtech/WidgetProspectingMapMixin.java
+--- a/src/main/java/hellfall/visualores/mixins/gregtech/WidgetProspectingMapMixin.java
++++ b/src/main/java/hellfall/visualores/mixins/gregtech/WidgetProspectingMapMixin.java
+@@ -4,7 +4,7 @@
+ import gregtech.api.util.Position;
+ import gregtech.api.util.Size;
+ import gregtech.api.worldgen.bedrockFluids.BedrockFluidVeinHandler;
+-import gregtech.api.worldgen.vein.OreVeinHandler;
++import gregtech.api.worldgen.bedrockOres.OreVeinHandler;
+ import gregtech.common.gui.widget.prospector.ProspectorMode;
+ import gregtech.common.gui.widget.prospector.widget.WidgetProspectingMap;
+ import gregtech.core.network.packets.PacketProspecting;
+@@ -64,79 +64,25 @@
+             remap = false
+     )
+     private void visualores$handleFluidPacket(PacketProspecting packet, CallbackInfo ci) {
+-        if (packet == null || packet.mode != ProspectorMode.FLUID ||
+-                packet.map == null || packet.map.length == 0 ||
+-                packet.map[0] == null || packet.map[0].length == 0) {
+-            return;
+-        }
+-
+-        Map<Byte, String> fluidData = packet.map[0][0];
+-        if (fluidData == null) return;
+-
+-        String fluidName = fluidData.get((byte) 1);
+-        String yieldStr = fluidData.get((byte) 2);
+-        String depletionStr = fluidData.get((byte) 3);
+-
+-        if (fluidName == null || yieldStr == null || depletionStr == null) {
+-            return;
+-        }
+-
++        if (packet == null || (packet.mode != ProspectorMode.BEDROCK_FLUID && packet.mode != ProspectorMode.BEDROCK_ORE)
++                || packet.map == null || packet.map.length == 0 || packet.map[0] == null || packet.map[0].length == 0) return;
++        Map<Byte, String> values = packet.map[0][0];
++        if (values == null || values.get((byte) 1) == null || values.get((byte) 2) == null
++                || values.get((byte) 3) == null) return;
+         try {
+-            int yield = Integer.parseInt(yieldStr);
+-            double depletion = Double.parseDouble(depletionStr);
+-
+-            int fieldX = BedrockFluidVeinHandler.getVeinCoord(packet.chunkX);
+-            int fieldZ = BedrockFluidVeinHandler.getVeinCoord(packet.chunkZ);
+-
+-            // 获取维度ID
+-            int dimension = gui != null && gui.entityPlayer != null && gui.entityPlayer.world != null ?
+-                    gui.entityPlayer.world.provider.getDimension() : 0;
+-
+-            GTClientCache.instance.addFluid(
+-                    dimension,
+-                    fieldX,
+-                    fieldZ,
+-                    fluidName,
+-                    yield,
+-                    depletion
+-            );
++            String name = values.get((byte) 1);
++            int yield = Integer.parseInt(values.get((byte) 2));
++            double percent = Double.parseDouble(values.get((byte) 3));
++            int dimension = gui != null && gui.entityPlayer != null && gui.entityPlayer.world != null
++                    ? gui.entityPlayer.world.provider.getDimension() : 0;
++            if (packet.mode == ProspectorMode.BEDROCK_ORE) {
++                GTClientCache.instance.addBedrockOre(dimension, OreVeinHandler.getVeinCoord(packet.chunkX),
++                        OreVeinHandler.getVeinCoord(packet.chunkZ), name, yield, percent);
++            } else {
++                GTClientCache.instance.addFluid(dimension, BedrockFluidVeinHandler.getVeinCoord(packet.chunkX),
++                        BedrockFluidVeinHandler.getVeinCoord(packet.chunkZ), name, yield, percent);
++            }
+         } catch (NumberFormatException ignored) {
+-        }
+-
+-        // Handle BEDROCK_ORE packets
+-        if (packet.mode == ProspectorMode.BEDROCK_ORE &&
+-                packet.map != null && packet.map.length > 0 &&
+-                packet.map[0] != null && packet.map[0].length > 0) {
+-
+-            Map<Byte, String> oreData = packet.map[0][0];
+-            if (oreData == null) return;
+-
+-            String veinId = oreData.get((byte) 1);
+-            String yieldStr = oreData.get((byte) 2);
+-            String depletionStr = oreData.get((byte) 3);
+-
+-            if (veinId == null || yieldStr == null || depletionStr == null) return;
+-
+-            try {
+-                int yield = Integer.parseInt(yieldStr);
+-                double depletion = Double.parseDouble(depletionStr);
+-
+-                int fieldX = OreVeinHandler.getVeinCoord(packet.chunkX);
+-                int fieldZ = OreVeinHandler.getVeinCoord(packet.chunkZ);
+-
+-                int dimension = gui != null && gui.entityPlayer != null && gui.entityPlayer.world != null ?
+-                        gui.entityPlayer.world.provider.getDimension() : 0;
+-
+-                GTClientCache.instance.addBedrockOre(
+-                        dimension,
+-                        fieldX,
+-                        fieldZ,
+-                        veinId,
+-                        yield,
+-                        depletion
+-                );
+-            } catch (NumberFormatException ignored) {
+-            }
+         }
+     }
+ }
+\ No newline at end of file
+diff --git a/src/main/java/hellfall/visualores/mixins/gregtech/WorldGenRegistryMixin.java b/src/main/java/hellfall/visualores/mixins/gregtech/WorldGenRegistryMixin.java
+--- a/src/main/java/hellfall/visualores/mixins/gregtech/WorldGenRegistryMixin.java
++++ b/src/main/java/hellfall/visualores/mixins/gregtech/WorldGenRegistryMixin.java
+@@ -9,7 +9,7 @@
+ 
+ @Mixin(value = WorldGenRegistry.class, remap = false)
+ public abstract class WorldGenRegistryMixin {
+-    @Inject(method = "reinitializeRegisteredVeins", at = @At("TAIL"))
++    @Inject(method = "initializeRegistry", at = @At("RETURN"), require = 1)
+     private void visualores$reloadVeinInfoCache(CallbackInfo ci) {
+         VeinInfoCache.init();
+     }

@@ -1,0 +1,120 @@
+{
+  "run": "20261113-013900-324547",
+  "resultSha256": "3f406e53f3aed3281e52c4ac6582a65caaf33ac206905463e1bb412faae8efce",
+  "worldStorage": "data/visualores.dat",
+  "phases": {
+    "create": {
+      "levelSha256": "c728b148cc76d51b26da765a56f8287331caf115fa1826b53b9ad981aed8362e",
+      "sha256": "a7cc9baf27a2d5fbc8ff5511b7cc9f979b1b81c76eddbe8d928d639053ab76f8",
+      "sortedRecordsSha256": "ceda1597ca45f32a96319789cb5f099a94b9d0b9038029636cb3363a8359d341",
+      "bytes": 1412,
+      "grids": 133,
+      "veins": 133,
+      "deposits": {
+        "overworld/apatite_vein": 5,
+        "overworld/cassiterite_vein": 8,
+        "overworld/coal_vein": 11,
+        "overworld/copper_tin_vein": 5,
+        "overworld/copper_vein": 11,
+        "overworld/diamond_vein": 4,
+        "overworld/galena_vein": 7,
+        "overworld/garnet_tin_vein": 12,
+        "overworld/garnet_vein": 1,
+        "overworld/iron_vein": 11,
+        "overworld/lapis_vein": 4,
+        "overworld/lubricant_vein": 3,
+        "overworld/magnetite_vein": 7,
+        "overworld/manganese_vein": 4,
+        "overworld/mica_vein": 2,
+        "overworld/mineral_sand_vein": 13,
+        "overworld/nickel_vein": 4,
+        "overworld/oilsands_vein": 3,
+        "overworld/olivine_vein": 2,
+        "overworld/redstone_vein": 6,
+        "overworld/salts_vein": 5,
+        "overworld/sapphire_vein": 5
+      }
+    },
+    "reload": {
+      "levelSha256": "9196ef61a936b0da9128fb29b0d3f51e9b0e3deb0aa0ce331a8eda88d49972d6",
+      "sha256": "a7cc9baf27a2d5fbc8ff5511b7cc9f979b1b81c76eddbe8d928d639053ab76f8",
+      "sortedRecordsSha256": "ceda1597ca45f32a96319789cb5f099a94b9d0b9038029636cb3363a8359d341",
+      "bytes": 1412,
+      "grids": 133,
+      "veins": 133,
+      "deposits": {
+        "overworld/apatite_vein": 5,
+        "overworld/cassiterite_vein": 8,
+        "overworld/coal_vein": 11,
+        "overworld/copper_tin_vein": 5,
+        "overworld/copper_vein": 11,
+        "overworld/diamond_vein": 4,
+        "overworld/galena_vein": 7,
+        "overworld/garnet_tin_vein": 12,
+        "overworld/garnet_vein": 1,
+        "overworld/iron_vein": 11,
+        "overworld/lapis_vein": 4,
+        "overworld/lubricant_vein": 3,
+        "overworld/magnetite_vein": 7,
+        "overworld/manganese_vein": 4,
+        "overworld/mica_vein": 2,
+        "overworld/mineral_sand_vein": 13,
+        "overworld/nickel_vein": 4,
+        "overworld/oilsands_vein": 3,
+        "overworld/olivine_vein": 2,
+        "overworld/redstone_vein": 6,
+        "overworld/salts_vein": 5,
+        "overworld/sapphire_vein": 5
+      }
+    }
+  },
+  "preserved": 133,
+  "additional": 0,
+  "sample": [
+    {
+      "grid": [
+        -8,
+        -4
+      ],
+      "x": -360,
+      "z": -168,
+      "name": "overworld/apatite_vein"
+    },
+    {
+      "grid": [
+        -8,
+        -3
+      ],
+      "x": -360,
+      "z": -120,
+      "name": "overworld/cassiterite_vein"
+    },
+    {
+      "grid": [
+        -8,
+        -2
+      ],
+      "x": -360,
+      "z": -72,
+      "name": "overworld/cassiterite_vein"
+    },
+    {
+      "grid": [
+        -8,
+        -1
+      ],
+      "x": -360,
+      "z": -24,
+      "name": "overworld/lapis_vein"
+    },
+    {
+      "grid": [
+        -8,
+        0
+      ],
+      "x": -360,
+      "z": 24,
+      "name": "overworld/coal_vein"
+    }
+  ]
+}

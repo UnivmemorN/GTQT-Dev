@@ -30,6 +30,43 @@ def build_receipt(lock, profile, jar_sha):
             "inputs": {key: lock["artifacts"][key]["sha256"] for key in ids}}
 
 
+def prepare_october_source(source, revision):
+    prefix = "src/main/java/com/drppp/drtech/"
+    changeset = {prefix + "common/metaTileEntities/muti/mutipart/MetaTileEntityYotHatch.java":
+                 ("Textures.ME_INPUT_BUS.renderSided(", "Textures.FLUID_HATCH_INPUT_OVERLAY.renderSided(")}
+    for filename, handler, packet, discriminator in (
+        ("common/glider/GliderNetwork", "SyncHandler", "SyncPacket", 1),
+        ("common/wings/WingsNetwork", "SyncHandler", "SyncPacket", 1),
+        ("hooked/HookNetwork", "SyncHooksHandler", "PacketHookCapSync", 4),
+    ):
+        register = f"{packet}.class, {discriminator}, Side.CLIENT);"
+        before = f"CHANNEL.registerMessage({handler}.class, {register}\n        }}"
+        after = (before + " else {\n            // The dedicated sender also needs the discriminator to encode the packet.\n"
+                 f"            CHANNEL.registerMessage((message, ctx) -> null, {register}\n        }}")
+        changeset[prefix + filename + ".java"] = before, after
+    head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source, text=True).strip()
+    changes = set(subprocess.check_output(["git", "diff", "--name-only", "HEAD"], cwd=source, text=True).splitlines())
+    if head != revision or changes.difference(changeset):
+        sys.exit(f"Use an isolated DrTech checkout at {revision} for --october-gregtech")
+    pending = {}
+    adapted = {}
+    for path, (before, after) in changeset.items():
+        original = subprocess.check_output(["git", "show", f"{revision}:{path}"], cwd=source).replace(b"\r\n", b"\n")
+        if original.count(before.encode()) != 1:
+            sys.exit(f"Pinned DrTech source does not contain the expected code in {path}")
+        expected = original.replace(before.encode(), after.encode())
+        content = (source / path).read_bytes()
+        normalized = content.replace(b"\r\n", b"\n")
+        if normalized not in (original, expected):
+            sys.exit(f"Unexpected local changes at {source / path}")
+        if normalized != expected:
+            pending[source / path] = expected.replace(b"\n", b"\r\n") if b"\r\n" in content else expected
+        adapted[path] = hashlib.sha256(expected).hexdigest()
+    for path, data in pending.items():
+        path.write_bytes(data)
+    return adapted
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, required=True, help="upstream DrTech checkout")
@@ -37,7 +74,10 @@ def main():
     parser.add_argument("--state", type=Path, required=True, help="local DrTech tooling/cache directory")
     parser.add_argument("--gradle-home", type=Path, help="optional existing Gradle 8.5 cache")
     parser.add_argument("--rfg-seed", type=Path, help="optional official release JAR download directory")
-    parser.add_argument("--steam-gregtech", action="store_true", help="build with SteamTech's August GregTech pin")
+    versions = parser.add_mutually_exclusive_group()
+    versions.add_argument("--steam-gregtech", action="store_true", help="build with SteamTech's August GregTech pin")
+    versions.add_argument("--october-gregtech", action="store_true",
+                          help="apply the October YOT overlay and dedicated packet fixes in the supplied isolated checkout")
     parser.add_argument("--offline", action="store_true", help="use only previously prepared inputs and Gradle cache")
     parser.add_argument("--clean", action="store_true", help="run upstream clean before the selected task")
     parser.add_argument("task", nargs="?", choices=["help", "compileJava", "build"], default="build")
@@ -45,7 +85,12 @@ def main():
     source, legacy, state = [path.resolve() for path in (args.source, args.steam_env, args.state)]
     lock = workspace_lock()
     profile = "steamDrtechAugust" if args.steam_gregtech else "drtechJuly"
-    check_head(source, lock["repositories"]["drtech"]["rev"])
+    adapted_sources = None
+    if args.october_gregtech:
+        profile = "drtechOctober"
+        adapted_sources = prepare_october_source(source, lock["repositories"]["drtech"]["rev"])
+    else:
+        check_head(source, lock["repositories"]["drtech"]["rev"])
     check_head(legacy, lock["repositories"]["steamRunner"]["rev"])
     helpers = legacy / "dev/legacy"
     sys.path.insert(0, str(helpers))
@@ -109,7 +154,10 @@ def main():
             sys.exit(f"Unexpected mod metadata or Java bytecode in {artifact}")
         sha = hashlib.sha256(artifact.read_bytes()).hexdigest()
         receipt = source / "build/drtech-profile.json"
-        receipt.write_text(json.dumps(build_receipt(lock, profile, sha), indent=2) + "\n", encoding="utf-8")
+        record = build_receipt(lock, profile, sha)
+        if adapted_sources:
+            record["adaptedSourcesSha256"] = adapted_sources
+        receipt.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
         print(f"{artifact}  SHA-256 {sha}")
     return result.returncode
 
