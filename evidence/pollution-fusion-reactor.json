@@ -24,24 +24,26 @@
   "cases": [
     {
       "mode": "reactor-altar",
-      "resultSha256": "eea27430997ee6c5c62c26b94cf99169a87bbaa8d1daf84427259ebd9f9c8ae3",
+      "resultSha256": "3764ba2d82a735aff28b07e33f29d3d835964851edb029c145509592659d4e11",
       "restartVerified": true,
       "originalsRestored": true,
       "world": {
-        "seed": 5407935344783294431,
+        "seed": 7954670378190420294,
         "name": "steamtech-smoke"
       },
       "savedModCount": 27,
-      "probeSha256": "a1cd45dbe019cc4e00bf2aae50f956e54dd2a8ed98ec6208c54172fd9e28eada",
+      "probeSha256": "462f42fe5cde37254823e6c784eaa461dea64284127ef87b877188a447607b78",
       "runs": [
         {
           "phase": "create",
-          "levelSha256": "883cac7ecda625aefd7e724aaceb7b8b53c59acd64f1cb0996dedc1bc814caff",
+          "levelSha256": "3c42a7361ed2f13ba1bdde05524a7c9b44949cb113c4432958ed3788c8cb012b",
+          "compressor": "GTQT_COMPRESSOR_OK phase=create route=altar machine=gregtech:compressor.lv dust=9 blocks=1 ticks=300 eut=2 eu=600 supplied=768 storedBefore=0 storedAfter=168 shortInputRejected=true",
           "altar": "GTQT_REACTOR_ALTAR_OK phase=create recipe=pollution:magic_fusion_reactor research=INFUSION@2 central=1 peripheral=10 missingUraniumRejected=true uranium238Rejected=true essentia=692 output=1 ticks=3765 totalOutput=1"
         },
         {
           "phase": "reload",
-          "levelSha256": "ec7da64d85e6649b93e9dc5d0cccaa8d47910e407e0341a705d22a0c886b966a",
+          "levelSha256": "356d4379090badccdc3ad6caaa235cb714f13e0faed3b22073cf32b9167e80f0",
+          "compressor": "GTQT_COMPRESSOR_OK phase=reload route=altar machine=gregtech:compressor.lv dust=9 blocks=1 ticks=300 eut=2 eu=600 supplied=768 storedBefore=168 storedAfter=336 shortInputRejected=true",
           "altar": "GTQT_REACTOR_ALTAR_OK phase=reload recipe=pollution:magic_fusion_reactor research=INFUSION@2 central=1 peripheral=10 missingUraniumRejected=true uranium238Rejected=true essentia=692 output=1 ticks=3765 totalOutput=2"
         }
       ],
@@ -49,26 +51,28 @@
     },
     {
       "mode": "processing",
-      "resultSha256": "5ef56c69a86edf5abd434cf3fa458fd2d80776f4928f95651b1d694d8b400ff1",
+      "resultSha256": "3e4d5b8d51c190f94f33ee02878397a147d522872ee0d96c8e05060f28528f5b",
       "restartVerified": true,
       "originalsRestored": true,
       "world": {
-        "seed": 3628816376571814033,
+        "seed": 2576903130193070119,
         "name": "steamtech-smoke"
       },
       "savedModCount": 27,
-      "probeSha256": "a1cd45dbe019cc4e00bf2aae50f956e54dd2a8ed98ec6208c54172fd9e28eada",
+      "probeSha256": "462f42fe5cde37254823e6c784eaa461dea64284127ef87b877188a447607b78",
       "runs": [
         {
           "phase": "create",
-          "levelSha256": "5f29a9855e4d3a60ecd87371c4329879841d425d207f8eaa342c2eeff33dfe22",
+          "levelSha256": "9930a9635b4f6a2a061cd2c8a6a8a2518d16d0a9dbd4df2578f9a0ad753d28af",
+          "compressor": "GTQT_COMPRESSOR_OK phase=create route=industrial machine=gregtech:compressor.lv dust=9 blocks=1 ticks=300 eut=2 eu=600 supplied=768 storedBefore=0 storedAfter=168 shortInputRejected=true",
           "industrialRecipesProcessed": 9,
           "reactor": "GTQT_PROCESS_OK phase=create recipe=pollution:magic_fusion_reactor output=1xtile.unnamed@542 quantity=1 ticks=822 eu=6312960 items=11 aspectsMb=99648 infusedMb=822 totalInOutput=1 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
           "parallel": "GTQT_INFUSION_BATCH_OK phase=create recipe=pollution:magic_circuit_board_iv output=1xmetaitem@545 quantity=2 ticks=460 eu=1766400 items=58 aspectsMb=55296 infusedMb=460 totalInOutput=3 parallel=2 stalledTicks=12 cutProgress=5 stalledProgress=1"
         },
         {
           "phase": "reload",
-          "levelSha256": "674bc20deb45f791b91064bbb3afc37bdc168f4da5e9baff66f0f8a562ec86c9",
+          "levelSha256": "33348b1ec45781a705d76971f084ce1a5c88eb17022834fb3a7a12c9d0f2e793",
+          "compressor": "GTQT_COMPRESSOR_OK phase=reload route=industrial machine=gregtech:compressor.lv dust=9 blocks=1 ticks=300 eut=2 eu=600 supplied=768 storedBefore=168 storedAfter=336 shortInputRejected=true",
           "industrialRecipesProcessed": 9,
           "reactor": "GTQT_PROCESS_OK phase=reload recipe=pollution:magic_fusion_reactor output=1xtile.unnamed@542 quantity=1 ticks=822 eu=6312960 items=11 aspectsMb=99648 infusedMb=822 totalInOutput=2 parallel=1 stalledTicks=0 cutProgress=0 stalledProgress=0",
           "parallel": "GTQT_INFUSION_BATCH_OK phase=reload recipe=pollution:magic_circuit_board_iv output=1xmetaitem@545 quantity=2 ticks=460 eu=1766400 items=58 aspectsMb=55296 infusedMb=460 totalInOutput=6 parallel=2 stalledTicks=12 cutProgress=5 stalledProgress=1"
@@ -78,22 +82,22 @@
     },
     {
       "mode": "runtime-only",
-      "resultSha256": "9f1888aa4e4b14ce2207cfc9b291449faff16aea5033626cac6247352bac2cbf",
+      "resultSha256": "996ba77eb55b67d99a72e7ee0c0899be6a6288578bb8c7a060766090d49cf2a6",
       "restartVerified": true,
       "originalsRestored": true,
       "world": {
-        "seed": -8623655138703445136,
+        "seed": 6172225950413243429,
         "name": "steamtech-smoke"
       },
       "savedModCount": 26,
       "runs": [
         {
           "phase": "create",
-          "levelSha256": "c9e01296ec9b0d3bada1168303d9b640e5201112c408bfea478cd034ec8b396d"
+          "levelSha256": "1446b709b2658ef889deef0bc772e8f894a50afd9ee51a77a1b7e685b8e088e5"
         },
         {
           "phase": "reload",
-          "levelSha256": "d495f7e12cddae5e1ade0162fb9c63f0f069cc00759491a4dd4aa96838c87e55"
+          "levelSha256": "20fe13b4d4382ec655a672c53bf6854a4f772a8d71806cee994bd230476f3178"
         }
       ],
       "lockedRun": true

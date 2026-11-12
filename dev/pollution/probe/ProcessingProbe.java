@@ -223,9 +223,9 @@ final class ProcessingProbe {
                     if (stage.length == 2) knowledge.setResearchStage(stage[0], Integer.parseInt(stage[1]));
                     require(knowledge.isResearchKnown(batch.research), "cannot grant research " + batch.research);
                 }
-                craft(machine, magic.get(0), infusedMagic, batch, phase, 1);
+                craft(world, machine, magic.get(0), infusedMagic, batch, phase, 1);
                 if ("pollution:magic_circuit_board_iv".equals(batch.sourceId)) {
-                    craft(machine, magic.get(0), infusedMagic, batch, phase, 2);
+                    craft(world, machine, magic.get(0), infusedMagic, batch, phase, 2);
                 }
             }
         } finally {
@@ -233,17 +233,30 @@ final class ProcessingProbe {
         }
     }
 
-    private static void craft(RecipeMapMultiblockController machine, IFluidTank magic, Material infusedMagic,
+    private static void craft(WorldServer world, RecipeMapMultiblockController machine, IFluidTank magic, Material infusedMagic,
                               InfusionCases.Batch batch, String phase, int copies) throws Exception {
         int fluidTotal = 0;
         int itemTotal = 0;
         require(inventoryCount(machine.getInputInventory(), null) == 0, "input bus already contains items");
         for (int i = 0; i < copies; i++) {
             for (ItemStack stack : batch.items) {
-                itemTotal += count(stack);
-                // A bus can retain its inserted stack and grow it when a later pedestal stacks with it.
-                require(count(GTTransferUtils.insertItem(machine.getInputInventory(), (ItemStack) COPY.invoke(stack), false)) == 0,
-                        "input bus rejected " + stack);
+                boolean fromCompressor = batch.sourceId.equals(InfusionCases.FUSION_REACTOR)
+                        && InfusionCases.isUranium235Block(stack);
+                ItemStack input;
+                if (fromCompressor) {
+                    input = UraniumCompressorProbe.run(world, phase, "industrial");
+                    require(count(input) == 1 && InfusionCases.isUranium235Block(input), "wrong compressor output for matrix");
+                } else {
+                    // The bus can retain and grow an inserted stack. Keep recipe templates reusable.
+                    input = (ItemStack) COPY.invoke(stack);
+                }
+                itemTotal += count(input);
+                require(count(GTTransferUtils.insertItem(machine.getInputInventory(), input, false)) == 0,
+                        "input bus rejected " + input);
+                if (fromCompressor) {
+                    require(inventoryCount(machine.getInputInventory(), input) == 1,
+                            "matrix bus did not receive the extracted uranium-235 block");
+                }
             }
             for (FluidStack cost : batch.fluids) {
                 require(machine.getInputFluidInventory().fill(cost.copy(), true) == cost.amount, "input hatch rejected " + cost);

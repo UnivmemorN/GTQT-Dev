@@ -36,7 +36,7 @@ def build_probe(destination, javac, source, gt_compile, mods, forge):
                  *sorted((forge.parent / "libraries").rglob("*.jar"))]
     sources = [HERE / "probe" / name for name in (
         "SunnariumProbe.java", "InfusionCases.java", "ProcessingProbe.java", "ImportGuardProbe.java",
-        "LegacyInfusionProbe.java", "ReactorAltarProbe.java")]
+        "LegacyInfusionProbe.java", "ReactorAltarProbe.java", "UraniumCompressorProbe.java")]
     subprocess.run([str(javac), "-proc:none", "-encoding", "UTF-8", "-cp", os.pathsep.join(map(str, classpath)),
                     "-d", str(classes), *sources], check=True)
     jar = destination / "gtqt-compat-probe.jar"
@@ -52,6 +52,13 @@ def single_marker(lines, prefix, phase):
     if len(messages) != 1:
         raise ValueError(f"{phase}.log: expected one {prefix}, found {len(messages)}")
     return messages[0]
+
+
+def compressor_marker(lines, phase, route):
+    marker = single_marker(lines, "GTQT_COMPRESSOR_OK ", phase)
+    if not marker.startswith(f"GTQT_COMPRESSOR_OK phase={phase} route={route} "):
+        raise ValueError(f"{phase}.log: expected compressor output for {route}, got {marker}")
+    return marker
 
 
 def saved_identity(level):
@@ -156,7 +163,7 @@ def main():
         test_mode = "reactor-altar"
     elif args.legacy_infusion:
         test_mode = "legacy-infusion"
-    record = {"source": revision, "forge": smoke.FORGE, "mode": test_mode,
+    record = {"source": revision, "forge": smoke.FORGE, "mode": test_mode, "lockedRun": not args.candidate,
               "productionRuntimeSha256": hashes,
               "sha256": {p.name: smoke.digest(p) for p in [forge, *files]},
               "restartVerified": False, "runs": []}
@@ -206,6 +213,8 @@ def main():
                 run = {"phase": phase, "world": identity, "mods": registered, "levelSha256": smoke.digest(level)}
                 if matches:
                     run["probe"] = matches[0]
+                if args.reactor_altar or args.processing:
+                    run["compressor"] = compressor_marker(lines, phase, "altar" if args.reactor_altar else "industrial")
                 if args.reactor_altar:
                     run["altar"] = single_marker(lines, f"GTQT_REACTOR_ALTAR_OK phase={phase} ", phase)
                 if args.legacy_infusion:

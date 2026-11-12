@@ -20,7 +20,6 @@ import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.common.util.FakePlayerFactory;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.blocks.BlocksTC;
@@ -36,7 +35,7 @@ import java.util.UUID;
 
 /** The original altar starts by caster interaction and consumes actual jar and pedestal inventories. */
 final class ReactorAltarProbe {
-    private static final ResourceLocation RECIPE = new ResourceLocation("pollution:magic_fusion_reactor");
+    private static final ResourceLocation RECIPE = new ResourceLocation(InfusionCases.FUSION_REACTOR);
     private static final GameProfile OWNER = new GameProfile(
             UUID.fromString("3aabaa50-3d9d-4925-a32d-94a324eb5c0f"), "ReactorAltar");
     private static final int[][] PEDESTALS = {
@@ -140,19 +139,14 @@ final class ReactorAltarProbe {
         set(centre, InfusionCases.one(recipe.getRecipeInput()));
 
         Object[] stands = new Object[PEDESTALS.length];
-        ItemStack uranium = null;
         for (int i = 0; i < stands.length; i++) {
             int[] p = PEDESTALS[i];
             stands[i] = tile(world, pos(p[0], -2, p[1]));
             require(empty(get(stands[i])), "occupied component pedestal " + i);
-            if (i == URANIUM) uranium = InfusionCases.compressedUranium235();
-            else set(stands[i], InfusionCases.one(recipe.getComponents().get(i)));
+            if (i != URANIUM) set(stands[i], InfusionCases.one(recipe.getComponents().get(i)));
         }
-        boolean correctIsotope = false;
-        for (ItemStack candidate : OreDictionary.getOres("blockUranium235", false)) {
-            if (OreDictionary.itemMatches(candidate, uranium, true)) correctIsotope = true;
-        }
-        require(correctIsotope, "ninth peripheral ingredient is not blockUranium235");
+        require(InfusionCases.isUranium235Block(InfusionCases.one(recipe.getComponents().get(URANIUM))),
+                "ninth peripheral ingredient is not blockUranium235");
         require(recipe.getAspects().getAspects().length == ASPECTS.length, "unexpected aspect type count");
         TileJarFillable[] jars = new TileJarFillable[JARS.length];
         for (int i = 0; i < jars.length; i++) {
@@ -171,7 +165,10 @@ final class ReactorAltarProbe {
         set(stands[URANIUM], wrongIsotope);
         matrix.onCasterRightClick(world, glove, owner, origin, EnumFacing.UP, EnumHand.MAIN_HAND);
         require(!matrix.crafting, "started with uranium-238");
+        ItemStack uranium = UraniumCompressorProbe.run(world, phase, "altar");
+        require(InfusionCases.isUranium235Block(uranium), "wrong compressor output for altar");
         set(stands[URANIUM], uranium);
+        require(get(stands[URANIUM]).serializeNBT().equals(uranium.serializeNBT()), "pedestal did not receive compressor output");
         matrix.onCasterRightClick(world, glove, owner, origin, EnumFacing.UP, EnumHand.MAIN_HAND);
         require(matrix.crafting, "complete recipe did not start");
         require(matrix.costMult == 1 && matrix.stabilityReplenish >= 1.6F,

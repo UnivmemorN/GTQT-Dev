@@ -28,10 +28,11 @@ import java.util.Map;
 
 /** Supply original Thaumcraft ingredients to the server test, independently of the GT converter. */
 final class InfusionCases {
+    static final String FUSION_REACTOR = "pollution:magic_fusion_reactor";
     private static final String[] IDS = {
             "thaumcraft:elementalsword", "thaumcraft:voidrobehelm", "thaumcraft:voidrobechest",
             "thaumcraft:voidrobelegs", "thaumcraft:primalcrusher", "thaumcraft:causalitycollapser",
-            "thaumcraft:voidsiphon", "pollution:magic_circuit_board_iv", "pollution:magic_fusion_reactor"
+            "thaumcraft:voidsiphon", "pollution:magic_circuit_board_iv", FUSION_REACTOR
     };
 
     static final class Batch {
@@ -107,13 +108,13 @@ final class InfusionCases {
             if (id.equals("pollution:magic_circuit_board_iv")) {
                 require(slots == 29, id + ": expected central board and 28 pedestal items");
             }
-            if (id.equals("pollution:magic_fusion_reactor")) {
+            if (id.equals(FUSION_REACTOR)) {
                 require(slots == 11 && units == 692 && "INFUSION@2".equals(original.getResearch()),
                         id + ": expected central frame, ten pedestal items and 692 essentia");
-                ItemStack block = compressedUranium235();
+                verifyUranium235CompressionRecipe();
                 int matches = 0;
                 for (int i = 1; i < items.size(); i++) {
-                    if (!OreDictionary.itemMatches(items.get(i), block, true)) continue;
+                    if (!isUranium235Block(items.get(i))) continue;
                     List<ItemStack> substituted = new ArrayList<>(items);
                     ItemStack otherBlock = OreDictUnifier.get(OrePrefix.block, Materials.Uranium238);
                     require((int) ItemStack.class.getMethod("func_190916_E").invoke(otherBlock) == 1,
@@ -124,7 +125,6 @@ final class InfusionCases {
                         substituted.set(i, OreDictUnifier.get(OrePrefix.dust, material, 9));
                         require(!recipe.matches(false, substituted, fluids), id + ": accepted loose dust " + material);
                     }
-                    items.set(i, block);
                     matches++;
                 }
                 require(matches == 1, id + ": expected one compressed uranium-235 pedestal");
@@ -136,17 +136,20 @@ final class InfusionCases {
         return result;
     }
 
-    static ItemStack compressedUranium235() throws Exception {
-        List<ItemStack> inputs = new ArrayList<>();
-        inputs.add(OreDictUnifier.get(OrePrefix.dust, Materials.Uranium235, 9));
+    static boolean isUranium235Block(ItemStack stack) {
+        return OreDictionary.getOres("blockUranium235", false).stream()
+                .anyMatch(candidate -> OreDictionary.itemMatches(candidate, stack, true));
+    }
+
+    private static void verifyUranium235CompressionRecipe() throws Exception {
+        List<ItemStack> inputs = Collections.singletonList(OreDictUnifier.get(OrePrefix.dust, Materials.Uranium235, 9));
         List<FluidStack> dry = Collections.emptyList();
         Recipe recipe = RecipeMaps.COMPRESSOR_RECIPES.findRecipe(32, inputs, dry);
         require(recipe != null && recipe.getEUt() == 2 && recipe.getDuration() == 300
                         && recipe.getOutputs().size() == 1, "missing uranium-235 compression recipe");
         ItemStack product = recipe.getOutputs().get(0);
         require((int) ItemStack.class.getMethod("func_190916_E").invoke(product) == 1
-                        && OreDictionary.getOres("blockUranium235", false).stream()
-                        .anyMatch(stack -> OreDictionary.itemMatches(stack, product, true)),
+                        && isUranium235Block(product),
                 "compressor output does not match blockUranium235");
         require(!recipe.matches(false, Collections.singletonList(OreDictUnifier.get(OrePrefix.dust,
                 Materials.Uranium235, 8)), dry), "compressor accepted only eight uranium-235 dusts");
@@ -154,10 +157,6 @@ final class InfusionCases {
             require(!recipe.matches(false, Collections.singletonList(OreDictUnifier.get(OrePrefix.dust, wrong, 9)), dry),
                     "uranium-235 compressor accepted " + wrong);
         }
-        require(recipe.matches(true, inputs, dry)
-                        && (int) ItemStack.class.getMethod("func_190916_E").invoke(inputs.get(0)) == 0,
-                "compressor did not consume nine uranium-235 dusts");
-        return (ItemStack) ItemStack.class.getMethod("func_77946_l").invoke(product);
     }
 
     static ItemStack one(Ingredient ingredient) throws Exception {
