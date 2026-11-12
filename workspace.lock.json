@@ -1,0 +1,334 @@
+{
+  "format": 1,
+  "minecraft": "1.12.2",
+  "repositories": {
+    "gtceMuku": {
+      "repo": "GTQT/GregTech",
+      "rev": "1d6dcad959021ec1530238620211f55aef471daf",
+      "modIds": [
+        "gregtech"
+      ],
+      "note": "master-gtqt 源码参考。三个同名 1.9.0 二进制分别锁定，未建立 HEAD 与其一一对应关系。"
+    },
+    "steamRunner": {
+      "repo": "UnivmemorN/GregTech-SteamTech",
+      "rev": "6098eee246a59388d32f8c7112f1305143f7c1de",
+      "modIds": [
+        "gtsteam"
+      ],
+      "note": "独立构建与隔离专服工具",
+      "extraRevs": [
+        "2ce5e1e8b9423ea33a0d71f1c123e909053b0e0e"
+      ]
+    },
+    "steamUpstream": {
+      "repo": "GTQT/GregTech-SteamTech",
+      "rev": "ccbb394cfc155b8df24cff064cfa9c75ed7af9c1",
+      "modIds": [
+        "gtsteam"
+      ],
+      "note": "基线后的作者提交，蒸发池两处无参 builder 在所测依赖上无法编译"
+    },
+    "corePublic": {
+      "repo": "GTQT/GTQT-Core",
+      "rev": "7ab5b236c4839b84de5a65d4b56b5655732740d1",
+      "modIds": [
+        "gtqtcore"
+      ],
+      "note": "公开 1.8.9 源码。七月 1.9.0 二进制另见 coreJuly"
+    },
+    "drtech": {
+      "repo": "GTQT/DrTech",
+      "rev": "e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf",
+      "modIds": [
+        "drtech",
+        "futuremc"
+      ],
+      "note": "产物声明 drtech 1.8.9 和 futuremc 1.0.0"
+    },
+    "pollutionJuly": {
+      "repo": "GTQT/Pollution",
+      "rev": "d1611ce5dec0eac71c2d68cc86975db86c2e3112",
+      "modIds": [
+        "pollution"
+      ],
+      "note": "可编译的七月基线与当日依赖"
+    },
+    "pollutionCurrent": {
+      "repo": "GTQT/Pollution",
+      "rev": "9ed70ed318c57e350cfcdf725c1eadda8f539789",
+      "modIds": [
+        "pollution"
+      ],
+      "note": "使用 GTQTMaterials.Sunnarium 的源码"
+    },
+    "gtfo": {
+      "repo": "GTQT/GregTechFoodOption",
+      "rev": "62399050c1646f4ff6b292230554193d3ff939c4",
+      "modIds": [
+        "gregtechfoodoption"
+      ],
+      "note": "七月 JAR 为下游的已知输入"
+    },
+    "modelLib": {
+      "repo": "GTQT/ModelLoadLib",
+      "rev": "41484d9623ada2743c036e0e3aafa18bd203e9ce",
+      "modIds": [
+        "modelloader"
+      ],
+      "note": "JAR 取自 DrTech 的 libs"
+    },
+    "space": {
+      "repo": "GTQT/GTQTSpace",
+      "rev": "0e3110f7b9801da60358c1ac6a1dcdb10821edeb",
+      "modIds": [
+        "gtqtspace"
+      ],
+      "note": "公开 1.8.7 历史线"
+    },
+    "prism": {
+      "repo": "GTQT/PrismPlan",
+      "rev": "8dbed095e346ac421f263a1a95ffccbed859543d",
+      "modIds": [
+        "prismplan"
+      ],
+      "note": "1.9.0 历史 AE 系列"
+    },
+    "applyGray": {
+      "repo": "GTQT/ApplyGray",
+      "rev": "413a9ddd7897f420dd0077604f4777fc3603f85e",
+      "modIds": [
+        "applygray"
+      ],
+      "note": "Cleanroom / Java 25"
+    },
+    "pack": {
+      "repo": "GTQT/GT-QuantumTransition",
+      "rev": "3fd61bb3d9eacef642dd55eedb90bd2de216dec8",
+      "note": "公开 1.8.8 manifest 与 overrides"
+    }
+  },
+  "artifacts": {
+    "gtJuly": {
+      "filename": "gregtech-gtqt-1.12.2-1.9.0.jar",
+      "size": 33921556,
+      "sha256": "b5b190f16858b54560cfac4e3d3c0f796d45dd460c119bb62638ea015533696e",
+      "url": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gregtech-gtqt-1.12.2-1.9.0.jar"
+    },
+    "gtAugust": {
+      "filename": "gregtech-gtqt-1.12.2-1.9.0.jar",
+      "size": 33943105,
+      "sha256": "57a19c90d6580fa7c3af7aa184b2126814da2bd72d344488ee18defe23c3fe1a",
+      "url": "https://raw.githubusercontent.com/GTQT/VisualOres-Meowmel/a9f5e8e3b83756146796c83bbe39171d26d2a375/libs/gregtech-gtqt-1.12.2-1.9.0.jar"
+    },
+    "gtOctober": {
+      "filename": "gregtech-gtqt-1.12.2-1.9.0.jar",
+      "size": 34466569,
+      "sha256": "1e01cbe2664e21d76cf9ab3bbdcf0a2fa1a2e82758fcefd6ed9af4071bea12f8",
+      "url": "https://raw.githubusercontent.com/GTQT/QuantumHue-Visualizer/72e08b4f1b3d64748ca3bbf3e09bf133de0f8405/libs/gregtech-gtqt-1.12.2-1.9.0.jar"
+    },
+    "coreJuly": {
+      "filename": "gtqtcore-1.9.0.jar",
+      "size": 5798651,
+      "sha256": "458029f1649d5b08a4e71be5820dddda4a4dc606524e0841996571ba87a09502",
+      "url": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gtqtcore-1.9.0.jar"
+    },
+    "gtfoJuly": {
+      "filename": "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar",
+      "size": 2026911,
+      "sha256": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
+      "url": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gregtechfoodoption-gtqt-1.12.2-1.9.0.jar"
+    },
+    "steamJuly": {
+      "filename": "gtsteam-1.9.0.jar",
+      "size": 741294,
+      "sha256": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
+      "url": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gtsteam-1.9.0.jar"
+    },
+    "astralJuly": {
+      "filename": "astralsorcery-1.12.2-1.10.27.jar",
+      "size": 25028160,
+      "sha256": "771107764cad17a30b37f683fd6889384a916981b1c8ed63826ec0a335efae86",
+      "url": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/astralsorcery-1.12.2-1.10.27.jar"
+    },
+    "model100": {
+      "filename": "modelloader-1.0.0.jar",
+      "size": 2436745,
+      "sha256": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f",
+      "url": "https://raw.githubusercontent.com/GTQT/DrTech/e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf/libs/modelloader-1.0.0.jar"
+    },
+    "aePrism": {
+      "filename": "appliedenergistics2-v1.0.5-gtqt.jar",
+      "size": 4520908,
+      "sha256": "36ae14312ab08944c646bf31ee3d5612b7d011fa792db0153e8a7b3bd8d22ec0",
+      "url": "https://raw.githubusercontent.com/GTQT/PrismPlan/8dbed095e346ac421f263a1a95ffccbed859543d/libs/appliedenergistics2-v1.0.5-gtqt.jar"
+    },
+    "ae2fc": {
+      "filename": "ae2fc-2.7.10-unofficial.jar",
+      "size": 689353,
+      "sha256": "3ee8f3de4dee9cd14589cda9359e0a8c091c99afa56189ac5cf67d8deb3e9f23",
+      "url": "https://raw.githubusercontent.com/GTQT/PrismPlan/8dbed095e346ac421f263a1a95ffccbed859543d/libs/ae2fc-2.7.10-unofficial.jar"
+    },
+    "nae2": {
+      "filename": "nae2-1.9.0.jar",
+      "size": 577049,
+      "sha256": "d457bb5c2c61547d7a720b201c0da03aaf929095aa838b620d65354dccba51a2",
+      "url": "https://raw.githubusercontent.com/GTQT/PrismPlan/8dbed095e346ac421f263a1a95ffccbed859543d/libs/nae2-1.9.0.jar"
+    },
+    "gtPrism190": {
+      "filename": "gregtech-gtqt-1.12.2-2.9.0-190.jar",
+      "size": 15628647,
+      "sha256": "175269596956590c9b231b1c0ffc12525886200751cd6241da3800672fe7a781",
+      "url": "https://raw.githubusercontent.com/GTQT/PrismPlan/8dbed095e346ac421f263a1a95ffccbed859543d/libs/gregtech-gtqt-1.12.2-2.9.0-190.jar"
+    },
+    "space187Release": {
+      "filename": "gtqtspace-1.8.7.jar",
+      "size": 12443482,
+      "sha256": "b21025fa17dd7347534dec686771d2e238ab8fa3b54ccb4db12e43d9856bc3e1",
+      "url": "https://mediafilez.forgecdn.net/files/6995/566/gtqtspace-1.8.7.jar"
+    },
+    "supergiant": {
+      "filename": "AppliedEnergistics2-Supergiant-1.1.0.jar",
+      "size": 7617220,
+      "sha256": "1f15fcda479f6b6a15e0640e0bf0f8a86e88c08c2bbd20e63b4145ea7e5efe26",
+      "url": "https://mediafilez.forgecdn.net/files/9342/33/AppliedEnergistics2-Supergiant-1.1.0.jar"
+    }
+  },
+  "profiles": {
+    "steamBaseline": {
+      "repositories": [
+        "steamRunner"
+      ],
+      "artifacts": [
+        "gtAugust"
+      ],
+      "build": "passed",
+      "server": "passed",
+      "guide": "README.md",
+      "sourceRev": "2ce5e1e8b9423ea33a0d71f1c123e909053b0e0e",
+      "runtime": "Forge 1.12.2 14.23.5.2860 / Java 8",
+      "evidence": "evidence/steam-server.json"
+    },
+    "drtechJuly": {
+      "repositories": [
+        "drtech",
+        "steamRunner"
+      ],
+      "artifacts": [
+        "gtJuly",
+        "gtfoJuly",
+        "model100"
+      ],
+      "build": "passed",
+      "server": "untested",
+      "guide": "dev/drtech/README.md"
+    },
+    "steamDrtechAugust": {
+      "repositories": [
+        "steamRunner",
+        "drtech"
+      ],
+      "artifacts": [
+        "gtAugust",
+        "gtfoJuly",
+        "model100"
+      ],
+      "build": "passed",
+      "server": "passed-with-registration-errors",
+      "guide": "dev/drtech/README.md",
+      "runtime": "Forge 1.12.2 14.23.5.2860 / Java 8",
+      "evidence": "dev/drtech/august-server.json"
+    },
+    "pollutionJuly": {
+      "repositories": [
+        "pollutionJuly",
+        "steamRunner"
+      ],
+      "artifacts": [
+        "gtJuly",
+        "coreJuly",
+        "gtfoJuly",
+        "steamJuly",
+        "astralJuly",
+        "model100"
+      ],
+      "build": "passed",
+      "server": "blocked-core-client-class",
+      "guide": "dev/pollution/README.md",
+      "runtime": "Forge 1.12.2 14.23.5.2860 / Java 8",
+      "evidence": "dev/pollution/july-server.json"
+    },
+    "pollutionCurrent": {
+      "repositories": [
+        "pollutionCurrent",
+        "steamRunner"
+      ],
+      "artifacts": [
+        "gtOctober",
+        "coreJuly",
+        "gtfoJuly",
+        "steamJuly",
+        "model100"
+      ],
+      "build": "blocked-core-sunnarium",
+      "server": "untested",
+      "guide": "dev/pollution/README.md"
+    },
+    "space187": {
+      "repositories": [
+        "space"
+      ],
+      "artifacts": [
+        "space187Release"
+      ],
+      "build": "untested",
+      "server": "untested",
+      "guide": "docs/pack.md"
+    },
+    "prismLegacy": {
+      "repositories": [
+        "prism"
+      ],
+      "artifacts": [
+        "gtPrism190",
+        "aePrism",
+        "ae2fc",
+        "nae2"
+      ],
+      "build": "untested",
+      "server": "untested",
+      "guide": "docs/pack.md"
+    },
+    "applyGray": {
+      "repositories": [
+        "applyGray"
+      ],
+      "artifacts": [
+        "supergiant"
+      ],
+      "build": "awaiting-structurelib",
+      "server": "untested",
+      "guide": "docs/pack.md",
+      "runtime": "Cleanroom 0.5.14-alpha / Java 25"
+    },
+    "pack188": {
+      "repositories": [
+        "pack"
+      ],
+      "artifacts": [],
+      "build": "upstream-manifest",
+      "server": "blocked-duplicate-ae",
+      "guide": "docs/pack.md"
+    }
+  },
+  "awaitingSource": [
+    {
+      "project": "GuideQT",
+      "needed": "GTQT 1.12.2 源码提交或可检验制品"
+    },
+    {
+      "project": "SatisMC",
+      "needed": "GTQT 1.12.2 源码提交或可检验制品"
+    }
+  ]
+}

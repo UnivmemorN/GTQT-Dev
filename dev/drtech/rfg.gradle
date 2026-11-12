@@ -1,0 +1,4 @@
+// RFG 1.4.0 release binaries are resolved from the verified local Maven layout.
+def mirror = new File(System.getProperty('drtech.rfg.maven')).toURI()
+beforeSettings { settings -> settings.pluginManagement.repositories.maven { url = mirror } }
+gradle.beforeProject { project -> project.repositories.maven { url = mirror } }

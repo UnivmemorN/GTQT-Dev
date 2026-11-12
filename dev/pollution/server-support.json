@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Baubles-1.12-1.5.2.jar",
+    "sha256": "b32010b2f2778aa1188585e7ead91ad46d4cb2c715f9c778a61848ba7fe51f8d",
+    "url": "https://mediafilez.forgecdn.net/files/2518/667/Baubles-1.12-1.5.2.jar"
+  },
+  {
+    "name": "Thaumcraft-1.12.2-6.1.BETA26.jar",
+    "sha256": "9425f8643581b27ff8845b087c8bc6fc10425a32942f1a3f0e265ce6b38f7b5f",
+    "url": "https://mediafilez.forgecdn.net/files/2629/023/Thaumcraft-1.12.2-6.1.BETA26.jar"
+  },
+  {
+    "name": "Botania r1.10-364.4.jar",
+    "sha256": "8962beb2c583720a83858f58bd6afc891185b50d868c712549a96b191339b52a",
+    "url": "https://mediafilez.forgecdn.net/files/3330/934/Botania%20r1.10-364.4.jar"
+  },
+  {
+    "name": "ExtraBotany-r1.1-60-beta-hotfix.jar",
+    "sha256": "68b07d9a0b23210511d603c20353c61ba2e77ea0e076d12eda3ef5a8ec6ac516",
+    "url": "https://mediafilez.forgecdn.net/files/3112/313/ExtraBotany-r1.1-60-beta-hotfix.jar"
+  },
+  {
+    "name": "BloodMagic-1.12.2-2.4.3-105.jar",
+    "sha256": "ef187aea109446bdb7b35e06958d4c6d22f5f7ceb4e5bcaeab16f3ad29fe16a5",
+    "url": "https://mediafilez.forgecdn.net/files/2822/288/BloodMagic-1.12.2-2.4.3-105.jar"
+  },
+  {
+    "name": "Guide-API-1.12-2.1.8-63.jar",
+    "sha256": "e201712ef8fadc6c4b6380939751e92fe32cad2ba2dcb717e1acb3b07e0c2125",
+    "url": "https://mediafilez.forgecdn.net/files/2645/992/Guide-API-1.12-2.1.8-63.jar"
+  },
+  {
+    "name": "FTBLib-5.4.7.2.jar",
+    "sha256": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+    "url": "https://mediafilez.forgecdn.net/files/2985/811/FTBLib-5.4.7.2.jar"
+  },
+  {
+    "name": "FTBQuests-1202.9.0.15.jar",
+    "sha256": "3f6a674ac0d8678fd0b127e6930199f32848fe47d1689e44c72976bfb24c7385",
+    "url": "https://mediafilez.forgecdn.net/files/3156/637/FTBQuests-1202.9.0.15.jar"
+  },
+  {
+    "name": "ItemFilters-1.0.4.2.jar",
+    "sha256": "cdffbb810f75db50afce9681374f0604e4c1ed2dcfe768cff5b4e17d5384166b",
+    "url": "https://mediafilez.forgecdn.net/files/3003/364/ItemFilters-1.0.4.2.jar"
+  },
+  {
+    "name": "FTBMoney-1.2.0.47.jar",
+    "sha256": "e39a0e07387ea03753675670c1e7f483b030b49441e2fa5d460f02b7dea3980b",
+    "url": "https://mediafilez.forgecdn.net/files/3010/526/FTBMoney-1.2.0.47.jar"
+  }
+]

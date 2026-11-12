@@ -1,0 +1,39 @@
+{
+  "readyAndSaved": false,
+  "source": "d1611ce5dec0eac71c2d68cc86975db86c2e3112",
+  "sha256": {
+    "forge-1.12.2-14.23.5.2860.jar": "cd3fbf85d7ca744507fd6a37a41b90122d43e616a4f8962332b1b658655e8a64",
+    "!configanytime-3.0.jar": "29fe190f0d1bb0b3841b2b9f315a5d561cab9f587df6164a0205440540577575",
+    "!mixinbooter-10.6.jar": "c74998ccd73e6722b2b1f0d236c7b9c0b34572a892a3810d5e49557d96a356bd",
+    "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+    "modularui-3.1.5.jar": "faed2f57c620b180f7730ea4767a7bfde7a54a94997626577ed53cd264616ce4",
+    "theoneprobe-1.12-1.4.28.jar": "f3e5048dbe58f37f98f8130886ede880ac5b3333ee73cae2381c337e500c4bd1",
+    "gregtech-gtqt-1.12.2-1.9.0.jar": "b5b190f16858b54560cfac4e3d3c0f796d45dd460c119bb62638ea015533696e",
+    "gtqtcore-1.9.0.jar": "458029f1649d5b08a4e71be5820dddda4a4dc606524e0841996571ba87a09502",
+    "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
+    "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
+    "astralsorcery-1.12.2-1.10.27.jar": "771107764cad17a30b37f683fd6889384a916981b1c8ed63826ec0a335efae86",
+    "modelloader-1.0.0.jar": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f",
+    "Pollution-1.9.0.jar": "9cd505dfafbc346b04955680b3d990a40f0e68a457efe59da286df94a73e884b",
+    "Baubles-1.12-1.5.2.jar": "b32010b2f2778aa1188585e7ead91ad46d4cb2c715f9c778a61848ba7fe51f8d",
+    "Thaumcraft-1.12.2-6.1.BETA26.jar": "9425f8643581b27ff8845b087c8bc6fc10425a32942f1a3f0e265ce6b38f7b5f",
+    "Botania r1.10-364.4.jar": "8962beb2c583720a83858f58bd6afc891185b50d868c712549a96b191339b52a",
+    "ExtraBotany-r1.1-60-beta-hotfix.jar": "68b07d9a0b23210511d603c20353c61ba2e77ea0e076d12eda3ef5a8ec6ac516",
+    "BloodMagic-1.12.2-2.4.3-105.jar": "ef187aea109446bdb7b35e06958d4c6d22f5f7ceb4e5bcaeab16f3ad29fe16a5",
+    "Guide-API-1.12-2.1.8-63.jar": "e201712ef8fadc6c4b6380939751e92fe32cad2ba2dcb717e1acb3b07e0c2125",
+    "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+    "FTBQuests-1202.9.0.15.jar": "3f6a674ac0d8678fd0b127e6930199f32848fe47d1689e44c72976bfb24c7385",
+    "ItemFilters-1.0.4.2.jar": "cdffbb810f75db50afce9681374f0604e4c1ed2dcfe768cff5b4e17d5384166b",
+    "FTBMoney-1.2.0.47.jar": "e39a0e07387ea03753675670c1e7f483b030b49441e2fa5d460f02b7dea3980b"
+  },
+  "originalsRestored": true,
+  "crashExcerpt": [
+    "java.lang.NoClassDefFoundError: net/minecraft/client/renderer/block/model/IBakedModel",
+    "at meowmel.gtqtcore.common.items.GTQTMetaItems.extraBehavior(GTQTMetaItems.java:545)",
+    "at meowmel.gtqtcore.common.CommonProxy.registerItems(CommonProxy.java:189)",
+    "Caused by: java.lang.ClassNotFoundException: net.minecraft.client.renderer.block.model.IBakedModel",
+    "Caused by: net.minecraftforge.fml.common.asm.ASMTransformerWrapper$TransformerException: Exception in class transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer@77d18d0b from coremod FMLCorePlugin",
+    "Caused by: java.lang.RuntimeException: Attempted to load class cfy for invalid side SERVER"
+  ],
+  "failure": "java.lang.NoClassDefFoundError: net/minecraft/client/renderer/block/model/IBakedModel"
+}
