@@ -1,5 +1,7 @@
 # Pollution 1.12.2 构建
 
+使用当前源码开展兼容开发，可直接复跑[七月 Core 兼容组合](july-compat.md)。下面的两个组合用于核对作者原始版本。
+
 当前检查对象为 [Pollution `9ed70ed`](https://github.com/GTQT/Pollution/tree/9ed70ed318c57e350cfcdf725c1eadda8f539789)。Forge 2847、stable_39、Gradle 8.5、RFG 1.4.1 的构建工具复用 [SteamTech 独立开发环境](https://github.com/UnivmemorN/GregTech-SteamTech/tree/6098eee246a59388d32f8c7112f1305143f7c1de/dev/legacy)。先按其说明准备工具仓和 JDK 8、16、17。
 
 在协调仓根目录执行以下 PowerShell 命令。首次构建需要网络。脚本会检查 Pollution 源码和 SteamTech 工具仓的提交、暂存区和工作区中的已跟踪改动，然后向 Pollution 签出的 `libs` 补上缺少的作者 JAR。私有 Gradle 缓存由 `--state` 指定。热缓存可加 `--offline`。

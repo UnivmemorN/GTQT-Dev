@@ -1,0 +1,166 @@
+{
+  "profile": "pollutionJulyCompat",
+  "forge": "forge-1.12.2-14.23.5.2860",
+  "build": {
+    "source": "71d7de118d3b5278b2f8caaec567449c6d1f4d62",
+    "profile": "pollutionJulyCompat",
+    "jarSha256": "6cf6ca6eff8c43946a8dfd99a6ccdd570dd0e0ca3476b0558c630bf2ddd16eb8",
+    "inputs": {
+      "gtOctober": "1e01cbe2664e21d76cf9ab3bbdcf0a2fa1a2e82758fcefd6ed9af4071bea12f8",
+      "coreJuly": "458029f1649d5b08a4e71be5820dddda4a4dc606524e0841996571ba87a09502",
+      "gtfoJuly": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
+      "steamJuly": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
+      "model100": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f"
+    }
+  },
+  "productionRuntimeSha256": {
+    "gtqtcore": "fd2cbe765cb362e4869855ca4244b71f9d8761d7b5af9e68c98cfa178731f046",
+    "gregtech": "6ee0c0fc7756b8c8c1a4693d2943c711faefcb36af2db8170d548573e0d77671"
+  },
+  "runtimeJarSha256": {
+    "forge-1.12.2-14.23.5.2860.jar": "cd3fbf85d7ca744507fd6a37a41b90122d43e616a4f8962332b1b658655e8a64",
+    "gregtech-1.9.0-october-srg.jar": "6ee0c0fc7756b8c8c1a4693d2943c711faefcb36af2db8170d548573e0d77671",
+    "gtqtcore-1.9.0-july-compat.jar": "fd2cbe765cb362e4869855ca4244b71f9d8761d7b5af9e68c98cfa178731f046",
+    "Pollution-1.9.0.jar": "6cf6ca6eff8c43946a8dfd99a6ccdd570dd0e0ca3476b0558c630bf2ddd16eb8",
+    "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
+    "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
+    "modelloader-1.0.0.jar": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f",
+    "astralsorcery-1.12.2-1.10.27.jar": "771107764cad17a30b37f683fd6889384a916981b1c8ed63826ec0a335efae86",
+    "!configanytime-3.0.jar": "29fe190f0d1bb0b3841b2b9f315a5d561cab9f587df6164a0205440540577575",
+    "!mixinbooter-10.6.jar": "c74998ccd73e6722b2b1f0d236c7b9c0b34572a892a3810d5e49557d96a356bd",
+    "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+    "modularui-3.1.5.jar": "faed2f57c620b180f7730ea4767a7bfde7a54a94997626577ed53cd264616ce4",
+    "theoneprobe-1.12-1.4.28.jar": "f3e5048dbe58f37f98f8130886ede880ac5b3333ee73cae2381c337e500c4bd1",
+    "Baubles-1.12-1.5.2.jar": "b32010b2f2778aa1188585e7ead91ad46d4cb2c715f9c778a61848ba7fe51f8d",
+    "Thaumcraft-1.12.2-6.1.BETA26.jar": "9425f8643581b27ff8845b087c8bc6fc10425a32942f1a3f0e265ce6b38f7b5f",
+    "Botania r1.10-364.4.jar": "8962beb2c583720a83858f58bd6afc891185b50d868c712549a96b191339b52a",
+    "ExtraBotany-r1.1-60-beta-hotfix.jar": "68b07d9a0b23210511d603c20353c61ba2e77ea0e076d12eda3ef5a8ec6ac516",
+    "BloodMagic-1.12.2-2.4.3-105.jar": "ef187aea109446bdb7b35e06958d4c6d22f5f7ceb4e5bcaeab16f3ad29fe16a5",
+    "Guide-API-1.12-2.1.8-63.jar": "e201712ef8fadc6c4b6380939751e92fe32cad2ba2dcb717e1acb3b07e0c2125",
+    "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+    "FTBQuests-1202.9.0.15.jar": "3f6a674ac0d8678fd0b127e6930199f32848fe47d1689e44c72976bfb24c7385",
+    "ItemFilters-1.0.4.2.jar": "cdffbb810f75db50afce9681374f0604e4c1ed2dcfe768cff5b4e17d5384166b",
+    "FTBMoney-1.2.0.47.jar": "e39a0e07387ea03753675670c1e7f483b030b49441e2fa5d460f02b7dea3980b"
+  },
+  "worldModList": {
+    "minecraft": "1.12.2",
+    "mcp": "9.42",
+    "FML": "8.0.99.99",
+    "forge": "14.23.5.2860",
+    "mixinbooter": "10.6",
+    "configanytime": "3.0",
+    "baubles": "1.5.2",
+    "astralsorcery": "1.10.27",
+    "guideapi": "1.12-2.1.8-63",
+    "bloodmagic": "1.12.2-2.4.3-105",
+    "thaumcraft": "6.1.BETA26",
+    "botania": "r1.10-364",
+    "codechickenlib": "3.2.3.358",
+    "theoneprobe": "1.4.28",
+    "extrabotany": "60",
+    "ftblib": "5.4.7.2",
+    "itemfilters": "1.0.4.2",
+    "ftbquests": "1202.9.0.15",
+    "ftbmoney": "1.2.0.47",
+    "modularui": "3.1.5",
+    "gregtech": "1.9.0",
+    "gregtechfoodoption": "1.9.0",
+    "gtqtcore": "1.9.0",
+    "gtsteam": "0.0.1-beta",
+    "modelloader": "1.0.0",
+    "pollution": "0.0.1-beta"
+  },
+  "cases": [
+    {
+      "mode": "runtime-only",
+      "restartVerified": true,
+      "originalsRestored": true,
+      "modCount": 26,
+      "runs": [
+        {
+          "phase": "create",
+          "world": {
+            "seed": -4572069591436722368,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "6bbd45deee1522ba8e0ca527fdc54ec62c1cb230705618da3897e1396e55928c"
+        },
+        {
+          "phase": "reload",
+          "world": {
+            "seed": -4572069591436722368,
+            "name": "steamtech-smoke"
+          },
+          "levelSha256": "3a7829935ed7f2dd0c8e0f3aaf02fdde62d6d90eda27870e77d63c23c0f1eafb"
+        }
+      ]
+    },
+    {
+      "mode": "fallback",
+      "restartVerified": true,
+      "originalsRestored": true,
+      "modCount": 27,
+      "testJars": {
+        "gtqt-compat-probe.jar": "4aae57a6720d67628b30567edbd1c76b60b0a39bba22636eeecc7468ed1799f9"
+      },
+      "runs": [
+        {
+          "phase": "create",
+          "probe": "GTQT_PROBE_OK phase=create marker=cd43f37958764a69b87f99a9b621a244 material=pollution:sunnarium id=14 reactor=1 tarot=1",
+          "levelSha256": "68398467ed6ad384f6642a3f872c4b5b7a3c95f946d1636d52420b63edf14463"
+        },
+        {
+          "phase": "reload",
+          "probe": "GTQT_PROBE_OK phase=reload marker=cd43f37958764a69b87f99a9b621a244 material=pollution:sunnarium id=14 reactor=1 tarot=1",
+          "levelSha256": "fbe936555a3448494b7be1cf8027ba8da5e2d549db304b8de644798fc6218229"
+        }
+      ]
+    },
+    {
+      "mode": "supplier",
+      "restartVerified": true,
+      "originalsRestored": true,
+      "modCount": 27,
+      "testJars": {
+        "gtqt-compat-probe.jar": "4aae57a6720d67628b30567edbd1c76b60b0a39bba22636eeecc7468ed1799f9"
+      },
+      "runs": [
+        {
+          "phase": "create",
+          "probe": "GTQT_PROBE_OK phase=create marker=48c96f1d02254101bc4b85a62f73a4b2 material=gtqtcore:sunnarium id=30000 reactor=1 tarot=1",
+          "levelSha256": "d677c276a89eca73eaf87705737df54a54ba7fc614c16ffa4c1ce1b274c28a4f"
+        },
+        {
+          "phase": "reload",
+          "probe": "GTQT_PROBE_OK phase=reload marker=48c96f1d02254101bc4b85a62f73a4b2 material=gtqtcore:sunnarium id=30000 reactor=1 tarot=1",
+          "levelSha256": "b79a1d74dce153301d0e183bb5d0f425062e1f4284a777520a03b71a23781a50"
+        }
+      ]
+    },
+    {
+      "mode": "core-field",
+      "restartVerified": true,
+      "originalsRestored": true,
+      "modCount": 27,
+      "testJars": {
+        "TEST-ONLY-gtqtcore-field.jar": "20d9692aacd69c633aee01c99e7cd3ead66377cc15ed7fd0dc5c526de1783e07",
+        "gtqt-compat-probe.jar": "4aae57a6720d67628b30567edbd1c76b60b0a39bba22636eeecc7468ed1799f9"
+      },
+      "replacedRuntimeJars": [
+        "gtqtcore-1.9.0-july-compat.jar"
+      ],
+      "runs": [
+        {
+          "phase": "create",
+          "probe": "GTQT_PROBE_OK phase=create marker=00c4d67dcbc448a6b9d62f7da36bda14 material=gtqtcore:field_fixture_sun id=30000 reactor=1 tarot=1",
+          "levelSha256": "0d35fd1921b4772dea8184e68a5d84d5cd924bd0fbe13e18604a4d9e6503efc7"
+        },
+        {
+          "phase": "reload",
+          "probe": "GTQT_PROBE_OK phase=reload marker=00c4d67dcbc448a6b9d62f7da36bda14 material=gtqtcore:field_fixture_sun id=30000 reactor=1 tarot=1",
+          "levelSha256": "85330e1bd202f535a158fc0374e860495af270aa6ecb4051a0a08f0087931a0c"
+        }
+      ]
+    }
+  ]
+}

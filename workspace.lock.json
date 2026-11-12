@@ -62,6 +62,12 @@
       ],
       "note": "使用 GTQTMaterials.Sunnarium 的源码"
     },
+    "pollutionCompat": {
+      "repo": "UnivmemorN/Pollution",
+      "rev": "71d7de118d3b5278b2f8caaec567449c6d1f4d62",
+      "modIds": ["pollution"],
+      "note": "codex/july-core-compat，基于作者 9ed70ed 的独立兼容分支"
+    },
     "gtfo": {
       "repo": "GTQT/GregTechFoodOption",
       "rev": "62399050c1646f4ff6b292230554193d3ff939c4",
@@ -273,6 +279,20 @@
       "build": "blocked-core-sunnarium",
       "server": "untested",
       "guide": "dev/pollution/README.md"
+    },
+    "pollutionJulyCompat": {
+      "repositories": ["pollutionCompat", "steamRunner"],
+      "sourceRev": "71d7de118d3b5278b2f8caaec567449c6d1f4d62",
+      "artifacts": ["gtOctober", "coreJuly", "gtfoJuly", "steamJuly", "model100"],
+      "runtimeSha256": {
+        "gregtech": "6ee0c0fc7756b8c8c1a4693d2943c711faefcb36af2db8170d548573e0d77671",
+        "gtqtcore": "fd2cbe765cb362e4869855ca4244b71f9d8761d7b5af9e68c98cfa178731f046"
+      },
+      "runtime": "Forge 1.12.2 14.23.5.2860 / Java 8",
+      "build": "passed",
+      "server": "passed-save-and-restart",
+      "guide": "dev/pollution/july-compat.md",
+      "evidence": "evidence/pollution-july-compat.json"
     },
     "space187": {
       "repositories": [

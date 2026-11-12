@@ -28,13 +28,15 @@ def main():
     parser.add_argument("task", nargs="?", choices=["compileJava", "build"], default="build")
     args = parser.parse_args()
     source, legacy, state = (p.resolve() for p in (args.source, args.steam_env, args.state))
-    revision = check_head(source, CURRENT, BASELINE)
+    profiles = {CURRENT: "pollutionCurrent", BASELINE: "pollutionJuly",
+                LOCK["profiles"]["pollutionJulyCompat"]["sourceRev"]: "pollutionJulyCompat"}
+    revision = check_head(source, *profiles)
     check_head(legacy, ENVIRONMENT)
     helpers = legacy / "dev/legacy"
     sys.path.insert(0, str(helpers))
     from prepare_dependencies import fetch_verified, matches
 
-    profile = "pollutionJuly" if revision == BASELINE else "pollutionCurrent"
+    profile = profiles[revision]
     for artifact_id in LOCK["profiles"][profile]["artifacts"]:
         # This July Core dependency is needed at runtime only; July Pollution compiles without it.
         if profile == "pollutionJuly" and artifact_id == "model100":
@@ -73,7 +75,13 @@ def main():
             java8 = header[:4] == b"\xca\xfe\xba\xbe" and int.from_bytes(header[6:], "big") == 52
             if archive.testzip() or mods != {("pollution", "1.9.0")} or not java8:
                 sys.exit(f"Unexpected or damaged Java 8 Pollution 1.9.0 artifact at {jar}")
-        print(f"{jar}  SHA-256 {hashlib.sha256(jar.read_bytes()).hexdigest()}")
+        digest = hashlib.sha256(jar.read_bytes()).hexdigest()
+        if profile == "pollutionJulyCompat":
+            inputs = {key: LOCK["artifacts"][key]["sha256"] for key in LOCK["profiles"][profile]["artifacts"]}
+            receipt = {"source": revision, "profile": profile, "jarSha256": digest, "inputs": inputs}
+            (source / "build/pollution-compat.json").write_text(json.dumps(receipt, indent=2) + "\n",
+                                                               encoding="utf-8")
+        print(f"{jar}  SHA-256 {digest}")
     return result.returncode
 
 

@@ -38,6 +38,7 @@ python -B tools/workspace.py fetch coreJuly --offline
 | DrTech + SteamTech | DrTech 的七月、八月 GT 组合均构建成功；八月用于共服。 | 世界保存了 24 个模组 ID。橡胶草提取、作物种子反射登记及部分 Binnie、无人机平台配方有注册错误或警告。[构建与共服复现](dev/drtech/README.md) |
 | 七月 Pollution + 七月 Core 1.9.0 | 作者同批源码和依赖可离线重建。 | 补齐 ModelLoadLib 后，Core 在专服注册物品时加载客户端 `IBakedModel` 并崩溃。单换八月 GT 会更早缺少 `MaterialIconType.oreLean`。[两次启动证据](dev/pollution/README.md) |
 | 当前锁定的 Pollution + 七月 Core | 换到十月 GT 后，剩下的四条编译诊断都指向 `GTQTMaterials.Sunnarium`。 | 取得含该字段的 Core，才能继续验证这条组合。[具体调用和复现命令](dev/pollution/README.md) |
+| Pollution 兼容分支 + 修补的七月 Core + 十月 GT | 当前 Pollution 的独立分支可以从源代码构建。 | Forge 2860 专服完成建档、保存和重启。已验证 Sunnarium 唯一注册与两条配方。[复跑兼容组合](dev/pollution/july-compat.md) |
 | Space、PrismPlan、ApplyGray 和整包 | 各用单独组合。Space 的公开版本锁到 1.8.7，PrismPlan 使用旧 AE，ApplyGray 的主代码和 Supergiant 需要 Java 25。 | ApplyGray 待取得作者的 StructureLib。1.8.8 的 189 文件清单在历史和本次检查中都发现两个 AE JAR 注册相同 ID。[配套依赖与整包预检](docs/pack.md) |
 
 核心发现来自 [Pollution 的七月依赖目录](https://github.com/GTQT/Pollution/tree/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs)。其中的 Core 自报 1.9.0，主类是 `meowmel.gtqtcore.GTQTCore`。公开 Core 仓的固定提交仍为 1.8.9，主类在 `keqing.gtqtcore`。目前可以基于七月二进制开发下游；维护 1.9 Core 自身仍需对应源码。[公开 Core 源码](https://github.com/GTQT/GTQT-Core/tree/7ab5b236c4839b84de5a65d4b56b5655732740d1)
@@ -51,4 +52,4 @@ python -B tools/workspace.py fetch coreJuly --offline
 - 修改上游 API 时，在对应 fork 开分支，用候选 JAR 跑受影响的下游构建及专服。上游合入后更新本仓锁和验收记录，再由整合包仓锁定实际发布文件。各组合使用独立的 `mods`、世界和配置；Java 25 的 Cleanroom 组合单独运行。
 - 整包候选先运行 `python -B tools/pack_check.py <实例的mods目录>`，再运行对应专服、客户端加入、关键机器加工与世界重载。当前已通过的共服检查覆盖注册、建档、保存和停服。客户端联机和机器加工仍待验收。
 
-下一步优先核对与当前 Pollution 匹配的 1.9 Core，并复现其专服物品注册；同期可以在已跑通的八月环境维护 SteamTech、DrTech。整合包待这些组合验证后再提升相应依赖。
+当前 Pollution 的开发可以使用 `pollutionJulyCompat`。取得作者新版 Core 后，再以 `pollutionCurrent` 验证原始组合。SteamTech 与 DrTech 使用各自已通过联调的八月环境。

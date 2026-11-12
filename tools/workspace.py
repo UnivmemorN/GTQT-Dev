@@ -93,6 +93,11 @@ def validate(lock):
         check_local_reference(key, "guide", profile.get("guide"))
         if "evidence" in profile:
             check_local_reference(key, "evidence", profile["evidence"])
+        if "runtimeSha256" in profile:
+            runtime = profile["runtimeSha256"]
+            require(isinstance(runtime, dict) and runtime and
+                    all(isinstance(mod_id, str) and mod_id and is_hash(sha, 64)
+                        for mod_id, sha in runtime.items()), f"{key}: invalid runtime JAR digest")
         if "sourceRev" in profile:
             repos = [lock["repositories"][ref] for ref in profile["repositories"]]
             require(is_hash(profile["sourceRev"], 40) and any(profile["sourceRev"] in
