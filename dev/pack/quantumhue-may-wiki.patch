@@ -1,0 +1,67 @@
+--- a/src/main/java/meowmel/quantumhue/LateMixin.java
++++ b/src/main/java/meowmel/quantumhue/LateMixin.java
+@@ -1,8 +1,11 @@
+ package meowmel.quantumhue;
+ 
+ import mcjty.theoneprobe.config.Config;
++import net.minecraftforge.fml.relauncher.FMLLaunchHandler;
+ import zone.rong.mixinbooter.ILateMixinLoader;
+ 
++import java.lang.invoke.MethodHandles;
++import java.lang.invoke.MethodType;
+ import java.util.ArrayList;
+ import java.util.List;
+ 
+@@ -13,8 +16,25 @@
+     @Override
+     public List<String> getMixinConfigs() {
+         List<String> configs = new ArrayList<>();
+-        if(isModLoaded("theoneprobe") && !Config.isJadeTheme())  configs.add("mixins.quantumhue_theoneprobe.json");
+-        if(isModLoaded("thaumcraft"))  configs.add("mixins.quantumhue_thaumcraft.json");
++        if (!FMLLaunchHandler.side().isClient()) {
++            return configs;
++        }
++        if (isModLoaded("thaumcraft")) {
++            configs.add("mixins.quantumhue_thaumcraft.json");
++        }
++        if (isModLoaded("theoneprobe") && supportsProbePresets()) {
++            configs.add("mixins.quantumhue_theoneprobe.json");
++        }
+         return configs;
+     }
+-}
+\ No newline at end of file
++
++    private static boolean supportsProbePresets() {
++        // Original TOP and its Community Edition share the same Forge mod ID.
++        try {
++            MethodHandles.publicLookup().findStatic(Config.class, "isJadeTheme", MethodType.methodType(boolean.class));
++        } catch (NoSuchMethodException | IllegalAccessException unsupportedEdition) {
++            return false;
++        }
++        return !Config.isJadeTheme();
++    }
++}
+--- a/src/main/java/meowmel/quantumhue/QuantumHue.java
++++ b/src/main/java/meowmel/quantumhue/QuantumHue.java
+@@ -64,6 +64,9 @@
+ 
+     @Mod.EventHandler
+     public void onInit(FMLInitializationEvent event) {
++        if (!event.getSide().isClient()) {
++            return;
++        }
+         MinecraftForge.EVENT_BUS.register(new SimpleBlurHandler());
+         MinecraftForge.EVENT_BUS.register(new AdvancedTooltipHandler());
+         MinecraftForge.EVENT_BUS.register(new BiomeInfoEventHandler());
+--- a/src/main/java/meowmel/quantumhue/network/PacketHandler.java
++++ b/src/main/java/meowmel/quantumhue/network/PacketHandler.java
+@@ -12,7 +12,7 @@
+     private static int packetId = 0;
+ 
+     public static void init() {
+-        instance = new SimpleNetworkWrapper("gtqtcore");
++        instance = new SimpleNetworkWrapper("qh_wiki");
+         instance.registerMessage(
+                 ShowWikiPacket.Handler.class,
+                 ShowWikiPacket.class,

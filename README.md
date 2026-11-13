@@ -49,7 +49,8 @@ python -B tools/workspace.py fetch coreJuly --offline
 ## 仓库与打包分工
 
 - [workspace.lock.json](workspace.lock.json) 记录各检出提交、关键跨模组制品及其下载哈希。各组合另行锁定运行依赖；每次专服记录包含实际入服 JAR 的指纹。上游构建时间戳可使重编后的 JAR 哈希变化。
-- GuideQT、SatisMC 在清单中等待可核验的 1.12.2 源码或制品。GTFO、ModelLoadLib 已纳入依赖管理。GCYM、Supercritical、GTTopAddition、BestQuestings、GregTinker、GTMaid、VisualOres 等可由历史包回溯版本；是否进入 1.9 候选按实际使用它们的模组和脚本逐项确认。[历史模组列表](https://github.com/GTQT/GT-QuantumTransition/blob/3fd61bb3d9eacef642dd55eedb90bd2de216dec8/modlist.html)
+- 作者演示的早期 GuideQT Wiki 已在 QuantumHue 历史源码中定位。SatisMC 已取得作者蓝图样本与预览读取器，独立建造器仍缺源码或 JAR。[视频、源码与整包验证](docs/guide-satis.md)
+- GTFO、ModelLoadLib 已纳入依赖管理。GCYM、Supercritical、GTTopAddition、BestQuestings、GregTinker、GTMaid、VisualOres 等可由历史包回溯版本；是否进入 1.9 候选按实际使用它们的模组和脚本逐项确认。[历史模组列表](https://github.com/GTQT/GT-QuantumTransition/blob/3fd61bb3d9eacef642dd55eedb90bd2de216dec8/modlist.html)
 - 修改上游 API 时，在对应 fork 开分支，用候选 JAR 跑受影响的下游构建及专服。上游合入后更新本仓锁和验收记录，再由整合包仓锁定实际发布文件。各组合使用独立的 `mods`、世界和配置；Java 25 的 Cleanroom 组合单独运行。
 - 整包候选先运行 `python -B tools/pack_check.py <实例的mods目录>`，再运行对应专服与客户端。联机、原始任务引用和机器实作采用独立记录。可从存档注册名查出缺失部件，生存制作与多方块加工则需要在相应机器上复测。[整包组装和双端验收](dev/pack/README.md) · [Pollution 既有实机测试](dev/pollution/july-compat.md)
 

@@ -1,0 +1,123 @@
+{
+  "forge": "1.12.2-14.23.5.2860",
+  "serverAndClientBaseline": {
+    "server": {
+      "overrides": {
+        "files": 8236,
+        "sha256": "e0428b29021f5a6bb6d2e26fe1b892ab106c8b3c36441a68632aa4898b1863ea"
+      },
+      "scriptsQuestsResources": {
+        "files": 113,
+        "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+      },
+      "productionMods": {
+        "files": 183,
+        "sha256": "bf1f0fcabe3e0255b0a3b7e7cd8ed2b8769d2b21fd4e73695e803bcbab81e3c4"
+      }
+    },
+    "client": {
+      "overrides": {
+        "files": 8236,
+        "sha256": "e0428b29021f5a6bb6d2e26fe1b892ab106c8b3c36441a68632aa4898b1863ea"
+      },
+      "scriptsQuestsResources": {
+        "files": 113,
+        "sha256": "810c8ae979cf196f282ab3f43bd76b8d0ec4d7facf939feca77ab581dd794c6e"
+      },
+      "productionMods": {
+        "files": 185,
+        "sha256": "dda66d1ac247b34b0d1dc6cfeae8d3e1d117851e2d597ccb81c5ec7e359a2fec"
+      }
+    }
+  },
+  "scope": "Input candidate plus an isolated diagnostic variant; phases use the same saved world, two separate server/client pairs and clean client files.",
+  "variants": [
+    {
+      "key": "unmodified",
+      "sha256": "18999384e4a290df13c171d0326313793be236267f610aa9e3e27813d204d9de",
+      "dedicated": "preinit failed: gtqtcore channel already registered",
+      "log": "bc05838c52b76f88c69ac8eca5ca66188fd615901ba77c46feb59bfeae60b78f"
+    },
+    {
+      "key": "channelOnly",
+      "sha256": "ca76bf98cd819b17a5dfeaba5e09030062a82162cba18826c39c5d6a998acf5d",
+      "dedicated": "init failed: SimpleBlurHandler for invalid side SERVER",
+      "log": "4a63f07ff517710148fa10b177080c1d066f8a5ca36ee9e8ecb9fc83234252b4"
+    },
+    {
+      "key": "channelAndClientInit",
+      "sha256": "610e7983df8387d4ebde9ee78d350e7449029154f5d992c153e7b33034a085e5",
+      "dedicated": "world created, registered /wiki, player joined; verification stopped at startup announcement",
+      "log": "c77c1d46fccec563c839b81674a0def801557c74fc9f503ee0f4568b4cf6c9ab"
+    }
+  ],
+  "testedVersion": "6ab64338e282e512c6ca53d58e7b3c1cfebd9250c18d3e9876613aff170ac457",
+  "originalsRestored": true,
+  "phases": [
+    {
+      "phase": "create",
+      "world": {
+        "seed": -9190821571248531799,
+        "name": "wiki-audit"
+      },
+      "wiki": "GTQT_WIKI_OPEN_OK packets=1 pages=8 displayed=welcome renderedLines=22",
+      "serverExit": 0,
+      "help": "[00:29:05] [Server thread/INFO] [minecraft/DedicatedServer]: Usage: /wiki - 打开Wiki窗口",
+      "levelSha": "2687f353a4d995ea7379e0213c51ce39bf85c2fd72dafab425b1e1941b986809",
+      "playerSha": "0dfe1f98f76811c6dc68938c6141586f3285bf7e3e87bbd79431cdd3c93684d3",
+      "playerConfigPagesSha256": {
+        "advanced_formatting.json": "495ec9684ef36b834c13cce1e4c9723763906769c6b2a82aa28a3948a80623ae",
+        "discovery_system.json": "61459d488e13c93ac01a6d7df0c5f6c20632e8541786d5e02271ea912a541813",
+        "inline_assets.json": "54783956b0dd7f232f601fdfa163dfdfedd1536d9bd214ddfecf8398f3ac9a85",
+        "json_structure.json": "b5e60d6e0437eb6c4168aabbf2d3cb00152de278c36f280b9b9edda57a33f05e",
+        "markdown_syntax.json": "906f7b4597e6a602277dc3910b9715f83915deb61e13b0f59ee3def058e8d652",
+        "tables_and_lists.json": "309edea6b97bef311682eec0b006bc0000ea43ddb03eca6c6d1f4ad72e24290a",
+        "troubleshooting.json": "c54091e195f705a6fb99f61f530355892bb4e0e8bf055bd0e1f3cfed8938102b",
+        "welcome.json": "8d28b9b11fec14284ddbd474fb243bdd8468d196e9767da5a02cfff0b32ae928",
+        "_index.json": "4c0689745fc6d7c8bdff193d2dd091b0b77afe9d9fecf9e808d3ddc09fe38b4f"
+      },
+      "clientExit": 0,
+      "clientReturnedToMenu": true,
+      "clientAndServerJoined": true,
+      "registeredThaumcraftClientMixin": true,
+      "marker": "d64a64fe956a44a086dcd51bf5d73808",
+      "clientLogSha256": "d18109057f5add8d82f025717b109618641066e6db6d592177361cfc86eb70df",
+      "serverLogSha256": "72a510b6d7265a858cce658d82f4126cb6a682469f0c8e8abd6dc9452f7869ec"
+    },
+    {
+      "phase": "reload",
+      "world": {
+        "seed": -9190821571248531799,
+        "name": "wiki-audit"
+      },
+      "wiki": "GTQT_WIKI_OPEN_OK packets=1 pages=8 displayed=welcome renderedLines=22",
+      "serverExit": 0,
+      "help": "[00:33:30] [Server thread/INFO] [minecraft/DedicatedServer]: Usage: /wiki - 打开Wiki窗口",
+      "levelSha": "e5d37648e9c8e83339bfad7e99d1a04fc2fe639ba8da70b1f6883c1af1b4c4e6",
+      "playerSha": "afbc5b62c060654386e464837e75cf4b1c528b4763ab0e17930fa7e86d79cba7",
+      "playerConfigPagesSha256": {
+        "advanced_formatting.json": "495ec9684ef36b834c13cce1e4c9723763906769c6b2a82aa28a3948a80623ae",
+        "discovery_system.json": "61459d488e13c93ac01a6d7df0c5f6c20632e8541786d5e02271ea912a541813",
+        "inline_assets.json": "54783956b0dd7f232f601fdfa163dfdfedd1536d9bd214ddfecf8398f3ac9a85",
+        "json_structure.json": "b5e60d6e0437eb6c4168aabbf2d3cb00152de278c36f280b9b9edda57a33f05e",
+        "markdown_syntax.json": "906f7b4597e6a602277dc3910b9715f83915deb61e13b0f59ee3def058e8d652",
+        "tables_and_lists.json": "309edea6b97bef311682eec0b006bc0000ea43ddb03eca6c6d1f4ad72e24290a",
+        "troubleshooting.json": "c54091e195f705a6fb99f61f530355892bb4e0e8bf055bd0e1f3cfed8938102b",
+        "welcome.json": "8d28b9b11fec14284ddbd474fb243bdd8468d196e9767da5a02cfff0b32ae928",
+        "_index.json": "4c0689745fc6d7c8bdff193d2dd091b0b77afe9d9fecf9e808d3ddc09fe38b4f"
+      },
+      "clientExit": 0,
+      "clientReturnedToMenu": true,
+      "clientAndServerJoined": true,
+      "registeredThaumcraftClientMixin": true,
+      "marker": "d64a64fe956a44a086dcd51bf5d73808",
+      "clientLogSha256": "03b9f21611c44fefa4803003525bd3869c1adbb2cb776aee8671e760391fd59c",
+      "serverLogSha256": "4eeb3e53c30db2ed6ce2406b0e66f9def148169f4dd8dbf903ca8332d3f974e0"
+    }
+  ],
+  "testSourceSha256": {
+    "ClientProbe.java": "1578195c1297ab55a2eeae115219a08ede45f10f42f0ea0efa690d9330f583e1",
+    "wiki_client.py": "ed7c3c94a2b75d399369570221236994018055c427e064457df5d5e4d285c05b",
+    "audit_wiki.py": "81c3067489710ae8a9f3fed727909cfeacb566875d29b26746bc18838ac3b69d"
+  }
+}

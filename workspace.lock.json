@@ -365,11 +365,20 @@
   "awaitingSource": [
     {
       "project": "GuideQT",
-      "needed": "GTQT 1.12.2 源码提交或可检验制品"
+      "needed": "后期独立 GuideQT 的 1.12.2 源码或制品。五月内嵌 Wiki 的 Forge ID 是 quantumhue，已单独验收。",
+      "historicalImplementation": {
+        "repo": "GTQT/QuantumHue-Visualizer",
+        "rev": "4367435ade4c4707553a3eaa02969f81c8c9c254",
+        "modId": "quantumhue",
+        "compatibilityPatch": "dev/pack/quantumhue-may-wiki.patch",
+        "testedJarSha256": "6ab64338e282e512c6ca53d58e7b3c1cfebd9250c18d3e9876613aff170ac457",
+        "evidence": "evidence/quantumhue-may-wiki.json"
+      }
     },
     {
       "project": "SatisMC",
-      "needed": "GTQT 1.12.2 源码提交或可检验制品"
+      "needed": "具备鸟瞰建造及蓝图导出、放置能力的 1.12.2 执行源码或 JAR。已识别作者的蓝图样本与 Wiki 预览器。",
+      "sourceAudit": "docs/guide-satis.md"
     }
   ]
 }
