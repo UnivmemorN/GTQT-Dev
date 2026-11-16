@@ -57,3 +57,9 @@ python -B dev/pack/verify_batch.py --instance work/candidate-replay --runtime-lo
 | 匠魂及其附属 | 153 服 / 183 客候选在专服注册阶段抛出 `TinkerAPIException`。LibNine 已登记铝的 `head` 属性，GregTech 的 `TiCModule.registerBlocks` 再次提交该属性。 |
 | Biomes O’ Plenty | 去掉匠魂组后，147 服 / 177 客候选在专服配方注册阶段退出。GTFO 的 `BiomesOPlentyWoodRecipe.getDefaultEntries:37` 传入空木板，GT 的 `WoodTypeEntry.Builder.build:417` 抛出 `Planks cannot be empty`。 |
 | Forestry、Extra Trees 及依赖项 | 146 服 / 176 客能建档和复登，但两次实际握手各有 837 条缺失的合成配方名。对比两次 33,534 项的注册表，重启后 837 个旧名消失、另增 837 个新名，涉及 Forestry 413 项和 Extra Trees 424 项。GT 木材联动在生成配方 ID 时加入了随机字符串。该组退出候选。[两次握手的完整差异](../evidence/gtqt19-pack/forestry-recipe-diff.json) |
+
+### 匠魂恢复待办
+
+本轮保留 `gregtech:tic_integration` 的默认值 `true`。候选暂缺匠魂本体，以及 Tinker Tool Leveling、Construct’s Armory、Tinkers’ JEI、PlusTiC、Tinkers’ Evolution 五个附属。GregTinker 另有独立 GCYM 前置缺口。
+
+后续在组织仓 `GTQT/GregTech` 修复已有匠魂材料的属性合并。回归时保留 LibNine，验证铝的 `head` 属性只登记一次且合并后的数值符合预期，再用六件组合验证专服建档、客户端入服、保存重启和复登。[GregTech 材料合并入口](https://github.com/GTQT/GregTech/blob/748c944bc811f99c1d534c05c3ac1b9cbae634e4/src/main/java/gregtech/integration/tconstruct/materials/ToolMaterialRegistrar.java#L178)
