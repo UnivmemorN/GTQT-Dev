@@ -181,6 +181,7 @@ def main():
     parser.add_argument("--phase", required=True, choices=("create", "reload"))
     parser.add_argument("--port", required=True, type=int, choices=range(1, 65536), metavar="PORT")
     parser.add_argument("--timeout", default=480, type=int)
+    parser.add_argument("--join-only", action="store_true", help="verify joining independently of pack-specific gameplay checks")
     parser.add_argument("--cache", type=Path, help="shared verified libraries and asset objects")
     parser.add_argument("--lock", type=Path, help="verify the actual player-mod and override staging before JVM startup")
     parser.add_argument("--resource-dir", type=Path, action="append", default=[], help="optional read-only .minecraft resource cache")
@@ -214,6 +215,7 @@ def main():
                 if entry.filename.lower().endswith(".dll"):
                     (native_dir / Path(entry.filename).name).write_bytes(zipfile.read(entry))
     command = [str(jdk / "bin/java.exe"), "-Xms512m", "-Xmx6g", "-Dfile.encoding=UTF-8",
+               "-Dgtqt.probe.joinOnly=" + str(args.join_only).lower(),
                "-Dlog4j2.formatMsgNoLookups=true", "-Djava.library.path=" + str(native_dir),
                "-Dorg.lwjgl.librarypath=" + str(native_dir), "-Dnet.java.games.input.librarypath=" + str(native_dir),
                "-Dgtqt.probe.phase=" + args.phase, "-Dgtqt.probe.port=" + str(args.port),
@@ -221,7 +223,8 @@ def main():
                "--username", USER, "--version", FORGE, "--gameDir", str(game), "--assetsDir", str(cache / "assets"),
                "--assetIndex", "1.12", "--accessToken", "offline", "--uuid", OFFLINE_ID.hex,
                "--userType", "legacy", "--userProperties", "{}", "--tweakClass", "net.minecraftforge.fml.common.launcher.FMLTweaker",
-               "--server", "127.0.0.1", "--port", str(args.port), "--width", "480", "--height", "270"]
+               "--server", "127.0.0.1", "--port", str(args.port),
+               "--width", "854" if args.join_only else "480", "--height", "480" if args.join_only else "270"]
     log = result / "client-console.log"
     print(f"Forge client console: {log}", flush=True)
     code = hidden_client(command, game, log, args.timeout)
@@ -235,13 +238,21 @@ def main():
     if code or len(markers) != 1 or graceful != 1:
         raise RuntimeError(f"Client exit {code}, successful joins {len(markers)}; see {log}")
     print(markers[0])
-    record = {"phase": args.phase, "username": USER, "exitCode": code, "join": markers[0], "cleanMenuExit": True}
+    record = {"phase": args.phase, "username": USER, "exitCode": code, "join": markers[0], "cleanMenuExit": True,
+              "clientProbeSha256": inputs.digest(game / "mods" / inputs.CLIENT_PROBE)}
+    if args.join_only:
+        closed = sum("GTQT_PACK_CLIENT_CHANNEL_CLOSED ticks=20" in line for line in lines)
+        if "validChunkTicks=100" not in markers[0] or closed != 1:
+            raise RuntimeError(f"Missing sustained world or network-close receipt; see {log}")
+        record.update(validChunkTicks=100, closedChannelTicks=20)
     missing = Counter()
     for line in lines:
         match = re.search(r"Registry ([^:\r\n]+): Found a missing id from the world (\S+)", line)
         if match:
             missing[" ".join(match.groups())] += 1
     record["missingWorldIds"] = dict(sorted(missing.items()))
+    record["menuWarnings"] = [line.split("GTQT_PACK_CLIENT_WARNING ", 1)[1]
+                              for line in lines if "GTQT_PACK_CLIENT_WARNING " in line]
     if staged is not None:
         record["beforeProbeAndJvm"] = inputs.summary(staged)
     for line in lines:

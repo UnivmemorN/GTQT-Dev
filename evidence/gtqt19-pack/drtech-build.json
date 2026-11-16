@@ -1,0 +1,67 @@
+{
+  "repo": "GTQT/DrTech",
+  "branch": "main",
+  "sourceRev": "e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf",
+  "forgeTarget": "1.12.2",
+  "gradle": "8.5",
+  "declaredModVersion": "1.8.9",
+  "status": "blocked-compileJava",
+  "requiredAfter": [
+    "gregtech@[1.9.0,)"
+  ],
+  "sourceBuildInputs": {
+    "gregtech-gtqt-1.12.2-1.9.0.jar": "bbfe1b587ec63251929ac875c485d29bfee67fc0ae7069645abec737ebdd9b79",
+    "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
+    "modelloader-1.0.0.jar": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f"
+  },
+  "gtqtProfile": "gtqt19",
+  "command": "upstream gradlew.bat --offline clean build; RFG 1.4.0 and common Maven tooling mirrors, JDK17/8, stable_39, skips already cached Minecraft asset download tasks",
+  "result": {
+    "exit": 1,
+    "tasksExecuted": 18,
+    "elapsedSeconds": 53,
+    "errors": [
+      {
+        "file": "src/main/java/com/drppp/drtech/common/metaTileEntities/muti/mutipart/MetaTileEntityYotHatch.java",
+        "line": 75,
+        "missing": "gregtech.client.renderer.texture.Textures.ME_INPUT_BUS"
+      }
+    ],
+    "log": "main-build.log",
+    "logSha256": "a2eae37cd7ed1b8caf8c9dca32620b7df075fa96767b814ab02b6b3239824a33",
+    "producedJar": false,
+    "forgeRuntimeAttempted": false
+  },
+  "crossCheck": {
+    "method": "javap on locked production GT, confirms absent field, present FLUID_HATCH_INPUT_OVERLAY",
+    "releases": "published assets only v0.0.1 and v0.0.2 from 2024 master",
+    "newerBranch": "cropQT",
+    "newerBranchRev": "83bf12af0127b5cc4555e86569b09e184d7f4e1b",
+    "diverged": {
+      "ahead": 3,
+      "behind": 2
+    },
+    "newerBranchSourceAlsoReferencesMissingFieldAt": 75,
+    "newerBranchCleanBuild": {
+      "compileExitCode": 1,
+      "errorCount": 1,
+      "missing": "Textures.ME_INPUT_BUS",
+      "file": "MetaTileEntityYotHatch.java",
+      "line": 75,
+      "tasksExecuted": 18,
+      "elapsedSeconds": 108,
+      "upstreamExtraDependency": {
+        "fileId": 3558882,
+        "sha256": "1c53d3ee39f557162591f618c58b79dc6861d24522ef785794ee4a815f8a3908"
+      },
+      "log": "cropqt-confirm.log",
+      "logSha256": "d47a972194dc0ba9a8b8ac24853e86f564c553566433f8c4c04f26b4399d852e"
+    },
+    "latestListedCurseForge1122": {
+      "id": 7042514,
+      "name": "drtech-1.8.8.jar",
+      "uploaded_at": "2025-09-28T14:52:10.257Z",
+      "url": "https://www.curseforge.com/minecraft/mc-mods/drtech/files/7042514"
+    }
+  }
+}

@@ -1,0 +1,424 @@
+[
+  {
+    "label": "02-libraries",
+    "run": "02-libraries-20261116-112629-936180",
+    "rawResultSha256": "7c00de642c7083110c5ada193c8884d04521f41970567245882f622b724f5213",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "35220df190673eb12e13817a02e50d85edd2a3dbc295e4969d3066a584c1a1ad",
+    "jars": {
+      "server": 39,
+      "client": 40
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": true,
+    "fixtureRestored": true,
+    "phases": [
+      {
+        "phase": "create",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 43,
+        "levelSha256": "1bb38964c3ddbba0ba4b7e368eb1d4c94406e1cc9090dfd4f1c65153defb1867",
+        "savedMarker": 81232169,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "517477eab7c64e1b74f72a34a2ba579b92d7e8b70a3042b17251e4c4c4b40de8"
+      },
+      {
+        "phase": "reload",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 43,
+        "levelSha256": "5282786dc15e5c26716dec29c198b6b665d04fbb5c89a2cbe16b6097e24d01df",
+        "savedMarker": 81232169,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "e97f014a7fb709adeec7021b83c449690ae5565dcee4c840175c9a970f8a3833"
+      }
+    ],
+    "worldFilesCheckedBeforeRestart": 57
+  },
+  {
+    "label": "03-utilities",
+    "run": "03-utilities-20261116-113127-607846",
+    "rawResultSha256": "a2a17ecb026cdca328dbe56a5e4ec0a69453bbfb15243dad9a1f9fc177768220",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "ee5db59f82f191ce99a408d2d2b1c33a4a43e70e10a7ccb045ba66591f8b8e05",
+    "jars": {
+      "server": 58,
+      "client": 59
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": true,
+    "fixtureRestored": true,
+    "phases": [
+      {
+        "phase": "create",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 62,
+        "levelSha256": "9e9893f7d3af4043203bf87efd58584549bceb4581b52ad656bbd134d494e9ab",
+        "savedMarker": 49831825,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "1d6360e3f6b6c31a2012fad94baa452be5fe033f83972368d33c1bbd89b37229"
+      },
+      {
+        "phase": "reload",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 62,
+        "levelSha256": "50da7ec5a292480cdfd8615af435735bd994132cdbacaef55bc5f4f9d842e1ea",
+        "savedMarker": 49831825,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "1719087ef092f2a1f5d14308590e7aede1b6f9ba0e62ca0bc791322d49169faf"
+      }
+    ],
+    "worldFilesCheckedBeforeRestart": 57
+  },
+  {
+    "label": "04-content-tech-ae",
+    "run": "04-content-tech-ae-20261116-113755-469284",
+    "rawResultSha256": "eed20fbc88d7ac5d419f3e1aaf538178087fa8f55feaa3c3e9b22bbfb058aea0",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "e5c9a241047a698e41879b8bc5885b2319011179d98c3e947ce4d5cc80b2e66a",
+    "jars": {
+      "server": 124,
+      "client": 125
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": false,
+    "fixtureRestored": true,
+    "phases": [],
+    "failure": "Forge rejected RandomComplement 1.6.9: it requires the installed JEI provider to be exactly 4.29.7; the accepted HEI provides 4.32.0.",
+    "serverLogs": {
+      "create.log": "c5dd8477a39d0e92d5754b827d328627726107bab5a144aecba11a9fd9489519"
+    },
+    "crashReports": {
+      "server-files/crash-reports/crash-2026-11-16_11.38.04-server.txt": "7cc62d7bb072638158881a4474030bbc0df0befbeb09afe43a15038250864124"
+    }
+  },
+  {
+    "label": "04b-content-tech-ae",
+    "run": "04b-content-tech-ae-20261116-113925-808337",
+    "rawResultSha256": "b0969cf6d613e12f4db1635e16503fab8c4165e071c8d860c9d9331b0f7dbad6",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "3e7ca8f73c8f1e2684fa652b2818462da0722f8fb2ce4cec43f8c9c9fa18ae99",
+    "jars": {
+      "server": 123,
+      "client": 124
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": false,
+    "fixtureRestored": true,
+    "phases": [],
+    "failure": "Forge block registry exhausted ID 4095 while registering HarvestCraft blocks. Re-tested with Roughly Enough IDs from the original manifest.",
+    "serverLogs": {
+      "create.log": "4aa84c6bc60b0fbedea225529a23cc89a6b8425dce57b2ef463ce921b3e64187"
+    },
+    "crashReports": {
+      "server-files/crash-reports/crash-2026-11-16_11.39.57-server.txt": "9e40f5e4cd5dffd537609ad77cdb52902990b79559872cf0a17a1a79c45703d4"
+    }
+  },
+  {
+    "label": "04c-content-tech-ae-reid",
+    "run": "04c-content-tech-ae-reid-20261116-114101-638493",
+    "rawResultSha256": "c85ee114155163cde6d872a2f9924e684f29a70943f6acb03cc761affa1c3d40",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "08f11a42afb9c85cbdedc835dbfa5eeee46b48d8ffe9e9bb47f5fc26a139ea8f",
+    "jars": {
+      "server": 124,
+      "client": 125
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": true,
+    "fixtureRestored": true,
+    "phases": [
+      {
+        "phase": "create",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 148,
+        "levelSha256": "aa8de093c508a1cb4e058992d886cd79e956868db18d80611bcc9af955899b6e",
+        "savedMarker": 47401350,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "b27b18d3e539042b289ae1ed85caa009b87039af76179559e20d8458546802f0"
+      },
+      {
+        "phase": "reload",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 148,
+        "levelSha256": "67851973585a279351531791061ea61b6d4fe42d7324ebcd9e5778b9c645894a",
+        "savedMarker": 47401350,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "26997f919e8bbf35e401d7f0e51d8188ed2faf8c1311d47dcb1c3b53d59bf89d"
+      }
+    ],
+    "worldFilesCheckedBeforeRestart": 90
+  },
+  {
+    "run": "05b-ui-tools-20261116-115524-600859",
+    "passed": false,
+    "outcome": "harness-error",
+    "rawResultSha256": "e09c1fab0e2229329fa51940751c5a1dbccbb73e83735d826d9ef773179392b7",
+    "phase": "create-receipt-write",
+    "failure": "TypeError: Object of type WindowsPath is not JSON serializable"
+  },
+  {
+    "label": "05b-ui-tools",
+    "run": "05b-ui-tools-20261116-115945-021257",
+    "rawResultSha256": "596a36bad964e94b2596601d3fde4aea46e9ef5cd5ca19a68ce062bac3553c34",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "3c2156a609cdc92ae5e7ede2106a0822d5da46adf4120234035846af72369314",
+    "jars": {
+      "server": 139,
+      "client": 169
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": false,
+    "fixtureRestored": true,
+    "phases": [],
+    "failure": "Client crashed handling a queued SPacketEntityHeadLook after the test observer unloaded the world. The same mod set was re-tested with an orderly disconnect.",
+    "serverLogs": {
+      "create.log": "6fcb0e4e8024e7d2ef8e50671c258d50b8a3decc0356158a91b0a722b908a4e9"
+    },
+    "crashReports": {
+      "client-create/client-game/crash-reports/crash-2026-11-16_12.03.37-client.txt": "1d5b6e2ce5745c8370e48d8469d32c36d727ccf0b6b5750d3af046386a66dc8a"
+    }
+  },
+  {
+    "label": "05b-probe100",
+    "run": "05b-probe100-20261116-120516-540752",
+    "rawResultSha256": "8232313cba9df95745c04b0f77e68309c7ce4a1a8039fb91f8afd9977eacb168",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "3c2156a609cdc92ae5e7ede2106a0822d5da46adf4120234035846af72369314",
+    "jars": {
+      "server": 139,
+      "client": 169
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": true,
+    "fixtureRestored": true,
+    "phases": [
+      {
+        "phase": "create",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3 validChunkTicks=100",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 161,
+        "levelSha256": "688838748437e7e56c3b483e5ebedadbb5c4967055d58e5dc6f98478ab8de52b",
+        "savedMarker": 86993747,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "105d4148f9d437152701e434246c11a98c3d2c795be4cbaf007a5efe4fdfbc6e"
+      },
+      {
+        "phase": "reload",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3 validChunkTicks=100",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 161,
+        "levelSha256": "340e617a18b949839b862915e6c4f06f42a160deebd86a8b7767d7468eebc78f",
+        "savedMarker": 86993747,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "f95f1160a1e6de8474e6bf6306bb9d35b572d26604259f0f5c090d68af54e75a"
+      }
+    ],
+    "worldFilesCheckedBeforeRestart": 91
+  },
+  {
+    "label": "06b-world-materials",
+    "run": "06b-world-materials-20261116-121354-658824",
+    "rawResultSha256": "36c76a0e32b164f2c2aa24902fbf00ba5d74311f16121375c9d86587db2828a1",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "b4f83ab786000bd01ed15bb41e9f9532221eff45aa0b489e98650efa80337efa",
+    "jars": {
+      "server": 153,
+      "client": 183
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": false,
+    "fixtureRestored": true,
+    "phases": [],
+    "failure": "TinkerAPIException during GregTech integration: aluminium head stats already registered by libnine.",
+    "serverLogs": {
+      "create.log": "73515de719c6eccf92aec745c48f062805337d5646f9b8ea6493f405a02ab4db"
+    },
+    "crashReports": {
+      "server-files/crash-reports/crash-2026-11-16_12.14.36-server.txt": "d5528c58f83367a2a707453317370607ab999d22980adcfbc6549b8a24044c48"
+    }
+  },
+  {
+    "label": "06c-bop-forestry-rtg",
+    "run": "06c-bop-forestry-rtg-20261116-121739-342044",
+    "rawResultSha256": "af8805899f67c2b5fb3f8ced397f5b5c1592e2efc6c9d1476542fe653423ba10",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "f271616f89681f36d8777bc5ed3e4a633ee34bf4e4a425994d4b39d160879b47",
+    "jars": {
+      "server": 147,
+      "client": 177
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": false,
+    "fixtureRestored": true,
+    "phases": [],
+    "failure": "GTFO BiomesOPlentyWoodRecipe.getDefaultEntries:37 -> GT WoodTypeEntry.Builder.build:417: Planks cannot be empty.",
+    "serverLogs": {
+      "create.log": "fcac117b84f5dba31adf6dd9f9f6e63ffadac12dddafb8e06519c48baf245774"
+    },
+    "crashReports": {
+      "server-files/crash-reports/crash-2026-11-16_12.18.21-server.txt": "60d68ee3b3742dece8cc9602d0f146e31a5da6373dc2e8949ffeb06f501992fd"
+    }
+  },
+  {
+    "label": "06d-forestry-rtg",
+    "run": "06d-forestry-rtg-20261116-121905-654452",
+    "rawResultSha256": "61d57277ab77cb04da48c500b538436e01e4958e1cfba46f17d596529f362e27",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "6fbd0a7bb2602b916af9478b0c6eca582cc1ffafc77ae931d3a68d0718985356",
+    "jars": {
+      "server": 146,
+      "client": 176
+    },
+    "overrideTree": {
+      "files": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "passed": true,
+    "fixtureRestored": true,
+    "phases": [
+      {
+        "phase": "create",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,2 validChunkTicks=100",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 173,
+        "levelSha256": "f514a0fc14953d27a30d52de60f6235a485649758b1e22b3c3ce08c5d6c1e0cf",
+        "savedMarker": 25950412,
+        "saveFlushed": true,
+        "worldIdWarnings": 837,
+        "serverLogSha256": "396b249d66c71ad2e18c059c61441134aae0fb61879e6180b8fe2b2d460a387a"
+      },
+      {
+        "phase": "reload",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,2 validChunkTicks=100",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 173,
+        "levelSha256": "ec989f4004f7a1fc2587d7e49876c0266f93505c11d67547c8b24d2caf049f24",
+        "savedMarker": 25950412,
+        "saveFlushed": true,
+        "worldIdWarnings": 837,
+        "serverLogSha256": "f9a26cb894eeec7a57a32dfe22a9d0c503d421d4ef8451f98e6d90866e8df2e6"
+      }
+    ],
+    "worldFilesCheckedBeforeRestart": 97,
+    "promotion": "quarantined: mismatching generated Forestry/Extra Trees crafting recipe IDs",
+    "mismatchingWoodRecipeNames": 1674
+  },
+  {
+    "label": "07-stable-overrides",
+    "run": "07-stable-overrides-20261116-122833-838544",
+    "rawResultSha256": "bf37b875d3c6cd06a2c5b60a223ba2b5d93cbc1e757dcf68eade4dbad990fff6",
+    "baselineLockSha256": "b9f3ac542b4f21b3fa852546ce7476931834fa93f8d4d8085b8381f13030d39e",
+    "candidateLockSha256": "6db3906af1f499714ad751873e86ba666ab212cb3b09f997a891ba682670a5e7",
+    "jars": {
+      "server": 141,
+      "client": 171
+    },
+    "overrideTree": {
+      "files": 8236,
+      "sha256": "960bc1791fd0857bb3b190c1cad88649874c36a3563ebcdb586eb3fc0aabe7a2"
+    },
+    "passed": true,
+    "fixtureRestored": true,
+    "phases": [
+      {
+        "phase": "create",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3 validChunkTicks=100",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 163,
+        "levelSha256": "6fd97aea899b8e9e947e85b9d0c3b6d90a5e073370bbb566ee5447b61e5d170f",
+        "savedMarker": 29191081,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "6ceb7a3ab92291418536f8db08c6bb9c109a171b4251662cfa3fc3ec5ec4a2aa"
+      },
+      {
+        "phase": "reload",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,3 validChunkTicks=100",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 163,
+        "levelSha256": "b49ee5e1435ef6ae299260e47a9dc36956fe6c8226be9e4893663b889594e8f7",
+        "savedMarker": 29191081,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "9e520258b2e121cef5338bdca88f1fe98614b3593021c883194d68f3a5f3543d"
+      }
+    ],
+    "worldFilesCheckedBeforeRestart": 87,
+    "publishedLockSha256": "fae2a4c62922395bba95ca74f76b2f249d1452fdcf4a42d5706902f7c19cbf92",
+    "productionModTrees": {
+      "server": {
+        "files": 141,
+        "sha256": "e794efe4ce5841429b1c44c09edb1f94a0d5f825deeca422e77817354e2c6f2e"
+      },
+      "client": {
+        "files": 171,
+        "sha256": "cb65322a11f6a73448aa93ad393f38298ead35c45e799e89de091545fab0c37e"
+      }
+    }
+  }
+]

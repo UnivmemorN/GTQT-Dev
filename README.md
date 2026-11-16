@@ -24,7 +24,7 @@ python -B tools/workspace.py check-mods server work/gtqt19/server/mods
 python -B tools/workspace.py check-mods client work/gtqt19/client/mods
 ```
 
-新版玩家整包仍待组装。加入其他模组、脚本、配置和任务时，以这套双端组合为起点，逐批验证专服建档、客户端加入、保存重启及受影响玩法，分别记录结果。
+新版整包候选以这套双端组合为起点，按 1.8.8 清单分批加入模组，并单独验收脚本、任务和配置。实际纳入的文件、逐批联机记录及阻断见[新版整包组装与验收](docs/gtqt19-pack.md)。
 
 ## 已退役的七月兼容版
 

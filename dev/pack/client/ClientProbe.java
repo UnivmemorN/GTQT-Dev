@@ -21,6 +21,9 @@ public final class ClientProbe {
     private boolean finished;
     private boolean returningToMenu;
     private int menuTicks;
+    private int validChunkTicks;
+    private Object closingNetwork;
+    private int closedTicks;
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
@@ -29,6 +32,7 @@ public final class ClientProbe {
 
     @Mod.EventHandler
     public void verifyWoodEntries(FMLLoadCompleteEvent event) throws Exception {
+        if (Boolean.getBoolean("gtqt.probe.joinOnly")) return;
         if (!Loader.isModLoaded("biomesoplenty") || !Loader.isModLoaded("gregtechfoodoption")) return;
         Method getter = Class.forName("gregtechfoodoption.integration.bop.BiomesOPlentyWoodRecipe")
                 .getDeclaredMethod("getDefaultEntries");
@@ -66,6 +70,34 @@ public final class ClientProbe {
         Object mc = minecraft.getMethod("func_71410_x").invoke(null);
         Object gui = minecraft.getField("field_71462_r").get(mc);
         if (returningToMenu) {
+            if (closingNetwork != null) {
+                if ((boolean) closingNetwork.getClass().getMethod("func_150724_d").invoke(closingNetwork)) return;
+                // Leave time for already scheduled play packets to run against the live world.
+                if (++closedTicks < 20) return;
+                System.out.println("GTQT_PACK_CLIENT_CHANNEL_CLOSED ticks=" + closedTicks);
+                closingNetwork = null;
+                returnToTitle(minecraft, mc);
+                return;
+            }
+            if (Boolean.getBoolean("gtqt.probe.joinOnly")
+                    && gui != null && gui.getClass().getName().equals("com.cleanroommc.groovyscript.compat.WarningScreen")
+                    && minecraft.getField("field_71441_e").get(mc) == null
+                    && minecraft.getField("field_71439_g").get(mc) == null
+                    && minecraft.getMethod("func_147114_u").invoke(mc) == null) {
+                java.lang.reflect.Field buttons = Class.forName("net.minecraft.client.gui.GuiScreen")
+                        .getDeclaredField("field_146292_n");
+                buttons.setAccessible(true);
+                for (Object button : (List<?>) buttons.get(gui)) {
+                    if (button.getClass().getField("field_146127_k").getInt(button) == 0) {
+                        System.out.println("GTQT_PACK_CLIENT_WARNING screen=" + gui.getClass().getName()
+                                + " messages=" + String.valueOf(gui.getClass().getField("messages").get(gui))
+                                        .replace('\n', ' ').replace('\r', ' '));
+                        gui.getClass().getMethod("func_146284_a", Class.forName("net.minecraft.client.gui.GuiButton"))
+                                .invoke(gui, button);
+                        return;
+                    }
+                }
+            }
             if (minecraft.getField("field_71441_e").get(mc) == null &&
                     Class.forName("net.minecraft.client.gui.GuiMainMenu").isInstance(gui) && ++menuTicks >= 5) {
                 finished = true;
@@ -106,14 +138,25 @@ public final class ClientProbe {
                 || !id.equals(UUID.nameUUIDFromBytes(("OfflinePlayer:" + user).getBytes(StandardCharsets.UTF_8)))) {
             throw new IllegalStateException("Unexpected server player identity " + id);
         }
+        if (Boolean.getBoolean("gtqt.probe.joinOnly") && ++validChunkTicks < 100) return;
         returningToMenu = true;
         System.out.println("GTQT_PACK_CLIENT_OK phase=" + System.getProperty("gtqt.probe.phase") + " user=" + user
                 + " uuid=" + id + " port=" + peer.getPort() + " dimension="
-                + player.getClass().getField("field_71093_bK").getInt(player) + " chunk=" + x + "," + z);
-        // Match the multiplayer Disconnect button, then allow client and mod teardown ticks.
+                + player.getClass().getField("field_71093_bK").getInt(player) + " chunk=" + x + "," + z
+                + " validChunkTicks=" + validChunkTicks);
         world.getClass().getMethod("func_72882_A").invoke(world);
-        minecraft.getMethod("func_71403_a", Class.forName("net.minecraft.client.multiplayer.WorldClient"))
-                .invoke(mc, (Object) null);
+        if (Boolean.getBoolean("gtqt.probe.joinOnly")) {
+            closingNetwork = network;
+            return;
+        }
+        returnToTitle(minecraft, mc);
+    }
+
+    private void returnToTitle(Class<?> minecraft, Object mc) throws Exception {
+        if (minecraft.getField("field_71441_e").get(mc) != null) {
+            minecraft.getMethod("func_71403_a", Class.forName("net.minecraft.client.multiplayer.WorldClient"))
+                    .invoke(mc, (Object) null);
+        }
         Class<?> screen = Class.forName("net.minecraft.client.gui.GuiScreen");
         Object menu = Class.forName("net.minecraft.client.gui.GuiMainMenu").getConstructor().newInstance();
         minecraft.getMethod("func_147108_a", screen).invoke(mc, menu);
