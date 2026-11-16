@@ -1,4 +1,4 @@
-"""Build GTMaid or VisualOres against the locked October GT using the verified Forge 1.12 toolchain."""
+"""Historical reproduction: build GTMaid or VisualOres against the locked October GT using the verified Forge 1.12 toolchain."""
 import argparse
 import hashlib
 import json
@@ -30,6 +30,7 @@ def fetch(target, url, expected):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--historical", action="store_true", required=True, help="use the archived inputs for this reproduction")
     parser.add_argument("addon", choices=("gtmaid", "visualores"))
     parser.add_argument("--work", type=Path, required=True, help="new, empty build directory")
     parser.add_argument("--cache", type=Path, required=True, help="cache for pinned source and build scaffolding")

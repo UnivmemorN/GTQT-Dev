@@ -1,4 +1,6 @@
-# GTQT 1.9 候选的组装和联机验收
+# 旧 183/185 件候选的组装和联机验收（历史）
+
+此页记录退役组合。当前修复、开发与整包联调统一从[新版开发基线](../../README.md)开始。
 
 本候选使用 Minecraft 1.12.2、Forge 14.23.5.2860、Java 8。模组来自多个日期的作者开发制品。玩家配置、任务、资源和脚本取自 GTQT 1.8.8 公开整合包的固定提交。适用范围是新建世界；历史玩家存档迁移需单独验证。
 
@@ -18,7 +20,7 @@ BetterQuesting 加载 2,375 项，按最终存档的注册表列出 304 项待�
 
 ```powershell
 git -C D:/GTQT-Pack archive -o D:/candidate-input/overrides.pinned.zip 3fd61bb3d9eacef642dd55eedb90bd2de216dec8 overrides
-python -B dev/pack/assemble.py --overrides D:/candidate-input/overrides.pinned.zip --cache D:/candidate-input/mod-jars --cache D:/candidate-input/built-jars --output work/pack19-instance
+python -B dev/pack/assemble.py --lock dev/pack/candidate.json --overrides D:/candidate-input/overrides.pinned.zip --cache D:/candidate-input/mod-jars --cache D:/candidate-input/built-jars --output work/pack19-instance
 ```
 
 七月 Core 和十月 GregTech 的基础生产名称转换见 [Pollution 兼容构建](../pollution/july-compat.md)。整包使用单独派生的 GregTech 和 GTFO，可用 JDK 17、ASM 9.5 重现。将下面的 JAR 路径换成相应基础组合的实际产物。
@@ -73,7 +75,7 @@ Java 侧还有配方被拒绝。筛选机有 16 条配方给出 7 种输出，�
 Windows 客户端验收使用 Python 3.11+、pywin32、JDK 8 和隔离的 Win32 桌面。Forge 客户端从回环地址连接专服，读取服务器下发的地形并核对玩家身份，再正常退出。脚本只复制模组和整包覆盖文件到临时实例。测试服使用已有的 EULA 授权，关闭外网监听与在线身份验证，用户名固定为 `Pack19Probe`。专服端核对玩家登录事件、玩家存档、世界种子、FML 模组清单和跨 JVM 保留的世界标记。两次启动都必须正常保存和停服。
 
 ```powershell
-python -B dev/pack/verify.py --instance work/pack19-instance/server --client-instance work/pack19-instance/client --steam-env D:/GTSteam-1.12.2 --server-dir D:/Minecraft-Test/forge-112 --state work/pack19-acceptance --client-cache work/pack19-client-cache
+python -B dev/pack/verify.py --lock dev/pack/candidate.json --instance work/pack19-instance/server --client-instance work/pack19-instance/client --steam-env D:/GTSteam-1.12.2 --server-dir D:/Minecraft-Test/forge-112 --state work/pack19-acceptance --client-cache work/pack19-client-cache
 ```
 
 `--boot-only` 只检查一次专服启动，产出的记录带有 `fullVerification=false`。完整验收使用两个独立的专服 JVM 和两个真实客户端 JVM。[旧附属的接口与缺失玩法](legacy-addons.md)

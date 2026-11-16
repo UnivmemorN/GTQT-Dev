@@ -1,4 +1,4 @@
-"""Run the August DrTech/SteamTech dedicated Forge probe in an existing isolated loopback rig."""
+"""Historical reproduction: run the August DrTech/SteamTech dedicated Forge probe in an existing isolated loopback rig."""
 import argparse
 from datetime import datetime
 import gzip
@@ -49,6 +49,7 @@ def world_mods(level):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--historical", action="store_true", required=True, help="use the archived inputs for this reproduction")
     for arg in ("steam-env", "drtech", "drtech-source", "results-root"):
         parser.add_argument("--" + arg, type=Path, required=True)
     parser.add_argument("--support-cache", type=Path, required=True, help="download/cache for the four pinned support JARs")

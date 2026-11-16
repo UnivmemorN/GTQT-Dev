@@ -1,4 +1,4 @@
-"""Replay the pinned DrTech build probe with the SteamTech legacy tool bootstrap."""
+"""Historical reproduction: replay the pinned DrTech build probe with the SteamTech legacy tool bootstrap."""
 import argparse
 import hashlib
 import json
@@ -21,7 +21,7 @@ RFG = {
 
 
 def workspace_lock():
-    return json.loads((HERE.parents[1] / "workspace.lock.json").read_text(encoding="utf-8-sig"))
+    return json.loads((HERE.parents[1] / "evidence" / "historical-workspace.lock.json").read_text(encoding="utf-8-sig"))
 
 
 def build_receipt(lock, profile, jar_sha):
@@ -69,6 +69,7 @@ def prepare_october_source(source, revision):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--historical", action="store_true", required=True, help="use the archived inputs for this reproduction")
     parser.add_argument("--source", type=Path, required=True, help="upstream DrTech checkout")
     parser.add_argument("--steam-env", type=Path, required=True, help="pinned SteamTech environment checkout")
     parser.add_argument("--state", type=Path, required=True, help="local DrTech tooling/cache directory")

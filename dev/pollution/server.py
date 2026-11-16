@@ -1,4 +1,4 @@
-"""Probe the July Pollution and Core binaries on the existing isolated Forge server."""
+"""Historical reproduction: probe the July Pollution and Core binaries on the existing isolated Forge server."""
 import argparse
 from datetime import datetime
 import json
@@ -9,7 +9,7 @@ import shutil
 import sys
 import zipfile
 
-from build import BASELINE, ENVIRONMENT, LOCK, check_head
+from historical_build import BASELINE, ENVIRONMENT, LOCK, check_head
 from acceptance import isolated_server, server_directory
 
 
@@ -20,6 +20,7 @@ EXPECTED_MODS = {"pollution", "gtqtcore", "gtsteam", "gregtech", "gregtechfoodop
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--historical", action="store_true", required=True, help="use the archived inputs for this reproduction")
     for name in ("source", "steam-env", "state"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--august-gt", action="store_true", help="use SteamTech's verified August GregTech production JAR")

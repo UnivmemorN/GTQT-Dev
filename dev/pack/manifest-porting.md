@@ -1,5 +1,7 @@
 # 从 1.8.8 清单迁移的玩法与构建入口
 
+本页记录旧候选的历史构建。后续开发从[组织仓新版](../../README.md)开始。
+
 ## GTQTSpace
 
 原包的 `gtqtspace-1.8.7.jar`（SHA-256 `b21025fa17dd7347534dec686771d2e238ab8fa3b54ccb4db12e43d9856bc3e1`）同时含 GTQTSpace、Advanced Rocketry 和 LibVulpes 的实现。以下内容在旧 JAR 的机器类、配方加载器和语言文件中都有对应入口。本候选没有装载该 JAR。
@@ -27,8 +29,8 @@
 `manifest_addons.py` 校验固定提交的源码 ZIP、构建模板和每个依赖 JAR 的 SHA-256，应用同目录中的对应补丁后执行 RFG clean build。GTMaid 保留女仆前置，并将 GT 依赖与十月版对齐。VisualOres 对接十月 GT 的矿床注册与旧存档的矿名查找，使用 XaeroLib 1.1.0、Xaero's Minimap 25.3.13 和 World Map 1.40.16 三件套。锁定的原件和构建依赖见 [manifest-addon-sources.json](manifest-addon-sources.json)。
 
 ```powershell
-python -B dev/pack/manifest_addons.py gtmaid --work ../build-gtmaid --cache ../addon-archives --mods ../original-1.8.8/mods --steam-env ../GTSteam-1.12.2 --rfg-maven ../rfg-1.4.0-maven
-python -B dev/pack/manifest_addons.py visualores --work ../build-visualores --cache ../addon-archives --mods ../original-1.8.8/mods --steam-env ../GTSteam-1.12.2 --rfg-maven ../rfg-1.4.0-maven
+python -B dev/pack/manifest_addons.py --historical gtmaid --work ../build-gtmaid --cache ../addon-archives --mods ../original-1.8.8/mods --steam-env ../GTSteam-1.12.2 --rfg-maven ../rfg-1.4.0-maven
+python -B dev/pack/manifest_addons.py --historical visualores --work ../build-visualores --cache ../addon-archives --mods ../original-1.8.8/mods --steam-env ../GTSteam-1.12.2 --rfg-maven ../rfg-1.4.0-maven
 ```
 
 两个 `--work` 参数均指向新的构建目录。`--steam-env` 指向已准备好的 1.12.2 开发环境，`--rfg-maven` 使用 `dev/drtech/build.py` 已准备的 RFG 1.4.0 插件仓库。发布时按候选文件锁校验最终 JAR，独立重编时还可逐项核对解压后的条目，以区分 ZIP 时间戳与内容差异。

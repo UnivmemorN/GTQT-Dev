@@ -1,6 +1,8 @@
 # 十月 GregTech 的 DrTech 与 SteamTech
 
-`drtechOctober` 使用 DrTech 作者 `main` 的 `e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf`。YOT 流体仓原先引用 `Textures.ME_INPUT_BUS`，十月 GregTech 已删除该字段和原贴图。此构建将仓口正面渲染改用同一版 GT 的 `FLUID_HATCH_INPUT_OVERLAY`。补后的 Java 文件按 LF 计算 SHA-256 为 `6d5b0c13a618decd4d8a130cba3ed1efc6303fb92c558441e37380a1ed5eda88`。[上游 YOT 仓](https://github.com/GTQT/DrTech/blob/e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf/src/main/java/com/drppp/drtech/common/metaTileEntities/muti/mutipart/MetaTileEntityYotHatch.java#L70-L77) · [依赖锁](../../workspace.lock.json)
+本页记录旧候选的历史构建。后续开发从[组织仓新版](../../README.md)开始。
+
+`drtechOctober` 使用 DrTech 作者 `main` 的 `e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf`。YOT 流体仓原先引用 `Textures.ME_INPUT_BUS`，十月 GregTech 已删除该字段和原贴图。此构建将仓口正面渲染改用同一版 GT 的 `FLUID_HATCH_INPUT_OVERLAY`。补后的 Java 文件按 LF 计算 SHA-256 为 `6d5b0c13a618decd4d8a130cba3ed1efc6303fb92c558441e37380a1ed5eda88`。[上游 YOT 仓](https://github.com/GTQT/DrTech/blob/e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf/src/main/java/com/drppp/drtech/common/metaTileEntities/muti/mutipart/MetaTileEntityYotHatch.java#L70-L77) · [依赖锁](../../evidence/historical-workspace.lock.json)
 
 ## 复跑构建
 
@@ -9,7 +11,7 @@
 ```powershell
 git -C ../GTQT-DrTech-1.12.2 worktree add --detach ../GTQT-DrTech-October e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf
 $steam = '../GTSteam-1.12.2'
-python -B dev/drtech/build.py --october-gregtech --source ../GTQT-DrTech-October --steam-env $steam --state ../.drtech-dev --gradle-home "$steam/.legacy-dev/gradle" --clean build
+python -B dev/drtech/build.py --historical --october-gregtech --source ../GTQT-DrTech-October --steam-env $steam --state ../.drtech-dev --gradle-home "$steam/.legacy-dev/gradle" --clean build
 ```
 
 编译输入为 `gtOctober`、`gtfoJuly` 和 `model100`。构建成功后，`build/libs/drtech-1.8.9.jar` 是生产 JAR。`build/drtech-profile.json` 记录源码、适配文件、输入和当前产物的 SHA-256。带网络修复的生产 JAR 为 `8ad8ed5d064533269309009e5a5a766a57a1bbd1384daca14d22ead0e0954915`。上游构建器会写入不同的 ZIP 元数据，重复构建应分别记录当前 JAR 摘要。

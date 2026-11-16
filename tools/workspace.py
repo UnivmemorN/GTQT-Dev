@@ -48,6 +48,27 @@ def check_local_reference(profile_key, field, name):
     require(path.is_relative_to(ROOT) and path.is_file(), f"{profile_key}: missing or external {field}: {name}")
 
 
+def runtime_digest(files):
+    digest = hashlib.sha256()
+    for filename, sha in sorted(files.items()):
+        digest.update(filename.encode("utf-8") + b"\0" + sha.encode("ascii") + b"\n")
+    return digest.hexdigest()
+
+
+def check_mods(directory, expected):
+    require(directory.is_dir(), f"Missing mods directory: {directory}")
+    actual = {}
+    for jar in directory.rglob("*"):
+        if jar.is_file() and jar.suffix.lower() == ".jar":
+            with jar.open("rb") as stream:
+                actual[jar.relative_to(directory).as_posix()] = hashlib.file_digest(stream, "sha256").hexdigest()
+    differences = [f"missing: {name}" for name in sorted(expected.keys() - actual.keys())]
+    differences.extend(f"extra: {name}" for name in sorted(actual.keys() - expected.keys()))
+    differences.extend(f"SHA-256 differs: {name}" for name in sorted(actual.keys() & expected.keys())
+                       if actual[name] != expected[name])
+    require(not differences, "\n".join(differences))
+
+
 def validate(lock):
     require(isinstance(lock, dict), "Expected a JSON object")
     require(type(lock.get("format")) is int and lock["format"] == 1, "Expected workspace lock format 1")
@@ -60,6 +81,7 @@ def validate(lock):
             require(safe_name(key) and re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9_.-]*", key), f"Invalid {group} key: {key}")
             require(isinstance(entry, dict), f"{group}.{key} must be an object")
 
+    require(lock.get("defaultProfile") in lock["profiles"], "Missing default development profile")
     for key, entry in lock["repositories"].items():
         repo = entry.get("repo")
         require(isinstance(repo, str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9-]*/[A-Za-z0-9_.-]+", repo)
@@ -94,6 +116,27 @@ def validate(lock):
         for field in ("evidence", "candidateManifest", "historicalAudit", "dependencyAudit", "questAudit", "veinAudit"):
             if field in profile:
                 check_local_reference(key, field, profile[field])
+        if key == lock["defaultProfile"] or "runtime" in profile:
+            runtime = profile.get("runtime")
+            require(isinstance(runtime, dict) and set(runtime) == {"server", "client"},
+                    f"{key}: expected server and client runtime lists")
+            require("evidence" in profile, f"{key}: missing runtime acceptance receipt")
+            receipt = json.loads((ROOT / profile["evidence"]).read_bytes(), object_pairs_hook=unique_object)
+            require(receipt.get("profile") == key and receipt.get("passed") is True
+                    and receipt.get("forge") == profile.get("forge")
+                    and receipt.get("minecraft") == lock["minecraft"],
+                    f"{key}: acceptance receipt does not match this profile")
+            for side, files in runtime.items():
+                require(isinstance(files, dict) and files and len({n.casefold() for n in files}) == len(files)
+                        and all(safe_name(n) and n.lower().endswith(".jar") and is_hash(sha, 64)
+                                for n, sha in files.items()), f"{key}: invalid {side} runtime")
+                require(len(files) == receipt.get("runtimeCounts", {}).get(side)
+                        and runtime_digest(files) == receipt.get("runtimeSetSha256", {}).get(side),
+                        f"{key}: {side} runtime differs from acceptance receipt")
+            production_hashes = {sha for files in runtime.values() for sha in files.values()}
+            for ref in profile["artifacts"]:
+                require(lock["artifacts"][ref]["sha256"] in production_hashes,
+                        f"{key}: artifact {ref} differs from the accepted runtime")
         if "candidateManifest" in profile:
             require("evidence" in profile, f"{key}: candidate manifest needs an acceptance receipt")
             evidence = json.loads((ROOT / profile["evidence"]).read_bytes())
@@ -219,6 +262,9 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("list", help="list profiles and build/server status")
     commands.add_parser("check", help="validate the lock, referenced files and existing artifact cache offline")
+    mods = commands.add_parser("check-mods", help="verify production JARs against the default development profile")
+    mods.add_argument("side", choices=["server", "client"])
+    mods.add_argument("directory", type=Path, help="production mods directory")
     commands.add_parser("checkout", help="obtain a clean checkout at a locked commit").add_argument("key")
     download = commands.add_parser("fetch", help="obtain a size- and SHA-256-verified artifact")
     download.add_argument("key")
@@ -231,6 +277,11 @@ def main():
         if args.command == "list":
             for key, profile in lock["profiles"].items():
                 print(f"{key}: build={profile['build']}  server={profile['server']}  {profile['guide']}")
+        elif args.command == "check-mods":
+            key = lock["defaultProfile"]
+            files = lock["profiles"][key]["runtime"][args.side]
+            check_mods(args.directory, files)
+            print(f"{key}: verified {len(files)} {args.side} JARs")
         elif args.command == "check":
             cached = 0
             for key, entry in lock["artifacts"].items():

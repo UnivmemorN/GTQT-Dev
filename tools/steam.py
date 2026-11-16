@@ -1,4 +1,4 @@
-"""Run the pinned SteamTech baseline build or isolated Forge server check."""
+"""Historical reproduction: run the pinned SteamTech baseline build or isolated Forge server check."""
 
 import argparse
 import json
@@ -33,9 +33,10 @@ def main():
     build = sub.add_parser("build", help="build the baseline via its upstream Gradle wrapper")
     verify = sub.add_parser("verify", help="boot the built baseline and check the saved world")
     for command in (build, verify):
+        command.add_argument("--historical", action="store_true", required=True, help="use the archived SteamTech baseline")
         command.add_argument(
             "--checkout", type=Path, default=ROOT / "work" / "src" / "steamRunner",
-            help="prepared SteamTech runner checkout (default: work/src/steamRunner)",
+            help="prepared historical SteamTech runner checkout",
         )
     build.add_argument("--offline", action="store_true", help="use Gradle offline mode with a populated cache")
     verify.add_argument(
@@ -45,7 +46,7 @@ def main():
     args = parser.parse_args()
     checkout = args.checkout.resolve()
     try:
-        lock = json.loads((ROOT / "workspace.lock.json").read_text(encoding="utf-8"))
+        lock = json.loads((ROOT / "evidence" / "historical-workspace.lock.json").read_text(encoding="utf-8"))
         check_checkout(checkout, lock["repositories"]["steamRunner"]["rev"])
         baseline = checkout / ".legacy-dev" / "baseline"
         baseline_rev = lock["profiles"]["steamBaseline"]["sourceRev"]

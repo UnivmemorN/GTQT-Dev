@@ -1,6 +1,26 @@
-# Pollution 1.12.2 构建
+# Pollution 1.12.2 开发
 
-使用当前源码开展兼容开发，可直接复跑[七月 Core 兼容组合](july-compat.md)。下面的两个组合用于核对作者原始版本。
+从 GTQT 组织的 Pollution 工作树开发，使用 GTQT-Dev 活动锁中的 Core 和 GregTech。现行构建入口会校验本地 Gradle 依赖的 SHA-256，再调用该工作树的 Gradle Wrapper。工作分支可以有未提交的源码修改。[项目开发入口](../../README.md) · [依赖锁](../../workspace.lock.json)
+
+在协调仓根目录运行。先准备 SteamTech 的 Forge 1.12.2 工具链、JDK 8/16/17 和 Gradle 缓存。将已核验的服务端模组目录中以下五个 JAR 放入 Pollution 工作树的 `libs/`，保持原文件名：
+
+- `gtqtcore-1.9.0.jar`
+- `gregtech-gtqt-1.12.2-1.9.0.jar`
+- `gregtechfoodoption-gtqt-1.12.2-1.9.0.jar`
+- `modelloader-1.0.0.jar`
+- `gtsteam-1.9.0.jar`
+
+```powershell
+python -B tools/workspace.py checkout pollution
+python -B tools/workspace.py check-mods server work/gtqt19/server/mods
+python -B dev/pollution/build.py --source work/src/pollution --steam-env D:/GTSteam-1.12.2 --state D:/GTQT-Pollution-1.12.2/.coord build
+```
+
+如果开发在另一个 worktree 中，将 `--source` 指向它。缓存已准备好时可加 `--offline`。Gradle 成功后，在新版双端组合的独立副本中替换待测 JAR，按任务验证运行行为，再更新依赖锁。
+
+## 归档：取得新版组织源码前的调查
+
+以下命令和结果用于追溯当时的组合；文中的“当前”均指当时提交。七月兼容分支的加工结果另见[历史记录](july-compat.md)。
 
 当前检查对象为 [Pollution `9ed70ed`](https://github.com/GTQT/Pollution/tree/9ed70ed318c57e350cfcdf725c1eadda8f539789)。Forge 2847、stable_39、Gradle 8.5、RFG 1.4.1 的构建工具复用 [SteamTech 独立开发环境](https://github.com/UnivmemorN/GregTech-SteamTech/tree/6098eee246a59388d32f8c7112f1305143f7c1de/dev/legacy)。先按其说明准备工具仓和 JDK 8、16、17。
 
@@ -9,7 +29,7 @@
 ```powershell
 git clone https://github.com/GTQT/Pollution.git D:/GTQT-Pollution-1.12.2
 git -C D:/GTQT-Pollution-1.12.2 checkout --detach 9ed70ed318c57e350cfcdf725c1eadda8f539789
-python -B dev/pollution/build.py --source D:/GTQT-Pollution-1.12.2 --steam-env D:/GTSteam-1.12.2 --state D:/GTQT-Pollution-State build
+python -B dev/pollution/historical_build.py --source D:/GTQT-Pollution-1.12.2 --steam-env D:/GTSteam-1.12.2 --state D:/GTQT-Pollution-State build
 ```
 
 ## 当前提交的实测结果
@@ -39,7 +59,7 @@ javap -classpath D:/GTQT-Pollution-1.12.2/libs/gtqtcore-1.9.0.jar meowmel.gtqtco
 
 ```powershell
 git -C D:/GTQT-Pollution-1.12.2 worktree add --detach D:/GTQT-Pollution-July d1611ce5dec0eac71c2d68cc86975db86c2e3112
-python -B dev/pollution/build.py --source D:/GTQT-Pollution-July --steam-env D:/GTSteam-1.12.2 --state D:/GTQT-Pollution-State build
+python -B dev/pollution/historical_build.py --source D:/GTQT-Pollution-July --steam-env D:/GTSteam-1.12.2 --state D:/GTQT-Pollution-State build
 ```
 
 ## 7 月服启动结果
@@ -57,6 +77,6 @@ python -B dev/pollution/build.py --source D:/GTQT-Pollution-July --steam-env D:/
 
 ```powershell
 $serverDir = 'D:/Minecraft-Test/forge-112'
-python -B dev/pollution/server.py --source D:/GTQT-Pollution-July --steam-env D:/GTSteam-1.12.2 --state D:/GTQT-Pollution-State --server-dir $serverDir
-python -B dev/pollution/server.py --source D:/GTQT-Pollution-July --steam-env D:/GTSteam-1.12.2 --state D:/GTQT-Pollution-State --server-dir $serverDir --august-gt
+python -B dev/pollution/server.py --historical --source D:/GTQT-Pollution-July --steam-env D:/GTSteam-1.12.2 --state D:/GTQT-Pollution-State --server-dir $serverDir
+python -B dev/pollution/server.py --historical --source D:/GTQT-Pollution-July --steam-env D:/GTSteam-1.12.2 --state D:/GTQT-Pollution-State --server-dir $serverDir --august-gt
 ```

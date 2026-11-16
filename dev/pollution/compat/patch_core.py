@@ -1,4 +1,4 @@
-"""Generate the July Core with client-only renderer registration for the compatibility profile."""
+"""Historical reproduction: generate the July Core with client-only renderer registration for the compatibility profile."""
 import argparse
 import hashlib
 import json
@@ -29,7 +29,7 @@ def main():
     source, output = args.input.resolve(), args.output.resolve()
     if output == source or (output.exists() and output.samefile(source)):
         parser.error("Choose a separate output JAR")
-    lock = json.loads((HERE.parents[2] / "workspace.lock.json").read_text(encoding="utf-8"))
+    lock = json.loads((HERE.parents[2] / "evidence" / "historical-workspace.lock.json").read_text(encoding="utf-8"))
     if sha256(source) != lock["artifacts"]["coreJuly"]["sha256"]:
         parser.error(f"Expected the locked July GTQT-Core at {source}")
     asm = next(args.gradle_cache.glob("wrapper/dists/gradle-8.5-bin/*/gradle-8.5/lib/asm-9.5.jar"), None)

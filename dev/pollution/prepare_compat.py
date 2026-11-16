@@ -1,4 +1,4 @@
-"""Prepare the two derived Forge runtime JARs for the current Pollution / July Core profile."""
+"""Historical reproduction: prepare the derived runtime JARs for the archived July Core profile."""
 import argparse
 import json
 import os
@@ -24,7 +24,7 @@ def main():
     legacy = args.steam_env.resolve(strict=True)
     gradle = args.gradle_home.resolve(strict=True)
     destination = args.output.resolve()
-    lock = json.loads((ROOT / "workspace.lock.json").read_text(encoding="utf-8"))
+    lock = json.loads((ROOT / "evidence" / "historical-workspace.lock.json").read_text(encoding="utf-8"))
     profile = lock["profiles"]["pollutionJulyCompat"]
     check_head(source, profile["sourceRev"])
     check_head(legacy, lock["repositories"]["steamRunner"]["rev"])

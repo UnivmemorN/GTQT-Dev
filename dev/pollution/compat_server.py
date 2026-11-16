@@ -1,4 +1,4 @@
-"""Start, save and restart the July-Core/current-Pollution profile in two dedicated Forge JVMs."""
+"""Historical reproduction: start, save and restart the archived July Core / Pollution profile."""
 import argparse
 from datetime import datetime
 import gzip
@@ -90,7 +90,7 @@ def main():
     modes.add_argument("--legacy-infusion", action="store_true", help="reload an already-paid infusion from an older scheduler save")
     parser.add_argument("--candidate", action="store_true", help="test new hashes and source commit before promotion to the lock")
     args = parser.parse_args()
-    lock = json.loads((HERE.parents[1] / "workspace.lock.json").read_text(encoding="utf-8"))
+    lock = json.loads((HERE.parents[1] / "evidence" / "historical-workspace.lock.json").read_text(encoding="utf-8"))
     legacy, source = args.steam_env.resolve(strict=True), args.source.resolve(strict=True)
     state = args.state.resolve()
     support = (args.support_cache or state / "support").resolve()

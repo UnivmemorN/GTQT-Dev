@@ -1,4 +1,6 @@
-# DrTech 1.12.2 构建
+# DrTech 历史构建与共服记录
+
+此页记录退役组合。当前修复、开发与整包联调统一从[新版开发基线](../../README.md)开始。
 
 DrTech 的源码提交为 `e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf`。其产物自报 `drtech 1.8.9`，同一 JAR 另注册 `futuremc 1.0.0`，并要求 GregTech ≥1.9.0。将这个 JAR 纳入整包时，两项 modid 都要参与冲突检查。[DrTech 源码](https://github.com/GTQT/DrTech/tree/e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf)
 
@@ -12,8 +14,8 @@ git -C ../GTQT-DrTech-1.12.2 checkout --detach e530bc957baa05437a3a6c17c6a7f5fe1
 git clone -b codex/legacy-dev-env https://github.com/UnivmemorN/GregTech-SteamTech.git ../GTSteam-1.12.2
 git -C ../GTSteam-1.12.2 checkout --detach 6098eee246a59388d32f8c7112f1305143f7c1de
 $inputs = @('--source', '../GTQT-DrTech-1.12.2', '--steam-env', '../GTSteam-1.12.2', '--state', '../.drtech-dev')
-python -B dev/drtech/build.py @inputs build
-python -B dev/drtech/build.py @inputs --offline --clean build
+python -B dev/drtech/build.py --historical @inputs build
+python -B dev/drtech/build.py --historical @inputs --offline --clean build
 ```
 
 第一次运行按 SHA-256 准备上游声明的两个本地依赖、RFG 1.4.0 官方插件与 javac 插件，再启动上游 Gradle 8.5。Forge 2847 userdev 和 MCP stable_39 的准备脚本来自固定提交的 SteamTech 环境。可通过 `--gradle-home` 指定现有缓存。已有 RFG 官方下载文件时可使用 `--rfg-seed` 指向含两个 JAR 的文件夹。原始环境中的 RFG 插件标记未能从上游配置的仓库解析，协调脚本在本地生成其 Maven 描述文件。[RFG 官方发布](https://github.com/GTNewHorizons/RetroFuturaGradle/releases/tag/1.4.0)
@@ -26,7 +28,7 @@ python -B dev/drtech/build.py @inputs --offline --clean build
 
 ## 验收边界
 
-构建取用根目录 [workspace.lock.json](../../workspace.lock.json) 的源码提交和所选组合的编译依赖。上游 `build` 通过了 Java 编译、资源处理与 `reobfJar`。生产文件为源码目录的 `build/libs/drtech-1.8.9.jar`，主类字节码版本为 52（Java 8）。协调脚本把提交、组合、输入摘要及成品哈希写入 `build/drtech-profile.json`。同一检出用于共服验收时，脚本会核对这份记录、当前依赖与传入的生产 JAR。上游 `test` 显示 `NO-SOURCE`。专服使用下述八月共用基线，DrTech 与 Pollution 的共存及机器行为仍待验证。
+该历史构建使用 [归档依赖锁](../../evidence/historical-workspace.lock.json) 的源码提交和所选组合的编译依赖。上游 `build` 通过了 Java 编译、资源处理与 `reobfJar`。生产文件为源码目录的 `build/libs/drtech-1.8.9.jar`，主类字节码版本为 52（Java 8）。协调脚本把提交、组合、输入摘要及成品哈希写入 `build/drtech-profile.json`。同一检出用于共服验收时，脚本会核对这份记录、当前依赖与传入的生产 JAR。上游 `test` 显示 `NO-SOURCE`。专服使用下述八月共用基线，DrTech 与 Pollution 的共存及机器行为仍待验证。
 
 2026-11-12 使用已有 Gradle 缓存运行协调脚本 `--offline --clean build`，耗时 86 秒，执行 24 个任务。验收产物 SHA-256 为 `354b4b27a668600fd928422b45d8a7320cc35c3d62bfa1a56ed5adee734504a0`。此前普通构建生成的 JAR 哈希不同。入包时应记录所选文件的实际哈希，重新构建后脚本会输出新哈希。
 
@@ -42,9 +44,9 @@ python -B dev/drtech/build.py @inputs --offline --clean build
 
 ```powershell
 git -C ../GTQT-DrTech-1.12.2 worktree add --detach ../GTQT-DrTech-August e530bc957baa05437a3a6c17c6a7f5fe18cbe0bf
-python -B dev/drtech/build.py --source ../GTQT-DrTech-August --steam-env ../GTSteam-1.12.2 --state ../.drtech-dev --steam-gregtech build
+python -B dev/drtech/build.py --historical --source ../GTQT-DrTech-August --steam-env ../GTSteam-1.12.2 --state ../.drtech-dev --steam-gregtech build
 $serverDir = 'D:/Minecraft-Test/forge-112'
-python -B dev/drtech/server.py --steam-env ../GTSteam-1.12.2 --drtech-source ../GTQT-DrTech-August --drtech ../GTQT-DrTech-August/build/libs/drtech-1.8.9.jar --support-cache ../.drtech-dev/server-support --results-root ../.drtech-dev/server-checks --server-dir $serverDir
+python -B dev/drtech/server.py --historical --steam-env ../GTSteam-1.12.2 --drtech-source ../GTQT-DrTech-August --drtech ../GTQT-DrTech-August/build/libs/drtech-1.8.9.jar --support-cache ../.drtech-dev/server-support --results-root ../.drtech-dev/server-checks --server-dir $serverDir
 ```
 
 脚本自动核对 Forestry、Binnie's Mods、BdLib、Gendustry 四个支持 JAR，并复用 SteamTech 已有的五个基础依赖。缺少 Forestry 的试运行在 DrTech 加载工业蜂箱时找不到 `IBeeHousing`。装入 Forestry 而缺少 Binnie 时，GregTech 的蜜蜂集成调用 `getExtraBeesComb` 失败。联调使用独立模组目录和新世界，复用已有排他锁、备份与恢复逻辑。每次结果目录包含控制台日志、世界及原隔离服的恢复检查。

@@ -1,20 +1,21 @@
-# 当前 Pollution 配合七月 Core
+# 七月 Core 与 Pollution 兼容分支（历史）
 
-`pollutionJulyCompat` 在作者 Pollution `9ed70ed` 基础上修复材料兼容、网络包的物理端分离及工业注魔的注册和加工。编译使用原始七月 Core。运行时使用经过两处修补的 Core 和十月喵呜版 GregTech 的生产名称 JAR。兼容分支 `117162f` 恢复了魔法聚变反应堆要求的铀-235 压缩块。[依赖锁](../../workspace.lock.json) · [Pollution 兼容分支](https://github.com/UnivmemorN/Pollution/tree/117162fc16b0a6f4e87571ab972c8c1bf9e3a03c) · [Core 补丁](compat/README.md)
+此页记录退役组合。当前修复、开发与整包联调统一从[新版开发基线](../../README.md)开始。
+
+`pollutionJulyCompat` 在作者 Pollution `9ed70ed` 基础上修复材料兼容、网络包的物理端分离及工业注魔的注册和加工。编译使用原始七月 Core。运行时使用经过两处修补的 Core 和十月喵呜版 GregTech 的生产名称 JAR。兼容分支 `117162f` 恢复了魔法聚变反应堆要求的铀-235 压缩块。[依赖锁](../../evidence/historical-workspace.lock.json) · [Pollution 兼容分支](https://github.com/UnivmemorN/Pollution/tree/117162fc16b0a6f4e87571ab972c8c1bf9e3a03c) · [Core 补丁](compat/README.md)
 
 ## 复跑
 
 使用 Python 3.11+、Git 和 JDK 8、16、17。先按协调仓首页的 SteamTech 步骤完成基础构建及一次专服验证，以准备 Forge 2860 和公共依赖。以下命令在协调仓根目录执行。已有环境可将 `$steam` 指向原检出。首次勿加 `--offline`。请把 `$rig` 换成服主已接受 EULA 的独立空闲测试服目录。
 
 ```powershell
-python -B tools/workspace.py checkout steamRunner
-python -B tools/workspace.py checkout pollutionCompat
+# 两个历史检出的来源和提交见归档依赖锁
 $steam = 'work/src/steamRunner'
 $source = 'work/src/pollutionCompat'
 $state = 'work/pollution-compat'
 $runtime = 'work/verified-compat-runtime'
 $rig = 'D:/Minecraft-Test/forge-112'
-python -B dev/pollution/build.py --source $source --steam-env $steam --state $state build
+python -B dev/pollution/historical_build.py --source $source --steam-env $steam --state $state build
 python -B dev/pollution/prepare_compat.py --source $source --steam-env $steam --gradle-home "$state/gradle" --output $runtime
 $inputs = @('--steam-env', $steam, '--source', $source, '--state', $state, '--core', "$runtime/gtqtcore-1.9.0-july-compat.jar", '--gregtech', "$runtime/gregtech-1.9.0-october-srg.jar", '--server-dir', $rig)
 python -B dev/pollution/compat_server.py @inputs

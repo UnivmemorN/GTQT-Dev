@@ -1,0 +1,58 @@
+{
+  "profile": "gtqt19",
+  "testedOn": "2026-11-16",
+  "minecraft": "1.12.2",
+  "forge": "14.23.5.2860",
+  "java": "1.8.0_512",
+  "runtimeCounts": {
+    "server": 25,
+    "client": 26
+  },
+  "runtimeSetSha256": {
+    "server": "ae8b639eed182c8ae33e3e3aa9920613e9e32063a0be73f6e849921784a0b6ac",
+    "client": "6b4796918ba06b2e9cfdd64cbf0b17b125a9f3e7890bfdcf59e558b3bdea2095"
+  },
+  "digestAlgorithm": "SHA-256 over all production entries on each side, sorted by filename in Unicode code point order; concatenate UTF-8(filename), one NUL byte, ASCII(lowercase SHA-256 hex), one LF per entry.",
+  "passed": true,
+  "checks": {
+    "serverNewWorld": true,
+    "clientJoin": true,
+    "serverSaveAndStop": true,
+    "serverRestartSameWorld": true,
+    "samePlayerRejoin": true,
+    "worldFilesVerifiedBeforeReload": 60,
+    "serverExitCodes": [
+      0,
+      0
+    ],
+    "clientExitCodes": [
+      0,
+      0
+    ],
+    "clientWarpPackets": [
+      "PacketBlinkParticles",
+      "PacketBlood",
+      "PacketFakeRain",
+      "PacketFakeExplosionSound"
+    ]
+  },
+  "scope": "已验收 Forge 专服与客户端开发组合的建档、联机、保存重启、复登和扭曲网络效果。",
+  "rawReceipts": {
+    "server": {
+      "path": "work/pollution-warp-final-verification/20261116-101330-9adcc687/result.json",
+      "sha256": "7d1e5d3aa14585742f7371e46bb0a82a7850f07b34081e746498dd0363f3c14e"
+    },
+    "client": {
+      "path": "work/pollution-warplayer-20261116/20261116-101330-9adcc687-client-results.json",
+      "sha256": "f6d97280fb6e2870beb30fc93eabbb02ec62abfe188049c8b3ee77cc7907c078"
+    },
+    "clientCreateInputs": {
+      "path": "work/pollution-warplayer-20261116/20261116-101330-9adcc687-create/input-shas.json",
+      "sha256": "8f1ab5597182cfc4a844ae0838f8159e34844bd909b05f357e32789714f6b2c4"
+    },
+    "clientReopenInputs": {
+      "path": "work/pollution-warplayer-20261116/20261116-101330-9adcc687-reopen/input-shas.json",
+      "sha256": "8f1ab5597182cfc4a844ae0838f8159e34844bd909b05f357e32789714f6b2c4"
+    }
+  }
+}

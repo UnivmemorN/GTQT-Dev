@@ -1,4 +1,6 @@
-# 七月 Core 的运行补丁
+# 七月 Core 的运行补丁（历史）
+
+此页记录退役组合。当前修复、开发与整包联调统一从[新版开发基线](../../../README.md)开始。
 
 输入取自 [Pollution 作者当时提交的 Core 1.9.0](https://github.com/GTQT/Pollution/blob/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gtqtcore-1.9.0.jar)，由协调仓 `artifacts.coreJuly` 锁定。以下两项补丁应用在单独生成的运行 JAR 上。当前 Pollution 的编译输入仍可使用原始七月文件。
 
@@ -9,7 +11,7 @@
 
 ```powershell
 $steamEnv = 'D:/GTSteam-1.12.2'
-python -B tools/workspace.py fetch coreJuly
+# 原始 coreJuly 制品的来源与 SHA-256 见归档依赖锁
 python -B dev/pollution/compat/patch_core.py --input work/artifacts/coreJuly/gtqtcore-1.9.0.jar --output work/core-compat/gtqtcore-1.9.0-july-compat.jar --java-home "$steamEnv/.legacy-dev/jdks/java17" --gradle-cache "$steamEnv/.legacy-dev/gradle"
 ```
 

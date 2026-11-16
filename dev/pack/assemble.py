@@ -8,7 +8,6 @@ import shutil
 import tempfile
 from zipfile import ZipFile
 
-HERE = Path(__file__).resolve().parent
 OVERRIDES = {"config", "scripts", "groovy", "resources"}
 
 
@@ -72,7 +71,7 @@ def extract_overrides(archive, instance):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--lock", type=Path, default=HERE / "candidate.json")
+    p.add_argument("--lock", type=Path, required=True, help="pack candidate lock with a JAR manifest and overrides")
     p.add_argument("--cache", type=Path, action="append", required=True, help="JAR directory, repeat as needed")
     p.add_argument("--overrides", type=Path, required=True, help="pinned overrides.pinned.zip")
     p.add_argument("--output", type=Path, required=True, help="new directory for server/ and client/")

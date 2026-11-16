@@ -165,11 +165,14 @@ def main():
     parser.add_argument("--state", type=Path, required=True)
     parser.add_argument("--server-dir", type=Path)
     parser.add_argument("--client-cache", type=Path, help="share verified launcher libraries across client runs")
-    parser.add_argument("--lock", type=Path, help="candidate lock (defaults to dev/pack/candidate.json for a full run)")
+    parser.add_argument("--lock", type=Path, help="pack candidate lock with JARs and overrides (required for full verification)")
     parser.add_argument("--boot-only", action="store_true", help="diagnostic single boot without a client")
     args = parser.parse_args()
     if not args.boot_only and not args.client_instance:
         parser.error("full verification needs --client-instance")
+    if not args.boot_only and not args.lock:
+        parser.error("full verification needs --lock")
+    lock_path = args.lock.resolve(strict=True) if args.lock else None
     steam = args.steam_env.resolve(strict=True)
     source = args.instance.resolve(strict=True)
     runtime = steam / ".legacy-dev"
@@ -191,7 +194,6 @@ def main():
     if not args.boot_only:
         record["clientFiles"] = jar_hashes(client_source)
     try:
-        lock_path = args.lock.resolve(strict=True) if args.lock else (HERE / "candidate.json" if not args.boot_only else None)
         lock = json.loads(lock_path.read_bytes()) if lock_path else None
         if lock:
             server_inputs = inputs.inspect(source)
