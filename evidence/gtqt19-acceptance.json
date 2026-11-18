@@ -1,16 +1,16 @@
 {
   "profile": "gtqt19",
-  "testedOn": "2026-11-16",
+  "testedOn": "2026-11-18",
   "minecraft": "1.12.2",
   "forge": "14.23.5.2860",
   "java": "1.8.0_512",
   "runtimeCounts": {
-    "server": 25,
-    "client": 26
+    "server": 29,
+    "client": 30
   },
   "runtimeSetSha256": {
-    "server": "ae8b639eed182c8ae33e3e3aa9920613e9e32063a0be73f6e849921784a0b6ac",
-    "client": "6b4796918ba06b2e9cfdd64cbf0b17b125a9f3e7890bfdcf59e558b3bdea2095"
+    "server": "77c4f4e071e16a1ff06ab3617fd6695e11c102d69fad22496ee7a36c67b5a897",
+    "client": "93c01eaf8ba72a3556d2872f5602c3b7ec1b9c590a90d281799ba254dd703fa0"
   },
   "digestAlgorithm": "SHA-256 over all production entries on each side, sorted by filename in Unicode code point order; concatenate UTF-8(filename), one NUL byte, ASCII(lowercase SHA-256 hex), one LF per entry.",
   "passed": true,
@@ -20,7 +20,7 @@
     "serverSaveAndStop": true,
     "serverRestartSameWorld": true,
     "samePlayerRejoin": true,
-    "worldFilesVerifiedBeforeReload": 60,
+    "worldFilesVerifiedBeforeReload": 59,
     "serverExitCodes": [
       0,
       0
@@ -29,30 +29,84 @@
       0,
       0
     ],
-    "clientWarpPackets": [
-      "PacketBlinkParticles",
-      "PacketBlood",
-      "PacketFakeRain",
-      "PacketFakeExplosionSound"
-    ]
+    "clientValidChunkTicks": [
+      100,
+      100
+    ],
+    "clientMissingWorldIds": {}
   },
-  "scope": "已验收 Forge 专服与客户端开发组合的建档、联机、保存重启、复登和扭曲网络效果。",
+  "productionConfig": [
+    {
+      "side": "client",
+      "path": "work/gtqt19/client/config/GalaxySpace/core.conf",
+      "size": 37,
+      "sha256": "42187c1a8b66ab3cf0302dd3f49e9b87c110841bf3906e51c52087e810afd826"
+    },
+    {
+      "side": "server",
+      "path": "work/gtqt19/server/config/GalaxySpace/core.conf",
+      "size": 37,
+      "sha256": "42187c1a8b66ab3cf0302dd3f49e9b87c110841bf3906e51c52087e810afd826"
+    }
+  ],
+  "productionConfigNote": "GalaxySpace 的标题界面由其官方配置项关闭：config/GalaxySpace/core.conf 的 B:enableNewMenu=false。配置不在 workspace.lock 的校验范围内，以本回执记录的路径与 SHA-256 为准。",
+  "scope": "已验收 Forge 专服与客户端开发组合的建档、联机、保存重启与复登：新版 GTQTCore、喵呜版 GregTech、SteamTech、QuantumHue、Pollution，再加上 GTQTGalaxy 1.9.0 与 Galacticraft Legacy 4.0.7 / AsmodeusCore / GalaxySpace 2.2.0 双端全量加载；GalaxySpace 自定义标题界面已由配置关闭，客户端回到 GUI 主菜单系并正常退出。",
+  "registeredMods": {
+    "minecraft": "1.12.2",
+    "mcp": "9.42",
+    "FML": "8.0.99.99",
+    "forge": "14.23.5.2860",
+    "micdoodlecore": "4.0.7",
+    "mixinbooter": "10.7",
+    "configanytime": "3.0",
+    "galacticraftcore": "4.0.7",
+    "galacticraftplanets": "4.0.7",
+    "asmodeuscore": "1.0.5",
+    "baubles": "1.5.2",
+    "astralsorcery": "1.10.27",
+    "guideapi": "1.12-2.1.8-63",
+    "bloodmagic": "1.12.2-2.4.3-105",
+    "jei": "4.32.0",
+    "thaumcraft": "6.1.BETA26",
+    "botania": "r1.10-364",
+    "codechickenlib": "3.2.3.358",
+    "theoneprobe": "1.4.29",
+    "extrabotany": "60",
+    "ftblib": "5.4.7.2",
+    "itemfilters": "1.0.4.2",
+    "ftbquests": "1202.9.0.15",
+    "ftbmoney": "1.2.0.47",
+    "galaxyspace": "2.2.0",
+    "modularui": "3.1.5",
+    "gregtech": "1.9.0",
+    "gregtechfoodoption": "1.9.0",
+    "gtqtcore": "1.9.0",
+    "gtqtgalaxy": "1.9.0",
+    "gtsteam": "0.0.1-beta",
+    "modelloader": "1.0.0",
+    "pollution": "0.0.1-beta",
+    "quantumhue": "1.1.0"
+  },
   "rawReceipts": {
-    "server": {
-      "path": "work/pollution-warp-final-verification/20261116-101330-9adcc687/result.json",
-      "sha256": "7d1e5d3aa14585742f7371e46bb0a82a7850f07b34081e746498dd0363f3c14e"
+    "result": {
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/result.json",
+      "sha256": "716575ff4c176ea7ff869edecb65bda5d5da04114219f4e3a428b3a963dbe08a"
     },
-    "client": {
-      "path": "work/pollution-warplayer-20261116/20261116-101330-9adcc687-client-results.json",
-      "sha256": "f6d97280fb6e2870beb30fc93eabbb02ec62abfe188049c8b3ee77cc7907c078"
+    "serverCreateLog": {
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/create.log",
+      "sha256": "b2b442d3cd81ec298fbe6c56287815151e0903d5f9389e8647d1c533384e81dc"
     },
-    "clientCreateInputs": {
-      "path": "work/pollution-warplayer-20261116/20261116-101330-9adcc687-create/input-shas.json",
-      "sha256": "8f1ab5597182cfc4a844ae0838f8159e34844bd909b05f357e32789714f6b2c4"
+    "serverReloadLog": {
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/reload.log",
+      "sha256": "835acae827461f58bf0dd622dfd35011c60f9b0fe87f9a5a8c0f1773f449809f"
     },
-    "clientReopenInputs": {
-      "path": "work/pollution-warplayer-20261116/20261116-101330-9adcc687-reopen/input-shas.json",
-      "sha256": "8f1ab5597182cfc4a844ae0838f8159e34844bd909b05f357e32789714f6b2c4"
+    "clientCreate": {
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/client-create/client-result.json",
+      "sha256": "965f691b658adbe0e239c437b2580d2cdbe3026c993cb68f1c02314c2c27c5dc"
+    },
+    "clientReload": {
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/client-reload/client-result.json",
+      "sha256": "bc3f9895047091c2f974198c7a0e873094229af4943aeba44bf83a6195c182bb"
     }
   }
 }

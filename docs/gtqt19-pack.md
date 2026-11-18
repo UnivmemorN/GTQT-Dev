@@ -1,6 +1,6 @@
 # GTQT 1.9 新版整包候选
 
-Minecraft 1.12.2、Forge 14.23.5.2860、Java 8。组装起点为 GTQT 组织仓的 `gtqt19` 开发基线，包括 GregTech、GTQTCore、SteamTech、QuantumHue 和 Pollution。原始开发锁继续保存这套 25 服 / 26 客的最小组合。[基线依赖锁](../workspace.lock.json)
+Minecraft 1.12.2、Forge 14.23.5.2860、Java 8。组装起点为 GTQT 组织仓的 `gtqt19` 开发基线，包括 GregTech、GTQTCore、SteamTech、QuantumHue、Pollution 和 GTQTGalaxy。开发锁保存当前 29 服 / 30 客的组合（含 Galacticraft Legacy 4.0.7、AsmodeusCore 1.0.2、GalaxySpace 2.2.0）；加入星组前的 25 服 / 26 客组合见 git 历史。[基线依赖锁](../workspace.lock.json)
 
 ## 候选结果
 

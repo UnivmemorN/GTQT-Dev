@@ -41,9 +41,23 @@
         "c9f4c3bc22b3e5139a1f16cf8a2443b903b7b9c0"
       ],
       "note": "rev 是实测 JAR 的构建提交。extraRevs 中的后续提交仅新增停用配方清单。"
+    },
+    "gtqtgalaxy": {
+      "repo": "GTQT/GTQTGalaxy",
+      "rev": "35e8f5ce2948fa100b09afb4fe4fdd15a8b8041b",
+      "modIds": [
+        "gtqtgalaxy"
+      ],
+      "productionJar": "gtqtgalaxy-1.9.0.jar"
     }
   },
   "artifacts": {
+    "asmodeusCore": {
+      "filename": "asmodeuscore-303101-7180991.jar",
+      "size": 4060393,
+      "sha256": "e499bfbd7669bdaf3ad7483293af0647f1b260265b1ae51468f780b3861441b8",
+      "url": "https://www.cursemaven.com/curse/maven/asmodeuscore-303101/7180991/asmodeuscore-303101-7180991.jar"
+    },
     "astralSorcery": {
       "filename": "astral-sorcery-241721-3044416.jar",
       "size": 25028160,
@@ -109,6 +123,18 @@
       "size": 1091954,
       "sha256": "3f6a674ac0d8678fd0b127e6930199f32848fe47d1689e44c72976bfb24c7385",
       "url": "https://mediafilez.forgecdn.net/files/3156/637/FTBQuests-1202.9.0.15.jar"
+    },
+    "galacticraftLegacy": {
+      "filename": "galacticraft-legacy-564236-6364107.jar",
+      "size": 15675570,
+      "sha256": "e77f62ba847ae4ecef95c4db3878b8eba1d9b05fdc9c20fac79f6bc4517e8240",
+      "url": "https://www.cursemaven.com/curse/maven/galacticraft-legacy-564236/6364107/galacticraft-legacy-564236-6364107.jar"
+    },
+    "galaxySpace": {
+      "filename": "galaxy-space-addon-for-galacticraft-238770-7005609.jar",
+      "size": 10310984,
+      "sha256": "a2b90ebdff7654b6f7f5e0991a6c01cd350d885f5d728fbdc2d6ba7168c4fd71",
+      "url": "https://www.cursemaven.com/curse/maven/galaxy-space-addon-for-galacticraft-238770/7005609/galaxy-space-addon-for-galacticraft-238770-7005609.jar"
     },
     "gtSteam": {
       "filename": "gtsteam-1.9.0.jar",
@@ -186,9 +212,11 @@
         "gregtech",
         "gtqtcore",
         "quantumhue",
-        "pollution"
+        "pollution",
+        "gtqtgalaxy"
       ],
       "artifacts": [
+        "asmodeusCore",
         "astralSorcery",
         "baubles",
         "bloodMagic",
@@ -200,6 +228,8 @@
         "ftbLib",
         "ftbMoney",
         "ftbQuests",
+        "galacticraftLegacy",
+        "galaxySpace",
         "gtSteam",
         "gtfo",
         "guideApi",
@@ -234,11 +264,15 @@
           "ItemFilters-1.0.4.2.jar": "cdffbb810f75db50afce9681374f0604e4c1ed2dcfe768cff5b4e17d5384166b",
           "Pollution-1.9.0.jar": "9adcc68725ab36995b248d57e1f04e14df5f9dd95db0ba6c2de1ca6482c5a449",
           "Thaumcraft-1.12.2-6.1.BETA26.jar": "9425f8643581b27ff8845b087c8bc6fc10425a32942f1a3f0e265ce6b38f7b5f",
+          "asmodeuscore-303101-7180991.jar": "e499bfbd7669bdaf3ad7483293af0647f1b260265b1ae51468f780b3861441b8",
           "astralsorcery-1.12.2-1.10.27.jar": "771107764cad17a30b37f683fd6889384a916981b1c8ed63826ec0a335efae86",
           "ctm-267602-2915363.jar": "433f441dc9c0aa75a4168df832900720ddadac1f22cc3bba4e4f25ca789b268b",
+          "galacticraft-legacy-564236-6364107.jar": "e77f62ba847ae4ecef95c4db3878b8eba1d9b05fdc9c20fac79f6bc4517e8240",
+          "galaxy-space-addon-for-galacticraft-238770-7005609.jar": "a2b90ebdff7654b6f7f5e0991a6c01cd350d885f5d728fbdc2d6ba7168c4fd71",
           "gregtech-gtqt-1.12.2-1.9.0.jar": "bbfe1b587ec63251929ac875c485d29bfee67fc0ae7069645abec737ebdd9b79",
           "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
           "gtqtcore-1.9.0.jar": "9ece4a0e7a578d675d1c4346a7940819f0dc03f883f999f8f49d63d6adea4bc9",
+          "gtqtgalaxy-1.9.0.jar": "37d2a521b24699312db54c647353a8cf800f0dde59a42145544604709cd9e2e5",
           "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
           "had-enough-items-557549-8405357.jar": "40d01797ebc29ca5ceaadcaa4951af708b708f396d16b1c85c7262afdae849bd",
           "modelloader-1.0.0.jar": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f",
@@ -255,15 +289,19 @@
           "FTBQuests-1202.9.0.15.jar": "3f6a674ac0d8678fd0b127e6930199f32848fe47d1689e44c72976bfb24c7385",
           "ItemFilters-1.0.4.2.jar": "cdffbb810f75db50afce9681374f0604e4c1ed2dcfe768cff5b4e17d5384166b",
           "Pollution-1.9.0.jar": "9adcc68725ab36995b248d57e1f04e14df5f9dd95db0ba6c2de1ca6482c5a449",
+          "asmodeuscore-303101-7180991.jar": "e499bfbd7669bdaf3ad7483293af0647f1b260265b1ae51468f780b3861441b8",
           "astral-sorcery-241721-3044416.jar": "771107764cad17a30b37f683fd6889384a916981b1c8ed63826ec0a335efae86",
           "baubles-227083-2518667.jar": "b32010b2f2778aa1188585e7ead91ad46d4cb2c715f9c778a61848ba7fe51f8d",
           "blood-magic-224791-2822288.jar": "ef187aea109446bdb7b35e06958d4c6d22f5f7ceb4e5bcaeab16f3ad29fe16a5",
           "botania-225643-3330934.jar": "8962beb2c583720a83858f58bd6afc891185b50d868c712549a96b191339b52a",
           "ctm-267602-2915363.jar": "433f441dc9c0aa75a4168df832900720ddadac1f22cc3bba4e4f25ca789b268b",
           "extrabotany-299086-3112313.jar": "68b07d9a0b23210511d603c20353c61ba2e77ea0e076d12eda3ef5a8ec6ac516",
+          "galacticraft-legacy-564236-6364107.jar": "e77f62ba847ae4ecef95c4db3878b8eba1d9b05fdc9c20fac79f6bc4517e8240",
+          "galaxy-space-addon-for-galacticraft-238770-7005609.jar": "a2b90ebdff7654b6f7f5e0991a6c01cd350d885f5d728fbdc2d6ba7168c4fd71",
           "gregtech-gtqt-1.12.2-1.9.0.jar": "bbfe1b587ec63251929ac875c485d29bfee67fc0ae7069645abec737ebdd9b79",
           "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
           "gtqtcore-1.9.0.jar": "9ece4a0e7a578d675d1c4346a7940819f0dc03f883f999f8f49d63d6adea4bc9",
+          "gtqtgalaxy-1.9.0.jar": "37d2a521b24699312db54c647353a8cf800f0dde59a42145544604709cd9e2e5",
           "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
           "guide-api-228832-2645992.jar": "e201712ef8fadc6c4b6380939751e92fe32cad2ba2dcb717e1acb3b07e0c2125",
           "had-enough-items-557549-8405357.jar": "40d01797ebc29ca5ceaadcaa4951af708b708f396d16b1c85c7262afdae849bd",

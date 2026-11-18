@@ -17,7 +17,7 @@ python -B tools/workspace.py checkout pollution
 
 ## 当前可以复现什么
 
-Forge 14.23.5.2860、Java 8 的开发组合包含新版 GTQTCore、喵呜版 GregTech、QuantumHue 和 Pollution。专服 25 个生产 JAR、客户端 26 个，已实测建档、客户端首次入服、保存停服、重启并重新进入同一存档。锁内逐端记录文件名与 SHA-256。检查实际实例时，把下面的路径换成该实例的生产模组目录：
+Forge 14.23.5.2860、Java 8 的开发组合包含新版 GTQTCore、喵呜版 GregTech、QuantumHue、Pollution 和 GTQTGalaxy，以及 Galacticraft Legacy 4.0.7 / AsmodeusCore 1.0.2 / GalaxySpace 2.2.0 三项太空依赖。专服 29 个生产 JAR、客户端 30 个，已实测建档、客户端首次入服、保存停服、重启并重新进入同一存档。锁内逐端记录文件名与 SHA-256。检查实际实例时，把下面的路径换成该实例的生产模组目录：
 
 ```powershell
 python -B tools/workspace.py check-mods server work/gtqt19/server/mods
