@@ -13,10 +13,10 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from acceptance import check_head
 
-RFG_URL = "https://github.com/GTNewHorizons/RetroFuturaGradle/releases/download/1.4.0/"
+RFG_URL = "https://github.com/GTNewHorizons/RetroFuturaGradle/releases/download/1.4.9/"
 RFG = {
-    "retrofuturagradle": (46866219, "49de836a84b0ee5b3e0f9c0fdf25b9e780fb7b69790e1a3e86074d388396eb94"),
-    "rfgJavacPlugin": (4946060, "3efe33563d27492c69fee6aeda8c9eb209aa59376153eb8c545197f1d254b29e"),
+    "retrofuturagradle": (47697312, "4fe86b90d9c2fc47eabf78d4bd1c19eec3238722faca4ec86461ab758404c27a"),
+    "rfgJavacPlugin": (4946060, "830f84ff6c205631e22b33af921d5696c46e1c05b124968942cc23d35cb8b903"),
 }
 
 
@@ -109,8 +109,8 @@ def main():
         subprocess.run([sys.executable, "-B", helpers / "prepare_minecraft_cache.py",
                         "--gradle-home", gradle_home], check=True)
     for key, (size, sha) in RFG.items():
-        filename = f"{key}-1.4.0.jar"
-        dest = maven / "com/gtnewhorizons" / key / "1.4.0" / filename
+        filename = f"{key}-1.4.9.jar"
+        dest = maven / "com/gtnewhorizons" / key / "1.4.9" / filename
         entry = dict(size=size, sha256=sha, urls=[RFG_URL + filename])
         if args.offline and not matches(dest, entry):
             sys.exit(f"Prepare {dest} online first")
@@ -121,9 +121,9 @@ def main():
     for entry in bootstrap_lock:
         path = entry["path"]
         if path.startswith("maven/com/gtnewhorizons/") and path.endswith(".pom"):
-            pom = state / path.replace("1.4.1", "1.4.0")
+            pom = state / path.replace("1.4.1", "1.4.9")
             pom.parent.mkdir(parents=True, exist_ok=True)
-            pom.write_text(entry["text"].replace("1.4.1", "1.4.0"), encoding="utf-8")
+            pom.write_text(entry["text"].replace("1.4.1", "1.4.9"), encoding="utf-8")
     for key in lock["profiles"][profile]["artifacts"]:
         pin = lock["artifacts"][key]
         dest = source / "libs" / pin["filename"]
