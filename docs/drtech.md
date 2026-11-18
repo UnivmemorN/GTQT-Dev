@@ -3,6 +3,7 @@
 更新日期：2026-11-18
 上游：`GTQT/DrTech` `cd1668d6`（YOT/TFFT 移除 #22 已合入，构建脚本改用 RFG 1.4.9）
 上游 issue：[GTQT/DrTech#23 资源与配方已知问题](https://github.com/GTQT/DrTech/issues/23)
+Future MC / BogoSorter 冲突分析：[Future MC 的两个实现与 BogoSorter 冲突](drtech-futuremc-conflict.md)
 开发工具：`dev/drtech/build.py` 与 `work/gtqt19-drtech-new/tool-maven` 已升级到 RFG 1.4.9。
 
 ## 已验证
