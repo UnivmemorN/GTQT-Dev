@@ -420,5 +420,62 @@
         "sha256": "cb65322a11f6a73448aa93ad393f38298ead35c45e799e89de091545fab0c37e"
       }
     }
+  },
+  {
+    "label": "08-galaxy",
+    "run": "08-galaxy-20261118-193002-415671",
+    "rawResultSha256": "6d6cdfcba0e1d54ca325637a2b1cd28d48653e4053a81f9724d8d78d1e1ec432",
+    "baselineLockSha256": "3f49f92641dedfed0f067f8727e6aae54eac01721b0a2ddf4f5f5298480a57d1",
+    "candidateLockSha256": "9d8e8d98ff7c97555625bec3936645ca6e7bd8cf4b18c178f703f9bd9669e880",
+    "jars": {
+      "server": 145,
+      "client": 175
+    },
+    "overrideTree": {
+      "files": 8236,
+      "sha256": "960bc1791fd0857bb3b190c1cad88649874c36a3563ebcdb586eb3fc0aabe7a2"
+    },
+    "passed": true,
+    "fixtureRestored": true,
+    "phases": [
+      {
+        "phase": "create",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,2 validChunkTicks=100",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 169,
+        "levelSha256": "148640f4dc6ffdf12753a367c5e63738b9fbc0d412f64a4880942de842d486cf",
+        "savedMarker": 52721071,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "161ac07846cb5777fa096f46f3b969049a2f35ee7c4b3d8084f2649576ff0792"
+      },
+      {
+        "phase": "reload",
+        "serverExit": 0,
+        "clientExit": 0,
+        "clientWorld": "dimension=0 chunk=-2,2 validChunkTicks=100",
+        "clientMenuExit": true,
+        "persistedFmlModIds": 169,
+        "levelSha256": "9007df225859a490334d8233a956b78f17a9035e6a352c3af2488bfebb04d1af",
+        "savedMarker": 52721071,
+        "saveFlushed": true,
+        "worldIdWarnings": 0,
+        "serverLogSha256": "bc32a25148ed5ee0411b8d5056fc258a8cf9b2fbf740eff45259cb75d3cd166d"
+      }
+    ],
+    "worldFilesCheckedBeforeRestart": 89,
+    "publishedLockSha256": "9d8e8d98ff7c97555625bec3936645ca6e7bd8cf4b18c178f703f9bd9669e880",
+    "productionModTrees": {
+      "server": {
+        "files": 145,
+        "sha256": "fa7d070714dcceb7a1a8be5301e32edf6ee4b8ac64b10d874019fb611113427e"
+      },
+      "client": {
+        "files": 175,
+        "sha256": "43d3ce13dda85ca798b923a9d630d073a1912d14cc30b971d792db791a18d27f"
+      }
+    }
   }
 ]

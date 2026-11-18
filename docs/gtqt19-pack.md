@@ -4,7 +4,7 @@ Minecraft 1.12.2、Forge 14.23.5.2860、Java 8。组装起点为 GTQT 组织仓�
 
 ## 候选结果
 
-通过联机和保存重启的候选含 **141 个专服 JAR、171 个客户端 JAR**。两次真实客户端均在主世界出生区保持 100 tick 后正常退出。重启前核对 87 份存档文件，世界登记 163 个 FML 模组 ID。客户端两次均未报告缺失的世界注册 ID，可比对的 29,424 个合成配方注册名也完全一致。[最终运行清单](../evidence/gtqt19-pack/runtime-lock.json) · [配方注册名对照](../evidence/gtqt19-pack/recipe-registry.json)
+通过联机和保存重启的候选含 **145 个专服 JAR、175 个客户端 JAR**（在 141 / 171 的基础上追加 GTQTGalaxy 与三项太空依赖）。两次真实客户端均在主世界出生区保持 100 tick 后正常退出。重启前核对 89 份存档文件，世界登记 169 个 FML 模组 ID。客户端两次均未报告缺失的世界注册 ID。加入 GTQTGalaxy 组之前，141 / 171 候选另外比对过 29,424 个合成配方注册名，完全一致。[最终运行清单](../evidence/gtqt19-pack/runtime-lock.json) · [配方注册名对照](../evidence/gtqt19-pack/recipe-registry.json)
 
 按 1.8.8 清单计，156 项使用原文件，10 项由开发基线中的新版提供，2 项采用上游替代件，21 项未纳入。BogoSorter 使用作者发布的 1.6.2，客户端配套安装 Key Binding Patch；RandomComplement 使用作者发布的 1.9.10。Future MC 使用原始独立 JAR。DrTech、BOP、匠魂和 Forestry 均未进入最终清单。GT 模块开关保持原包配置。[实际新增文件及分发来源](../evidence/gtqt19-pack/accepted-additions.json)
 
@@ -16,6 +16,7 @@ Minecraft 1.12.2、Forge 14.23.5.2860、Java 8。组装起点为 GTQT 组织仓�
 | 工具、优化、上游替代件 | 139 / 169 | 完整复测通过，重启前后 30,960 个配方注册名相同。 |
 | 世界生成、材料联动 | 153 / 183 → 147 / 177 → 146 / 176 | 分别定位匠魂、BOP 和 Forestry 问题。Forestry 组合虽能复登，配方注册名会改变。 |
 | 剩余世界生成模组及官方覆盖文件 | **141 / 171** | 两端原样使用全部 8,236 个覆盖文件，通过两轮验收。 |
+| 组织仓 GTQTGalaxy 与太空依赖 | **141 / 171 → 145 / 175** | 加入 GTQTGalaxy 1.9.0（`dd05e337`，客户端关闭 GalaxySpace 标题界面）与 Galacticraft Legacy 4.0.7 / AsmodeusCore 1.0.2 / GalaxySpace 2.2.0；通过建档、入服、保存重启和复登。 |
 
 ## 配方脚本和任务
 
