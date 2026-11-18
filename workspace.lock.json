@@ -44,7 +44,7 @@
     },
     "gtqtgalaxy": {
       "repo": "GTQT/GTQTGalaxy",
-      "rev": "35e8f5ce2948fa100b09afb4fe4fdd15a8b8041b",
+      "rev": "dd05e3379b2032258dec517ac97e32e7097999c6",
       "modIds": [
         "gtqtgalaxy"
       ],
@@ -272,7 +272,7 @@
           "gregtech-gtqt-1.12.2-1.9.0.jar": "bbfe1b587ec63251929ac875c485d29bfee67fc0ae7069645abec737ebdd9b79",
           "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
           "gtqtcore-1.9.0.jar": "9ece4a0e7a578d675d1c4346a7940819f0dc03f883f999f8f49d63d6adea4bc9",
-          "gtqtgalaxy-1.9.0.jar": "37d2a521b24699312db54c647353a8cf800f0dde59a42145544604709cd9e2e5",
+          "gtqtgalaxy-1.9.0.jar": "1d1486887763041cb1237f77608583b0fe2eb73fc0cd2256247b84d41e0dc876",
           "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
           "had-enough-items-557549-8405357.jar": "40d01797ebc29ca5ceaadcaa4951af708b708f396d16b1c85c7262afdae849bd",
           "modelloader-1.0.0.jar": "ca0c44d331b19618181854119220092f5b0188203d1833da95e39d16ce8ad16f",
@@ -301,7 +301,7 @@
           "gregtech-gtqt-1.12.2-1.9.0.jar": "bbfe1b587ec63251929ac875c485d29bfee67fc0ae7069645abec737ebdd9b79",
           "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
           "gtqtcore-1.9.0.jar": "9ece4a0e7a578d675d1c4346a7940819f0dc03f883f999f8f49d63d6adea4bc9",
-          "gtqtgalaxy-1.9.0.jar": "37d2a521b24699312db54c647353a8cf800f0dde59a42145544604709cd9e2e5",
+          "gtqtgalaxy-1.9.0.jar": "1d1486887763041cb1237f77608583b0fe2eb73fc0cd2256247b84d41e0dc876",
           "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
           "guide-api-228832-2645992.jar": "e201712ef8fadc6c4b6380939751e92fe32cad2ba2dcb717e1acb3b07e0c2125",
           "had-enough-items-557549-8405357.jar": "40d01797ebc29ca5ceaadcaa4951af708b708f396d16b1c85c7262afdae849bd",

@@ -9,8 +9,8 @@
     "client": 30
   },
   "runtimeSetSha256": {
-    "server": "77c4f4e071e16a1ff06ab3617fd6695e11c102d69fad22496ee7a36c67b5a897",
-    "client": "93c01eaf8ba72a3556d2872f5602c3b7ec1b9c590a90d281799ba254dd703fa0"
+    "server": "506f8a466a4c0c174605b973db0336a6184b730e39a3a959a8d646374446c060",
+    "client": "b0cfec70e4899048e058837566c10bb10af99ba0191c45fdf80381a099c09a78"
   },
   "digestAlgorithm": "SHA-256 over all production entries on each side, sorted by filename in Unicode code point order; concatenate UTF-8(filename), one NUL byte, ASCII(lowercase SHA-256 hex), one LF per entry.",
   "passed": true,
@@ -35,22 +35,12 @@
     ],
     "clientMissingWorldIds": {}
   },
-  "productionConfig": [
-    {
-      "side": "client",
-      "path": "work/gtqt19/client/config/GalaxySpace/core.conf",
-      "size": 37,
-      "sha256": "42187c1a8b66ab3cf0302dd3f49e9b87c110841bf3906e51c52087e810afd826"
-    },
-    {
-      "side": "server",
-      "path": "work/gtqt19/server/config/GalaxySpace/core.conf",
-      "size": 37,
-      "sha256": "42187c1a8b66ab3cf0302dd3f49e9b87c110841bf3906e51c52087e810afd826"
-    }
-  ],
-  "productionConfigNote": "GalaxySpace 的标题界面由其官方配置项关闭：config/GalaxySpace/core.conf 的 B:enableNewMenu=false。配置不在 workspace.lock 的校验范围内，以本回执记录的路径与 SHA-256 为准。",
-  "scope": "已验收 Forge 专服与客户端开发组合的建档、联机、保存重启与复登：新版 GTQTCore、喵呜版 GregTech、SteamTech、QuantumHue、Pollution，再加上 GTQTGalaxy 1.9.0 与 Galacticraft Legacy 4.0.7 / AsmodeusCore / GalaxySpace 2.2.0 双端全量加载；GalaxySpace 自定义标题界面已由配置关闭，客户端回到 GUI 主菜单系并正常退出。",
+  "galaxySpaceTitleScreen": {
+    "suppressedBy": "gtqtgalaxy",
+    "repoRev": "dd05e3379b2032258dec517ac97e32e7097999c6",
+    "mechanism": "client/ClientProxy.preInit sets GSConfigCore.enableNewMenu to false after GalaxySpace loads its configuration; no GalaxySpace config file is shipped."
+  },
+  "scope": "已验收 Forge 专服与客户端开发组合的建档、联机、保存重启与复登：新版 GTQTCore、喵呜版 GregTech、SteamTech、QuantumHue、Pollution，再加上 GTQTGalaxy 1.9.0（含 dd05e337 的标题界面修复）与 Galacticraft Legacy 4.0.7 / AsmodeusCore / GalaxySpace 2.2.0 双端全量加载。GalaxySpace 自定义标题界面由 GTQTGalaxy 在运行时代码中关闭，客户端回到 GUI 主菜单系并正常退出。",
   "registeredMods": {
     "minecraft": "1.12.2",
     "mcp": "9.42",
@@ -89,24 +79,24 @@
   },
   "rawReceipts": {
     "result": {
-      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/result.json",
-      "sha256": "716575ff4c176ea7ff869edecb65bda5d5da04114219f4e3a428b3a963dbe08a"
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-modsuppress-20261118-190714-975719/result.json",
+      "sha256": "2d3c70f0ed4697fe4931f269a928f095274f1780cd69e9859a4e823376bf61d6"
     },
     "serverCreateLog": {
-      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/create.log",
-      "sha256": "b2b442d3cd81ec298fbe6c56287815151e0903d5f9389e8647d1c533384e81dc"
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-modsuppress-20261118-190714-975719/create.log",
+      "sha256": "eb28c007aab60055b584322b51332cf700628e186a10554f6b66d95f7bddf1b8"
     },
     "serverReloadLog": {
-      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/reload.log",
-      "sha256": "835acae827461f58bf0dd622dfd35011c60f9b0fe87f9a5a8c0f1773f449809f"
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-modsuppress-20261118-190714-975719/reload.log",
+      "sha256": "2c77ab123a5af8b868f52a3bc0f87a67d878bfdf4c63d90d7c3e674a3b7447a7"
     },
     "clientCreate": {
-      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/client-create/client-result.json",
-      "sha256": "965f691b658adbe0e239c437b2580d2cdbe3026c993cb68f1c02314c2c27c5dc"
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-modsuppress-20261118-190714-975719/client-create/client-result.json",
+      "sha256": "95a461d327cbbc1295d5ce464b6e78f7a4f0e1e7360e0563b29ce00f7a9891ea"
     },
     "clientReload": {
-      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-config-20261118-164514-160159/client-reload/client-result.json",
-      "sha256": "bc3f9895047091c2f974198c7a0e873094229af4943aeba44bf83a6195c182bb"
+      "path": "work/gtqt19-galaxy-acceptance/runs/gtqt19-galaxy-modsuppress-20261118-190714-975719/client-reload/client-result.json",
+      "sha256": "0de5efacee8115f50ad6edce1c0eb092229eefcc9f87cea19f238046e1160377"
     }
   }
 }
