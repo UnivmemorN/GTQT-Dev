@@ -149,8 +149,13 @@ PR #40 评论已指出：
 - `GTQTCore/libs/gregtech-gtqt-1.12.2-1.9.0.jar`
   - 已替换为主混淆 JAR
   - `GTQTCore`: `.local-dev\gradle.cmd assemble test` 通过（47s）
+- `GTQTCore/libs/gregtechfoodoption-gtqt-1.12.2-1.9.0.jar`
+  - GTFO PR #1 已合并（`93cf333`）
+  - 已替换为 BOP 修复的主混淆 JAR
+  - `GTQTCore`: `.local-dev\gradle.cmd assemble test` 再次通过（18s）
 - `work/gtqt19` 与 candidate 的 GT JAR 已替换
 - candidate create 阶段使用新 JAR 通过：`chunk=-5,153`
+- 全模组 BOP 128 栈断言与客户端 create 通过（`chunk=-4,68`）
 
 注意：完整 baseline/candidate create+reload 仍未重跑，原因是验收探针退出问题；这与配方错误无关，但 evidence 的 `runtimeSetSha256` 已按新 JAR 更新。
 

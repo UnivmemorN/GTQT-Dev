@@ -145,10 +145,10 @@
     },
     "gtfo": {
       "filename": "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar",
-      "size": 2026911,
-      "sha256": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
-      "url": "https://raw.githubusercontent.com/GTQT/Pollution/d1611ce5dec0eac71c2d68cc86975db86c2e3112/libs/gregtechfoodoption-gtqt-1.12.2-1.9.0.jar",
-      "provenance": "作者随依赖仓库提供的原始 JAR；源码构建提交待核对。"
+      "size": 2023664,
+      "sha256": "1c5a5f5f927695da7d17bbb6ce0378e528a557250d53563f05643c30f688b51f",
+      "url": "https://github.com/GTQT/GregTechFoodOption/commit/93cf333961ba173ee88bba8243b86b394786a9e5",
+      "provenance": "由 GTFO master 93cf333（PR #1）构建的主混淆 JAR"
     },
     "guideApi": {
       "filename": "guide-api-228832-2645992.jar",
@@ -270,7 +270,7 @@
           "galacticraft-legacy-564236-6364107.jar": "e77f62ba847ae4ecef95c4db3878b8eba1d9b05fdc9c20fac79f6bc4517e8240",
           "galaxy-space-addon-for-galacticraft-238770-7005609.jar": "a2b90ebdff7654b6f7f5e0991a6c01cd350d885f5d728fbdc2d6ba7168c4fd71",
           "gregtech-gtqt-1.12.2-1.9.0.jar": "c5726857c06a89b7598925d5abc8efb19bf4b9b81e47522df07bdc2b42257ea0",
-          "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
+          "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "1c5a5f5f927695da7d17bbb6ce0378e528a557250d53563f05643c30f688b51f",
           "gtqtcore-1.9.0.jar": "9ece4a0e7a578d675d1c4346a7940819f0dc03f883f999f8f49d63d6adea4bc9",
           "gtqtgalaxy-1.9.0.jar": "1d1486887763041cb1237f77608583b0fe2eb73fc0cd2256247b84d41e0dc876",
           "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
@@ -299,7 +299,7 @@
           "galacticraft-legacy-564236-6364107.jar": "e77f62ba847ae4ecef95c4db3878b8eba1d9b05fdc9c20fac79f6bc4517e8240",
           "galaxy-space-addon-for-galacticraft-238770-7005609.jar": "a2b90ebdff7654b6f7f5e0991a6c01cd350d885f5d728fbdc2d6ba7168c4fd71",
           "gregtech-gtqt-1.12.2-1.9.0.jar": "c5726857c06a89b7598925d5abc8efb19bf4b9b81e47522df07bdc2b42257ea0",
-          "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
+          "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "1c5a5f5f927695da7d17bbb6ce0378e528a557250d53563f05643c30f688b51f",
           "gtqtcore-1.9.0.jar": "9ece4a0e7a578d675d1c4346a7940819f0dc03f883f999f8f49d63d6adea4bc9",
           "gtqtgalaxy-1.9.0.jar": "1d1486887763041cb1237f77608583b0fe2eb73fc0cd2256247b84d41e0dc876",
           "gtsteam-1.9.0.jar": "9f02c92878f91c113cc3edc2dc3c40ed0161edc731f2558a7ec1cfad07bd18ad",
