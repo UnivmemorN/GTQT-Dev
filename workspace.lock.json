@@ -5,7 +5,7 @@
   "repositories": {
     "gregtech": {
       "repo": "GTQT/GregTech",
-      "rev": "105a2a50fcfba0d1fdbb3c8fc77271824a351876",
+      "rev": "29adf54e9ae427afe3b34423320ede271d9793cb",
       "modIds": [
         "gregtech"
       ],
@@ -269,7 +269,7 @@
           "ctm-267602-2915363.jar": "433f441dc9c0aa75a4168df832900720ddadac1f22cc3bba4e4f25ca789b268b",
           "galacticraft-legacy-564236-6364107.jar": "e77f62ba847ae4ecef95c4db3878b8eba1d9b05fdc9c20fac79f6bc4517e8240",
           "galaxy-space-addon-for-galacticraft-238770-7005609.jar": "a2b90ebdff7654b6f7f5e0991a6c01cd350d885f5d728fbdc2d6ba7168c4fd71",
-          "gregtech-gtqt-1.12.2-1.9.0.jar": "bcde4a491595bcc851ba685eaaad7b9aa661ca57c5855a0164ba8395d5aabd33",
+          "gregtech-gtqt-1.12.2-1.9.0.jar": "56a4cdf5c9ac58d91dff0151c59ba85facb8706349e6fa9034ae6c6478ef1f04",
           "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
           "gtqtcore-1.9.0.jar": "9ece4a0e7a578d675d1c4346a7940819f0dc03f883f999f8f49d63d6adea4bc9",
           "gtqtgalaxy-1.9.0.jar": "1d1486887763041cb1237f77608583b0fe2eb73fc0cd2256247b84d41e0dc876",
@@ -298,7 +298,7 @@
           "extrabotany-299086-3112313.jar": "68b07d9a0b23210511d603c20353c61ba2e77ea0e076d12eda3ef5a8ec6ac516",
           "galacticraft-legacy-564236-6364107.jar": "e77f62ba847ae4ecef95c4db3878b8eba1d9b05fdc9c20fac79f6bc4517e8240",
           "galaxy-space-addon-for-galacticraft-238770-7005609.jar": "a2b90ebdff7654b6f7f5e0991a6c01cd350d885f5d728fbdc2d6ba7168c4fd71",
-          "gregtech-gtqt-1.12.2-1.9.0.jar": "bcde4a491595bcc851ba685eaaad7b9aa661ca57c5855a0164ba8395d5aabd33",
+          "gregtech-gtqt-1.12.2-1.9.0.jar": "56a4cdf5c9ac58d91dff0151c59ba85facb8706349e6fa9034ae6c6478ef1f04",
           "gregtechfoodoption-gtqt-1.12.2-1.9.0.jar": "f8521a873e5316aaa7d400ab84d532f62cf59d35fb3c0de3af76572a19d66baa",
           "gtqtcore-1.9.0.jar": "9ece4a0e7a578d675d1c4346a7940819f0dc03f883f999f8f49d63d6adea4bc9",
           "gtqtgalaxy-1.9.0.jar": "1d1486887763041cb1237f77608583b0fe2eb73fc0cd2256247b84d41e0dc876",
