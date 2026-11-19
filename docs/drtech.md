@@ -6,7 +6,17 @@
 Future MC / BogoSorter 冲突分析：[Future MC 的两个实现与 BogoSorter 冲突](drtech-futuremc-conflict.md)
 开发工具：`dev/drtech/build.py` 与 `work/gtqt19-drtech-new/tool-maven` 已升级到 RFG 1.4.9。
 
-## 已验证
+## 2026-11-19 方向变更（当前）
+
+- 放弃 PR #24（已关闭，远端/本地分支已删除）：不再修改 DrTech `futuremc` 的 modid。
+- 按 cropQT 开发者方向：cropQT 使用 **FFD**；**移除独立 Future MC**；DrTech 的 `futuremc` 保持原样；cropQT 中紫水晶注册已删除（`FutureMCMain` 目前只保留 dried ghast / happy ghast）。
+- 因此整包应删除 `Future-MC-0.2.21.jar`，让 DrTech 的 `futuremc` 成为唯一提供者；不再需要 modid 迁移。
+- 代价/后续：DrTech 的 `futuremc` 没有 `thedarkcolour.futuremc.container.ContainerBarrel`，**BogoSorter 必须使用 barrelguard 补丁**（或等价修正），否则 `DefaultCompat.init` 会崩溃。
+- 下面“阻断并入 GTQT 全体的问题”第 1 条以及 `drtech-futuremc-conflict.md` 的改名方案，保留为历史分析，不再执行。
+
+## 已验证（改名前 baseline / 已放弃的改名 spike）
+
+> 生产专服的 179 mods 验证用的是改名 spike（`drtechfuturemc`），该方案已放弃；它只证明“改名后可以启动”，不代表当前 cropQT 方向。当前方向仍需重新构建 cropQT 并验证。
 
 - `build` 通过；产物 `drtech-1.8.9.jar`，SHA-256 `6336c89f89a03253233131994c2fff7d9828242af9655282f68e42da110e44cd`
 - dev `runClient`：40 个 mod 加载到主菜单；`runServer`：38 个 mod，`Done (1.487s)` 后正常停服

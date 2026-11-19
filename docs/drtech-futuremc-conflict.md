@@ -2,6 +2,8 @@
 
 日期：2026-11-19
 
+> **2026-11-19 更新：本分析提出的“改名共存”方案已放弃。** PR #24 已关闭，远端/本地分支已删除。按 cropQT 开发者方向：cropQT 使用 FFD；整包移除独立 Future MC；DrTech 的 `futuremc` 保持原样；cropQT 中紫水晶注册已删除。以下内容仅保留为历史分析，不再作为执行方案。
+
 ## 结论
 
 - 独立 Future MC 与 DrTech 内置的 `futuremc` **不是同一个实现**，只共享 `modid = futuremc` 和少量注册名。
