@@ -96,6 +96,12 @@ public final class ClientProbe {
                 && minecraft.getField("field_71441_e").get(mc) == null
                 && minecraft.getField("field_71439_g").get(mc) == null) {
             String guiName = gui == null ? "null" : gui.getClass().getName();
+            // FMLLoadCompleteEvent fires before resource reload. With a large pack the loading screen is
+            // still up at that point, so only connect after the real main menu has been reached.
+            if (!Class.forName("net.minecraft.client.gui.GuiMainMenu").isInstance(gui)) {
+                menuTicksBeforeConnect = 0;
+                return;
+            }
             if (!guiName.equals("net.minecraft.client.multiplayer.GuiConnecting")
                     && !guiName.equals("net.minecraft.client.gui.GuiDisconnected")
                     && ++menuTicksBeforeConnect >= 40) {
