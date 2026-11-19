@@ -24,6 +24,9 @@ public final class ClientProbe {
     private int validChunkTicks;
     private Object closingNetwork;
     private int closedTicks;
+    private boolean connectAttempted;
+    private int menuTicksBeforeConnect;
+    private boolean loadComplete;
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
@@ -32,6 +35,7 @@ public final class ClientProbe {
 
     @Mod.EventHandler
     public void verifyWoodEntries(FMLLoadCompleteEvent event) throws Exception {
+        loadComplete = true;
         if (Boolean.getBoolean("gtqt.probe.joinOnly")) return;
         if (!Loader.isModLoaded("biomesoplenty") || !Loader.isModLoaded("gregtechfoodoption")) return;
         Method getter = Class.forName("gregtechfoodoption.integration.bop.BiomesOPlentyWoodRecipe")
@@ -69,6 +73,43 @@ public final class ClientProbe {
         Class<?> minecraft = Class.forName("net.minecraft.client.Minecraft");
         Object mc = minecraft.getMethod("func_71410_x").invoke(null);
         Object gui = minecraft.getField("field_71462_r").get(mc);
+        if (Boolean.getBoolean("gtqt.probe.joinOnly")
+                && gui != null && gui.getClass().getName().equals("com.cleanroommc.groovyscript.compat.WarningScreen")
+                && minecraft.getField("field_71441_e").get(mc) == null
+                && minecraft.getField("field_71439_g").get(mc) == null
+                && minecraft.getMethod("func_147114_u").invoke(mc) == null) {
+            java.lang.reflect.Field buttons = Class.forName("net.minecraft.client.gui.GuiScreen")
+                    .getDeclaredField("field_146292_n");
+            buttons.setAccessible(true);
+            for (Object button : (List<?>) buttons.get(gui)) {
+                if (button.getClass().getField("field_146127_k").getInt(button) == 0) {
+                    System.out.println("GTQT_PACK_CLIENT_WARNING screen=" + gui.getClass().getName()
+                            + " messages=" + String.valueOf(gui.getClass().getField("messages").get(gui))
+                                    .replace('\n', ' ').replace('\r', ' '));
+                    gui.getClass().getMethod("func_146284_a", Class.forName("net.minecraft.client.gui.GuiButton"))
+                            .invoke(gui, button);
+                    return;
+                }
+            }
+        }
+        if (Boolean.getBoolean("gtqt.probe.joinOnly") && !connectAttempted && loadComplete
+                && minecraft.getField("field_71441_e").get(mc) == null
+                && minecraft.getField("field_71439_g").get(mc) == null) {
+            String guiName = gui == null ? "null" : gui.getClass().getName();
+            if (!guiName.equals("net.minecraft.client.multiplayer.GuiConnecting")
+                    && !guiName.equals("net.minecraft.client.gui.GuiDisconnected")
+                    && ++menuTicksBeforeConnect >= 40) {
+                connectAttempted = true;
+                System.out.println("GTQT_PACK_CLIENT_CONNECT screen=" + guiName);
+                Class<?> serverData = Class.forName("net.minecraft.client.multiplayer.ServerData");
+                Object data = serverData.getConstructor(String.class, String.class, boolean.class)
+                        .newInstance("probe", "127.0.0.1:" + Integer.getInteger("gtqt.probe.port"), false);
+                Class<?> connecting = Class.forName("net.minecraft.client.multiplayer.GuiConnecting");
+                connecting.getConstructor(Class.forName("net.minecraft.client.gui.GuiScreen"), minecraft, serverData)
+                        .newInstance(null, mc, data);
+                return;
+            }
+        }
         if (returningToMenu) {
             if (closingNetwork != null) {
                 if ((boolean) closingNetwork.getClass().getMethod("func_150724_d").invoke(closingNetwork)) return;

@@ -48,9 +48,18 @@ def stage(args):
             source = next((p for p in options if p.is_file() and digest(p) == row["sha256"]), None)
             if not source:
                 raise ValueError(f"No source matching {name} ({row['sha256']})")
+            replace = row.get("replace", False)
+            if not isinstance(replace, bool):
+                raise ValueError(f"Invalid replace flag for {name}")
             for side, entries in by_side.items():
                 if row["side"] in (side, "both"):
-                    if any(n.casefold() == name.casefold() or sha == row["sha256"] for n, (_, sha) in entries.items()):
+                    if replace:
+                        for existing in [n for n in entries if n.casefold() == name.casefold()]:
+                            del entries[existing]
+                        if any(sha == row["sha256"] for _, sha in entries.values()):
+                            raise ValueError(f"{side}: addition duplicates a selected JAR: {name}")
+                    elif any(n.casefold() == name.casefold() or sha == row["sha256"]
+                             for n, (_, sha) in entries.items()):
                         raise ValueError(f"{side}: addition duplicates a selected JAR: {name}")
                     entries[name] = source, row["sha256"]
 

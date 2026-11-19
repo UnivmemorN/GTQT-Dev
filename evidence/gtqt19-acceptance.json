@@ -1,6 +1,6 @@
 {
   "profile": "gtqt19",
-  "testedOn": "2026-11-18",
+  "testedOn": "2026-11-19",
   "minecraft": "1.12.2",
   "forge": "14.23.5.2860",
   "java": "1.8.0_512",
@@ -9,8 +9,8 @@
     "client": 30
   },
   "runtimeSetSha256": {
-    "server": "506f8a466a4c0c174605b973db0336a6184b730e39a3a959a8d646374446c060",
-    "client": "b0cfec70e4899048e058837566c10bb10af99ba0191c45fdf80381a099c09a78"
+    "server": "3448bd3270f6b2bb3a28a2f2a325534f30d1a0afff4386377d4c3c6cd5a04d3d",
+    "client": "243c918f67bf1ec9ce5dc65550fbbbf44bc7bcd3a05b29757451c1483fbdd2e6"
   },
   "digestAlgorithm": "SHA-256 over all production entries on each side, sorted by filename in Unicode code point order; concatenate UTF-8(filename), one NUL byte, ASCII(lowercase SHA-256 hex), one LF per entry.",
   "passed": true,

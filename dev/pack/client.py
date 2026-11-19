@@ -198,7 +198,7 @@ def main():
     cache = (args.cache or result.parent / "client-cache").resolve()
     classpath, natives = prepare(runtime, cache, args.resource_dir)
     game.mkdir()
-    for name in ("mods", "config", "scripts", "groovy", "resources"):
+    for name in ("mods", "config", "scripts", "groovy", "resources", "pollution"):
         source = instance / name
         if source.is_dir():
             shutil.copytree(source, game / name)
