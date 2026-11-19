@@ -52,7 +52,7 @@ public final class ClientProbe {
             if (!wood.equals(entry.getClass().getField("woodName").get(entry))) throw new IllegalStateException(wood);
             String[] ids = {"log_" + i / 4, "planks_0", "wood_slab_" + i / 8, wood + "_stairs",
                     wood + "_fence_gate", wood + "_fence", wood + "_door", "boat_" + wood};
-            int[] metadata = {(i % 4) * 4, i, i % 8, 0, 0, 0, 0, 0};
+            int[] metadata = {4 + i % 4, i, i % 8, 0, 0, 0, 0, 0};
             for (int j = 0; j < fields.length; j++) {
                 Object stack = entry.getClass().getField(fields[j]).get(entry);
                 Object item = stack.getClass().getMethod("func_77973_b").invoke(stack);
